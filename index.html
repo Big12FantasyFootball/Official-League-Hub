@@ -664,9 +664,14 @@ table.sch-table tr:last-child td{border-bottom:none}
 .ss-award-card .aw-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;margin-top:.15rem}
 .ss-award-card .aw-detail{font-size:.75rem;color:var(--muted);margin-top:.1rem}
 
+.ss-player-log-row{display:grid;grid-template-columns:44px 1fr 110px 70px;gap:.5rem;align-items:center;padding:.4rem .3rem;border-bottom:1px solid var(--border);font-size:.78rem}
+.ss-player-log-row.head{font-family:'JetBrains Mono',monospace;font-size:.6rem;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--border)}
+.ss-player-log-row:last-child{border-bottom:none}
+
 @media(max-width:700px){
   .ss-standings-row{grid-template-columns:24px 1fr 40px 50px 60px 60px;font-size:.72rem}
   .ss-standings-row span.hide-mobile{display:none}
+  .ss-player-log-row{grid-template-columns:32px 1fr 80px 50px;font-size:.7rem}
 }
 </style>
 </head>
@@ -1558,12 +1563,12 @@ table.sch-table tr:last-child td{border-bottom:none}
     <h1>2026 Schedule Book</h1>
     <div class="sch-hero">
       <div class="sch-kicker">Uploaded 2026 Regular Season Schedule</div>
-      <div class="sch-title">14 Weeks, Cup Qualifier, Two Rivalry Weeks</div>
-      <p class="sch-copy">The schedule has been added as the official 2026 regular-season slate. Week 1 is the <strong>Hawkins Cup qualification week</strong>, Week 3 is <strong>Rivalry Week I</strong>, and Week 14 is <strong>Rivalry Week II</strong>. Lines are <strong>entertainment-only</strong> preseason power numbers using manager history, 2024&ndash;2025 results, draft-grade notes, championship r&eacute;sum&eacute;, and rookie uncertainty.</p>
+      <div class="sch-title">14 Weeks, Cup Qualifier, Three Rivalry Weeks, Two Secondary Rivalry Weeks</div>
+      <p class="sch-copy">Weeks 1, 8, and 14 are the <strong>Rivalry Weeks</strong> &mdash; the six master-list rivalries play all three, so every rival pair meets three times. Weeks 5 and 11 are the <strong>Secondary Rivalry Weeks</strong>, built from each manager's own ranked pick sheet (excluding their primary rival), so those six new pairs meet twice. The other nine weeks fill in the remaining opponent for everyone exactly once, so every manager plays a full 14-game slate. Week 1 also doubles as the <strong>Hawkins Cup qualification week</strong>. Lines are <strong>entertainment-only</strong> preseason power numbers using manager history, 2024&ndash;2025 results, draft-grade notes, championship r&eacute;sum&eacute;, and rookie uncertainty.</p>
       <div class="sch-mini-grid">
         <div class="sch-mini"><b>84</b><span>Regular-season games</span></div>
-        <div class="sch-mini"><b>Weeks 3 &amp; 14</b><span>Rivalry weeks</span></div>
-        <div class="sch-mini"><b>4</b><span>Rookie-vs-rookie meetings</span></div>
+        <div class="sch-mini"><b>Weeks 1, 8 &amp; 14</b><span>Rivalry weeks</span></div>
+        <div class="sch-mini"><b>Weeks 5 &amp; 11</b><span>Secondary rivalry weeks</span></div>
         <div class="sch-mini"><b>Top 8</b><span>Week 1 qualification</span></div>
       </div>
     </div>
@@ -1571,12 +1576,12 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="sch-panel">
         <div class="sch-panel-title">Season Storylines</div>
         <div class="story-row"><b>Week 1 Cup Qualification</b><strong>Top eight scorers enter the Hawkins Cup.</strong><span>Week 1 is the qualifying cut for the Hawkins Cup. Record does not matter for this part: a manager can lose the matchup and still qualify with a top-eight score.</span></div>
+        <div class="story-row"><b>Three Rivalry Weeks</b><strong>Every rival pair meets three times, spread across the season.</strong><span>Sanford/Beland, Joyce/Peretz, Goss/Furnari, Guarnaccia/Hawkins, Sweeney/Carullo, and Dann/Lisa open in Week 1, run it back in Week 8, and settle it again in Week 14 &mdash; the last week before playoffs.</span></div>
+        <div class="story-row"><b>Secondary Rivalries</b><strong>The league drafted a second set of grudge matches.</strong><span>Every manager ranked three preferred opponents (excluding their existing rival). Mutual first choices locked in immediately; everyone else was matched in pick order. Those six new pairs &mdash; Joyce/Guarnaccia, Beland/Peretz, Sanford/Goss, Sweeney/Dann, Hawkins/Furnari, and Lisa/Carullo &mdash; play in Week 5 and again in Week 11.</span></div>
+        <div class="story-row"><b>Everyone Else, Once</b><strong>The other nine weeks are a single round robin.</strong><span>Outside the rivalry and secondary-rivalry weeks, every manager plays each of their remaining nine opponents exactly one time, so the full slate adds up to a clean 14 games apiece.</span></div>
         <div class="story-row"><b>Transaction Wire</b><strong>Drew Sanford replaces Dillon Jacobs.</strong><span>Dillon is terminated for 2026, but his 2024 championship remains historical. Drew takes the active East slot and inherits the schedule.</span></div>
         <div class="story-row"><b>League Discipline</b><strong>Beland suspended, Sweeney on write-up watch.</strong><span>Brandon Beland has a three-day suspension after threatening Jalen. Josh Sweeney is listed as probable for a write-up.</span></div>
-        <div class="story-row"><b>Two Rivalry Weeks</b><strong>Week 3 starts it, Week 14 runs it back.</strong><span>Week 3 is Rivalry Week I. Week 14 is Rivalry Week II with the rematches: Lisa/Dann, Josh/Jojo, Carullo/Furnari, Jalen/Joyce, Aidan/Brandon, and Hawkins/Drew.</span></div>
-        <div class="story-row"><b>Rookie of the Year</b><strong>Aidan, Brandon, and Drew turn ROY into a three-way race.</strong><span>Aidan and Brandon still meet in both rivalry weeks, while Drew inherits the Hawkins rivalry slot and adds a third new-manager path to the ROY board.</span></div>
-        <div class="story-row"><b>Runner-Up Curse Watch</b><strong>Hawkins opens at Jake and closes with Drew.</strong><span>Nick Hawkins gets the defending champion in Week 1, Jojo in Week 7, Furnari in Week 12, and Drew in the Week 14 rivalry finale.</span></div>
-        <div class="story-row"><b>Champion Path</b><strong>Joyce gets Hawkins, Jojo, Furnari, Drew, and Jalen.</strong><span>The reigning champ has enough regular-season résumé games to build a Manager of the Year case before playoffs even start.</span></div>
+        <div class="story-row"><b>Rookie of the Year</b><strong>Aidan, Brandon, and Drew turn ROY into a three-way race.</strong><span>All three new managers carry rivalry or secondary-rivalry obligations of their own &mdash; Beland/Sanford in the rivalry slate, Sanford/Goss in the secondary slate &mdash; keeping the rookie board honest all season.</span></div>
         <div class="story-row"><b>Division Heat</b><strong>East has the power names, West has the chaos.</strong><span>Jojo, Hawkins, Furnari, Drew, Brandon, and Dann make up the East. Joyce, Carullo, Josh, Jalen, Aidan, and Lisa make up the West.</span></div>
       </div>
       <div class="sch-panel">
@@ -1599,666 +1604,666 @@ table.sch-table tr:last-child td{border-bottom:none}
     </div>
     <div class="sch-board">
       <article class="sch-week qualifier">
-        <div class="sch-week-head"><h3>NFL Week 1</h3><span class="sch-week-tag">Hawkins Cup Qualifier</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><span class="sch-line">Team Lisa -1.5</span></td>
-            <td><span class="sch-total">233.0</span></td>
-            <td><div class="sch-note">Aidan debut watch. Lisa gets the rookie before anyone has a scouting report.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Josh's Scary Team -2.0</span></td>
-            <td><span class="sch-total">237.5</span></td>
-            <td><div class="sch-note">Josh opens against the reigning 2025 draft-grade winner. This is points-floor vs roster-build bragging rights.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -3.0</span></td>
-            <td><span class="sch-total">235.5</span></td>
-            <td><div class="sch-note">Brandon gets a former finalist immediately. Rookie of the Year starts with a real test.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><span class="sch-line">Drake London and Friends -3.0</span></td>
-            <td><span class="sch-total">242.0</span></td>
-            <td><div class="sch-note">Replacement manager versus former #1 seed. The Week 1 “is Drew real?” game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -1.5</span></td>
-            <td><span class="sch-total">247.5</span></td>
-            <td><div class="sch-note">Runner-up curse meets defending champ. The loudest Week 1 game on the slate.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -2.5</span></td>
-            <td><span class="sch-total">250.0</span></td>
-            <td><div class="sch-note">Two regular-season grinders open with a playoff-caliber line.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 2</h3><span class="sch-week-tag dark">Furnari @ Drew</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -5.0</span></td>
-            <td><span class="sch-total">237.5</span></td>
-            <td><div class="sch-note">Aidan's second game is against Hawkins. Welcome to the league, enjoy the cursed pressure.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -6.5</span></td>
-            <td><span class="sch-total">241.5</span></td>
-            <td><div class="sch-note">Brandon gets Jojo one week after Jalen. Brutal rookie ramp-up.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -0.5</span></td>
-            <td><span class="sch-total">239.0</span></td>
-            <td><div class="sch-note">Two West teams that need early division leverage.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -3.5</span></td>
-            <td><span class="sch-total">239.5</span></td>
-            <td><div class="sch-note">Champion versus Team Dann. A bad Joyce game would get screenshotted forever.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><span class="sch-line">Josh's Scary Team -3.5</span></td>
-            <td><span class="sch-total">237.5</span></td>
-            <td><div class="sch-note">Lisa tries to slow down the Josh scoring profile.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -3.5</span></td>
-            <td><span class="sch-total">246.5</span></td>
-            <td><div class="sch-note">Furnari gets the replacement manager in an early East résumé check.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 3</h3><span class="sch-week-tag">Rivalry Week I</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><span class="sch-line">Team Lisa -1.0</span></td>
-            <td><span class="sch-total">233.5</span></td>
-            <td><div class="sch-note">Rivalry Week I opener: Lisa and Dann start a two-game rivalry set before the Week 14 return game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -1.0</span></td>
-            <td><span class="sch-total">249.0</span></td>
-            <td><div class="sch-note">Rivalry Week I headliner. Josh and Jojo start their two-game rivalry set with the Week 14 rematch already looming.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -0.5</span></td>
-            <td><span class="sch-total">241.0</span></td>
-            <td><div class="sch-note">Nick Bowl Part I. Furnari and Carullo open the rivalry set before the Week 14 rematch.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -1.5</span></td>
-            <td><span class="sch-total">242.0</span></td>
-            <td><div class="sch-note">West rivalry Part I. Joyce and Jalen get their first rivalry-week chapter before Week 14.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><span class="sch-line">Brandon's Brilliant Team -1.0</span></td>
-            <td><span class="sch-total">232.0</span></td>
-            <td><div class="sch-note">Rookie Bowl Part I and Rivalry Week I. Winner owns the first real ROY argument.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -4.0</span></td>
-            <td><span class="sch-total">247.0</span></td>
-            <td><div class="sch-note">Hawkins-Drew rivalry Part I. The Week 14 finale finishes the set.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 4</h3><span class="sch-week-tag dark">Furnari @ Hawkins</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><span class="sch-line">Drake London and Friends -0.5</span></td>
-            <td><span class="sch-total">240.5</span></td>
-            <td><div class="sch-note">West swing game. Both need it for division tiebreaker comfort.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><span class="sch-line">Team Lisa -1.0</span></td>
-            <td><span class="sch-total">239.0</span></td>
-            <td><div class="sch-note">Drew gets an early East/West credibility check against Lisa.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -1.5</span></td>
-            <td><span class="sch-total">246.5</span></td>
-            <td><div class="sch-note">East division pressure with the cleanest “prove it” line.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -4.5</span></td>
-            <td><span class="sch-total">241.5</span></td>
-            <td><div class="sch-note">Aidan gets the 2023 champ. Upset would shake the rookie race.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -1.0</span></td>
-            <td><span class="sch-total">236.0</span></td>
-            <td><div class="sch-note">Jalen cannot drop games like this if he wants the West.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -5.5</span></td>
-            <td><span class="sch-total">239.0</span></td>
-            <td><div class="sch-note">Brandon gets the defending champ. Rookie upset watch.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 5</h3><span class="sch-week-tag dark">Jojo @ Joyce</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -0.5</span></td>
-            <td><span class="sch-total">251.0</span></td>
-            <td><div class="sch-note">Championship-level regular-season game. This is one of the slate's headline totals.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><span class="sch-line">Team Dann -0.5</span></td>
-            <td><span class="sch-total">239.0</span></td>
-            <td><div class="sch-note">East division test for Dann against the replacement manager.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><span class="sch-line">Drake London and Friends -1.0</span></td>
-            <td><span class="sch-total">236.5</span></td>
-            <td><div class="sch-note">Carullo rebound game on paper, but Lisa gets home-field chaos.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -3.0</span></td>
-            <td><span class="sch-total">237.5</span></td>
-            <td><div class="sch-note">Furnari needs to avoid the rookie landmine.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -0.5</span></td>
-            <td><span class="sch-total">240.0</span></td>
-            <td><div class="sch-note">West shootout potential. Points-for tiebreaker game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -3.0</span></td>
-            <td><span class="sch-total">238.0</span></td>
-            <td><div class="sch-note">Hawkins versus rookie. This is where Brandon can earn respect fast.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 6</h3><span class="sch-week-tag dark">Josh @ Hawkins</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -6.0</span></td>
-            <td><span class="sch-total">242.5</span></td>
-            <td><div class="sch-note">Lisa gets Jojo in a tough East/West crossover.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -2.5</span></td>
-            <td><span class="sch-total">238.0</span></td>
-            <td><div class="sch-note">Furnari favored, but Dann has draft-build upside.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -2.5</span></td>
-            <td><span class="sch-total">241.5</span></td>
-            <td><div class="sch-note">Jalen gets the new East manager in a reset-and-prove-it game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><span class="sch-line">Drake London and Friends -3.5</span></td>
-            <td><span class="sch-total">236.0</span></td>
-            <td><div class="sch-note">Brandon gets a rebound candidate. Sneaky ROY separator.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -2.0</span></td>
-            <td><span class="sch-total">245.5</span></td>
-            <td><div class="sch-note">One of the best non-division games on the schedule.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -4.0</span></td>
-            <td><span class="sch-total">239.0</span></td>
-            <td><div class="sch-note">Aidan faces the champ after four straight tough tests.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 7</h3><span class="sch-week-tag dark">Hawkins @ Jojo</span></div>
+        <div class="sch-week-head"><h3>NFL Week 1</h3><span class="sch-week-tag">Rivalry Week I · Hawkins Cup Qualifier</span></div>
         <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
           <tr>
             <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
             <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><span class="sch-line">Brandon's Brilliant Team -0.5</span></td>
+            <td><span class="sch-line">Brandon's Brilliant Team -1.5</span></td>
             <td><span class="sch-total">238.5</span></td>
-            <td><div class="sch-note">Beland vs Sanford adds a third lane to the rookie race.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><span class="sch-line">Josh's Scary Team -2.5</span></td>
-            <td><span class="sch-total">236.5</span></td>
-            <td><div class="sch-note">Aidan gets another West scoring test.</div></td>
+            <td><div class="sch-note">Same-division tilt (East). Brandon (rookie, three-day suspension on record) hosts Drew (rookie replacement manager).</div></td>
           </tr>
           <tr>
             <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -0.5</span></td>
-            <td><span class="sch-total">247.5</span></td>
-            <td><div class="sch-note">Potential playoff preview. Total should be live.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -2.5</span></td>
-            <td><span class="sch-total">250.0</span></td>
-            <td><div class="sch-note">East heavyweight of the week. Manager of the Year type game.</div></td>
-          </tr>
-          <tr>
             <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -0.5</span></td>
-            <td><span class="sch-total">236.0</span></td>
-            <td><div class="sch-note">Jalen needs wins like this to stay in the West race.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Drake London and Friends -1.0</span></td>
-            <td><span class="sch-total">236.5</span></td>
-            <td><div class="sch-note">Carullo comeback odds game. Dann can spoil the narrative.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 8</h3><span class="sch-week-tag dark">Drew @ Josh</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -2.5</span></td>
-            <td><span class="sch-total">237.5</span></td>
-            <td><div class="sch-note">Furnari cannot let a rookie steal a middle-season game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -2.0</span></td>
-            <td><span class="sch-total">244.5</span></td>
-            <td><div class="sch-note">Former champ vs former finalist with shootout potential.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
             <td><span class="sch-line">Seal Team Nix -3.0</span></td>
-            <td><span class="sch-total">240.0</span></td>
-            <td><div class="sch-note">Joyce favored, Lisa upset creates instant standings noise.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><span class="sch-line">Josh's Scary Team -3.0</span></td>
-            <td><span class="sch-total">246.0</span></td>
-            <td><div class="sch-note">Sweeney gets the replacement manager in a write-up-watch trap game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -4.5</span></td>
-            <td><span class="sch-total">238.5</span></td>
-            <td><div class="sch-note">Hawkins favored, but this is exactly the kind of game that becomes annoying.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><span class="sch-line">Drake London and Friends -1.5</span></td>
-            <td><span class="sch-total">235.5</span></td>
-            <td><div class="sch-note">Aidan can attack a Carullo down-year narrative.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 9</h3><span class="sch-week-tag dark">Josh @ Joyce</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -5.0</span></td>
-            <td><span class="sch-total">250.5</span></td>
-            <td><div class="sch-note">Jojo gets the new East manager in a game he cannot afford to make weird.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><span class="sch-line">Brandon's Brilliant Team -0.5</span></td>
-            <td><span class="sch-total">233.0</span></td>
-            <td><div class="sch-note">East undercard, but huge for avoiding the basement.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -4.0</span></td>
-            <td><span class="sch-total">238.5</span></td>
-            <td><div class="sch-note">Lisa gets another East contender.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -2.5</span></td>
-            <td><span class="sch-total">246.5</span></td>
-            <td><div class="sch-note">West headline game and one of the week's top totals.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -2.5</span></td>
-            <td><span class="sch-total">241.5</span></td>
-            <td><div class="sch-note">Carullo and Hawkins is a pure group-chat game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -1.5</span></td>
-            <td><span class="sch-total">235.0</span></td>
-            <td><div class="sch-note">Jalen cannot afford a rookie upset here.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 10</h3><span class="sch-week-tag dark">Josh @ Furnari</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -1.0</span></td>
-            <td><span class="sch-total">242.5</span></td>
-            <td><div class="sch-note">West heavyweight and comeback-manager checkpoint for Carullo.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -4.0</span></td>
-            <td><span class="sch-total">242.0</span></td>
-            <td><div class="sch-note">Jojo should be favored. Dann cover would be annoying in the best way.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><span class="sch-line">Aidan's Astounding Team -0.5</span></td>
-            <td><span class="sch-total">238.0</span></td>
-            <td><div class="sch-note">Aidan vs Sanford gives the rookie race a new cross-check.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><span class="sch-line">Brandon's Brilliant Team -0.5</span></td>
-            <td><span class="sch-total">233.0</span></td>
-            <td><div class="sch-note">Lisa and Brandon in a lower-total swing game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -3.0</span></td>
-            <td><span class="sch-total">241.0</span></td>
-            <td><div class="sch-note">High-ceiling cross-division game.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -1.5</span></td>
-            <td><span class="sch-total">245.0</span></td>
-            <td><div class="sch-note">One of the best week-10 tests. Winner gets real playoff heat.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 11</h3><span class="sch-week-tag dark">Drew @ Joyce</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -2.0</span></td>
-            <td><span class="sch-total">245.0</span></td>
-            <td><div class="sch-note">Regular-season king versus former #1 seed.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><span class="sch-line">Josh's Scary Team -2.0</span></td>
-            <td><span class="sch-total">237.0</span></td>
-            <td><div class="sch-note">Brandon needs a scoring upset to stay in ROY range.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -5.5</span></td>
-            <td><span class="sch-total">248.0</span></td>
-            <td><div class="sch-note">Drew gets the defending champion. Welcome-to-the-league type line.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -4.5</span></td>
-            <td><span class="sch-total">239.0</span></td>
-            <td><div class="sch-note">Hawkins has to handle the business games.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Team Dann -1.5</span></td>
-            <td><span class="sch-total">232.5</span></td>
-            <td><div class="sch-note">Aidan gets a realistic upset lane.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -2.5</span></td>
-            <td><span class="sch-total">240.5</span></td>
-            <td><div class="sch-note">Playoff bubble energy and a key total.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 12</h3><span class="sch-week-tag dark">Hawkins @ Furnari</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -0.5</span></td>
-            <td><span class="sch-total">246.5</span></td>
-            <td><div class="sch-note">East division Nick Bowl and a repeat from Week 4.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><span class="sch-line">Team Lisa -1.0</span></td>
-            <td><span class="sch-total">239.0</span></td>
-            <td><div class="sch-note">Sanford-Lisa rematch with late-season implications.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -5.5</span></td>
-            <td><span class="sch-total">239.0</span></td>
-            <td><div class="sch-note">Rookie vs champion rematch. Brandon upset would change ROY math.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><span class="sch-line">Drake London and Friends -0.5</span></td>
-            <td><span class="sch-total">240.5</span></td>
-            <td><div class="sch-note">West rematch. Could be a playoff tiebreaker.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -3.0</span></td>
-            <td><span class="sch-total">236.0</span></td>
-            <td><div class="sch-note">Jalen needs this if the West is crowded.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><span class="sch-line">Fortnite Grinder -6.5</span></td>
-            <td><span class="sch-total">241.5</span></td>
-            <td><div class="sch-note">Aidan gets Jojo again. Toughest rookie ask on the slate.</div></td>
-          </tr>
-        </tbody></table>
-      </article>
-      <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 13</h3><span class="sch-week-tag dark">Jojo @ Joyce</span></div>
-        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
-          <tr>
-            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -0.5</span></td>
-            <td><span class="sch-total">251.0</span></td>
-            <td><div class="sch-note">Second Jojo-Joyce game. Could swing Manager of the Year odds.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Josh's Scary Team -2.0</span></td>
-            <td><span class="sch-total">237.5</span></td>
-            <td><div class="sch-note">Week 1 rematch with playoff bubble stakes.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
-            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -3.0</span></td>
-            <td><span class="sch-total">238.0</span></td>
-            <td><div class="sch-note">Hawkins-Brandon rematch. Rookie spoiler spot.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><span class="sch-line">Bourne with Downs -2.0</span></td>
-            <td><span class="sch-total">241.5</span></td>
-            <td><div class="sch-note">Late-season contender test for Sanford against Jalen.</div></td>
-          </tr>
-          <tr>
-            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
-            <td><span class="sch-line">Drake London and Friends -3.0</span></td>
-            <td><span class="sch-total">236.5</span></td>
-            <td><div class="sch-note">Carullo cannot lose this if comeback talk is real.</div></td>
+            <td><span class="sch-total">253.0</span></td>
+            <td><div class="sch-note">Defending champ vs. 2023 runner-up. Peretz still owes the league a title-game comeback.</div></td>
           </tr>
           <tr>
             <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
             <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
             <td><span class="sch-line">Nick's Nitty Team -5.0</span></td>
-            <td><span class="sch-total">237.5</span></td>
-            <td><div class="sch-note">Aidan's last pre-rivalry test is still brutal.</div></td>
+            <td><span class="sch-total">245.0</span></td>
+            <td><div class="sch-note">West vs. East. Nick (steady contender) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -1.0</span></td>
+            <td><span class="sch-total">254.0</span></td>
+            <td><div class="sch-note">2023 champ vs. the runner-up curse. This one has playoff residue every single year.</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><span class="sch-line">Drake London and Friends -1.0</span></td>
+            <td><span class="sch-total">243.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Nick (president, bounce-back candidate) hosts Josh (on write-up watch).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><span class="sch-line">Team Lisa -1.0</span></td>
+            <td><span class="sch-total">246.5</span></td>
+            <td><div class="sch-note">Two managers still chasing a real identity, fighting over who finds it first.</div></td>
+          </tr>
+        </tbody></table>
+        <div class="sch-cup-note">Week 1 is Hawkins Cup qualification &mdash; a high-scoring loss can still matter.</div>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 2</h3><span class="sch-week-tag">NFL Week 2</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -7.0</span></td>
+            <td><span class="sch-total">247.5</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Aidan (rookie) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><span class="sch-line">Bourne with Downs -2.0</span></td>
+            <td><span class="sch-total">246.5</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Nick (president, bounce-back candidate) hosts Jalen (2023 runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><span class="sch-line">Team Lisa -2.0</span></td>
+            <td><span class="sch-total">245.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Josh (on write-up watch) hosts Joseph (still finding a team identity).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -3.5</span></td>
+            <td><span class="sch-total">250.5</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Ryan (foundation-year manager) hosts Nick (defending Hawkins Cup namesake, 3x runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Fortnite Grinder -5.0</span></td>
+            <td><span class="sch-total">246.5</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Brandon (rookie, three-day suspension on record) hosts Jojo (2023 champion, record-book king).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><span class="sch-line">Nick's Nitty Team -5.5</span></td>
+            <td><span class="sch-total">244.0</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Drew (rookie replacement manager) hosts Nick (steady contender).</div></td>
           </tr>
         </tbody></table>
       </article>
       <article class="sch-week">
-        <div class="sch-week-head"><h3>NFL Week 14</h3><span class="sch-week-tag">Rivalry Week II</span></div>
+        <div class="sch-week-head"><h3>NFL Week 3</h3><span class="sch-week-tag">NFL Week 3</span></div>
         <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
           <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -5.0</span></td>
+            <td><span class="sch-total">250.5</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Nick (president, bounce-back candidate) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><span class="sch-line">Bourne with Downs -4.0</span></td>
+            <td><span class="sch-total">244.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Jalen (2023 runner-up) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
             <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
-            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
-            <td><span class="sch-line">Team Dann -1.0</span></td>
-            <td><span class="sch-total">233.5</span></td>
-            <td><div class="sch-note">Rivalry Week II opener: the Lisa-Dann rematch closes their season series.</div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -3.0</span></td>
+            <td><span class="sch-total">251.0</span></td>
+            <td><div class="sch-note">West vs. East. Nick (defending Hawkins Cup namesake, 3x runner-up) hosts Joseph (still finding a team identity).</div></td>
           </tr>
           <tr>
             <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
             <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><span class="sch-line">Fortnite Grinder -4.0</span></td>
+            <td><span class="sch-total">247.5</span></td>
+            <td><div class="sch-note">West vs. East. Jojo (2023 champion, record-book king) hosts Josh (on write-up watch).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><span class="sch-line">Team Dann -3.5</span></td>
+            <td><span class="sch-total">241.5</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Drew (rookie replacement manager) hosts Ryan (foundation-year manager).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Nick's Nitty Team -4.0</span></td>
+            <td><span class="sch-total">246.0</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Brandon (rookie, three-day suspension on record) hosts Nick (steady contender).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 4</h3><span class="sch-week-tag">NFL Week 4</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -3.5</span></td>
+            <td><span class="sch-total">252.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Joseph (still finding a team identity) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><span class="sch-line">Drake London and Friends -2.0</span></td>
+            <td><span class="sch-total">241.5</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Nick (president, bounce-back candidate) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><span class="sch-line">Bourne with Downs -3.0</span></td>
+            <td><span class="sch-total">246.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Josh (on write-up watch) hosts Jalen (2023 runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -5.5</span></td>
+            <td><span class="sch-total">247.5</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Brandon (rookie, three-day suspension on record) hosts Nick (defending Hawkins Cup namesake, 3x runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Nick's Nitty Team -2.0</span></td>
+            <td><span class="sch-total">248.5</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Nick (steady contender) hosts Ryan (foundation-year manager).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><span class="sch-line">Fortnite Grinder -6.5</span></td>
+            <td><span class="sch-total">245.0</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Drew (rookie replacement manager) hosts Jojo (2023 champion, record-book king).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 5</h3><span class="sch-week-tag">Secondary Rivalry Week I</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -1.5</span></td>
+            <td><span class="sch-total">255.0</span></td>
+            <td><div class="sch-note">West vs. East. Jojo (2023 champion, record-book king) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><span class="sch-line">Bourne with Downs -3.5</span></td>
+            <td><span class="sch-total">245.0</span></td>
+            <td><div class="sch-note">Beland's pick, straight off the ranking sheet. Peretz gets a second walk-on villain.</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><span class="sch-line">Aidan's Astounding Team -1.0</span></td>
+            <td><span class="sch-total">237.5</span></td>
+            <td><div class="sch-note">East vs. West. Aidan (rookie) hosts Drew (rookie replacement manager).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><span class="sch-line">Team Dann -1.5</span></td>
+            <td><span class="sch-total">244.0</span></td>
+            <td><div class="sch-note">West vs. East. Ryan (foundation-year manager) hosts Josh (on write-up watch).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -1.5</span></td>
+            <td><span class="sch-total">253.0</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Nick (steady contender) hosts Nick (defending Hawkins Cup namesake, 3x runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><span class="sch-line">Team Lisa -1.5</span></td>
+            <td><span class="sch-total">246.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Nick (president, bounce-back candidate) hosts Joseph (still finding a team identity).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 6</h3><span class="sch-week-tag">NFL Week 6</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -5.5</span></td>
+            <td><span class="sch-total">249.5</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Josh (on write-up watch) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><span class="sch-line">Team Lisa -3.5</span></td>
+            <td><span class="sch-total">243.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Joseph (still finding a team identity) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -2.0</span></td>
+            <td><span class="sch-total">252.0</span></td>
+            <td><div class="sch-note">West vs. East. Nick (defending Hawkins Cup namesake, 3x runner-up) hosts Jalen (2023 runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><span class="sch-line">Drake London and Friends -3.0</span></td>
+            <td><span class="sch-total">240.5</span></td>
+            <td><div class="sch-note">West vs. East. Drew (rookie replacement manager) hosts Nick (president, bounce-back candidate).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Team Dann -2.0</span></td>
+            <td><span class="sch-total">243.0</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Brandon (rookie, three-day suspension on record) hosts Ryan (foundation-year manager).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Fortnite Grinder -1.0</span></td>
+            <td><span class="sch-total">252.0</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Nick (steady contender) hosts Jojo (2023 champion, record-book king).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 7</h3><span class="sch-week-tag">NFL Week 7</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -1.0</span></td>
+            <td><span class="sch-total">255.5</span></td>
+            <td><div class="sch-note">West vs. East. Nick (defending Hawkins Cup namesake, 3x runner-up) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><span class="sch-line">Josh's Scary Team -1.5</span></td>
+            <td><span class="sch-total">240.5</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Josh (on write-up watch) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Nick's Nitty Team -1.0</span></td>
+            <td><span class="sch-total">250.5</span></td>
+            <td><div class="sch-note">West vs. East. Nick (steady contender) hosts Jalen (2023 runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Drake London and Friends -1.5</span></td>
+            <td><span class="sch-total">242.0</span></td>
+            <td><div class="sch-note">West vs. East. Brandon (rookie, three-day suspension on record) hosts Nick (president, bounce-back candidate).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><span class="sch-line">Team Lisa -4.0</span></td>
+            <td><span class="sch-total">242.0</span></td>
+            <td><div class="sch-note">West vs. East. Drew (rookie replacement manager) hosts Joseph (still finding a team identity).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
             <td><span class="sch-line">Fortnite Grinder -3.0</span></td>
-            <td><span class="sch-total">249.0</span></td>
-            <td><div class="sch-note">Rivalry Week II headliner. Josh-Jojo runs back the Week 3 rivalry matchup with real seeding power.</div></td>
+            <td><span class="sch-total">249.5</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Jojo (2023 champion, record-book king) hosts Ryan (foundation-year manager).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 8</h3><span class="sch-week-tag">Rivalry Week II</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Brandon's Brilliant Team -1.5</span></td>
+            <td><span class="sch-total">238.5</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Brandon (rookie, three-day suspension on record) hosts Drew (rookie replacement manager).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -3.0</span></td>
+            <td><span class="sch-total">253.0</span></td>
+            <td><div class="sch-note">Defending champ vs. 2023 runner-up. Peretz still owes the league a title-game comeback.</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Nick's Nitty Team -5.0</span></td>
+            <td><span class="sch-total">245.0</span></td>
+            <td><div class="sch-note">West vs. East. Nick (steady contender) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -1.0</span></td>
+            <td><span class="sch-total">254.0</span></td>
+            <td><div class="sch-note">2023 champ vs. the runner-up curse. This one has playoff residue every single year.</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><span class="sch-line">Drake London and Friends -1.0</span></td>
+            <td><span class="sch-total">243.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Nick (president, bounce-back candidate) hosts Josh (on write-up watch).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><span class="sch-line">Team Lisa -1.0</span></td>
+            <td><span class="sch-total">246.5</span></td>
+            <td><div class="sch-note">Two managers still chasing a real identity, fighting over who finds it first.</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 9</h3><span class="sch-week-tag">NFL Week 9</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -4.0</span></td>
+            <td><span class="sch-total">251.0</span></td>
+            <td><div class="sch-note">West vs. East. Ryan (foundation-year manager) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -6.5</span></td>
+            <td><span class="sch-total">246.5</span></td>
+            <td><div class="sch-note">West vs. East. Nick (defending Hawkins Cup namesake, 3x runner-up) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><span class="sch-line">Fortnite Grinder -1.5</span></td>
+            <td><span class="sch-total">251.0</span></td>
+            <td><div class="sch-note">West vs. East. Jojo (2023 champion, record-book king) hosts Jalen (2023 runner-up).</div></td>
           </tr>
           <tr>
             <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
             <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
-            <td><span class="sch-line">Nick's Nitty Team -2.0</span></td>
-            <td><span class="sch-total">241.0</span></td>
-            <td><div class="sch-note">Nick Bowl Part II. Bragging rights plus playoff seeding.</div></td>
+            <td><span class="sch-line">Nick's Nitty Team -3.0</span></td>
+            <td><span class="sch-total">247.5</span></td>
+            <td><div class="sch-note">West vs. East. Nick (steady contender) hosts Nick (president, bounce-back candidate).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Team Lisa -3.0</span></td>
+            <td><span class="sch-total">244.0</span></td>
+            <td><div class="sch-note">West vs. East. Brandon (rookie, three-day suspension on record) hosts Joseph (still finding a team identity).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><span class="sch-line">Josh's Scary Team -2.0</span></td>
+            <td><span class="sch-total">239.5</span></td>
+            <td><div class="sch-note">West vs. East. Drew (rookie replacement manager) hosts Josh (on write-up watch).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 10</h3><span class="sch-week-tag">NFL Week 10</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -2.0</span></td>
+            <td><span class="sch-total">254.0</span></td>
+            <td><div class="sch-note">West vs. East. Nick (steady contender) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><span class="sch-line">Team Dann -3.0</span></td>
+            <td><span class="sch-total">242.0</span></td>
+            <td><div class="sch-note">West vs. East. Ryan (foundation-year manager) hosts Aidan (rookie).</div></td>
           </tr>
           <tr>
             <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
-            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
-            <td><span class="sch-line">Seal Team Nix -3.5</span></td>
-            <td><span class="sch-total">242.0</span></td>
-            <td><div class="sch-note">West rivalry Part II with star power and playoff-seeding pressure.</div></td>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><span class="sch-line">Bourne with Downs -1.0</span></td>
+            <td><span class="sch-total">248.5</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Joseph (still finding a team identity) hosts Jalen (2023 runner-up).</div></td>
           </tr>
           <tr>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><span class="sch-line">Fortnite Grinder -3.5</span></td>
+            <td><span class="sch-total">248.5</span></td>
+            <td><div class="sch-note">West vs. East. Jojo (2023 champion, record-book king) hosts Nick (president, bounce-back candidate).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
             <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
-            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
-            <td><span class="sch-line">Aidan's Astounding Team -1.0</span></td>
-            <td><span class="sch-total">232.0</span></td>
-            <td><div class="sch-note">Rookie Bowl Part II. This could decide Rookie of the Year outright.</div></td>
+            <td><span class="sch-line">Josh's Scary Team -1.0</span></td>
+            <td><span class="sch-total">241.5</span></td>
+            <td><div class="sch-note">West vs. East. Brandon (rookie, three-day suspension on record) hosts Josh (on write-up watch).</div></td>
           </tr>
           <tr>
             <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
             <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
-            <td><span class="sch-line">Curse of Ra -3.5</span></td>
-            <td><span class="sch-total">247.0</span></td>
-            <td><div class="sch-note">Hawkins-Drew Part II closes Rivalry Week with replacement-manager chaos.</div></td>
+            <td><span class="sch-line">Curse of Ra -7.0</span></td>
+            <td><span class="sch-total">246.0</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Drew (rookie replacement manager) hosts Nick (defending Hawkins Cup namesake, 3x runner-up).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 11</h3><span class="sch-week-tag">Secondary Rivalry Week II</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -1.5</span></td>
+            <td><span class="sch-total">255.0</span></td>
+            <td><div class="sch-note">West vs. East. Jojo (2023 champion, record-book king) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><span class="sch-line">Bourne with Downs -3.5</span></td>
+            <td><span class="sch-total">245.0</span></td>
+            <td><div class="sch-note">Beland's pick, straight off the ranking sheet. Peretz gets a second walk-on villain.</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><span class="sch-line">Aidan's Astounding Team -1.0</span></td>
+            <td><span class="sch-total">237.5</span></td>
+            <td><div class="sch-note">East vs. West. Aidan (rookie) hosts Drew (rookie replacement manager).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><span class="sch-line">Team Dann -1.5</span></td>
+            <td><span class="sch-total">244.0</span></td>
+            <td><div class="sch-note">West vs. East. Ryan (foundation-year manager) hosts Josh (on write-up watch).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -1.5</span></td>
+            <td><span class="sch-total">253.0</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Nick (steady contender) hosts Nick (defending Hawkins Cup namesake, 3x runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><span class="sch-line">Team Lisa -1.5</span></td>
+            <td><span class="sch-total">246.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Nick (president, bounce-back candidate) hosts Joseph (still finding a team identity).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 12</h3><span class="sch-week-tag">NFL Week 12</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -6.5</span></td>
+            <td><span class="sch-total">248.5</span></td>
+            <td><div class="sch-note">West vs. East. Brandon (rookie, three-day suspension on record) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><span class="sch-line">Fortnite Grinder -5.5</span></td>
+            <td><span class="sch-total">246.0</span></td>
+            <td><div class="sch-note">West vs. East. Jojo (2023 champion, record-book king) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><span class="sch-line">Bourne with Downs -5.0</span></td>
+            <td><span class="sch-total">243.0</span></td>
+            <td><div class="sch-note">West vs. East. Drew (rookie replacement manager) hosts Jalen (2023 runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><span class="sch-line">Team Dann -1.0</span></td>
+            <td><span class="sch-total">245.0</span></td>
+            <td><div class="sch-note">West vs. East. Ryan (foundation-year manager) hosts Nick (president, bounce-back candidate).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Nick's Nitty Team -1.5</span></td>
+            <td><span class="sch-total">249.5</span></td>
+            <td><div class="sch-note">West vs. East. Nick (steady contender) hosts Joseph (still finding a team identity).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -5.0</span></td>
+            <td><span class="sch-total">248.5</span></td>
+            <td><div class="sch-note">West vs. East. Nick (defending Hawkins Cup namesake, 3x runner-up) hosts Josh (on write-up watch).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 13</h3><span class="sch-week-tag">NFL Week 13</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -7.5</span></td>
+            <td><span class="sch-total">246.5</span></td>
+            <td><div class="sch-note">West vs. East. Drew (rookie replacement manager) hosts Jake (2025 league champion).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Brandon's Brilliant Team -1.0</span></td>
+            <td><span class="sch-total">239.5</span></td>
+            <td><div class="sch-note">West vs. East. Brandon (rookie, three-day suspension on record) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><span class="sch-line">Bourne with Downs -1.5</span></td>
+            <td><span class="sch-total">247.5</span></td>
+            <td><div class="sch-note">West vs. East. Ryan (foundation-year manager) hosts Jalen (2023 runner-up).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -4.0</span></td>
+            <td><span class="sch-total">249.5</span></td>
+            <td><div class="sch-note">West vs. East. Nick (defending Hawkins Cup namesake, 3x runner-up) hosts Nick (president, bounce-back candidate).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><span class="sch-line">Fortnite Grinder -2.0</span></td>
+            <td><span class="sch-total">250.5</span></td>
+            <td><div class="sch-note">West vs. East. Jojo (2023 champion, record-book king) hosts Joseph (still finding a team identity).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Nick's Nitty Team -3.5</span></td>
+            <td><span class="sch-total">246.5</span></td>
+            <td><div class="sch-note">West vs. East. Nick (steady contender) hosts Josh (on write-up watch).</div></td>
+          </tr>
+        </tbody></table>
+      </article>
+      <article class="sch-week">
+        <div class="sch-week-head"><h3>NFL Week 14</h3><span class="sch-week-tag">Rivalry Week III</span></div>
+        <table class="sch-table"><thead><tr><th>Away</th><th>Home</th><th>Line</th><th>O/U</th><th>Storyline</th></tr></thead><tbody>
+          <tr>
+            <td><div class="sch-team"><strong>Team Sanford</strong><span>Drew Sanford · East</span></div></td>
+            <td><div class="sch-team"><strong>Brandon's Brilliant Team</strong><span>Brandon Beland · East</span></div></td>
+            <td><span class="sch-line">Brandon's Brilliant Team -1.5</span></td>
+            <td><span class="sch-total">238.5</span></td>
+            <td><div class="sch-note">Same-division tilt (East). Brandon (rookie, three-day suspension on record) hosts Drew (rookie replacement manager).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Seal Team Nix</strong><span>Jake Joyce · West</span></div></td>
+            <td><div class="sch-team"><strong>Bourne with Downs</strong><span>Jalen Peretz · West</span></div></td>
+            <td><span class="sch-line">Seal Team Nix -3.0</span></td>
+            <td><span class="sch-total">253.0</span></td>
+            <td><div class="sch-note">Defending champ vs. 2023 runner-up. Peretz still owes the league a title-game comeback.</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Aidan's Astounding Team</strong><span>Aidan Goss · West</span></div></td>
+            <td><div class="sch-team"><strong>Nick's Nitty Team</strong><span>Nick Furnari · East</span></div></td>
+            <td><span class="sch-line">Nick's Nitty Team -5.0</span></td>
+            <td><span class="sch-total">245.0</span></td>
+            <td><div class="sch-note">West vs. East. Nick (steady contender) hosts Aidan (rookie).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Fortnite Grinder</strong><span>Jojo Guarnaccia · East</span></div></td>
+            <td><div class="sch-team"><strong>Curse of Ra</strong><span>Nick Hawkins · East</span></div></td>
+            <td><span class="sch-line">Curse of Ra -1.0</span></td>
+            <td><span class="sch-total">254.0</span></td>
+            <td><div class="sch-note">2023 champ vs. the runner-up curse. This one has playoff residue every single year.</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Josh's Scary Team</strong><span>Josh Sweeney · West</span></div></td>
+            <td><div class="sch-team"><strong>Drake London and Friends</strong><span>Nick Carullo · West</span></div></td>
+            <td><span class="sch-line">Drake London and Friends -1.0</span></td>
+            <td><span class="sch-total">243.0</span></td>
+            <td><div class="sch-note">Same-division tilt (West). Nick (president, bounce-back candidate) hosts Josh (on write-up watch).</div></td>
+          </tr>
+          <tr>
+            <td><div class="sch-team"><strong>Team Dann</strong><span>Ryan Dann · East</span></div></td>
+            <td><div class="sch-team"><strong>Team Lisa</strong><span>Joseph Lisa · West</span></div></td>
+            <td><span class="sch-line">Team Lisa -1.0</span></td>
+            <td><span class="sch-total">246.5</span></td>
+            <td><div class="sch-note">Two managers still chasing a real identity, fighting over who finds it first.</div></td>
           </tr>
         </tbody></table>
       </article>
     </div>
   </section>
-
   <section class="panel" id="panel-odds" role="tabpanel">
     <div class="panel-kicker">08 &middot; Odds</div>
     <h1>Draft Book</h1>
@@ -2267,9 +2272,9 @@ table.sch-table tr:last-child td{border-bottom:none}
     <div class="sch-hero">
       <div class="road-title" style="margin-bottom:1rem">2026 Futures Board &middot; Big 12 Sportsbook</div>
       <div class="sch-mini-grid">
-        <div class="sch-mini"><b>+450</b><span>Favorite to Win Title &middot; Jojo Guarnaccia</span></div>
+        <div class="sch-mini"><b>+500</b><span>Co-Favorites to Win Title &middot; Jojo Guarnaccia / Jake Joyce</span></div>
         <div class="sch-mini"><b>+850</b><span>Best Cup Value &middot; Jalen Peretz</span></div>
-        <div class="sch-mini"><b>9.5</b><span>Highest Win Total &middot; Jojo Guarnaccia</span></div>
+        <div class="sch-mini"><b>7.0</b><span>Win Total &middot; Every Manager</span></div>
         <div class="sch-mini"><b>Joyce / Jojo</b><span>Division Favorites &middot; West / East</span></div>
       </div>
     </div>
@@ -2328,38 +2333,38 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="odds-card2 gold">
         <div class="odds-card2-title"><h3>Championship Odds</h3><span>Win the $1,500 chip game</span></div>
         <table class="odds-table2"><tbody>
-          <tr><td><div class="odds-manager2">Jojo Guarnaccia</div><div class="odds-team2">Fortnite Grinder</div></td><td class="r"><span class="odds-num2">+450</span></td><td>Best record + 2023 champ, but semifinal scar tissue.</td></tr>
-          <tr><td><div class="odds-manager2">Jake Joyce</div><div class="odds-team2">Seal Team Nix</div></td><td class="r"><span class="odds-num2">+550</span></td><td>Defending champion tax and Gibbs-related volatility.</td></tr>
-          <tr><td><div class="odds-manager2">Nick Hawkins</div><div class="odds-team2">Curse of Ra</div></td><td class="r"><span class="odds-num2">+650</span></td><td>Three-time recorded runner-up and dangerous in brackets.</td></tr>
-          <tr><td><div class="odds-manager2">Nick Furnari</div><div class="odds-team2">Nick&rsquo;s Nitty Team</div></td><td class="r"><span class="odds-num2">+750</span></td><td>Consistent contender, still needs title-game proof.</td></tr>
-          <tr><td><div class="odds-manager2">Josh Sweeney</div><div class="odds-team2">Josh&rsquo;s Scary Team</div></td><td class="r"><span class="odds-num2">+900</span></td><td>Strong scoring profile with breakthrough upside.</td></tr>
-          <tr><td><div class="odds-manager2">Nick Carullo</div><div class="odds-team2">Drake London and Friends</div></td><td class="r"><span class="odds-num2">+1100</span></td><td>President, trade spammer, and always capable of chaos.</td></tr>
-          <tr><td><div class="odds-manager2">Jalen Peretz</div><div class="odds-team2">Bourne with Downs</div></td><td class="r"><span class="odds-num2">+1200</span></td><td>High-ceiling scoring profile and 2023 runner-up history.</td></tr>
-          <tr><td><div class="odds-manager2">Brandon Beland</div><div class="odds-team2">Brandon&rsquo;s Brilliant Team</div></td><td class="r"><span class="odds-num2">+1800</span></td><td>Rookie unknown with instant chaos potential.</td></tr>
-          <tr><td><div class="odds-manager2">Aidan Goss</div><div class="odds-team2">Aidan&rsquo;s Astounding Team</div></td><td class="r"><span class="odds-num2">+1800</span></td><td>Rookie unknown, no scars yet, no excuses either.</td></tr>
-          <tr><td><div class="odds-manager2">Joseph Lisa</div><div class="odds-team2">Team Lisa</div></td><td class="r"><span class="odds-num2">+2200</span></td><td>Needs a statement season before the market believes.</td></tr>
-          <tr><td><div class="odds-manager2">Drew Sanford</div><div class="odds-team2">Team Sanford</div></td><td class="r"><span class="odds-num2">+2200</span></td><td>Replacement manager tax: unknown draft style, unknown ceiling, no past Big 12 sample.</td></tr>
-          <tr><td><div class="odds-manager2">Ryan Dann</div><div class="odds-team2">Team Dann</div></td><td class="r"><span class="odds-num2">+2500</span></td><td>Needs the draft plan to survive past September.</td></tr>
+          <tr><td><div class="odds-manager2">Jojo Guarnaccia</div><div class="odds-team2">Fortnite Grinder</div></td><td class="r"><span class="odds-num2">+500</span></td><td>Best record + 2023 champ, but semifinal scar tissue.</td></tr>
+          <tr><td><div class="odds-manager2">Jake Joyce</div><div class="odds-team2">Seal Team Nix</div></td><td class="r"><span class="odds-num2">+500</span></td><td>Defending champion tax and Gibbs-related volatility.</td></tr>
+          <tr><td><div class="odds-manager2">Nick Hawkins</div><div class="odds-team2">Curse of Ra</div></td><td class="r"><span class="odds-num2">+600</span></td><td>Three-time recorded runner-up and dangerous in brackets.</td></tr>
+          <tr><td><div class="odds-manager2">Jalen Peretz</div><div class="odds-team2">Bourne with Downs</div></td><td class="r"><span class="odds-num2">+650</span></td><td>High-ceiling scoring profile and 2023 runner-up history.</td></tr>
+          <tr><td><div class="odds-manager2">Nick Carullo</div><div class="odds-team2">Drake London and Friends</div></td><td class="r"><span class="odds-num2">+800</span></td><td>President, trade spammer, and always capable of chaos.</td></tr>
+          <tr><td><div class="odds-manager2">Joseph Lisa</div><div class="odds-team2">Team Lisa</div></td><td class="r"><span class="odds-num2">+800</span></td><td>Needs a statement season before the market believes.</td></tr>
+          <tr><td><div class="odds-manager2">Brandon Beland</div><div class="odds-team2">Brandon&rsquo;s Brilliant Team</div></td><td class="r"><span class="odds-num2">+900</span></td><td>Rookie unknown with instant chaos potential.</td></tr>
+          <tr><td><div class="odds-manager2">Aidan Goss</div><div class="odds-team2">Aidan&rsquo;s Astounding Team</div></td><td class="r"><span class="odds-num2">+900</span></td><td>Rookie unknown, no scars yet, no excuses either.</td></tr>
+          <tr><td><div class="odds-manager2">Nick Furnari</div><div class="odds-team2">Nick&rsquo;s Nitty Team</div></td><td class="r"><span class="odds-num2">+1000</span></td><td>Consistent contender, still needs title-game proof.</td></tr>
+          <tr><td><div class="odds-manager2">Josh Sweeney</div><div class="odds-team2">Josh&rsquo;s Scary Team</div></td><td class="r"><span class="odds-num2">+1000</span></td><td>Strong scoring profile with breakthrough upside.</td></tr>
+          <tr><td><div class="odds-manager2">Ryan Dann</div><div class="odds-team2">Team Dann</div></td><td class="r"><span class="odds-num2">+1000</span></td><td>Needs the draft plan to survive past September.</td></tr>
+          <tr><td><div class="odds-manager2">Drew Sanford</div><div class="odds-team2">Team Sanford</div></td><td class="r"><span class="odds-num2">+1100</span></td><td>Replacement manager tax: unknown draft style, unknown ceiling, no past Big 12 sample.</td></tr>
         </tbody></table>
       </div>
 
       <div class="odds-card2">
-        <div class="odds-card2-title"><h3>Win Totals</h3><span>14-game regular season</span></div>
+        <div class="odds-card2-title"><h3>Win Totals</h3><span>Flat 7.0 line &middot; every manager</span></div>
         <table class="odds-table2"><tbody>
-          <tr><td><div class="odds-manager2">Jojo Guarnaccia</div><div class="odds-team2">Fortnite Grinder</div></td><td class="r"><span class="odds-total2">9.5</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Jake Joyce</div><div class="odds-team2">Seal Team Nix</div></td><td class="r"><span class="odds-total2">8.5</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Nick Hawkins</div><div class="odds-team2">Curse of Ra</div></td><td class="r"><span class="odds-total2">8.5</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Nick Furnari</div><div class="odds-team2">Nick&rsquo;s Nitty Team</div></td><td class="r"><span class="odds-total2">8.0</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Josh Sweeney</div><div class="odds-team2">Josh&rsquo;s Scary Team</div></td><td class="r"><span class="odds-total2">8.0</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Nick Carullo</div><div class="odds-team2">Drake London and Friends</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Jalen Peretz</div><div class="odds-team2">Bourne with Downs</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Drew Sanford</div><div class="odds-team2">Team Sanford</div></td><td class="r"><span class="odds-total2">5.5</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Brandon Beland</div><div class="odds-team2">Brandon&rsquo;s Brilliant Team</div></td><td class="r"><span class="odds-total2">5.5</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Aidan Goss</div><div class="odds-team2">Aidan&rsquo;s Astounding Team</div></td><td class="r"><span class="odds-total2">5.5</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Joseph Lisa</div><div class="odds-team2">Team Lisa</div></td><td class="r"><span class="odds-total2">5.5</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
-          <tr><td><div class="odds-manager2">Ryan Dann</div><div class="odds-team2">Team Dann</div></td><td class="r"><span class="odds-total2">5.0</span></td><td class="r"><span class="odds-pill2">O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Jojo Guarnaccia</div><div class="odds-team2">Fortnite Grinder</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Jake Joyce</div><div class="odds-team2">Seal Team Nix</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Nick Hawkins</div><div class="odds-team2">Curse of Ra</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Nick Furnari</div><div class="odds-team2">Nick&rsquo;s Nitty Team</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Josh Sweeney</div><div class="odds-team2">Josh&rsquo;s Scary Team</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Nick Carullo</div><div class="odds-team2">Drake London and Friends</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Jalen Peretz</div><div class="odds-team2">Bourne with Downs</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Drew Sanford</div><div class="odds-team2">Team Sanford</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Brandon Beland</div><div class="odds-team2">Brandon&rsquo;s Brilliant Team</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Aidan Goss</div><div class="odds-team2">Aidan&rsquo;s Astounding Team</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Joseph Lisa</div><div class="odds-team2">Team Lisa</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
+          <tr><td><div class="odds-manager2">Ryan Dann</div><div class="odds-team2">Team Dann</div></td><td class="r"><span class="odds-total2">7.0</span></td><td class="r"><span class="odds-pill2">-120 O/U</span></td></tr>
         </tbody></table>
-        <div class="odds-note2"><strong style="color:var(--ink)">Book rule:</strong> win totals are regular season only. Pushes are possible on whole-number totals.</div>
+        <div class="odds-note2"><strong style="color:var(--ink)">Book rule:</strong> every manager gets the same 7.0 win-total line, regular season only. Straight bets are -120 with 7 wins graded a push. Parlay this market across legs: 2-leg parlays pay +200, 3-leg parlays pay +350. Wager tiers: $5 / $10 / $15 / $20.</div>
       </div>
 
       <div class="odds-card2">
@@ -2440,13 +2445,13 @@ table.sch-table tr:last-child td{border-bottom:none}
       </div>
 
       <div class="odds-card2">
-        <div class="odds-card2-title"><h3>Rookie of the Year Race</h3><span>2026 new-manager award</span></div>
+        <div class="odds-card2-title"><h3>Rookie of the Year Race</h3><span>Reg. season record, PF as tiebreak</span></div>
         <table class="odds-table2"><tbody>
-          <tr><td><div class="odds-manager2">Aidan Goss</div><div class="odds-team2">Aidan&rsquo;s Astounding Team</div></td><td class="r"><span class="odds-num2">+100</span></td><td>Cleanest rookie board right now; Week 3 and Week 14 Brandon games matter.</td></tr>
-          <tr><td><div class="odds-manager2">Brandon Beland</div><div class="odds-team2">Brandon&rsquo;s Brilliant Team</div></td><td class="r"><span class="odds-num2">+100</span></td><td>Can still win it on record or points, but the three-day suspension adds noise.</td></tr>
-          <tr><td><div class="odds-manager2">Drew Sanford</div><div class="odds-team2">Team Sanford</div></td><td class="r"><span class="odds-num2">+100</span></td><td>Replacement manager path: beat expectations and make the inherited East slot matter.</td></tr>
+          <tr><td><div class="odds-manager2">Brandon Beland</div><div class="odds-team2">Brandon&rsquo;s Brilliant Team</div></td><td class="r"><span class="odds-num2">-110</span></td><td>Favorite despite the three-day suspension noise.</td></tr>
+          <tr><td><div class="odds-manager2">Aidan Goss</div><div class="odds-team2">Aidan&rsquo;s Astounding Team</div></td><td class="r"><span class="odds-num2">+120</span></td><td>Right behind Beland on the current rookie board.</td></tr>
+          <tr><td><div class="odds-manager2">Drew Sanford</div><div class="odds-team2">Team Sanford</div></td><td class="r"><span class="odds-num2">+230</span></td><td>Replacement manager path: beat expectations and make the inherited East slot matter.</td></tr>
         </tbody></table>
-        <div class="odds-note2"><strong style="color:var(--ink)">ROY tiebreakers:</strong> playoff berth, wins, points for, then head-to-head. Discipline does not automatically disqualify a manager, but it affects narrative odds.</div>
+        <div class="odds-note2"><strong style="color:var(--ink)">ROY tiebreakers:</strong> regular-season record first, points for as the tiebreaker if needed. Straight bets -120 elsewhere on the board; these are posted lines.</div>
       </div>
 
       <div class="odds-card2 gold">
@@ -2611,6 +2616,7 @@ table.sch-table tr:last-child td{border-bottom:none}
         <button class="ss-nav-btn" data-ss-screen="cup">Hawkins Cup</button>
         <button class="ss-nav-btn" data-ss-screen="playoffs">Playoffs</button>
         <button class="ss-nav-btn" data-ss-screen="awards">Awards</button>
+        <button class="ss-nav-btn" data-ss-screen="rosters">Rosters</button>
         <div class="ss-nav-spacer"></div>
         <button class="dr-btn" id="ssSaveExitBtn" title="Save your spot and come back later">Save &amp; Exit</button>
         <button class="dr-btn" id="ssRestartSeasonBtn" title="Start this season over with a new random seed, same rosters">Restart Season</button>
@@ -2649,6 +2655,8 @@ table.sch-table tr:last-child td{border-bottom:none}
             <select class="dr-select" id="ssSpeedSelectLive"></select>
             <button class="dr-btn" id="ssRevealBtn">Reveal Next Window</button>
             <button class="dr-btn" id="ssSkipBtn">Skip to Final</button>
+            <button class="dr-btn" id="ssSimPlayoffsBtn" title="Skip straight to the start of the playoffs">Sim to Playoffs</button>
+            <button class="dr-btn" id="ssSimEndBtn" title="Skip straight to the final season results">Sim to End</button>
           </div>
         </div>
 
@@ -2701,6 +2709,21 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="ss-screen" id="ssAwardsScreen">
         <div class="dr-card"><div class="dr-card-title">Awards Races</div><div id="ssAwardsBody"></div></div>
       </div>
+      <div class="ss-screen" id="ssRostersScreen">
+        <div class="dr-card">
+          <div class="dr-card-title">Team Rosters<select class="dr-select" id="ssRosterTeamSelect"></select></div>
+          <div id="ssRosterBody"></div>
+        </div>
+        <div class="dr-card" style="margin-top:1.25rem">
+          <div class="dr-card-title">Player Game Log
+            <span style="display:flex;gap:.5rem;align-items:center">
+              <select class="dr-select" id="ssRosterPlayerSelect"></select>
+              <button class="dr-btn" id="ssRosterViewLogBtn">View Log</button>
+            </span>
+          </div>
+          <div id="ssRosterLogBody"><p class="sec-lede">Pick a player above and click View Log to see their week-by-week results and season PPG.</p></div>
+        </div>
+      </div>
 
       <!-- ---- End of season ---- -->
       <div class="ss-screen" id="ssEnd">
@@ -2717,7 +2740,7 @@ table.sch-table tr:last-child td{border-bottom:none}
     <p class="sec-lede">Starting lineup requirements, prize distribution, the season calendar, and how the playoff field and draft order come together.</p>
 
     <div class="road-title">2026 Division Announcements &middot; West vs. East</div>
-    <p class="sec-lede" style="margin-bottom:1.5rem">The 2026 regular-season schedule uses these divisions for the repeated Week 1&ndash;3 / Week 12&ndash;14 opponents.</p>
+    <p class="sec-lede" style="margin-bottom:1.5rem">Divisions set the Hawkins Cup byes and playoff seeding. Weeks 1, 8, and 14 repeat the six master-list rivalries, and Weeks 5 and 11 repeat a second, manager-picked set of secondary rivalries. Every other opponent is played once, filling out a 14-game slate before the Week 15 playoff cut.</p>
     <div class="division-board">
       <div class="division-card west">
         <div class="division-title"><strong>West Division</strong><span>2026</span></div>
@@ -2781,23 +2804,23 @@ table.sch-table tr:last-child td{border-bottom:none}
   <section class="panel" id="panel-rules" role="tabpanel">
     <div class="panel-kicker">11 &middot; Handbook</div>
     <h1>Handbook</h1>
-    <p class="sec-lede">Community standards, cheating, eligibility, and checks &amp; balances &mdash; the numbered codes of conduct that govern the league.</p>
+    <p class="sec-lede">Community standards, cheating, eligibility, checks &amp; balances, and league format &mdash; the numbered codes of conduct that govern the league.</p>
 
     <div class="rtabs" role="tablist">
       <button class="rtab on" data-rtab="rc">&sect;1 Community</button>
       <button class="rtab" data-rtab="rh">&sect;2 Cheating</button>
       <button class="rtab" data-rtab="re">&sect;3 Eligibility</button>
       <button class="rtab" data-rtab="rb">&sect;4 Checks &amp; Balances</button>
+      <button class="rtab" data-rtab="rf">&sect;5 Format</button>
     </div>
 
     <div class="rpanel on" id="rc">
       <div class="rgrid">
         <div class="rc"><div class="rcc">Code 1 &middot; Participation</div><div class="rcb">All members must be <strong>active participants</strong> in league groupchat(s).</div></div>
         <div class="rc"><div class="rcc">Code 2 &middot; Trash Talk</div><div class="rcb">Permitted if <strong>appropriate and harmless</strong>. Harmful comments reviewed for disciplinary action.</div></div>
-        <div class="rc"><div class="rcc">Code 3 &middot; Injury Exploitation</div><div class="rcb">Exploiting a leaguemate&rsquo;s lack of knowledge of a <strong>player&rsquo;s injury during a trade</strong> is a fairness violation; can be overruled by lead council.</div><div class="rcp">Penalty &rarr; Trade overruled by lead council</div></div>
-        <div class="rc"><div class="rcc">Code 4 &middot; Third-Party Influence</div><div class="rcb">While in trade discussions, <strong>no third-party source</strong> may influence either side based on personal preferences.</div><div class="rcp">Penalty &rarr; Waiver wire privileges revoked</div></div>
-        <div class="rc"><div class="rcc">Code 5 &middot; Favoritism</div><div class="rcb">No league mate or council member shall show <strong>favoritism</strong> to any other member.</div><div class="rcp">Penalty &rarr; Demotion and/or probation</div></div>
-        <div class="rc"><div class="rcc">Code 6 &middot; Trade Finality</div><div class="rcb">All trades are <strong>final</strong>. Only overruled if proven coercion to detriment of game integrity. <strong>No vetoes.</strong></div></div>
+        <div class="rc"><div class="rcc">Code 3 &middot; Third-Party Influence</div><div class="rcb">While in trade discussions, <strong>no third-party source</strong> may influence either side based on personal preferences.</div><div class="rcp">Penalty &rarr; Waiver wire privileges revoked</div></div>
+        <div class="rc"><div class="rcc">Code 4 &middot; Favoritism</div><div class="rcb">No league mate or council member shall show <strong>favoritism</strong> to any other member.</div><div class="rcp">Penalty &rarr; Demotion and/or probation</div></div>
+        <div class="rc"><div class="rcc">Code 5 &middot; Trade Finality</div><div class="rcb">All trades are <strong>final</strong>. Only overruled if proven coercion to detriment of game integrity. <strong>No vetoes.</strong></div></div>
       </div>
     </div>
 
@@ -2831,10 +2854,27 @@ table.sch-table tr:last-child td{border-bottom:none}
         <div class="rc"><div class="rcc">Code 5 &middot; Discipline</div><div class="rcb">The <strong>Head of Internal Affairs</strong> handles discipline referred by the Supervisor. All actions require Presidential review before enforcement.</div></div>
         <div class="rc"><div class="rcc">Code 6 &middot; Impeachment</div><div class="rcb">President can only be impeached after <strong>proven violation</strong> + <strong>unanimous 11-member vote</strong>.</div><div class="rcp">Requires: Proven violation + 11/11 vote</div></div>
         <div class="rc"><div class="rcc">Code 7 &middot; Council Removal</div><div class="rcb">Council member removed only if <strong>President + 8 members (75%)</strong> vote in favor.</div><div class="rcp">Requires: President + 8 members</div></div>
+        <div class="rc"><div class="rcc">Code 8 &middot; Groupchat Jurisdiction</div><div class="rcb">No member outside <strong>lead council</strong> has authority to control other members&rsquo; participation in league groupchats or the email chain.</div></div>
+        <div class="rc"><div class="rcc">Code 9 &middot; Write-Ups</div><div class="rcb">Lead Council can issue a <strong>&ldquo;write up&rdquo;</strong> for violating a handbook clause. Saved on file; the violated clause must be cited in the write-up.</div></div>
+        <div class="rc"><div class="rcc">Code 10 &middot; Escalating Discipline</div><div class="rcb">Numerous write-ups let Lead Council impose <strong>suspension, loss of waiver wire, or termination</strong>. No fines unless the violation is a financial detriment to the league &mdash; any fines collected go directly to the pot.</div></div>
+        <div class="rc"><div class="rcc">Code 11 &middot; First-Offense Override</div><div class="rcb">Even with <strong>no prior write-ups</strong>, if an offense is substantial the league can vote to impose real discipline instead of just a warning.</div></div>
       </div>
     </div>
 
-    <div class="handbook-note">Permanent ruling &mdash; cannot be changed without unanimous lead council agreement. Current lead council: Nick Carullo (President) &middot; Jake Joyce (CEO / Head of Internal Affairs) &middot; Nick Hawkins (League Supervisor). Jojo Guarnaccia stepped down from the Supervisor position. Original handbook ratified 23 April 2026 &middot; leadership roster updated 19 July 2026.</div>
+    <div class="rpanel" id="rf">
+      <div class="rgrid">
+        <div class="rc"><div class="rcc">Code 1 &middot; Scoring</div><div class="rcb">League scoring is <strong>full PPR</strong>.</div></div>
+        <div class="rc"><div class="rcc">Code 2 &middot; Draft</div><div class="rcb">12-team <strong>snake draft</strong>; order randomized <strong>60 minutes before</strong> draft start. Date/time set by unanimous vote and, once set, is final.</div></div>
+        <div class="rc"><div class="rcc">Code 3 &middot; Starting Lineup</div><div class="rcb"><strong>1 QB &middot; 2 RB &middot; 2 WR &middot; 1 TE &middot; 1 FLEX</strong> (RB/WR/TE) <strong>&middot; 1 K &middot; 1 DEF</strong>.</div></div>
+        <div class="rc"><div class="rcc">Code 4 &middot; Playoffs</div><div class="rcb"><strong>6 teams</strong> advance. Each division&rsquo;s #1 seed gets a <strong>bye</strong>; the remaining four spots go by record, regardless of division.</div></div>
+        <div class="rc"><div class="rcc">Code 5 &middot; Prize Distribution</div><div class="rcb">Most PF <strong>($150)</strong> &middot; Runner-up <strong>($150)</strong> &middot; Hawkins Cup Winner <strong>($300)</strong> &middot; Champion <strong>($1,500)</strong>.</div></div>
+        <div class="rc"><div class="rcc">Code 6 &middot; Championship Payout Flexibility</div><div class="rcb">The two championship-game teams may <strong>mutually agree</strong> to alter distribution of the remaining <strong>$1,650</strong>, subject to review and approval by the President.</div></div>
+        <div class="rc"><div class="rcc">Code 7 &middot; Season Calendar</div><div class="rcb">Regular season runs <strong>Weeks 1&ndash;14</strong>. Surviving teams play on into <strong>Weeks 15, 16, and 17</strong> (championship).</div></div>
+        <div class="rc"><div class="rcc">Code 8 &middot; Side Bets</div><div class="rcb">Side bets on matchups are <strong>allowed and encouraged</strong>. Agreement in the league groupchat is binding; if the loser doesn&rsquo;t pay in full before their next matchup starts, Lead Council may discipline them.</div></div>
+      </div>
+    </div>
+
+    <div class="handbook-note">Permanent ruling &mdash; cannot be changed without unanimous lead council agreement. Current lead council: Nick Carullo (President) &middot; Jake Joyce (CEO / Head of Internal Affairs) &middot; Nick Hawkins (League Supervisor). Jojo Guarnaccia stepped down from the Supervisor position. Original handbook ratified 23 April 2026 (v6) &middot; leadership roster updated 19 July 2026.</div>
   </section>
 
   <section class="panel" id="panel-council" role="tabpanel">
@@ -14388,28 +14428,28 @@ const FANTASY_SCHEDULE = [
   "week": 1,
   "games": [
    {
-    "away": "goss",
-    "home": "lisa"
+    "away": "sanford",
+    "home": "beland"
    },
    {
-    "away": "sweeney",
-    "home": "dann"
-   },
-   {
-    "away": "beland",
+    "away": "joyce",
     "home": "peretz"
    },
    {
-    "away": "sanford",
+    "away": "goss",
+    "home": "furnari"
+   },
+   {
+    "away": "guarnaccia",
+    "home": "hawkins"
+   },
+   {
+    "away": "sweeney",
     "home": "carullo"
    },
    {
-    "away": "hawkins",
-    "home": "joyce"
-   },
-   {
-    "away": "furnari",
-    "home": "guarnaccia"
+    "away": "dann",
+    "home": "lisa"
    }
   ]
  },
@@ -14417,24 +14457,24 @@ const FANTASY_SCHEDULE = [
   "week": 2,
   "games": [
    {
-    "away": "goss",
-    "home": "hawkins"
-   },
-   {
-    "away": "beland",
-    "home": "guarnaccia"
-   },
-   {
-    "away": "carullo",
-    "home": "peretz"
-   },
-   {
     "away": "joyce",
-    "home": "dann"
+    "home": "goss"
+   },
+   {
+    "away": "peretz",
+    "home": "carullo"
    },
    {
     "away": "lisa",
     "home": "sweeney"
+   },
+   {
+    "away": "hawkins",
+    "home": "dann"
+   },
+   {
+    "away": "guarnaccia",
+    "home": "beland"
    },
    {
     "away": "furnari",
@@ -14446,28 +14486,28 @@ const FANTASY_SCHEDULE = [
   "week": 3,
   "games": [
    {
-    "away": "dann",
-    "home": "lisa"
-   },
-   {
-    "away": "guarnaccia",
-    "home": "sweeney"
-   },
-   {
-    "away": "furnari",
+    "away": "joyce",
     "home": "carullo"
    },
    {
-    "away": "joyce",
+    "away": "goss",
     "home": "peretz"
    },
    {
-    "away": "goss",
-    "home": "beland"
+    "away": "lisa",
+    "home": "hawkins"
    },
    {
-    "away": "sanford",
-    "home": "hawkins"
+    "away": "sweeney",
+    "home": "guarnaccia"
+   },
+   {
+    "away": "dann",
+    "home": "sanford"
+   },
+   {
+    "away": "furnari",
+    "home": "beland"
    }
   ]
  },
@@ -14475,28 +14515,28 @@ const FANTASY_SCHEDULE = [
   "week": 4,
   "games": [
    {
-    "away": "sweeney",
-    "home": "carullo"
-   },
-   {
-    "away": "sanford",
+    "away": "joyce",
     "home": "lisa"
    },
    {
-    "away": "furnari",
-    "home": "hawkins"
-   },
-   {
-    "away": "guarnaccia",
-    "home": "goss"
+    "away": "goss",
+    "home": "carullo"
    },
    {
     "away": "peretz",
-    "home": "dann"
+    "home": "sweeney"
    },
    {
-    "away": "beland",
-    "home": "joyce"
+    "away": "hawkins",
+    "home": "beland"
+   },
+   {
+    "away": "dann",
+    "home": "furnari"
+   },
+   {
+    "away": "guarnaccia",
+    "home": "sanford"
    }
   ]
  },
@@ -14504,28 +14544,28 @@ const FANTASY_SCHEDULE = [
   "week": 5,
   "games": [
    {
-    "away": "guarnaccia",
-    "home": "joyce"
+    "away": "joyce",
+    "home": "guarnaccia"
    },
    {
-    "away": "dann",
-    "home": "sanford"
+    "away": "beland",
+    "home": "peretz"
    },
    {
-    "away": "carullo",
-    "home": "lisa"
-   },
-   {
-    "away": "furnari",
+    "away": "sanford",
     "home": "goss"
    },
    {
     "away": "sweeney",
-    "home": "peretz"
+    "home": "dann"
    },
    {
     "away": "hawkins",
-    "home": "beland"
+    "home": "furnari"
+   },
+   {
+    "away": "lisa",
+    "home": "carullo"
    }
   ]
  },
@@ -14533,28 +14573,28 @@ const FANTASY_SCHEDULE = [
   "week": 6,
   "games": [
    {
-    "away": "lisa",
-    "home": "guarnaccia"
+    "away": "joyce",
+    "home": "sweeney"
    },
    {
-    "away": "furnari",
-    "home": "dann"
+    "away": "goss",
+    "home": "lisa"
    },
    {
     "away": "peretz",
-    "home": "sanford"
-   },
-   {
-    "away": "beland",
-    "home": "carullo"
-   },
-   {
-    "away": "sweeney",
     "home": "hawkins"
    },
    {
-    "away": "joyce",
-    "home": "goss"
+    "away": "carullo",
+    "home": "sanford"
+   },
+   {
+    "away": "dann",
+    "home": "beland"
+   },
+   {
+    "away": "guarnaccia",
+    "home": "furnari"
    }
   ]
  },
@@ -14562,28 +14602,28 @@ const FANTASY_SCHEDULE = [
   "week": 7,
   "games": [
    {
-    "away": "sanford",
-    "home": "beland"
-   },
-   {
-    "away": "sweeney",
-    "home": "goss"
-   },
-   {
     "away": "joyce",
-    "home": "furnari"
+    "home": "hawkins"
    },
    {
-    "away": "hawkins",
-    "home": "guarnaccia"
+    "away": "goss",
+    "home": "sweeney"
    },
    {
     "away": "peretz",
-    "home": "lisa"
+    "home": "furnari"
    },
    {
     "away": "carullo",
-    "home": "dann"
+    "home": "beland"
+   },
+   {
+    "away": "lisa",
+    "home": "sanford"
+   },
+   {
+    "away": "dann",
+    "home": "guarnaccia"
    }
   ]
  },
@@ -14591,28 +14631,28 @@ const FANTASY_SCHEDULE = [
   "week": 8,
   "games": [
    {
-    "away": "furnari",
+    "away": "sanford",
     "home": "beland"
    },
    {
-    "away": "guarnaccia",
+    "away": "joyce",
     "home": "peretz"
    },
    {
-    "away": "joyce",
-    "home": "lisa"
+    "away": "goss",
+    "home": "furnari"
    },
    {
-    "away": "sanford",
-    "home": "sweeney"
-   },
-   {
-    "away": "dann",
+    "away": "guarnaccia",
     "home": "hawkins"
    },
    {
-    "away": "carullo",
-    "home": "goss"
+    "away": "sweeney",
+    "home": "carullo"
+   },
+   {
+    "away": "dann",
+    "home": "lisa"
    }
   ]
  },
@@ -14620,28 +14660,28 @@ const FANTASY_SCHEDULE = [
   "week": 9,
   "games": [
    {
-    "away": "guarnaccia",
-    "home": "sanford"
+    "away": "joyce",
+    "home": "dann"
    },
    {
-    "away": "dann",
-    "home": "beland"
-   },
-   {
-    "away": "lisa",
-    "home": "furnari"
-   },
-   {
-    "away": "sweeney",
-    "home": "joyce"
-   },
-   {
-    "away": "carullo",
+    "away": "goss",
     "home": "hawkins"
    },
    {
     "away": "peretz",
-    "home": "goss"
+    "home": "guarnaccia"
+   },
+   {
+    "away": "carullo",
+    "home": "furnari"
+   },
+   {
+    "away": "lisa",
+    "home": "beland"
+   },
+   {
+    "away": "sweeney",
+    "home": "sanford"
    }
   ]
  },
@@ -14650,27 +14690,27 @@ const FANTASY_SCHEDULE = [
   "games": [
    {
     "away": "joyce",
-    "home": "carullo"
+    "home": "furnari"
    },
    {
-    "away": "guarnaccia",
+    "away": "goss",
     "home": "dann"
    },
    {
-    "away": "sanford",
-    "home": "goss"
-   },
-   {
-    "away": "lisa",
-    "home": "beland"
-   },
-   {
     "away": "peretz",
-    "home": "hawkins"
+    "home": "lisa"
+   },
+   {
+    "away": "carullo",
+    "home": "guarnaccia"
    },
    {
     "away": "sweeney",
-    "home": "furnari"
+    "home": "beland"
+   },
+   {
+    "away": "hawkins",
+    "home": "sanford"
    }
   ]
  },
@@ -14678,28 +14718,28 @@ const FANTASY_SCHEDULE = [
   "week": 11,
   "games": [
    {
-    "away": "guarnaccia",
-    "home": "carullo"
+    "away": "joyce",
+    "home": "guarnaccia"
    },
    {
-    "away": "sweeney",
-    "home": "beland"
+    "away": "beland",
+    "home": "peretz"
    },
    {
     "away": "sanford",
-    "home": "joyce"
+    "home": "goss"
    },
    {
-    "away": "lisa",
-    "home": "hawkins"
-   },
-   {
-    "away": "goss",
+    "away": "sweeney",
     "home": "dann"
    },
    {
-    "away": "peretz",
+    "away": "hawkins",
     "home": "furnari"
+   },
+   {
+    "away": "lisa",
+    "home": "carullo"
    }
   ]
  },
@@ -14707,28 +14747,28 @@ const FANTASY_SCHEDULE = [
   "week": 12,
   "games": [
    {
-    "away": "hawkins",
-    "home": "furnari"
-   },
-   {
-    "away": "sanford",
-    "home": "lisa"
-   },
-   {
-    "away": "beland",
-    "home": "joyce"
-   },
-   {
-    "away": "sweeney",
-    "home": "carullo"
-   },
-   {
-    "away": "dann",
-    "home": "peretz"
+    "away": "joyce",
+    "home": "beland"
    },
    {
     "away": "goss",
     "home": "guarnaccia"
+   },
+   {
+    "away": "peretz",
+    "home": "sanford"
+   },
+   {
+    "away": "carullo",
+    "home": "dann"
+   },
+   {
+    "away": "lisa",
+    "home": "furnari"
+   },
+   {
+    "away": "sweeney",
+    "home": "hawkins"
    }
   ]
  },
@@ -14736,27 +14776,27 @@ const FANTASY_SCHEDULE = [
   "week": 13,
   "games": [
    {
-    "away": "guarnaccia",
-    "home": "joyce"
-   },
-   {
-    "away": "sweeney",
-    "home": "dann"
-   },
-   {
-    "away": "hawkins",
-    "home": "beland"
-   },
-   {
-    "away": "sanford",
-    "home": "peretz"
-   },
-   {
-    "away": "lisa",
-    "home": "carullo"
+    "away": "joyce",
+    "home": "sanford"
    },
    {
     "away": "goss",
+    "home": "beland"
+   },
+   {
+    "away": "peretz",
+    "home": "dann"
+   },
+   {
+    "away": "carullo",
+    "home": "hawkins"
+   },
+   {
+    "away": "lisa",
+    "home": "guarnaccia"
+   },
+   {
+    "away": "sweeney",
     "home": "furnari"
    }
   ]
@@ -14765,28 +14805,28 @@ const FANTASY_SCHEDULE = [
   "week": 14,
   "games": [
    {
-    "away": "lisa",
-    "home": "dann"
+    "away": "sanford",
+    "home": "beland"
    },
    {
-    "away": "sweeney",
-    "home": "guarnaccia"
+    "away": "joyce",
+    "home": "peretz"
    },
    {
-    "away": "carullo",
+    "away": "goss",
     "home": "furnari"
    },
    {
-    "away": "peretz",
-    "home": "joyce"
+    "away": "guarnaccia",
+    "home": "hawkins"
    },
    {
-    "away": "beland",
-    "home": "goss"
+    "away": "sweeney",
+    "home": "carullo"
    },
    {
-    "away": "hawkins",
-    "home": "sanford"
+    "away": "dann",
+    "home": "lisa"
    }
   ]
  }
@@ -14876,8 +14916,31 @@ function buildSeasonHandoff(rosterState, order, config) {
   return teams;
 }
 
+// Every player not on any of the 12 drafted rosters is fair game as a
+// one-week emergency streamer (waiver-wire fill-in) for a starting slot the
+// roster can't otherwise cover. Computed once per season from the real
+// player pool, not per week.
+function buildLeftoverPool(teams, allPlayers) {
+  const drafted = new Set();
+  Object.keys(teams).forEach((mid) => {
+    teams[mid].roster.forEach((p) => drafted.add(p.id));
+  });
+  return allPlayers.filter((p) => !drafted.has(p.id));
+}
+
 // ---------------- 2. Weekly player-score engine ----------------
-const POSITION_VOLATILITY = { QB: 0.22, RB: 0.38, WR: 0.42, TE: 0.4, K: 0.5, DST: 0.55 };
+// TE volatility nudged down from 0.4: TE's weeklyBaseline sits well below
+// WR/RB even for a true TE1 (thin position, real-world consensus), so the
+// same spread that reads as normal boom/bust for WR/RB was landing TE in
+// single digits too often once you stack a below-average week on an
+// already-low baseline.
+const POSITION_VOLATILITY = { QB: 0.22, RB: 0.38, WR: 0.42, TE: 0.32, K: 0.5, DST: 0.55 };
+// Extra per-position calibration on top of the universal CALIBRATION below —
+// TE's weekly baseline runs low enough that the same 1.14x everyone else
+// gets still leaves a "good week" for a top TE looking unremarkable; a
+// small additional bump keeps a real week feeling like a TE1 without
+// touching WR/RB/QB, who calibrate fine already.
+const POSITION_CALIBRATION = { TE: 1.12 };
 
 // Sum of 3 uniforms centered at 0, roughly bell-shaped, bounded [-1.5,1.5].
 function seededGaussish(rng) {
@@ -14910,7 +14973,8 @@ function computePlayerWeek(player, week, rng, defenseStrength, injuryState) {
   // etc.). Nudge baseline up modestly so simulated weekly totals land in a believable
   // range for a PPR league without distorting relative player value.
   const CALIBRATION = 1.14;
-  const baseline = (player.weeklyBaseline || 0) * CALIBRATION;
+  const posCalibration = POSITION_CALIBRATION[player.pos] || 1;
+  const baseline = (player.weeklyBaseline || 0) * CALIBRATION * posCalibration;
   const defStrength = defenseStrength ? defenseStrength[player._opponentTeam] : null;
   const matchAdj = matchupMultiplier(defStrength);
   result.projectedPoints = Math.round(baseline * matchAdj * 100) / 100;
@@ -14931,7 +14995,7 @@ function computePlayerWeek(player, week, rng, defenseStrength, injuryState) {
   // Bust-to-zero and boom tails, layered on top of normal variance.
   const tail = rng();
   if (tail < 0.035) variance = rng() * 0.15; // near-zero bust
-  else if (tail > 0.97) variance = 1.8 + rng() * 0.7; // boom
+  else if (tail > 0.97) variance = 1.7 + rng() * 0.3; // boom (dialed down from 1.8-2.5 to 1.7-2.0)
 
   const actual = Math.max(0, baseline * matchAdj * variance);
   result.actualPoints = Math.round(actual * 100) / 100;
@@ -14979,7 +15043,7 @@ function optimizeLineup(rosterPlayers, playerResults, config) {
 }
 
 // ---------------- 4. One score per manager per week ----------------
-function computeManagerWeek(teamEntry, week, rng, schedule2026, defenseStrength, injuryState) {
+function computeManagerWeek(teamEntry, week, rng, schedule2026, defenseStrength, injuryState, leftoverPool) {
   // Attach this week's opponent/game-window to each rostered player from
   // the real 2026 NFL schedule, so projections/variance can react to it.
   const wk = schedule2026.weeks[String(week)] || schedule2026.weeks[week] || [];
@@ -15001,32 +15065,42 @@ function computeManagerWeek(teamEntry, week, rng, schedule2026, defenseStrength,
   const lineup = optimizeLineup(teamEntry.roster, playerResults, GLOBAL_CONFIG_REF);
   Object.values(lineup.starters).forEach((pid) => { if (pid) playerResults[pid].started = true; });
 
-  // K and DST have a hard roster cap of 1 (no bench backup possible), so a
-  // bye week would otherwise leave that starting slot at a guaranteed zero
-  // every single season for every manager. Real leagues stream a
-  // replacement-level K/DST off waivers for exactly this week; model that
-  // single-week auto-stream here rather than leaving the slot empty —
-  // this is not a persistent roster add, just a one-week fill-in, so it
-  // stays inside "keep roster management light."
-  let streamedPoints = 0;
-  ["K", "DEF"].forEach((slot) => {
-    const pid = lineup.starters[slot];
-    const rosteredPos = teamEntry.roster.find((p) => (p.pos === "DST" ? "DEF" : p.pos) === slot);
-    const onBye = rosteredPos && rosteredPos.bye === week;
-    if (!pid && onBye) {
-      const baseline = slot === "K" ? 7.5 : 6.0;
-      const vol = POSITION_VOLATILITY[slot === "K" ? "K" : "DST"];
-      const variance = Math.max(0, 1 + seededGaussish(rng) * vol);
-      const pts = Math.round(baseline * variance * 100) / 100;
-      lineup.starters[slot] = "__stream_" + slot;
-      playerResults["__stream_" + slot] = {
-        playerId: "__stream_" + slot, name: slot === "K" ? "Streamed Kicker" : "Streamed Defense",
-        pos: slot === "K" ? "K" : "DST", team: null,
-        projectedPoints: baseline, actualPoints: pts,
-        status: "streamed", started: true, opponent: null, gameWindow: null,
-      };
-      streamedPoints += pts;
-    }
+  // Any starting slot the roster can't fill on its own (most often the
+  // single-copy K/DST slot on a bye, but this can happen at any position
+  // once byes and in-season injuries stack up) gets a genuine one-week
+  // streamer pulled from the real leftover (undrafted) player pool — the
+  // best available player at that position who isn't themselves on bye or
+  // injured that week. This is not a persistent roster add, just a
+  // one-week emergency fill-in, so it stays inside "keep roster management
+  // light." If the pool is somehow exhausted at that position/week the
+  // slot is left empty rather than inventing a player.
+  const usedStreamersThisWeek = new Set();
+  const pool = leftoverPool || [];
+  Object.keys(lineup.starters).forEach((slotName) => {
+    if (lineup.starters[slotName]) return; // slot already filled
+    const isFlex = slotName === "FLEX";
+    const posKeys = isFlex
+      ? (GLOBAL_CONFIG_REF.flexEligible || ["RB", "WR", "TE"])
+      : [slotName.replace(/\d+$/, "") === "DEF" ? "DST" : slotName.replace(/\d+$/, "")];
+    const candidates = pool.filter((p) => {
+      if (posKeys.indexOf(p.pos) === -1) return false;
+      if (p.bye === week) return false;
+      if (usedStreamersThisWeek.has(p.id)) return false;
+      const inj = injuryState[p.id];
+      if (inj && inj.returnWeek > week) return false;
+      return true;
+    }).sort((a, b) => (b.weeklyBaseline || 0) - (a.weeklyBaseline || 0));
+    const candidate = candidates[0];
+    if (!candidate) return;
+    usedStreamersThisWeek.add(candidate.id);
+    const info = teamGameInfo[candidate.team];
+    candidate._opponentTeam = info ? info.opp : null;
+    candidate._gameWindow = info ? info.window : null;
+    const res = computePlayerWeek(candidate, week, rng, defenseStrength, injuryState);
+    res.started = true;
+    if (res.status === "healthy") res.status = "streamed";
+    playerResults[candidate.id] = res;
+    lineup.starters[slotName] = candidate.id;
   });
 
   const score = Object.values(lineup.starters)
@@ -15129,12 +15203,12 @@ function rankStandings(standings, config) {
 }
 
 // ---------------- 6b. Playoffs ----------------
-// 6-team bracket: the two division winners get a Week 15 bye (seeds 1-2);
+// 6-team bracket: the two division winners get a Week 16 bye (seeds 1-2);
 // the next four best records by overall record fill seeds 3-6 and play the
-// Week 15 wildcard round. Round 2 (Week 16) reseeds the four survivors —
+// Week 16 wildcard round. Round 2 (Week 17) reseeds the four survivors —
 // highest remaining seed plays lowest remaining seed. Round winners meet in
-// the Week 17 championship. Seeding is frozen off final regular-season
-// standings (through Week 14); nothing here mutates standings.
+// the Week 18 championship. Seeding is frozen off final regular-season
+// standings (through Week 15); nothing here mutates standings.
 function computePlayoffSeeding(standings, config) {
   const ranked = rankStandings(standings, config); // already sorted, includes .division/.rank
   const divisionNames = Object.keys(config.divisions);
@@ -15366,7 +15440,7 @@ function assembleWeeklyRecord({
 
 if (typeof module !== "undefined") {
   module.exports = {
-    buildSeasonHandoff, gradeRosterSimple,
+    buildSeasonHandoff, gradeRosterSimple, buildLeftoverPool,
     computePlayerWeek, optimizeLineup, computeManagerWeek,
     resolveRegularMatchups, computeHawkinsCupQualification, hawkinsCupRound1Pairs, resolveCupRound,
     initStandings, applyRegularResults, rankStandings, computeAwards,
@@ -15375,7 +15449,6 @@ if (typeof module !== "undefined") {
     setGlobalConfigRef,
   };
 }
-
 </script>
 <script>
 // ============================================================
@@ -15414,6 +15487,8 @@ if (typeof module !== "undefined") {
   ];
 
   var SS = null; // season state, set by startFromDraft()/resumeFromSave()
+  var rosterSelectedManager = null; // last team picked on the Rosters screen
+  var ROSTER_POS_ORDER = ["QB","RB","WR","TE","K","DST"];
   var managerDivision = {};
   Object.keys(LEAGUE_CONFIG.divisions).forEach(function(div){
     LEAGUE_CONFIG.divisions[div].forEach(function(id){ managerDivision[id] = div; });
@@ -15427,12 +15502,12 @@ if (typeof module !== "undefined") {
 
   // ---------------- Screen show/hide ----------------
   function showSSScreen(name){
-    ["ssSetup","ssLive","ssRecap","ssStandingsScreen","ssCupScreen","ssPlayoffsScreen","ssAwardsScreen","ssEnd"].forEach(function(id){
+    ["ssSetup","ssLive","ssRecap","ssStandingsScreen","ssCupScreen","ssPlayoffsScreen","ssAwardsScreen","ssRostersScreen","ssEnd"].forEach(function(id){
       document.getElementById(id).classList.toggle("on", id === name);
     });
     document.querySelectorAll(".ss-nav-btn").forEach(function(b){
       var target = b.getAttribute("data-ss-screen");
-      var map = { live: "ssLive", standings: "ssStandingsScreen", cup: "ssCupScreen", playoffs: "ssPlayoffsScreen", awards: "ssAwardsScreen" };
+      var map = { live: "ssLive", standings: "ssStandingsScreen", cup: "ssCupScreen", playoffs: "ssPlayoffsScreen", awards: "ssAwardsScreen", rosters: "ssRostersScreen" };
       b.classList.toggle("on", map[target] === name);
     });
   }
@@ -15441,7 +15516,7 @@ if (typeof module !== "undefined") {
   function computeWeek(week){
     var managerScores = {}, allPlayerResults = {}, allLineups = {};
     LEAGUE_CONFIG.managers.forEach(function(m){
-      var res = computeManagerWeek(SS.teams[m.id], week, SS.rng, SCHEDULE_2026, DEFENSE_STRENGTH, SS.injuryState);
+      var res = computeManagerWeek(SS.teams[m.id], week, SS.rng, SCHEDULE_2026, DEFENSE_STRENGTH, SS.injuryState, SS.leftoverPool);
       managerScores[m.id] = res.score;
       allPlayerResults[m.id] = res.playerResults;
       allLineups[m.id] = res.lineup;
@@ -15525,6 +15600,7 @@ if (typeof module !== "undefined") {
     return {
       teams: teams, order: order, userId: userId,
       seasonSeed: seasonSeed, rng: makeRNG(seasonSeed),
+      leftoverPool: buildLeftoverPool(teams, PLAYERS_DATA),
       standings: initStandings(LEAGUE_CONFIG), injuryState: {},
       weeklyRecords: [], week: 1, speed: "automatic",
       hawkinsCupQual: null, cupRound1Results: null, cupSemisResults: null, cupFinalResults: null,
@@ -15632,6 +15708,33 @@ if (typeof module !== "undefined") {
     renderLive();
   }
 
+  // ---------------- Fast-forward: sim ahead without stepping through the
+  // per-week reveal/recap sequence. The current week (SS.week) was already
+  // computed by beginWeek() when it started, so only weeks strictly after
+  // it need a fresh computeWeek() call — same silent-replay technique
+  // resumeFromSave() already uses, so results stay bit-for-bit identical
+  // to playing it out window-by-window.
+  function simForwardTo(targetWeek){
+    clearTimeout(SS.liveTimer);
+    for (var w = SS.week + 1; w < targetWeek; w++) computeWeek(w);
+    SS.week = targetWeek;
+    if (SS.week > TOTAL_WEEKS){ goToEnd(); return; }
+    beginWeek();
+    saveProgress();
+  }
+
+  function simToPlayoffs(){
+    var target = REGULAR_WEEKS + 1;
+    if (SS.week >= target) return; // already in (or past) playoffs
+    simForwardTo(target);
+  }
+
+  function simToEndOfSeason(){
+    clearTimeout(SS.liveTimer);
+    for (var w = SS.week + 1; w <= TOTAL_WEEKS; w++) computeWeek(w);
+    goToEnd();
+  }
+
   function renderLive(){
     var record = SS.currentRecord;
     var revealed = revealedWindowSet();
@@ -15648,6 +15751,7 @@ if (typeof module !== "undefined") {
     document.getElementById("ssRevealBtn").textContent = fullyRevealed ? "View Week Recap" : "Reveal Next Window";
     document.getElementById("ssRevealBtn").onclick = fullyRevealed ? goToRecap : advanceWindow;
     document.getElementById("ssSkipBtn").style.display = fullyRevealed ? "none" : "inline-block";
+    document.getElementById("ssSimPlayoffsBtn").style.display = SS.week >= REGULAR_WEEKS + 1 ? "none" : "inline-block";
 
     var tagHtml = fullyRevealed ? '<span class="ss-live-tag">FINAL</span>' : '<span class="ss-live-tag">LIVE</span>';
     document.getElementById("ssMatchupTag").innerHTML = tagHtml;
@@ -15989,6 +16093,99 @@ if (typeof module !== "undefined") {
     document.getElementById("ssAwardsBody").innerHTML = awardsHtml(awards);
   }
 
+  // ---------------- Rosters / player game log (nav-accessible anytime) ----------------
+  // Every week's playerResults[managerId][playerId] is already computed and
+  // archived in SS.weeklyRecords by computeWeek() — this section is pure
+  // read/display over that existing data, no new engine work required.
+  function rosterSortFn(a, b){ return ROSTER_POS_ORDER.indexOf(a.pos) - ROSTER_POS_ORDER.indexOf(b.pos); }
+
+  function getPlayerSeasonLog(managerId, playerId){
+    var rows = [];
+    SS.weeklyRecords.forEach(function(rec, idx){
+      if (!rec) return;
+      var mres = rec.playerResults && rec.playerResults[managerId];
+      var r = mres && mres[playerId];
+      if (!r) return;
+      rows.push({ week: idx + 1, opponent: r.opponent, status: r.status, started: r.started, actualPoints: r.actualPoints });
+    });
+    return rows;
+  }
+
+  function playerSeasonStats(rows){
+    var played = rows.filter(function(r){ return r.status !== "bye" && r.status !== "injured"; });
+    var total = played.reduce(function(s, r){ return s + (r.actualPoints || 0); }, 0);
+    return { games: played.length, total: total, ppg: played.length ? total / played.length : 0 };
+  }
+
+  function populateRosterTeamSelect(){
+    var sel = document.getElementById("ssRosterTeamSelect");
+    var html = "";
+    LEAGUE_CONFIG.managers.forEach(function(m){
+      html += '<option value="' + m.id + '"' + (m.id === rosterSelectedManager ? " selected" : "") + '>' + escapeHtml(m.name) + (m.id === SS.userId ? " (You)" : "") + '</option>';
+    });
+    sel.innerHTML = html;
+    sel.value = rosterSelectedManager;
+  }
+
+  function populateRosterPlayerSelect(managerId){
+    var sel = document.getElementById("ssRosterPlayerSelect");
+    var team = SS.teams[managerId];
+    var roster = team ? team.roster.slice().sort(rosterSortFn) : [];
+    var html = "";
+    roster.forEach(function(p){
+      html += '<option value="' + p.id + '">' + escapeHtml(p.name) + ' (' + escapeHtml(p.pos) + ')</option>';
+    });
+    sel.innerHTML = html;
+  }
+
+  function rosterTableHtml(managerId){
+    var team = SS.teams[managerId];
+    if (!team) return "";
+    var latest = SS.weeklyRecords[SS.week - 1] || SS.weeklyRecords[SS.weeklyRecords.length - 1];
+    var lineup = latest && latest.lineups ? latest.lineups[managerId] : null;
+    var slotByPlayer = {};
+    if (lineup) Object.keys(lineup.starters).forEach(function(slot){ var pid = lineup.starters[slot]; if (pid) slotByPlayer[pid] = slot; });
+    var roster = team.roster.slice().sort(rosterSortFn);
+    var html = "";
+    roster.forEach(function(p){
+      var stats = playerSeasonStats(getPlayerSeasonLog(managerId, p.id));
+      var slotTag = slotByPlayer[p.id] || "BN";
+      html += '<div class="dr-roster-row"><div class="slot">' + slotTag + '</div>'
+        + '<div class="pname">' + escapeHtml(p.name) + '</div>'
+        + '<div class="pmeta">' + escapeHtml(p.pos) + (p.team ? " &middot; " + escapeHtml(p.team) : "") + ' &middot; ' + stats.ppg.toFixed(1) + ' ppg (' + stats.games + ' gm' + (stats.games === 1 ? "" : "s") + ')</div></div>';
+    });
+    return html || '<p class="sec-lede">No roster data.</p>';
+  }
+
+  var ROSTER_LOG_PLACEHOLDER = '<p class="sec-lede">Pick a player above and click View Log to see their week-by-week results and season PPG.</p>';
+
+  function playerLogHtml(managerId, playerId){
+    var team = SS.teams[managerId];
+    var player = team ? team.roster.filter(function(p){ return p.id === playerId; })[0] : null;
+    if (!player) return ROSTER_LOG_PLACEHOLDER;
+    var rows = getPlayerSeasonLog(managerId, playerId);
+    var stats = playerSeasonStats(rows);
+    var html = '<p class="sec-lede"><strong>' + escapeHtml(player.name) + '</strong> (' + escapeHtml(player.pos) + (player.team ? ", " + escapeHtml(player.team) : "") + ') &middot; <strong>' + stats.ppg.toFixed(1) + ' PPG</strong> across ' + stats.games + ' game' + (stats.games === 1 ? "" : "s") + ' (' + fmt1(stats.total) + ' total pts)</p>';
+    if (!rows.length){
+      return html + '<p class="sec-lede">No games played yet this season.</p>';
+    }
+    html += '<div class="ss-player-log-row head"><span>Wk</span><span>Opp</span><span>Status</span><span>Pts</span></div>';
+    rows.forEach(function(r){
+      var statusLabel = r.status === "bye" ? "BYE" : r.status === "injured" ? "INJ" : r.status === "injured-this-week" ? "INJ (in-game)" : (r.started ? "Started" : "Bench");
+      var ptsDisplay = (r.status === "bye" || r.status === "injured") ? "&mdash;" : fmt1(r.actualPoints);
+      html += '<div class="ss-player-log-row"><span>' + r.week + '</span><span>' + (r.opponent ? escapeHtml(r.opponent) : "&mdash;") + '</span><span>' + statusLabel + '</span><span>' + ptsDisplay + '</span></div>';
+    });
+    return html;
+  }
+
+  function renderRostersScreen(){
+    if (!rosterSelectedManager) rosterSelectedManager = SS.userId;
+    populateRosterTeamSelect();
+    populateRosterPlayerSelect(rosterSelectedManager);
+    document.getElementById("ssRosterBody").innerHTML = rosterTableHtml(rosterSelectedManager);
+    document.getElementById("ssRosterLogBody").innerHTML = ROSTER_LOG_PLACEHOLDER;
+  }
+
   // ---------------- Week progression / end of season ----------------
   function nextWeek(){
     SS.week++;
@@ -16062,6 +16259,12 @@ if (typeof module !== "undefined") {
 
     document.getElementById("ssRevealBtn").addEventListener("click", function(){ advanceWindow(); });
     document.getElementById("ssSkipBtn").addEventListener("click", skipToFinal);
+    document.getElementById("ssSimPlayoffsBtn").addEventListener("click", function(){
+      if (confirm("Sim ahead to the start of the playoffs (Week " + (REGULAR_WEEKS + 1) + ")? This skips the rest of the regular season without stepping through each week.")) simToPlayoffs();
+    });
+    document.getElementById("ssSimEndBtn").addEventListener("click", function(){
+      if (confirm("Sim the rest of the season straight through to the final results?")) simToEndOfSeason();
+    });
     document.getElementById("ssSpeedSelectLive").addEventListener("change", function(e){
       if (SS) SS.speed = e.target.value;
       if (SS && SS.speed === "automatic" && SS.revealGroupIdx < WINDOW_GROUPS.length) scheduleAutoAdvance();
@@ -16084,7 +16287,19 @@ if (typeof module !== "undefined") {
         else if (target === "cup"){ renderCupScreen(); showSSScreen("ssCupScreen"); }
         else if (target === "playoffs"){ renderPlayoffsScreen(); showSSScreen("ssPlayoffsScreen"); }
         else if (target === "awards"){ renderAwardsScreen(); showSSScreen("ssAwardsScreen"); }
+        else if (target === "rosters"){ renderRostersScreen(); showSSScreen("ssRostersScreen"); }
       });
+    });
+
+    document.getElementById("ssRosterTeamSelect").addEventListener("change", function(e){
+      rosterSelectedManager = e.target.value;
+      populateRosterPlayerSelect(rosterSelectedManager);
+      document.getElementById("ssRosterBody").innerHTML = rosterTableHtml(rosterSelectedManager);
+      document.getElementById("ssRosterLogBody").innerHTML = ROSTER_LOG_PLACEHOLDER;
+    });
+    document.getElementById("ssRosterViewLogBtn").addEventListener("click", function(){
+      var playerId = document.getElementById("ssRosterPlayerSelect").value;
+      document.getElementById("ssRosterLogBody").innerHTML = playerLogHtml(rosterSelectedManager, playerId);
     });
 
     document.getElementById("ssSaveExitBtn").addEventListener("click", function(){
@@ -16106,7 +16321,6 @@ if (typeof module !== "undefined") {
     getState: function(){ return SS; }, // debug/test hook, read-only convenience
   };
 })();
-
 </script>
 </body>
 </html>
