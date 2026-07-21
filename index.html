@@ -675,6 +675,16 @@ table.sch-table tr:last-child td{border-bottom:none}
 .ss-player-log-row.head{font-family:'JetBrains Mono',monospace;font-size:.6rem;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--border)}
 .ss-player-log-row:last-child{border-bottom:none}
 
+.ss-matchup-slot{border:1px solid var(--border);border-radius:8px;margin-bottom:.6rem;overflow:hidden}
+.ss-matchup-slot:last-child{margin-bottom:0}
+.ss-matchup-slot.user{border-color:var(--gold)}
+.ss-matchup-slot-row{cursor:pointer;position:relative;padding-right:1.8rem}
+.ss-matchup-slot-row:hover{background:var(--gold-soft)}
+.ss-matchup-slot-row:after{content:"\25BE";position:absolute;right:.7rem;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.7rem}
+.ss-matchup-slot-row.expanded:after{content:"\25B4"}
+.ss-matchup-slot-row .ss-matchup-row{padding:.9rem 1rem;margin:0;border-bottom:none}
+.ss-matchup-slot-box{padding:0 1rem 1rem;border-top:1px solid var(--border)}
+
 @media(max-width:700px){
   .ss-standings-row{grid-template-columns:24px 1fr 40px 50px 60px 60px;font-size:.72rem}
   .ss-standings-row span.hide-mobile{display:none}
@@ -1094,11 +1104,11 @@ table.sch-table tr:last-child td{border-bottom:none}
         <div class="mgr-block"><div class="mgr-label">Manager Identity</div><div class="mgr-copy">Official 2023 runner-up, unofficial overvaluer of his own roster.</div></div>
       </div>
       <div class="mgr-card">
-        <div class="mgr-top"><div><div class="mgr-name">Joseph Lisa</div><div class="mgr-team">Team Lisa</div></div><span class="mgr-badge">Needs Identity</span></div>
-        <div class="mgr-stats"><div class="mgr-stat"><strong>21&ndash;21</strong><span>Record</span></div><div class="mgr-stat"><strong>2023</strong><span>Semis</span></div><div class="mgr-stat"><strong>&mdash;</strong><span>Titles</span></div></div>
-        <div class="mgr-block"><div class="mgr-label">Fantasy R&eacute;sum&eacute;</div><div class="mgr-copy">The 2023 semifinal run is now official, but the two seasons after that still need more proof.</div></div>
-        <div class="mgr-block"><div class="mgr-label">2026 Goal</div><div class="mgr-copy">Develop an identity before the season develops one for him.</div></div>
-        <div class="mgr-block"><div class="mgr-label">Manager Identity</div><div class="mgr-copy">Quiet, mysterious, and usually somewhere in the standings where people forget to look.</div></div>
+        <div class="mgr-top"><div><div class="mgr-name">Joseph Lisa</div><div class="mgr-team">Team Lisa</div></div><span class="mgr-badge crown">2021 Champ &middot; Archive</span></div>
+        <div class="mgr-stats"><div class="mgr-stat"><strong>21&ndash;21</strong><span>Record</span></div><div class="mgr-stat"><strong>2023</strong><span>Semis</span></div><div class="mgr-stat"><strong>2021</strong><span>Champion</span></div></div>
+        <div class="mgr-block"><div class="mgr-label">Fantasy R&eacute;sum&eacute;</div><div class="mgr-copy">The recognized 2021 champion &mdash; an archive-only title from the recovered screenshot, Team Lisa over Nick Hawkins' Mickey Mouse Losses. The 2023 semifinal run added real receipts on top of it, but 2024&ndash;2025 still need more proof.</div></div>
+        <div class="mgr-block"><div class="mgr-label">2026 Goal</div><div class="mgr-copy">Turn an actual title on the shelf into more than an archive footnote.</div></div>
+        <div class="mgr-block"><div class="mgr-label">Manager Identity</div><div class="mgr-copy">Quiet, mysterious, and somehow still the only manager in the room with a real banner.</div></div>
       </div>
       <div class="mgr-card">
         <div class="mgr-top"><div><div class="mgr-name">Ryan Dann</div><div class="mgr-team">Team Dann</div></div><span class="mgr-badge">Foundation Year</span></div>
@@ -1136,12 +1146,13 @@ table.sch-table tr:last-child td{border-bottom:none}
           <tr><td><div class="po-manager">Jojo Guarnaccia</div><div class="po-note">Title, then two semifinal exits</div></td><td class="r"><span class="po-number">2&ndash;2</span></td><td class="r"><span class="po-mid">50.0%</span></td><td class="r"><span class="po-number">1</span></td><td class="r"><span class="po-number">1</span></td><td><span class="po-note">Champion 2023</span></td></tr>
           <tr><td><div class="po-manager">Jalen Peretz</div><div class="po-note">2023 finalist, then stalled</div></td><td class="r"><span class="po-number">1&ndash;2</span></td><td class="r"><span class="po-bad">33.3%</span></td><td class="r"><span class="po-number">1</span></td><td class="r"><span class="po-number">0</span></td><td><span class="po-note">Runner-Up 2023</span></td></tr>
           <tr><td><div class="po-manager">Nick Furnari</div><div class="po-note">Three trips, no final</div></td><td class="r"><span class="po-number">1&ndash;3</span></td><td class="r"><span class="po-bad">25.0%</span></td><td class="r"><span class="po-number">0</span></td><td class="r"><span class="po-number">0</span></td><td><span class="po-note">Semis x2</span></td></tr>
-          <tr><td><div class="po-manager">Joseph Lisa</div><div class="po-note">2023 semifinal peak</div></td><td class="r"><span class="po-number">1&ndash;1</span></td><td class="r"><span class="po-mid">50.0%</span></td><td class="r"><span class="po-number">0</span></td><td class="r"><span class="po-number">0</span></td><td><span class="po-note">Semis 2023</span></td></tr>
+          <tr><td><div class="po-manager">Joseph Lisa</div><div class="po-note">Archive champion, then a real semifinal</div></td><td class="r"><span class="po-number">1&ndash;1</span></td><td class="r"><span class="po-mid">50.0%</span></td><td class="r"><span class="po-number">0</span></td><td class="r"><span class="po-number">0</span></td><td><span class="po-note">Champion 2021* &middot; Semis 2023</span></td></tr>
           <tr><td><div class="po-manager">Nick Carullo</div><div class="po-note">Regular season prince, bracket victim</div></td><td class="r"><span class="po-number">0&ndash;2</span></td><td class="r"><span class="po-bad">0.0%</span></td><td class="r"><span class="po-number">0</span></td><td class="r"><span class="po-number">0</span></td><td><span class="po-note">R1/Semis exits</span></td></tr>
           <tr><td><div class="po-manager">Josh Sweeney</div><div class="po-note">One bye, one immediate exit</div></td><td class="r"><span class="po-number">0&ndash;1</span></td><td class="r"><span class="po-bad">0.0%</span></td><td class="r"><span class="po-number">0</span></td><td class="r"><span class="po-number">0</span></td><td><span class="po-note">Semis 2024</span></td></tr>
           <tr><td><div class="po-manager">Ryan Dann</div><div class="po-note">One appearance, one exit</div></td><td class="r"><span class="po-number">0&ndash;1</span></td><td class="r"><span class="po-bad">0.0%</span></td><td class="r"><span class="po-number">0</span></td><td class="r"><span class="po-number">0</span></td><td><span class="po-note">R1 2023</span></td></tr>
         </tbody>
       </table>
+      <div class="note">*2021 is a title-game-only archive record (Team Lisa def. Nick Hawkins' Mickey Mouse Losses, 146.88&ndash;99.58) &mdash; no other 2021 game data survived, so it's noted in the Best column only and isn't counted in the Record/Finals/Titles columns above.</div>
     </div>
 
     <div class="po-card">
@@ -1163,7 +1174,7 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="shame-card"><div class="shame-top"><div><div class="shame-label">Runner-Up Hangover Watch</div><div class="shame-value">Jalen Peretz</div></div><span class="shame-badge">Shame</span></div><div class="shame-copy">The 2023 runner-up finish is official. The follow-up seasons are still waiting for the sequel.</div></div>
       <div class="shame-card"><div class="shame-top"><div><div class="shame-label">Worst Two-Year Record</div><div class="shame-value">Timmy &middot; 7&ndash;21</div></div><span class="shame-badge">Shame</span></div><div class="shame-copy">Historical damage only, since Timmy has been replaced. Still nasty work.</div></div>
       <div class="shame-card"><div class="shame-top"><div><div class="shame-label">Worst Point Diff</div><div class="shame-value">Timmy &middot; -585.86</div></div><span class="shame-badge">Shame</span></div><div class="shame-copy">The kind of number that gets remembered even after the manager exits.</div></div>
-      <div class="shame-card"><div class="shame-top"><div><div class="shame-label">Needs a Personality Win</div><div class="shame-value">Team Lisa</div></div><span class="shame-badge">Shame</span></div><div class="shame-copy">Middle-bottom finishes and no playoff r&eacute;sum&eacute;. 2026 needs a pulse.</div></div>
+      <div class="shame-card"><div class="shame-top"><div><div class="shame-label">The Forgotten Champion</div><div class="shame-value">Joseph Lisa</div></div><span class="shame-badge">Shame</span></div><div class="shame-copy">Owns a real 2021 title outright and still gets treated like a nobody. Quiet dynasty, zero marketing department.</div></div>
     </div>
 
     <div class="road-title">2026 Storylines</div>
@@ -1217,7 +1228,7 @@ table.sch-table tr:last-child td{border-bottom:none}
           <tr data-vals='["Nick Hawkins","20-22","47.6","4703.40","112.0","4642.70","60.70","4-2","66.7","Runner-Up x3*"]'><td><div class="mn2">Nick Hawkins</div><div class="ms2">Curse of Ra</div></td><td class="r">20&ndash;22</td><td class="r">47.6%</td><td class="r">4703.40</td><td class="r">112.0</td><td class="r">4642.70</td><td class="r" style="color:#2f9e44">+60.70</td><td class="r">4&ndash;2</td><td class="r">66.7%</td><td>Runner-Up x3*</td></tr>
           <tr data-vals='["Josh Sweeney","22-20","52.4","5111.10","121.7","5015.12","95.98","0-1","0.0","Semis 2024"]'><td><div class="mn2">Josh Sweeney</div><div class="ms2">Josh's Scary Team</div></td><td class="r">22&ndash;20</td><td class="r">52.4%</td><td class="r">5111.10</td><td class="r">121.7</td><td class="r">5015.12</td><td class="r" style="color:#2f9e44">+95.98</td><td class="r">0&ndash;1</td><td class="r">0.0%</td><td>Semis 2024</td></tr>
           <tr data-vals='["Nick Carullo","23-19","54.8","4919.68","117.1","4840.10","79.58","0-2","0.0","Semis 2024"]'><td><div class="mn2">Nick Carullo</div><div class="ms2">Drake London and Friends</div></td><td class="r">23&ndash;19</td><td class="r">54.8%</td><td class="r">4919.68</td><td class="r">117.1</td><td class="r">4840.10</td><td class="r" style="color:#2f9e44">+79.58</td><td class="r">0&ndash;2</td><td class="r">0.0%</td><td>Semis 2024</td></tr>
-          <tr data-vals='["Joseph Lisa","21-21","50.0","4594.38","109.4","4705.94","-111.56","1-1","50.0","Semis 2023"]'><td><div class="mn2">Joseph Lisa</div><div class="ms2">Team Lisa</div></td><td class="r">21&ndash;21</td><td class="r">50.0%</td><td class="r">4594.38</td><td class="r">109.4</td><td class="r">4705.94</td><td class="r" style="color:#c0392b">-111.56</td><td class="r">1&ndash;1</td><td class="r">50.0%</td><td>Semis 2023</td></tr>
+          <tr data-vals='["Joseph Lisa","21-21","50.0","4594.38","109.4","4705.94","-111.56","1-1","50.0","Champion 2021* / Semis 2023"]'><td><div class="mn2">Joseph Lisa</div><div class="ms2">Team Lisa</div></td><td class="r">21&ndash;21</td><td class="r">50.0%</td><td class="r">4594.38</td><td class="r">109.4</td><td class="r">4705.94</td><td class="r" style="color:#c0392b">-111.56</td><td class="r">1&ndash;1</td><td class="r">50.0%</td><td>Champion 2021* / Semis 2023</td></tr>
           <tr data-vals='["Ryan Dann","19-23","45.2","4841.72","115.3","4942.58","-100.86","0-1","0.0","R1 2023"]'><td><div class="mn2">Ryan Dann</div><div class="ms2">Team Dann</div></td><td class="r">19&ndash;23</td><td class="r">45.2%</td><td class="r">4841.72</td><td class="r">115.3</td><td class="r">4942.58</td><td class="r" style="color:#c0392b">-100.86</td><td class="r">0&ndash;1</td><td class="r">0.0%</td><td>R1 2023</td></tr>
           <tr data-vals='["Drew Sanford","0-0","0.0","0.00","0.0","0.00","0.00","0-0","0.0","New 2026"]'><td><div class="mn2">Drew Sanford</div><div class="ms2">Team Sanford</div></td><td class="r">0&ndash;0</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td>New 2026</td></tr>
           <tr data-vals='["Aidan Goss","0-0","0.0","0.00","0.0","0.00","0.00","0-0","0.0","New 2026"]'><td><div class="mn2">Aidan Goss</div><div class="ms2">Rookie Manager</div></td><td class="r">0&ndash;0</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td class="r">&mdash;</td><td>New 2026</td></tr>
@@ -1228,7 +1239,7 @@ table.sch-table tr:last-child td{border-bottom:none}
         </tbody>
       </table>
     </div>
-    <div class="note" style="margin-top:1rem">Click any column header to sort. RS = Regular Season. Brandon Beland and Aidan Goss begin with fresh records in 2026.</div>
+    <div class="note" style="margin-top:1rem">Click any column header to sort. RS = Regular Season. Brandon Beland and Aidan Goss begin with fresh records in 2026. *2021 is a title-game-only archive record (Lisa def. Hawkins) and isn't counted in the RS/Playoff numeric columns, which cover 2023&ndash;2025 only.</div>
   </section>
 
   <section class="panel" id="panel-h2h" role="tabpanel">
@@ -2686,7 +2697,14 @@ table.sch-table tr:last-child td{border-bottom:none}
               <span><span class="ss-dot inactive"></span>Bye / inactive</span>
             </span>
           </div>
-          <div id="ssScoreboard"></div>
+          <div id="ssScoreboard">
+            <div class="ss-matchup-slot" id="ssScoreboardSlot0"><div class="ss-matchup-slot-row" id="ssScoreboardRow0"></div><div class="ss-matchup-slot-box" id="ssScoreboardBox0" style="display:none"></div></div>
+            <div class="ss-matchup-slot" id="ssScoreboardSlot1"><div class="ss-matchup-slot-row" id="ssScoreboardRow1"></div><div class="ss-matchup-slot-box" id="ssScoreboardBox1" style="display:none"></div></div>
+            <div class="ss-matchup-slot" id="ssScoreboardSlot2"><div class="ss-matchup-slot-row" id="ssScoreboardRow2"></div><div class="ss-matchup-slot-box" id="ssScoreboardBox2" style="display:none"></div></div>
+            <div class="ss-matchup-slot" id="ssScoreboardSlot3"><div class="ss-matchup-slot-row" id="ssScoreboardRow3"></div><div class="ss-matchup-slot-box" id="ssScoreboardBox3" style="display:none"></div></div>
+            <div class="ss-matchup-slot" id="ssScoreboardSlot4"><div class="ss-matchup-slot-row" id="ssScoreboardRow4"></div><div class="ss-matchup-slot-box" id="ssScoreboardBox4" style="display:none"></div></div>
+            <div class="ss-matchup-slot" id="ssScoreboardSlot5"><div class="ss-matchup-slot-row" id="ssScoreboardRow5"></div><div class="ss-matchup-slot-box" id="ssScoreboardBox5" style="display:none"></div></div>
+          </div>
         </div>
       </div>
 
@@ -10969,7 +10987,7 @@ const LEAGUE_CONFIG = {
     },
     {
       id: "lisa", name: "Joseph Lisa", team: "Team Lisa",
-      division: "West", role: null, badges: ["Needs Identity"],
+      division: "West", role: null, badges: ["2021 Champion"],
       cpu: {
         fanTeam: "NE", homerStrength: 0.40, reach: 6,
         positionSequence: ["WR","RB","QB","WR","RB","RB","WR","WR","RB","WR","RB","RB","RB","K","K","WR"],
@@ -14942,7 +14960,13 @@ function buildLeftoverPool(teams, allPlayers) {
 // same spread that reads as normal boom/bust for WR/RB was landing TE in
 // single digits too often once you stack a below-average week on an
 // already-low baseline.
-const POSITION_VOLATILITY = { QB: 0.22, RB: 0.38, WR: 0.42, TE: 0.32, K: 0.5, DST: 0.55 };
+// Nudged every position up a notch (checked against a 20-seed, starter-only
+// sample of weekly coefficient of variation): the tamed-down build was
+// sitting around QB 28%/RB 41%/WR 41%/TE 33%/K 36%/DST 37%, all a bit
+// tighter than real-life weekly fantasy scoring (WR/TE especially — those
+// are historically the boom-or-bust positions). QB gets the smallest bump
+// since its tail was already dialed back once before for an outlier complaint.
+const POSITION_VOLATILITY = { QB: 0.25, RB: 0.44, WR: 0.48, TE: 0.37, K: 0.56, DST: 0.61 };
 // Extra per-position calibration on top of the universal CALIBRATION below —
 // TE's weekly baseline runs low enough that the same 1.14x everyone else
 // gets still leaves a "good week" for a top TE looking unremarkable; a
@@ -15003,7 +15027,7 @@ function computePlayerWeek(player, week, rng, defenseStrength, injuryState) {
   // Bust-to-zero and boom tails, layered on top of normal variance.
   const tail = rng();
   if (tail < 0.035) variance = rng() * 0.15; // near-zero bust
-  else if (tail > 0.97) variance = 1.7 + rng() * 0.3; // boom (dialed down from 1.8-2.5 to 1.7-2.0)
+  else if (tail > 0.97) variance = 1.75 + rng() * 0.35; // boom — nudged up slightly from 1.7-2.0 to 1.75-2.1
 
   const actual = Math.max(0, baseline * matchAdj * variance);
   result.actualPoints = Math.round(actual * 100) / 100;
@@ -15479,6 +15503,7 @@ if (typeof module !== "undefined") {
   setGlobalConfigRef(LEAGUE_CONFIG);
 
   var SAVE_KEY = "big12SeasonSave_v1";
+  var SCOREBOARD_SLOTS = 6; // most games in any week is 6 (regular season); playoff rounds use fewer
   var REGULAR_WEEKS = 14;
   var TOTAL_WEEKS = 17; // 14 regular + Round 1 (15), Round 2 (16), Championship (17)
   var PLAYOFF_ROUND_LABEL = { 15: "Round 1", 16: "Round 2", 17: "Championship" };
@@ -15802,18 +15827,29 @@ if (typeof module !== "undefined") {
       cupCard.style.display = "none";
     }
 
-    // League scoreboard grid — current-vs-projected for everyone.
-    var grid = live.byCurrent.slice().sort(function(a,b){ return b.projectedTotal - a.projectedTotal; });
-    var html = '<div class="ss-score-grid">';
-    grid.forEach(function(r){
-      var isUser = r.managerId === SS.userId;
-      var valueHtml = fullyRevealed
-        ? '<b class="ss-pts-actual">' + fmt1(r.currentScore) + '</b>'
-        : '<div class="ss-score-stack"><div class="ss-cur">' + fmt1(r.currentScore) + '</div><div class="ss-proj-sub">proj ' + fmt1(r.projectedTotal) + '</div></div>';
-      html += '<div class="ss-score-card' + (isUser ? " user" : "") + '"><span>' + escapeHtml(managerName(r.managerId)) + '</span>' + valueHtml + '</div>';
-    });
-    html += '</div>';
-    document.getElementById("ssScoreboard").innerHTML = html;
+    // League scoreboard — every matchup this week (not just yours), each one
+    // click-to-expand into its full box score. Uses the same matchup-row /
+    // box-score helpers as "Your Matchup" above, just once per game instead
+    // of once for everyone individually.
+    var pairs = SS.week <= REGULAR_WEEKS
+      ? record.regularMatchups.map(function(m){ return { a: m.away, b: m.home }; })
+      : (record.playoffMatchups || []).map(function(m){ return { a: m.a, b: m.b }; });
+    for (var slotIdx = 0; slotIdx < SCOREBOARD_SLOTS; slotIdx++){
+      var slotEl = document.getElementById("ssScoreboardSlot" + slotIdx);
+      var pair = pairs[slotIdx];
+      if (!pair){
+        slotEl.style.display = "none";
+        continue;
+      }
+      slotEl.style.display = "block";
+      slotEl.classList.toggle("user", pair.a === SS.userId || pair.b === SS.userId);
+      var rowEl = document.getElementById("ssScoreboardRow" + slotIdx);
+      rowEl.innerHTML = matchupRowHtml(pair.a, pair.b, liveByManager[pair.a], liveByManager[pair.b], fullyRevealed);
+      rowEl.classList.remove("expanded"); // start collapsed on every re-render (e.g. each window reveal)
+      var boxEl = document.getElementById("ssScoreboardBox" + slotIdx);
+      boxEl.innerHTML = twoTeamBoxScoreHtml(pair.a, pair.b, record, revealed, fullyRevealed);
+      boxEl.style.display = "none";
+    }
   }
 
   function cupBadgeText(record){
@@ -16311,6 +16347,21 @@ if (typeof module !== "undefined") {
 
     document.getElementById("ssRevealBtn").addEventListener("click", function(){ advanceWindow(); });
     document.getElementById("ssSkipBtn").addEventListener("click", skipToFinal);
+    // League Scoreboard: click any matchup row to expand/collapse its box
+    // score in place. Bound once against the fixed slot elements (a week
+    // has at most 6 games); renderLive() only ever changes their contents,
+    // never re-creates the slots, so these bindings stay live all season.
+    for (var sbIdx = 0; sbIdx < SCOREBOARD_SLOTS; sbIdx++){
+      (function(idx){
+        document.getElementById("ssScoreboardRow" + idx).addEventListener("click", function(){
+          var box = document.getElementById("ssScoreboardBox" + idx);
+          var row = document.getElementById("ssScoreboardRow" + idx);
+          var showing = box.style.display !== "none";
+          box.style.display = showing ? "none" : "block";
+          row.classList.toggle("expanded", !showing);
+        });
+      })(sbIdx);
+    }
     document.getElementById("ssSimPlayoffsBtn").addEventListener("click", function(){
       if (confirm("Sim ahead to the start of the playoffs (Week " + (REGULAR_WEEKS + 1) + ")? This skips the rest of the regular season without stepping through each week.")) simToPlayoffs();
     });
