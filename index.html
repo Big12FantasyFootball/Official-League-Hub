@@ -330,6 +330,13 @@ main{max-width:1240px;margin:0 auto;padding:3rem 1.5rem 6rem}
 
 /* ===== Head-to-Head ===== */
 .h2h-wrap{border:1px solid var(--border);border-radius:12px;background:#fff;padding:.8rem;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:1.25rem}
+/* .tbl-wrap was referenced in the markup (Historical Manager Stats + Season
+   History year tables — up to 10 columns) but never actually defined, so
+   those tables had no horizontal-scroll fallback at all on narrow screens.
+   Give the wide table a scrollable lane instead of letting it force the
+   whole page wider or squash into unreadable columns. */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px}
+.tbl-wrap table{min-width:720px}
 table.h2ht{border-collapse:collapse;white-space:nowrap;font-size:.85rem;width:100%}
 table.h2ht th,table.h2ht td{border:1px solid var(--border);padding:.7rem 1.1rem;text-align:center;font-family:'JetBrains Mono',monospace}
 table.h2ht .rh{text-align:left;background:#fafaf9;position:sticky;left:0;z-index:2;font-family:'Inter',sans-serif;font-weight:600;color:var(--ink);padding:.7rem 1rem;min-width:150px}
@@ -557,7 +564,7 @@ table.sch-table tr:last-child td{border-bottom:none}
 .dr-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:1.25rem;align-items:start}
 @media(max-width:960px){.dr-layout{grid-template-columns:1fr}}
 .dr-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.2rem}
-.dr-card-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;margin-bottom:.8rem;padding-bottom:.6rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.dr-card-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;margin-bottom:.8rem;padding-bottom:.6rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:.5rem;justify-content:space-between;align-items:center}
 .dr-toolbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.8rem}
 .dr-search{flex:1;min-width:140px;padding:.55rem .7rem;border-radius:8px;border:1px solid var(--border);font-size:.82rem}
 .dr-pos-pills{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.7rem}
@@ -596,8 +603,14 @@ table.sch-table tr:last-child td{border-bottom:none}
 .dr-log-row .lm{width:110px;flex-shrink:0;font-weight:600;font-size:.72rem}
 
 @media(max-width:700px){
-  .dr-topbar{position:sticky;top:0;flex-wrap:nowrap;overflow-x:auto;gap:.5rem}
+  /* Wrap onto multiple rows instead of a hidden horizontal scroll — the
+     season sim's Live/Recap topbars can carry 4-5 buttons (Reveal/Skip/Sim
+     to Playoffs/Sim to End, or Back/Next/Skip Recap) plus stats and a speed
+     select, which would otherwise scroll off the edge of a phone screen
+     with no visible cue that there's more to see. */
+  .dr-topbar{position:sticky;top:0;flex-wrap:wrap;gap:.5rem .7rem}
   .dr-stat{min-width:56px}
+  .dr-controls{width:100%;justify-content:flex-start}
   .draftboard{min-width:1100px}
 }
 
@@ -685,10 +698,30 @@ table.sch-table tr:last-child td{border-bottom:none}
 .ss-matchup-slot-row .ss-matchup-row{padding:.9rem 1rem;margin:0;border-bottom:none}
 .ss-matchup-slot-box{padding:0 1rem 1rem;border-top:1px solid var(--border)}
 
+.roster-log-controls{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+
 @media(max-width:700px){
   .ss-standings-row{grid-template-columns:24px 1fr 40px 50px 60px 60px;font-size:.72rem}
   .ss-standings-row span.hide-mobile{display:none}
   .ss-player-log-row{grid-template-columns:32px 1fr 80px 50px;font-size:.7rem}
+  /* Rosters screen: the team-select and player-select+button controls sit
+     inside a dr-card-title next to a text label — full-width them on their
+     own line instead of letting long manager/team names squeeze the row. */
+  #ssRostersScreen .dr-card-title select{width:100%}
+  .roster-log-controls{width:100%}
+  .roster-log-controls select{flex:1;min-width:0}
+  /* Matchup rows (Your Matchup, Hawkins Cup card, League Scoreboard, recap
+     result) have two team-name blocks + two score columns in one flex row
+     with no wrap — long team names ("Aidan's Astounding Team", "Drake
+     London and Friends") were pushing the row wider than a phone screen.
+     Let the name blocks shrink instead of forcing overflow. */
+  .ss-matchup-row{gap:.4rem}
+  .ss-matchup-team{min-width:0;flex:1}
+  .ss-matchup-team b{font-size:.88rem;overflow-wrap:break-word}
+  .ss-matchup-team span{font-size:.6rem}
+  .ss-matchup-vs{padding:0 .3rem}
+  .ss-matchup-score{font-size:1.1rem}
+  .ss-score-stack .ss-cur{font-size:1.1rem}
 }
 </style>
 </head>
@@ -1137,6 +1170,7 @@ table.sch-table tr:last-child td{border-bottom:none}
 
     <div class="po-card">
       <div class="po-card-title"><h3>Career Playoff Records</h3><span>2023&ndash;2025 &middot; 2021 title-game note in Best column</span></div>
+      <div class="tbl-wrap">
       <table class="po-table">
         <thead><tr><th>Manager</th><th class="r">Record</th><th class="r">Win %</th><th class="r">Finals</th><th class="r">Titles</th><th>Best</th></tr></thead>
         <tbody>
@@ -1152,6 +1186,7 @@ table.sch-table tr:last-child td{border-bottom:none}
           <tr><td><div class="po-manager">Ryan Dann</div><div class="po-note">One appearance, one exit</div></td><td class="r"><span class="po-number">0&ndash;1</span></td><td class="r"><span class="po-bad">0.0%</span></td><td class="r"><span class="po-number">0</span></td><td class="r"><span class="po-number">0</span></td><td><span class="po-note">R1 2023</span></td></tr>
         </tbody>
       </table>
+      </div>
       <div class="note">*2021 is a title-game-only archive record (Team Lisa def. Nick Hawkins' Mickey Mouse Losses, 146.88&ndash;99.58) &mdash; no other 2021 game data survived, so it's noted in the Best column only and isn't counted in the Record/Finals/Titles columns above.</div>
     </div>
 
@@ -2742,7 +2777,7 @@ table.sch-table tr:last-child td{border-bottom:none}
         </div>
         <div class="dr-card" style="margin-top:1.25rem">
           <div class="dr-card-title">Player Game Log
-            <span style="display:flex;gap:.5rem;align-items:center">
+            <span class="roster-log-controls">
               <select class="dr-select" id="ssRosterPlayerSelect"></select>
               <button class="dr-btn" id="ssRosterViewLogBtn">View Log</button>
             </span>
