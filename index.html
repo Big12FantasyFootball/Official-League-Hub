@@ -16487,7 +16487,33 @@ if (typeof module !== "undefined") {
   .cup-field-list { margin: 4px 0 12px; padding-left: 20px; font-size: 0.92em; }
   .cup-pending { color: #9aa5b1; font-style: italic; padding: 8px 0; }
   .cup-champion { margin-top: 12px; font-weight: 700; font-size: 1.1em; color: #f0b429; }
+
+  #live-elo { background: #12161c; border: 1px solid #242c38; border-radius: 8px; padding: 16px; margin: 16px 0; color: #e6e6e6; }
+  .elo-header-row, .elo-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 90px 90px;
+    align-items: center;
+    padding: 8px 4px;
+    font-size: 0.92em;
+  }
+  .elo-header-row { color: #9aa5b1; font-weight: 700; border-bottom: 1px solid #242c38; text-transform: uppercase; font-size: 0.78em; letter-spacing: 0.04em; }
+  .elo-row { border-bottom: 1px solid #1c222c; }
+  .elo-row:last-child { border-bottom: none; }
+  .elo-rank { color: #9aa5b1; font-weight: 700; }
+  .elo-name { font-weight: 600; }
+  .elo-team { display: block; color: #9aa5b1; font-weight: 400; font-size: 0.85em; margin-top: 1px; }
+  .elo-rating { font-weight: 700; font-size: 1.05em; }
+  .elo-trend-up { color: #2f9e44; }
+  .elo-trend-down { color: #c0392b; }
+  .elo-trend-flat { color: #9aa5b1; }
+  .elo-badge-new { background: #f0b429; color: #12161c; font-size: 0.72em; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
 </style>
+
+<div class="tbl-wrap">
+  <div class="road-title">Persistent Manager Elo</div>
+  <div class="inactive-note2">Every regular-season and playoff game (excluding consolation-bracket games) adjusts these ratings — carried across seasons, so every week matters even after you're out of title contention.</div>
+  <div id="live-elo"></div>
+</div>
 
 <div class="tbl-wrap">
   <div class="road-title">League Records</div>
