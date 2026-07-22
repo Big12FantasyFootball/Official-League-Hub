@@ -8,12 +8,16 @@ flat in 2026. Unlike espn_pull.py, this does NOT need to run daily — past
 seasons don't change. Run it once now, and again only if you add more
 manager/season history later.
 
+Reads ESPN_S2 / ESPN_SWID from environment variables (set as GitHub Actions
+secrets — never hardcode real cookie values in this file).
+
 Usage:
     pip install requests
-    python espn_history_pull.py
+    ESPN_S2=... ESPN_SWID=... python espn_history_pull.py
 """
 
 import json
+import os
 import sys
 
 import requests
@@ -22,7 +26,10 @@ LEAGUE_ID = 1480327482
 SEASONS = [2024, 2025]  # completed seasons per ESPN's `previousSeasons` field
 VIEWS = ["mTeam", "mMatchupScore"]
 
-COOKIES = {}  # league is public — no auth needed; add ESPN_S2/SWID here if that changes
+COOKIES = {
+    "espn_s2": os.environ.get("ESPN_S2", ""),
+    "SWID": os.environ.get("ESPN_SWID", ""),
+}
 
 
 def fetch_season(season):
@@ -62,7 +69,6 @@ def parse_standings(data):
 
 
 def parse_all_matchups(data):
-    """Unlike the live script, grab every completed matchup period, not just current."""
     schedule = data.get("schedule", [])
     out = []
     for m in schedule:
@@ -70,7 +76,7 @@ def parse_all_matchups(data):
         away = m.get("away", {})
         winner = m.get("winner", "UNDECIDED")
         if winner == "UNDECIDED":
-            continue  # skip anything not actually played (shouldn't happen for past seasons)
+            continue
         out.append({
             "matchupPeriodId": m.get("matchupPeriodId"),
             "homeTeamId": home.get("teamId"),
@@ -85,6 +91,10 @@ def parse_all_matchups(data):
 
 
 def main():
+    if not COOKIES["espn_s2"] or not COOKIES["SWID"]:
+        print("ERROR: ESPN_S2 / ESPN_SWID environment variables not set.", file=sys.stderr)
+        sys.exit(1)
+
     result = {"seasons": {}}
     for season in SEASONS:
         data = fetch_season(season)
