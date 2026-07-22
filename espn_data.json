@@ -1,0 +1,223 @@
+{
+  "pulledAt": "2026-07-22T21:55:50.459685+00:00",
+  "leagueId": 1480327482,
+  "season": 2026,
+  "currentMatchupPeriod": 1,
+  "draftCompleted": false,
+  "standings": [
+    {
+      "teamId": 1,
+      "name": "Drake London and Friends",
+      "abbrev": "NNT",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 1,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 2,
+      "name": "Flat Foot",
+      "abbrev": "FFB",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 0,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 3,
+      "name": "Seal Team Nix",
+      "abbrev": "STN",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 1,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 4,
+      "name": "Josh's Scary Team",
+      "abbrev": "JST",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 1,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 5,
+      "name": "Team Lisa",
+      "abbrev": "JOe",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 1,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 6,
+      "name": "Bourne with Downs",
+      "abbrev": "CMC",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 1,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 7,
+      "name": "Aidan's Astounding Team",
+      "abbrev": "AAT",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 1,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 8,
+      "name": "Curse of Ra",
+      "abbrev": "NICK",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 0,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 9,
+      "name": "Nick's Nitty Team",
+      "abbrev": "FURN",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 0,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 10,
+      "name": "Brandon's Brilliant Team",
+      "abbrev": "BBT",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 0,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 11,
+      "name": "Fortnite Grinder",
+      "abbrev": "JFT",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 0,
+      "playoffSeed": 0
+    },
+    {
+      "teamId": 12,
+      "name": "Team Dann",
+      "abbrev": "TD",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0,
+      "divisionId": 0,
+      "playoffSeed": 0
+    }
+  ],
+  "currentWeekMatchups": [
+    {
+      "matchupPeriodId": 1,
+      "homeTeamId": 5,
+      "homeScore": 0.0,
+      "awayTeamId": 12,
+      "awayScore": 0.0,
+      "winner": "UNDECIDED",
+      "playoffTierType": "NONE"
+    },
+    {
+      "matchupPeriodId": 1,
+      "homeTeamId": 7,
+      "homeScore": 0.0,
+      "awayTeamId": 9,
+      "awayScore": 0.0,
+      "winner": "UNDECIDED",
+      "playoffTierType": "NONE"
+    },
+    {
+      "matchupPeriodId": 1,
+      "homeTeamId": 4,
+      "homeScore": 0.0,
+      "awayTeamId": 1,
+      "awayScore": 0.0,
+      "winner": "UNDECIDED",
+      "playoffTierType": "NONE"
+    },
+    {
+      "matchupPeriodId": 1,
+      "homeTeamId": 10,
+      "homeScore": 0.0,
+      "awayTeamId": 2,
+      "awayScore": 0.0,
+      "winner": "UNDECIDED",
+      "playoffTierType": "NONE"
+    },
+    {
+      "matchupPeriodId": 1,
+      "homeTeamId": 11,
+      "homeScore": 0.0,
+      "awayTeamId": 8,
+      "awayScore": 0.0,
+      "winner": "UNDECIDED",
+      "playoffTierType": "NONE"
+    },
+    {
+      "matchupPeriodId": 1,
+      "homeTeamId": 3,
+      "homeScore": 0.0,
+      "awayTeamId": 6,
+      "awayScore": 0.0,
+      "winner": "UNDECIDED",
+      "playoffTierType": "NONE"
+    }
+  ],
+  "rosters": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": [],
+    "11": [],
+    "12": []
+  }
+}
