@@ -1,3 +1,2098 @@
 {
-  "seasons": {}
+  "seasons": {
+    "2024": {
+      "finalStandings": [
+        {
+          "teamId": 1,
+          "name": "Loud and stroud",
+          "abbrev": "NNT",
+          "wins": 11,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 1726.9,
+          "pointsAgainst": 0,
+          "finalPlace": 4
+        },
+        {
+          "teamId": 4,
+          "name": "Josh's Scary Team",
+          "abbrev": "JST",
+          "wins": 10,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1879.9199999999998,
+          "pointsAgainst": 0,
+          "finalPlace": 3
+        },
+        {
+          "teamId": 11,
+          "name": "Fortnite Grinder",
+          "abbrev": "JFT",
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1685.9200000000003,
+          "pointsAgainst": 0,
+          "finalPlace": 5
+        },
+        {
+          "teamId": 2,
+          "name": "This team is kincaids",
+          "abbrev": "DDT",
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1754.74,
+          "pointsAgainst": 0,
+          "finalPlace": 1
+        },
+        {
+          "teamId": 9,
+          "name": "Nick's Nitty Team",
+          "abbrev": "FURN",
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1594.04,
+          "pointsAgainst": 0,
+          "finalPlace": 6
+        },
+        {
+          "teamId": 8,
+          "name": "The Pitts of Hell",
+          "abbrev": "NICK",
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1641.06,
+          "pointsAgainst": 0,
+          "finalPlace": 2
+        },
+        {
+          "teamId": 3,
+          "name": "Hawk Tua",
+          "abbrev": "HT",
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1775.36,
+          "pointsAgainst": 0,
+          "finalPlace": 12
+        },
+        {
+          "teamId": 12,
+          "name": "Team Dann",
+          "abbrev": "TD",
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1522.8799999999999,
+          "pointsAgainst": 0,
+          "finalPlace": 9
+        },
+        {
+          "teamId": 5,
+          "name": "Team Lisa",
+          "abbrev": "JOe",
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1444.9800000000002,
+          "pointsAgainst": 0,
+          "finalPlace": 11
+        },
+        {
+          "teamId": 10,
+          "name": "BLORD",
+          "abbrev": "BL",
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1623.2,
+          "pointsAgainst": 0,
+          "finalPlace": 8
+        },
+        {
+          "teamId": 6,
+          "name": "Jalen's Team",
+          "abbrev": "JT",
+          "wins": 4,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 1599.42,
+          "pointsAgainst": 0,
+          "finalPlace": 10
+        },
+        {
+          "teamId": 7,
+          "name": "Waddle Waddle\ud83d\udc27",
+          "abbrev": "Th",
+          "wins": 4,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 1465.76,
+          "pointsAgainst": 0,
+          "finalPlace": 7
+        }
+      ],
+      "allMatchups": [
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 1,
+          "homeScore": 125.26,
+          "awayTeamId": 11,
+          "awayScore": 122.08,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 6,
+          "homeScore": 111.78,
+          "awayTeamId": 4,
+          "awayScore": 153.56,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 10,
+          "homeScore": 138.78,
+          "awayTeamId": 5,
+          "awayScore": 70.04,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 8,
+          "homeScore": 148.92,
+          "awayTeamId": 12,
+          "awayScore": 82.32,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 9,
+          "homeScore": 94.28,
+          "awayTeamId": 2,
+          "awayScore": 110.9,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 7,
+          "homeScore": 90.16,
+          "awayTeamId": 3,
+          "awayScore": 144.18,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 11,
+          "homeScore": 172.94,
+          "awayTeamId": 4,
+          "awayScore": 102.42,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 5,
+          "homeScore": 127.64,
+          "awayTeamId": 1,
+          "awayScore": 119.2,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 12,
+          "homeScore": 116.02,
+          "awayTeamId": 6,
+          "awayScore": 91.76,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 2,
+          "homeScore": 136.78,
+          "awayTeamId": 10,
+          "awayScore": 118.76,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 3,
+          "homeScore": 114.88,
+          "awayTeamId": 8,
+          "awayScore": 145.58,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 7,
+          "homeScore": 104.24,
+          "awayTeamId": 9,
+          "awayScore": 100.14,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 5,
+          "homeScore": 78.38,
+          "awayTeamId": 11,
+          "awayScore": 119.88,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 4,
+          "homeScore": 108.06,
+          "awayTeamId": 12,
+          "awayScore": 95.84,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 1,
+          "homeScore": 139.92,
+          "awayTeamId": 2,
+          "awayScore": 117.36,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 6,
+          "homeScore": 121.22,
+          "awayTeamId": 3,
+          "awayScore": 135.96,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 10,
+          "homeScore": 85.98,
+          "awayTeamId": 7,
+          "awayScore": 87.96,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 8,
+          "homeScore": 98.18,
+          "awayTeamId": 9,
+          "awayScore": 118.34,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 11,
+          "homeScore": 95.68,
+          "awayTeamId": 12,
+          "awayScore": 115.12,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 2,
+          "homeScore": 154.9,
+          "awayTeamId": 5,
+          "awayScore": 107.0,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 3,
+          "homeScore": 115.32,
+          "awayTeamId": 4,
+          "awayScore": 129.78,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 7,
+          "homeScore": 102.2,
+          "awayTeamId": 1,
+          "awayScore": 150.6,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 9,
+          "homeScore": 113.3,
+          "awayTeamId": 6,
+          "awayScore": 82.2,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 8,
+          "homeScore": 63.14,
+          "awayTeamId": 10,
+          "awayScore": 136.44,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 2,
+          "homeScore": 92.06,
+          "awayTeamId": 11,
+          "awayScore": 169.6,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 12,
+          "homeScore": 130.9,
+          "awayTeamId": 3,
+          "awayScore": 115.24,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 5,
+          "homeScore": 115.74,
+          "awayTeamId": 7,
+          "awayScore": 114.32,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 4,
+          "homeScore": 121.28,
+          "awayTeamId": 9,
+          "awayScore": 112.66,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 1,
+          "homeScore": 124.64,
+          "awayTeamId": 8,
+          "awayScore": 115.82,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 6,
+          "homeScore": 134.96,
+          "awayTeamId": 10,
+          "awayScore": 106.9,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 11,
+          "homeScore": 117.46,
+          "awayTeamId": 3,
+          "awayScore": 105.8,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 7,
+          "homeScore": 115.66,
+          "awayTeamId": 2,
+          "awayScore": 145.72,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 9,
+          "homeScore": 131.9,
+          "awayTeamId": 12,
+          "awayScore": 92.06,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 8,
+          "homeScore": 94.12,
+          "awayTeamId": 5,
+          "awayScore": 81.4,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 10,
+          "homeScore": 86.14,
+          "awayTeamId": 4,
+          "awayScore": 142.02,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 6,
+          "homeScore": 114.7,
+          "awayTeamId": 1,
+          "awayScore": 140.72,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 7,
+          "homeScore": 85.44,
+          "awayTeamId": 11,
+          "awayScore": 119.4,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 3,
+          "homeScore": 133.62,
+          "awayTeamId": 9,
+          "awayScore": 78.34,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 2,
+          "homeScore": 154.88,
+          "awayTeamId": 8,
+          "awayScore": 121.24,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 12,
+          "homeScore": 96.86,
+          "awayTeamId": 10,
+          "awayScore": 94.26,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 5,
+          "homeScore": 65.38,
+          "awayTeamId": 6,
+          "awayScore": 100.58,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 4,
+          "homeScore": 116.64,
+          "awayTeamId": 1,
+          "awayScore": 162.94,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 11,
+          "homeScore": 109.64,
+          "awayTeamId": 9,
+          "awayScore": 140.42,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 8,
+          "homeScore": 133.66,
+          "awayTeamId": 7,
+          "awayScore": 123.84,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 10,
+          "homeScore": 130.66,
+          "awayTeamId": 3,
+          "awayScore": 153.42,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 6,
+          "homeScore": 118.0,
+          "awayTeamId": 2,
+          "awayScore": 118.94,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 1,
+          "homeScore": 115.12,
+          "awayTeamId": 12,
+          "awayScore": 95.34,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 4,
+          "homeScore": 127.76,
+          "awayTeamId": 5,
+          "awayScore": 177.64,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 8,
+          "homeScore": 143.0,
+          "awayTeamId": 11,
+          "awayScore": 72.76,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 9,
+          "homeScore": 146.04,
+          "awayTeamId": 10,
+          "awayScore": 97.02,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 7,
+          "homeScore": 102.86,
+          "awayTeamId": 6,
+          "awayScore": 119.48,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 3,
+          "homeScore": 121.3,
+          "awayTeamId": 1,
+          "awayScore": 121.82,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 2,
+          "homeScore": 124.5,
+          "awayTeamId": 4,
+          "awayScore": 144.24,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 12,
+          "homeScore": 83.7,
+          "awayTeamId": 5,
+          "awayScore": 132.78,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 11,
+          "homeScore": 112.94,
+          "awayTeamId": 10,
+          "awayScore": 84.3,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 6,
+          "homeScore": 154.12,
+          "awayTeamId": 8,
+          "awayScore": 114.9,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 1,
+          "homeScore": 108.78,
+          "awayTeamId": 9,
+          "awayScore": 75.84,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 4,
+          "homeScore": 147.32,
+          "awayTeamId": 7,
+          "awayScore": 94.38,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 5,
+          "homeScore": 111.24,
+          "awayTeamId": 3,
+          "awayScore": 131.7,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 12,
+          "homeScore": 142.48,
+          "awayTeamId": 2,
+          "awayScore": 99.7,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 6,
+          "homeScore": 113.96,
+          "awayTeamId": 11,
+          "awayScore": 139.88,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 10,
+          "homeScore": 139.48,
+          "awayTeamId": 1,
+          "awayScore": 141.88,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 8,
+          "homeScore": 100.18,
+          "awayTeamId": 4,
+          "awayScore": 135.34,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 9,
+          "homeScore": 79.86,
+          "awayTeamId": 5,
+          "awayScore": 93.64,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 7,
+          "homeScore": 112.44,
+          "awayTeamId": 12,
+          "awayScore": 91.04,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 3,
+          "homeScore": 125.18,
+          "awayTeamId": 2,
+          "awayScore": 162.36,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 11,
+          "homeScore": 109.0,
+          "awayTeamId": 1,
+          "awayScore": 90.72,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 4,
+          "homeScore": 126.18,
+          "awayTeamId": 6,
+          "awayScore": 113.3,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 5,
+          "homeScore": 119.16,
+          "awayTeamId": 10,
+          "awayScore": 163.82,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 12,
+          "homeScore": 114.76,
+          "awayTeamId": 8,
+          "awayScore": 115.58,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 2,
+          "homeScore": 101.26,
+          "awayTeamId": 9,
+          "awayScore": 125.98,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 3,
+          "homeScore": 122.96,
+          "awayTeamId": 7,
+          "awayScore": 128.0,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 4,
+          "homeScore": 156.26,
+          "awayTeamId": 11,
+          "awayScore": 162.9,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 1,
+          "homeScore": 76.38,
+          "awayTeamId": 5,
+          "awayScore": 71.64,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 6,
+          "homeScore": 101.56,
+          "awayTeamId": 12,
+          "awayScore": 133.12,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 10,
+          "homeScore": 122.96,
+          "awayTeamId": 2,
+          "awayScore": 116.66,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 8,
+          "homeScore": 147.58,
+          "awayTeamId": 3,
+          "awayScore": 99.72,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 9,
+          "homeScore": 136.0,
+          "awayTeamId": 7,
+          "awayScore": 112.74,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 11,
+          "homeScore": 61.76,
+          "awayTeamId": 5,
+          "awayScore": 93.3,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 12,
+          "homeScore": 133.32,
+          "awayTeamId": 4,
+          "awayScore": 169.06,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 2,
+          "homeScore": 118.72,
+          "awayTeamId": 1,
+          "awayScore": 108.92,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 3,
+          "homeScore": 156.08,
+          "awayTeamId": 6,
+          "awayScore": 121.8,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 7,
+          "homeScore": 91.52,
+          "awayTeamId": 10,
+          "awayScore": 117.7,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 9,
+          "homeScore": 140.94,
+          "awayTeamId": 8,
+          "awayScore": 99.16,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 2,
+          "homeScore": 122.68,
+          "awayTeamId": 9,
+          "awayScore": 116.44,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 11,
+          "homeScore": 146.46,
+          "awayTeamId": 8,
+          "awayScore": 172.8,
+          "winner": "AWAY",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 3,
+          "homeScore": 97.68,
+          "awayTeamId": 12,
+          "awayScore": 124.5,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 5,
+          "homeScore": 97.16,
+          "awayTeamId": 10,
+          "awayScore": 97.2,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 6,
+          "homeScore": 93.24,
+          "awayTeamId": 7,
+          "awayScore": 134.74,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 1,
+          "homeScore": 138.24,
+          "awayTeamId": 2,
+          "awayScore": 142.18,
+          "winner": "AWAY",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 4,
+          "homeScore": 105.18,
+          "awayTeamId": 8,
+          "awayScore": 158.28,
+          "winner": "AWAY",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 11,
+          "homeScore": 159.88,
+          "awayTeamId": 9,
+          "awayScore": 131.92,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 12,
+          "homeScore": 83.84,
+          "awayTeamId": 10,
+          "awayScore": 121.12,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 3,
+          "homeScore": 85.86,
+          "awayTeamId": 7,
+          "awayScore": 122.02,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 5,
+          "homeScore": 129.7,
+          "awayTeamId": 6,
+          "awayScore": 140.84,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 2,
+          "homeScore": 90.8,
+          "awayTeamId": 8,
+          "awayScore": 80.72,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 1,
+          "homeScore": 108.68,
+          "awayTeamId": 4,
+          "awayScore": 136.18,
+          "winner": "AWAY",
+          "playoffTierType": "WINNERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 11,
+          "homeScore": 176.04,
+          "awayTeamId": 9,
+          "awayScore": 137.72,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 10,
+          "homeScore": 109.66,
+          "awayTeamId": 7,
+          "awayScore": 112.88,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 12,
+          "homeScore": 121.1,
+          "awayTeamId": 6,
+          "awayScore": 119.58,
+          "winner": "HOME",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 3,
+          "homeScore": 92.28,
+          "awayTeamId": 5,
+          "awayScore": 113.0,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        }
+      ]
+    },
+    "2025": {
+      "finalStandings": [
+        {
+          "teamId": 11,
+          "name": "Fortnite Grinder",
+          "abbrev": "JFT",
+          "wins": 11,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 1805.8400000000001,
+          "pointsAgainst": 0,
+          "finalPlace": 3
+        },
+        {
+          "teamId": 9,
+          "name": "Nick's Nitty Team",
+          "abbrev": "FURN",
+          "wins": 10,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1664.04,
+          "pointsAgainst": 0,
+          "finalPlace": 4
+        },
+        {
+          "teamId": 3,
+          "name": "Seal Team Nix",
+          "abbrev": "STN",
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1783.7600000000002,
+          "pointsAgainst": 0,
+          "finalPlace": 1
+        },
+        {
+          "teamId": 8,
+          "name": "Curse of Ra",
+          "abbrev": "NICK",
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1558.16,
+          "pointsAgainst": 0,
+          "finalPlace": 2
+        },
+        {
+          "teamId": 2,
+          "name": "Mud Hut Chig \ud83e\udd40",
+          "abbrev": "DDT",
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1710.38,
+          "pointsAgainst": 0,
+          "finalPlace": 6
+        },
+        {
+          "teamId": 6,
+          "name": "Bourne with Downs",
+          "abbrev": "CMC",
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1723.42,
+          "pointsAgainst": 0,
+          "finalPlace": 5
+        },
+        {
+          "teamId": 4,
+          "name": "Josh's Scary Team",
+          "abbrev": "JST",
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1649.6000000000001,
+          "pointsAgainst": 0,
+          "finalPlace": 11
+        },
+        {
+          "teamId": 12,
+          "name": "Team Dann",
+          "abbrev": "TD",
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1605.44,
+          "pointsAgainst": 0,
+          "finalPlace": 9
+        },
+        {
+          "teamId": 5,
+          "name": "Team Lisa",
+          "abbrev": "JOe",
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1521.62,
+          "pointsAgainst": 0,
+          "finalPlace": 8
+        },
+        {
+          "teamId": 1,
+          "name": "Drake London and Friends",
+          "abbrev": "NNT",
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1468.1800000000003,
+          "pointsAgainst": 0,
+          "finalPlace": 10
+        },
+        {
+          "teamId": 7,
+          "name": "50 Shades of Maye",
+          "abbrev": "Th",
+          "wins": 3,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1368.38,
+          "pointsAgainst": 0,
+          "finalPlace": 7
+        },
+        {
+          "teamId": 10,
+          "name": "BLORD",
+          "abbrev": "BL",
+          "wins": 3,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1342.9800000000002,
+          "pointsAgainst": 0,
+          "finalPlace": 12
+        }
+      ],
+      "allMatchups": [
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 1,
+          "homeScore": 111.08,
+          "awayTeamId": 11,
+          "awayScore": 124.78,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 6,
+          "homeScore": 143.76,
+          "awayTeamId": 4,
+          "awayScore": 123.72,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 10,
+          "homeScore": 76.82,
+          "awayTeamId": 5,
+          "awayScore": 105.72,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 8,
+          "homeScore": 81.02,
+          "awayTeamId": 12,
+          "awayScore": 100.36,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 9,
+          "homeScore": 114.92,
+          "awayTeamId": 2,
+          "awayScore": 79.44,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 1,
+          "homeTeamId": 7,
+          "homeScore": 92.98,
+          "awayTeamId": 3,
+          "awayScore": 141.42,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 11,
+          "homeScore": 152.04,
+          "awayTeamId": 4,
+          "awayScore": 78.98,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 5,
+          "homeScore": 85.5,
+          "awayTeamId": 1,
+          "awayScore": 149.9,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 12,
+          "homeScore": 125.6,
+          "awayTeamId": 6,
+          "awayScore": 95.62,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 2,
+          "homeScore": 128.04,
+          "awayTeamId": 10,
+          "awayScore": 104.44,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 3,
+          "homeScore": 103.24,
+          "awayTeamId": 8,
+          "awayScore": 124.5,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 2,
+          "homeTeamId": 7,
+          "homeScore": 95.6,
+          "awayTeamId": 9,
+          "awayScore": 119.18,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 5,
+          "homeScore": 98.32,
+          "awayTeamId": 11,
+          "awayScore": 141.24,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 4,
+          "homeScore": 110.9,
+          "awayTeamId": 12,
+          "awayScore": 129.22,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 1,
+          "homeScore": 132.52,
+          "awayTeamId": 2,
+          "awayScore": 129.88,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 6,
+          "homeScore": 137.72,
+          "awayTeamId": 3,
+          "awayScore": 106.44,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 10,
+          "homeScore": 68.9,
+          "awayTeamId": 7,
+          "awayScore": 105.62,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 3,
+          "homeTeamId": 8,
+          "homeScore": 95.36,
+          "awayTeamId": 9,
+          "awayScore": 116.06,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 11,
+          "homeScore": 134.7,
+          "awayTeamId": 12,
+          "awayScore": 84.58,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 2,
+          "homeScore": 120.84,
+          "awayTeamId": 5,
+          "awayScore": 129.88,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 3,
+          "homeScore": 137.12,
+          "awayTeamId": 4,
+          "awayScore": 143.64,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 7,
+          "homeScore": 112.82,
+          "awayTeamId": 1,
+          "awayScore": 95.36,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 9,
+          "homeScore": 171.1,
+          "awayTeamId": 6,
+          "awayScore": 131.26,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 4,
+          "homeTeamId": 8,
+          "homeScore": 133.6,
+          "awayTeamId": 10,
+          "awayScore": 68.72,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 2,
+          "homeScore": 104.32,
+          "awayTeamId": 11,
+          "awayScore": 117.82,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 12,
+          "homeScore": 153.26,
+          "awayTeamId": 3,
+          "awayScore": 151.28,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 5,
+          "homeScore": 128.34,
+          "awayTeamId": 7,
+          "awayScore": 92.12,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 4,
+          "homeScore": 134.32,
+          "awayTeamId": 9,
+          "awayScore": 134.82,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 1,
+          "homeScore": 84.32,
+          "awayTeamId": 8,
+          "awayScore": 99.0,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 5,
+          "homeTeamId": 6,
+          "homeScore": 137.92,
+          "awayTeamId": 10,
+          "awayScore": 102.44,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 11,
+          "homeScore": 110.22,
+          "awayTeamId": 3,
+          "awayScore": 119.86,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 7,
+          "homeScore": 93.24,
+          "awayTeamId": 2,
+          "awayScore": 125.92,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 9,
+          "homeScore": 134.98,
+          "awayTeamId": 12,
+          "awayScore": 105.44,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 8,
+          "homeScore": 102.7,
+          "awayTeamId": 5,
+          "awayScore": 107.04,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 10,
+          "homeScore": 89.66,
+          "awayTeamId": 4,
+          "awayScore": 108.9,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 6,
+          "homeTeamId": 6,
+          "homeScore": 133.04,
+          "awayTeamId": 1,
+          "awayScore": 97.44,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 7,
+          "homeScore": 102.48,
+          "awayTeamId": 11,
+          "awayScore": 139.04,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 3,
+          "homeScore": 139.86,
+          "awayTeamId": 9,
+          "awayScore": 102.34,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 2,
+          "homeScore": 90.42,
+          "awayTeamId": 8,
+          "awayScore": 126.02,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 12,
+          "homeScore": 113.78,
+          "awayTeamId": 10,
+          "awayScore": 119.9,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 5,
+          "homeScore": 93.94,
+          "awayTeamId": 6,
+          "awayScore": 112.86,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 7,
+          "homeTeamId": 4,
+          "homeScore": 146.34,
+          "awayTeamId": 1,
+          "awayScore": 91.62,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 11,
+          "homeScore": 111.66,
+          "awayTeamId": 9,
+          "awayScore": 105.96,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 8,
+          "homeScore": 150.06,
+          "awayTeamId": 7,
+          "awayScore": 76.58,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 10,
+          "homeScore": 114.48,
+          "awayTeamId": 3,
+          "awayScore": 132.78,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 6,
+          "homeScore": 92.82,
+          "awayTeamId": 2,
+          "awayScore": 119.72,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 1,
+          "homeScore": 115.76,
+          "awayTeamId": 12,
+          "awayScore": 157.36,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 8,
+          "homeTeamId": 4,
+          "homeScore": 80.08,
+          "awayTeamId": 5,
+          "awayScore": 103.68,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 8,
+          "homeScore": 113.44,
+          "awayTeamId": 11,
+          "awayScore": 108.84,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 9,
+          "homeScore": 88.3,
+          "awayTeamId": 10,
+          "awayScore": 124.6,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 7,
+          "homeScore": 125.46,
+          "awayTeamId": 6,
+          "awayScore": 157.6,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 3,
+          "homeScore": 115.92,
+          "awayTeamId": 1,
+          "awayScore": 114.58,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 2,
+          "homeScore": 127.92,
+          "awayTeamId": 4,
+          "awayScore": 111.6,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 9,
+          "homeTeamId": 12,
+          "homeScore": 133.26,
+          "awayTeamId": 5,
+          "awayScore": 130.32,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 11,
+          "homeScore": 124.14,
+          "awayTeamId": 10,
+          "awayScore": 92.2,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 6,
+          "homeScore": 100.0,
+          "awayTeamId": 8,
+          "awayScore": 117.52,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 1,
+          "homeScore": 98.9,
+          "awayTeamId": 9,
+          "awayScore": 113.92,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 4,
+          "homeScore": 124.02,
+          "awayTeamId": 7,
+          "awayScore": 113.6,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 5,
+          "homeScore": 109.6,
+          "awayTeamId": 3,
+          "awayScore": 120.5,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 10,
+          "homeTeamId": 12,
+          "homeScore": 124.94,
+          "awayTeamId": 2,
+          "awayScore": 136.52,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 6,
+          "homeScore": 140.22,
+          "awayTeamId": 11,
+          "awayScore": 161.38,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 10,
+          "homeScore": 84.44,
+          "awayTeamId": 1,
+          "awayScore": 87.46,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 8,
+          "homeScore": 84.58,
+          "awayTeamId": 4,
+          "awayScore": 102.42,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 9,
+          "homeScore": 110.04,
+          "awayTeamId": 5,
+          "awayScore": 105.6,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 7,
+          "homeScore": 108.14,
+          "awayTeamId": 12,
+          "awayScore": 63.12,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 11,
+          "homeTeamId": 3,
+          "homeScore": 128.9,
+          "awayTeamId": 2,
+          "awayScore": 141.7,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 11,
+          "homeScore": 100.22,
+          "awayTeamId": 1,
+          "awayScore": 124.14,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 4,
+          "homeScore": 162.74,
+          "awayTeamId": 6,
+          "awayScore": 113.16,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 5,
+          "homeScore": 117.22,
+          "awayTeamId": 10,
+          "awayScore": 61.16,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 12,
+          "homeScore": 86.72,
+          "awayTeamId": 8,
+          "awayScore": 159.16,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 2,
+          "homeScore": 126.16,
+          "awayTeamId": 9,
+          "awayScore": 144.38,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 12,
+          "homeTeamId": 3,
+          "homeScore": 119.22,
+          "awayTeamId": 7,
+          "awayScore": 99.16,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 4,
+          "homeScore": 101.76,
+          "awayTeamId": 11,
+          "awayScore": 128.32,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 1,
+          "homeScore": 84.74,
+          "awayTeamId": 5,
+          "awayScore": 80.32,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 6,
+          "homeScore": 122.8,
+          "awayTeamId": 12,
+          "awayScore": 121.54,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 10,
+          "homeScore": 99.56,
+          "awayTeamId": 2,
+          "awayScore": 148.9,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 8,
+          "homeScore": 79.94,
+          "awayTeamId": 3,
+          "awayScore": 133.14,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 13,
+          "homeTeamId": 9,
+          "homeScore": 122.24,
+          "awayTeamId": 7,
+          "awayScore": 108.98,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 11,
+          "homeScore": 151.44,
+          "awayTeamId": 5,
+          "awayScore": 126.14,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 12,
+          "homeScore": 106.26,
+          "awayTeamId": 4,
+          "awayScore": 120.18,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 2,
+          "homeScore": 130.6,
+          "awayTeamId": 1,
+          "awayScore": 80.36,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 3,
+          "homeScore": 134.08,
+          "awayTeamId": 6,
+          "awayScore": 104.64,
+          "winner": "HOME",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 7,
+          "homeScore": 41.6,
+          "awayTeamId": 10,
+          "awayScore": 135.66,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 14,
+          "homeTeamId": 9,
+          "homeScore": 85.8,
+          "awayTeamId": 8,
+          "awayScore": 91.26,
+          "winner": "AWAY",
+          "playoffTierType": "NONE"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 8,
+          "homeScore": 149.3,
+          "awayTeamId": 2,
+          "awayScore": 147.5,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 3,
+          "homeScore": 190.48,
+          "awayTeamId": 6,
+          "awayScore": 126.66,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 4,
+          "homeScore": 88.38,
+          "awayTeamId": 12,
+          "awayScore": 148.9,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 5,
+          "homeScore": 113.72,
+          "awayTeamId": 1,
+          "awayScore": 74.9,
+          "winner": "HOME",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 15,
+          "homeTeamId": 7,
+          "homeScore": 123.2,
+          "awayTeamId": 10,
+          "awayScore": 102.34,
+          "winner": "HOME",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 11,
+          "homeScore": 83.0,
+          "awayTeamId": 8,
+          "awayScore": 126.82,
+          "winner": "AWAY",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 9,
+          "homeScore": 121.16,
+          "awayTeamId": 3,
+          "awayScore": 145.58,
+          "winner": "AWAY",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 2,
+          "homeScore": 183.8,
+          "awayTeamId": 6,
+          "awayScore": 177.06,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 12,
+          "homeScore": 99.94,
+          "awayTeamId": 5,
+          "awayScore": 135.58,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 4,
+          "homeScore": 98.0,
+          "awayTeamId": 7,
+          "awayScore": 100.0,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 16,
+          "homeTeamId": 1,
+          "homeScore": 78.76,
+          "awayTeamId": 10,
+          "awayScore": 60.78,
+          "winner": "HOME",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 3,
+          "homeScore": 133.68,
+          "awayTeamId": 8,
+          "awayScore": 127.32,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_BRACKET"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 11,
+          "homeScore": 135.38,
+          "awayTeamId": 9,
+          "awayScore": 53.3,
+          "winner": "HOME",
+          "playoffTierType": "WINNERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 2,
+          "homeScore": 106.3,
+          "awayTeamId": 6,
+          "awayScore": 147.28,
+          "winner": "AWAY",
+          "playoffTierType": "WINNERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 5,
+          "homeScore": 105.86,
+          "awayTeamId": 7,
+          "awayScore": 122.54,
+          "winner": "AWAY",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 12,
+          "homeScore": 89.8,
+          "awayTeamId": 1,
+          "awayScore": 72.7,
+          "winner": "HOME",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        },
+        {
+          "matchupPeriodId": 17,
+          "homeTeamId": 4,
+          "homeScore": 93.64,
+          "awayTeamId": 10,
+          "awayScore": 82.04,
+          "winner": "HOME",
+          "playoffTierType": "LOSERS_CONSOLATION_LADDER"
+        }
+      ]
+    }
+  }
 }
