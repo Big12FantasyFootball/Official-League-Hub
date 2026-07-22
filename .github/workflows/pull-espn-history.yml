@@ -1,7 +1,7 @@
 name: Pull ESPN Fantasy History
 
 on:
-  workflow_dispatch:   # manual trigger only — past seasons don't change often
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -9,6 +9,9 @@ permissions:
 jobs:
   pull:
     runs-on: ubuntu-latest
+    env:
+      ESPN_S2: ${{ secrets.ESPN_S2 }}
+      ESPN_SWID: ${{ secrets.ESPN_SWID }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
