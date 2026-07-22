@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-07-22T22:09:40.029534+00:00",
+  "pulledAt": "2026-07-22T23:35:07.869380+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -206,6 +206,7 @@
       "playoffTierType": "NONE"
     }
   ],
+  "seasonMatchups": [],
   "rosters": {
     "1": [],
     "2": [],
