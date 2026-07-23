@@ -1276,11 +1276,23 @@ table.sch-table tr:last-child td{border-bottom:none}
     </div>
     <div class="note" style="margin-top:1rem">Click any column header to sort. RS = Regular Season. Brandon Beland and Aidan Goss begin with fresh records in 2026. *2021 is a title-game-only archive record (Lisa def. Hawkins) and isn't counted in the RS/Playoff numeric columns, which cover 2023&ndash;2025 only.</div>
 
+    <div class="road-title">Persistent Manager Elo</div>
+    <div class="stat-strip">
+      <div class="stat-strip-main">
+        <div class="stat-strip-kicker">How It's Calculated</div>
+        <div class="stat-strip-title">Every Game Counts, Forever</div>
+        <div class="stat-strip-copy">Every manager starts at 1500. After each regular-season or real-playoff game (consolation-bracket games don't count), both ratings shift based on the result &mdash; and on how surprising it was. Beating a team you were expected to beat barely moves the number; upsetting a stronger team moves it a lot. Blowouts move ratings more than nail-biters. Because it's calculated fresh from full match history each time, ratings carry across seasons automatically &mdash; there's no reset button, and no game ever stops mattering.</div>
+      </div>
+      <div class="stat-item"><b style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.6rem;display:block">1500</b><span style="font-size:.68rem;color:var(--muted)">Starting Elo</span></div>
+      <div class="stat-item"><b style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.6rem;display:block">2024&ndash;26</b><span style="font-size:.68rem;color:var(--muted)">Seasons Counted</span></div>
+    </div>
+
     <div class="tbl-wrap">
-      <div class="road-title">Persistent Manager Elo</div>
-      <div class="inactive-note2">Every regular-season and playoff game (excluding consolation-bracket games) adjusts these ratings &mdash; carried across seasons, so every week matters even after you're out of title contention.</div>
       <div id="live-elo"></div>
     </div>
+
+    <div class="road-title" style="margin-top:2.5rem">League Records</div>
+    <div id="live-records"></div>
   </section>
 
   <section class="panel" id="panel-h2h" role="tabpanel">
@@ -16472,58 +16484,50 @@ if (typeof module !== "undefined") {
 })();
 </script>
 <style>
-  #live-records, #live-hawkins-cup {
-    background: #12161c;
-    border: 1px solid #242c38;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px 0;
-    color: #e6e6e6;
-  }
-  .record-section-title, .cup-section-title {
-    font-weight: 700;
-    font-size: 1.05em;
-    margin: 12px 0 6px;
-    color: #f0b429;
-  }
-  .record-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #1c222c; font-size: 0.92em; }
-  .record-label { color: #9aa5b1; }
-  .record-val { text-align: right; }
-  .cup-matchup { padding: 4px 0; font-size: 0.92em; }
-  .cup-field-list { margin: 4px 0 12px; padding-left: 20px; font-size: 0.92em; }
-  .cup-pending { color: #9aa5b1; font-style: italic; padding: 8px 0; }
-  .cup-champion { margin-top: 12px; font-weight: 700; font-size: 1.1em; color: #f0b429; }
-
-  #live-elo { background: #12161c; border: 1px solid #242c38; border-radius: 8px; padding: 16px; margin: 16px 0; color: #e6e6e6; }
+  /* Elo leaderboard — built to match the site's existing design tokens
+     (var(--ink)/var(--muted)/var(--gold)/var(--border)) rather than a
+     one-off palette. */
+  #live-elo { background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
   .elo-header-row, .elo-row {
     display: grid;
-    grid-template-columns: 60px 1fr 90px 90px;
+    grid-template-columns: 50px 1fr 90px 90px;
     align-items: center;
-    padding: 8px 4px;
-    font-size: 0.92em;
+    padding: .7rem .9rem;
   }
-  .elo-header-row { color: #9aa5b1; font-weight: 700; border-bottom: 1px solid #242c38; text-transform: uppercase; font-size: 0.78em; letter-spacing: 0.04em; }
-  .elo-row { border-bottom: 1px solid #1c222c; }
+  .elo-header-row {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .6rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    background: var(--gold-soft);
+  }
+  .elo-row { border-bottom: 1px solid var(--border); font-size: .9rem; }
   .elo-row:last-child { border-bottom: none; }
-  .elo-rank { color: #9aa5b1; font-weight: 700; }
-  .elo-name { font-weight: 600; }
-  .elo-team { display: block; color: #9aa5b1; font-weight: 400; font-size: 0.85em; margin-top: 1px; }
-  .elo-rating { font-weight: 700; font-size: 1.05em; }
-  .elo-trend-up { color: #2f9e44; }
-  .elo-trend-down { color: #c0392b; }
-  .elo-trend-flat { color: #9aa5b1; }
-  .elo-badge-new { background: #f0b429; color: #12161c; font-size: 0.72em; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
+  .elo-rank { font-family: 'JetBrains Mono', monospace; color: var(--muted); font-weight: 600; }
+  .elo-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--ink); }
+  .elo-team { display: block; font-family: 'Inter', sans-serif; color: var(--muted); font-weight: 400; font-size: .72rem; margin-top: .1rem; }
+  .elo-rating { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1rem; color: var(--ink); }
+  .elo-trend-up { color: #2f9e44; font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
+  .elo-trend-down { color: #c0392b; font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
+  .elo-trend-flat { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
+  .elo-badge-new { background: var(--gold-soft); color: var(--gold); border: 1px solid rgba(161,98,7,.25); font-family: 'JetBrains Mono', monospace; font-size: .6rem; font-weight: 700; letter-spacing: .05em; padding: .15rem .45rem; border-radius: 4px; }
+
+  /* Hawkins Cup champion banner — only appears once the Final resolves */
+  .cup-champion-banner {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold-soft);
+    border: 1px solid rgba(161,98,7,.25);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+  }
 </style>
-
-<div class="tbl-wrap">
-  <div class="road-title">League Records</div>
-  <div id="live-records"></div>
-</div>
-
-<div class="tbl-wrap">
-  <div class="road-title">Hawkins Cup — Live Bracket</div>
-  <div id="live-hawkins-cup"></div>
-</div>
 
 <script src="elo.js"></script>
 <script src="data.js"></script>
