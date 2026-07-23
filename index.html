@@ -15791,7 +15791,13 @@ if (typeof module !== "undefined") {
   function skipToFinal(){
     clearTimeout(SS.liveTimer);
     SS.revealGroupIdx = WINDOW_GROUPS.length;
-    renderLive();
+    // "Skip to Final" should actually finish the week in one click. It used
+    // to only reveal every window and stop — the "Reveal Next Window"
+    // button silently relabels itself to "View Week Recap" at that point,
+    // but a user who just clicked "skip" has no reason to click a second,
+    // differently-labeled button to actually move on. Go straight to the
+    // recap, same as clicking through every window would eventually do.
+    goToRecap();
   }
 
   // ---------------- Fast-forward: sim ahead without stepping through the
@@ -16416,10 +16422,15 @@ if (typeof module !== "undefined") {
       })(sbIdx);
     }
     document.getElementById("ssSimPlayoffsBtn").addEventListener("click", function(){
-      if (confirm("Sim ahead to the start of the playoffs (Week " + (REGULAR_WEEKS + 1) + ")? This skips the rest of the regular season without stepping through each week.")) simToPlayoffs();
+      if (!confirm("Sim ahead to the start of the playoffs (Week " + (REGULAR_WEEKS + 1) + ")? This skips the rest of the regular season without stepping through each week.")) return;
+      // Guard against any edge-case exception failing silently — without
+      // this, a thrown error mid-sim just leaves the button looking like
+      // it did nothing, with the real cause only visible in devtools.
+      try { simToPlayoffs(); } catch (e) { console.error("Sim to Playoffs failed:", e); alert("Something went wrong simming ahead: " + e.message + "\n\nYour progress as of the last completed week is safe — try again, or step through week by week instead."); }
     });
     document.getElementById("ssSimEndBtn").addEventListener("click", function(){
-      if (confirm("Sim the rest of the season straight through to the final results?")) simToEndOfSeason();
+      if (!confirm("Sim the rest of the season straight through to the final results?")) return;
+      try { simToEndOfSeason(); } catch (e) { console.error("Sim to End failed:", e); alert("Something went wrong simming to the final results: " + e.message + "\n\nYour progress as of the last completed week is safe — try again, or step through week by week instead."); }
     });
     document.getElementById("ssSpeedSelectLive").addEventListener("change", function(e){
       if (SS) SS.speed = e.target.value;
@@ -16430,13 +16441,13 @@ if (typeof module !== "undefined") {
       if (SS.recapStep > 0){ SS.recapStep--; renderRecapStep(); }
     });
     document.getElementById("ssRecapNextBtn").addEventListener("click", function(){
-      if (SS.recapStep < RECAP_STEPS.length - 1){ SS.recapStep++; renderRecapStep(); }
-      else nextWeek();
+      if (SS.recapStep < RECAP_STEPS.length - 1){ SS.recapStep++; renderRecapStep(); return; }
+      try { nextWeek(); } catch (e) { console.error("nextWeek() failed:", e); alert("Something went wrong advancing to the next week: " + e.message); }
     });
     // Bypass the rest of the 6-step recap walkthrough entirely and jump
     // straight into the next week (or final results screen).
     document.getElementById("ssRecapSkipBtn").addEventListener("click", function(){
-      nextWeek();
+      try { nextWeek(); } catch (e) { console.error("nextWeek() failed:", e); alert("Something went wrong advancing to the next week: " + e.message); }
     });
 
     document.querySelectorAll(".ss-nav-btn").forEach(function(btn){
@@ -16513,6 +16524,11 @@ if (typeof module !== "undefined") {
   .elo-trend-down { color: #c0392b; font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
   .elo-trend-flat { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
   .elo-badge-new { background: var(--gold-soft); color: var(--gold); border: 1px solid rgba(161,98,7,.25); font-family: 'JetBrains Mono', monospace; font-size: .6rem; font-weight: 700; letter-spacing: .05em; padding: .15rem .45rem; border-radius: 4px; }
+  /* Departed managers (Dillon Jacobs, Timmy Hoffman, Braden Lord) — same
+     dimmed treatment as .inactive-manager rows elsewhere on the site, plus
+     a FORMER badge matching the existing .inactive-pill style. */
+  .elo-row-departed { opacity: .55; }
+  .elo-badge-former { background: #eee; color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: .6rem; font-weight: 700; letter-spacing: .05em; padding: .15rem .45rem; border-radius: 4px; }
 
   /* Hawkins Cup champion banner — only appears once the Final resolves */
   .cup-champion-banner {

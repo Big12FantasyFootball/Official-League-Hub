@@ -88,7 +88,7 @@ async function loadB12Live() {
   ]);
 
   const matches = buildMatchListFromEspnFiles(historyData, liveData);
-  const { ratings, history } = computeElo(matches, {
+  const { ratings, history, departedRatings, departedHistory } = computeElo(matches, {
     resetSeasons: MANAGER_START_SEASON,
     currentSeason: liveData.season, // 2026 — ensures preseason new-managers show 1500, not a predecessor's rating
   });
@@ -103,6 +103,7 @@ async function loadB12Live() {
       manager: info.manager,
       team: info.team,
       managerSince: MANAGER_START_SEASON[teamId] || 2024,
+      departed: false,
       wins: standing.wins ?? 0,
       losses: standing.losses ?? 0,
       ties: standing.ties ?? 0,
@@ -112,7 +113,33 @@ async function loadB12Live() {
       eloHistory: history[teamId] || [],
     };
   });
-  managers.sort((a, b) => b.elo - a.elo);
+
+  // Departed managers (slots that got reassigned) get their own leaderboard
+  // entries too, frozen at whatever their rating was the moment they left —
+  // computeElo() snapshotted this into departedRatings/departedHistory right
+  // before overwriting the slot for the incoming manager. Without this,
+  // Dillon Jacobs/Timmy Hoffman/Braden Lord would just vanish from the board
+  // even though their 2024-25 record is real and still on file.
+  const departedManagers = Object.keys(DEPARTED_MANAGERS)
+    .map(Number)
+    .filter((teamId) => teamId in departedRatings)
+    .map((teamId) => ({
+      teamId,
+      manager: DEPARTED_MANAGERS[teamId],
+      team: `Formerly Team ${teamId}`,
+      managerSince: null,
+      departed: true,
+      wins: null,
+      losses: null,
+      ties: null,
+      pointsFor: null,
+      pointsAgainst: null,
+      elo: Math.round(departedRatings[teamId]),
+      eloHistory: departedHistory[teamId] || [],
+    }));
+
+  const allManagers = managers.concat(departedManagers);
+  allManagers.sort((a, b) => b.elo - a.elo);
 
   window.B12Live = {
     live: liveData,
@@ -120,7 +147,9 @@ async function loadB12Live() {
     matches,
     ratings,
     eloHistory: history,
-    managers,
+    departedRatings,
+    departedHistory,
+    managers: allManagers,
     managerNameAt, // (teamId, season) -> real name, correct even for departed managers
     pulledAt: liveData.pulledAt,
     draftCompleted: liveData.draftCompleted,
@@ -186,7 +215,10 @@ function renderEloColumn(data) {
  * rank, manager, team, current rating, and a week-over-week trend arrow
  * (comparing the two most recent entries in eloHistory). New-for-2026
  * managers get a NEW badge instead of a trend, since they have no prior
- * week to compare against yet.
+ * week to compare against yet. Departed managers (Dillon Jacobs, Timmy
+ * Hoffman, Braden Lord) still show up ranked by their frozen final rating,
+ * marked with a FORMER badge instead of a trend since they're not playing
+ * any more games to trend from.
  */
 function renderEloLeaderboard(data) {
   const el = document.getElementById("live-elo");
@@ -194,10 +226,12 @@ function renderEloLeaderboard(data) {
 
   const rows = data.managers.map((m, i) => {
     const hist = m.eloHistory;
-    const isNew = m.managerSince === 2026 && hist.length === 0;
+    const isNew = !m.departed && m.managerSince === 2026 && hist.length === 0;
 
     let trendHtml;
-    if (isNew) {
+    if (m.departed) {
+      trendHtml = '<span class="elo-badge-former">FORMER</span>';
+    } else if (isNew) {
       trendHtml = '<span class="elo-badge-new">NEW</span>';
     } else if (hist.length >= 2) {
       const prev = hist[hist.length - 2].rating;
@@ -209,7 +243,9 @@ function renderEloLeaderboard(data) {
       trendHtml = '<span class="elo-trend-flat">–</span>';
     }
 
-    return `<div class="elo-row">
+    const rowClass = m.departed ? "elo-row elo-row-departed" : "elo-row";
+
+    return `<div class="${rowClass}">
       <span class="elo-rank">#${i + 1}</span>
       <span class="elo-name">${m.manager}<span class="elo-team">${m.team}</span></span>
       <span class="elo-rating">${m.elo}</span>
