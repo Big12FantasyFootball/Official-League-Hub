@@ -1,6 +1,7 @@
 /*
  * League Records — Big 12 Fantasy Football
- * Load AFTER elo.js and data.js. Renders into id="live-records" if present.
+ * Load AFTER elo.js and data.js. Renders into id="live-records" as
+ * feature-card tiles matching the site's existing card-grid styling.
  */
 
 function computeRecordsFromSlice(matches, nameAt) {
@@ -24,18 +25,14 @@ function computeRecordsFromSlice(matches, nameAt) {
   const wins = games.filter((g) => g.won).sort((a, b) => a.score - b.score);
   const byMarginDesc = [...contests].sort((a, b) => b.margin - a.margin);
   const byMarginAsc = [...contests].sort((a, b) => a.margin - b.margin);
-  const byCombinedDesc = [...contests].sort((a, b) => b.combined - a.combined);
-  const byCombinedAsc = [...contests].sort((a, b) => a.combined - b.combined);
 
   return {
-    highestScore: top(byScoreDesc, 3),
-    lowestScore: top(byScoreAsc, 3),
-    bestHeartbreakLoss: top(losses, 3),
-    ugliestWin: top(wins, 3),
-    biggestBlowout: top(byMarginDesc, 3),
-    closestGame: top(byMarginAsc, 3),
-    highestCombined: byCombinedDesc[0] || null,
-    lowestCombined: byCombinedAsc[0] || null,
+    highestScore: top(byScoreDesc, 1),
+    lowestScore: top(byScoreAsc, 1),
+    bestHeartbreakLoss: top(losses, 1),
+    ugliestWin: top(wins, 1),
+    biggestBlowout: top(byMarginDesc, 1),
+    closestGame: top(byMarginAsc, 1),
   };
 }
 
@@ -53,26 +50,38 @@ function renderRecords(records) {
   const el = document.getElementById("live-records");
   if (!el) return;
 
-  const line = (label, entries) => {
-    if (!entries || entries.length === 0) return "";
-    const e = entries[0];
-    if (e.team) {
-      return `<div class="record-row"><span class="record-label">${label}</span><span class="record-val">${e.team} — ${e.score.toFixed(2)} (${e.season} wk${e.week})</span></div>`;
+  const card = (kicker, entry, isGame) => {
+    if (!entry) return "";
+    let title, copy;
+    if (isGame) {
+      title = `${entry.score.toFixed(2)} pts`;
+      copy = `${entry.team} ${entry.won ? "beat" : "lost to"} ${entry.opp} ${entry.oppScore.toFixed(2)} &mdash; ${entry.season}, Week ${entry.week}`;
+    } else {
+      title = `${entry.margin.toFixed(2)} pt margin`;
+      copy = `${entry.home} ${entry.homeScore.toFixed(2)} vs ${entry.away} ${entry.awayScore.toFixed(2)} &mdash; ${entry.season}, Week ${entry.week}`;
     }
-    return `<div class="record-row"><span class="record-label">${label}</span><span class="record-val">${e.home} ${e.homeScore.toFixed(2)} vs ${e.away} ${e.awayScore.toFixed(2)} (${e.season} wk${e.week})</span></div>`;
+    return `<div class="feature-card">
+      <div class="feature-k">${kicker}</div>
+      <div class="feature-v">${title}</div>
+      <div class="feature-copy">${copy}</div>
+    </div>`;
   };
 
-  const section = (title, r) => `
-    <div class="record-section-title">${title}</div>
-    ${line("Highest single-game score", r.highestScore)}
-    ${line("Lowest single-game score", r.lowestScore)}
-    ${line("Toughest heartbreak loss", r.bestHeartbreakLoss)}
-    ${line("Ugliest win", r.ugliestWin)}
-    ${line("Biggest blowout", r.biggestBlowout)}
-    ${line("Closest game ever", r.closestGame)}
+  const section = (r) => `
+    ${card("Highest Score", r.highestScore[0], true)}
+    ${card("Lowest Score", r.lowestScore[0], true)}
+    ${card("Biggest Blowout", r.biggestBlowout[0], false)}
+    ${card("Closest Game", r.closestGame[0], false)}
+    ${card("Toughest Heartbreak", r.bestHeartbreakLoss[0], true)}
+    ${card("Ugliest Win", r.ugliestWin[0], true)}
   `;
 
-  el.innerHTML = section("Regular Season Records", records.regularSeason) + section("Playoff Records", records.playoffs);
+  const hasPlayoffData = records.playoffs.highestScore.length > 0;
+
+  el.innerHTML = `
+    <div class="card-grid">${section(records.regularSeason)}</div>
+    ${hasPlayoffData ? `<div class="road-title">Playoff Records</div><div class="card-grid">${section(records.playoffs)}</div>` : ""}
+  `;
 }
 
 document.addEventListener("b12live:ready", (e) => {
