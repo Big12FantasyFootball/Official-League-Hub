@@ -21,16 +21,24 @@ const TEAM_MANAGER_MAP = {
   1:  { manager: "Nick Carullo", team: "Drake London and Friends" }, // confirmed — matches ESPN league Creator field
   2:  { manager: "Drew Sanford", team: "Flat Foot" },                 // confirmed — new for 2026; Dillon Jacobs (2024 champion) owned this slot through 2025, departed
   3:  { manager: "Jake Joyce", team: "Seal Team Nix" },              // confirmed — rebranded from "Hawk Tua" in 2024, same manager
-  4:  { manager: "Josh", team: "Josh's Scary Team" },              // guessed from team name
-  5:  { manager: "Lisa", team: "Team Lisa" },                        // guessed from team name
-  6:  { manager: "Jalen", team: "Bourne with Downs" },               // confirmed — rebranded from "Jalen's Team" in 2024, same manager
+  4:  { manager: "Josh Sweeney", team: "Josh's Scary Team" },        // full name per the site's own LEAGUE_CONFIG
+  5:  { manager: "Joseph Lisa", team: "Team Lisa" },                 // full name per the site's own LEAGUE_CONFIG
+  6:  { manager: "Jalen Peretz", team: "Bourne with Downs" },        // confirmed — rebranded from "Jalen's Team" in 2024, same manager
   7:  { manager: "Aidan Goss", team: "Aidan's Astounding Team" },    // confirmed — new for 2026; Timmy Hoffman owned this slot through 2025, departed
   8:  { manager: "Nick Hawkins", team: "Curse of Ra" },              // confirmed — league supervisor/namesake
-  9:  { manager: "Nick Furnari", team: "Nick's Nitty Team" },        // guessed from team name
+  9:  { manager: "Nick Furnari", team: "Nick's Nitty Team" },        // matches the site's own LEAGUE_CONFIG
   10: { manager: "Brandon Beland", team: "Brandon's Brilliant Team" }, // confirmed — new for 2026; Braden Lord ("BLORD") owned this slot through 2025, departed
   11: { manager: "Jojo Guarnaccia", team: "Fortnite Grinder" },      // confirmed — matches existing mgr-tbl row
-  12: { manager: "Dann", team: "Team Dann" },                        // guessed from team name
+  12: { manager: "Ryan Dann", team: "Team Dann" },                   // full name per the site's own LEAGUE_CONFIG
 };
+
+/*
+ * These names must match the manager names printed in the site's static
+ * historical tables (#mgr-tbl .mn2) exactly. renderEloColumn() joins the
+ * live Elo ratings onto those rows BY NAME, so a first-name-only entry
+ * silently leaves that manager's Elo cell blank — and the same name is
+ * what shows up in League Records and the Hawkins Cup bracket.
+ */
 
 /*
  * ESPN reassigns the same teamId slot to whoever currently owns it. A
