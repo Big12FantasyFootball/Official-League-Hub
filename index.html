@@ -571,6 +571,27 @@ table.sch-table tr:last-child td{border-bottom:none}
 .dr-pill{font-family:'JetBrains Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.04em;padding:.3rem .65rem;border-radius:999px;border:1px solid var(--border);background:#fff;cursor:pointer}
 .dr-pill.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .dr-list{max-height:520px;overflow-y:auto;display:flex;flex-direction:column;gap:.4rem}
+/* ---- Draft grade breakdown ---- */
+.grade-parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem}
+.grade-part-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem}
+.grade-part-head span{font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.grade-part-head b{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;color:var(--ink)}
+.grade-meter{height:5px;background:var(--border);border-radius:999px;overflow:hidden}
+.grade-meter span{display:block;height:100%;background:var(--gold);border-radius:999px}
+.grade-part-detail{font-family:'Inter',sans-serif;font-size:.66rem;color:var(--muted);margin-top:.3rem}
+/* ---- Post-draft season projection ---- */
+.proj-bar{height:6px;background:var(--border);border-radius:999px;overflow:hidden;margin-top:.6rem}
+.proj-bar span{display:block;height:100%;width:0;background:var(--gold);border-radius:999px;transition:width .12s linear}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.7rem;margin:1rem 0 .8rem}
+.proj-stat{border:1px solid var(--border);border-radius:10px;padding:.7rem .5rem;text-align:center;background:var(--gold-soft)}
+.proj-stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;color:var(--ink);line-height:1.1}
+.proj-stat span{display:block;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:.25rem}
+.proj-range{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--muted);text-align:center;margin-bottom:1rem}
+.proj-dist-title{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.proj-dist{display:flex;align-items:flex-end;gap:3px;height:70px;padding-top:.2rem}
+.proj-col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;min-width:0}
+.proj-col-bar{background:var(--gold);border-radius:3px 3px 0 0;opacity:.85}
+.proj-col-lbl{font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);text-align:center;margin-top:.2rem}
 .dr-prow{display:flex;align-items:center;gap:.6rem;padding:.55rem .7rem;border:1px solid var(--border);border-radius:8px;cursor:pointer}
 .dr-prow:hover{border-color:var(--gold)}
 /* "Your next pick" divider — players above it are projected gone before
@@ -13411,11 +13432,19 @@ if (typeof module !== "undefined") {
   function renderResults(errors){
     var body = document.getElementById("drResultsBody");
     var entry = state.rosterState[USER_ID];
-    var grade = gradeRoster(entry, LEAGUE_CONFIG);
+    var grade = gradeRoster(state.rosterState, USER_ID, LEAGUE_CONFIG);
     var html = '<div class="dr-card" style="margin-bottom:1.25rem">'
       + '<div class="dr-card-title">Your Draft Grade<span style="font-family:\'Barlow Condensed\',sans-serif;font-weight:700;font-size:1.4rem;color:var(--gold)">'+grade.letter+'</span></div>'
       + '<p class="sec-lede" style="margin-bottom:1rem">'+grade.summary+'</p>'
-      + '</div>';
+      + '<div class="grade-parts">';
+    grade.parts.forEach(function(p){
+      html += '<div class="grade-part">'
+        + '<div class="grade-part-head"><span>'+p.label+'</span><b>'+Math.round(p.score)+'</b></div>'
+        + '<div class="grade-meter"><span style="width:'+Math.max(2,Math.round(p.score))+'%"></span></div>'
+        + '<div class="grade-part-detail">'+escapeHtml(p.detail)+'</div>'
+        + '</div>';
+    });
+    html += '</div></div>';
     html += '<div class="dr-card"><div class="dr-card-title">Full Roster</div>';
     entry.players.slice().sort(function(a,b){return a.pickNumber-b.pickNumber;}).forEach(function(p){
       html += '<div class="dr-roster-row"><div class="slot">R'+p.round+'</div><div class="pname">'+escapeHtml(p.name)+'</div><div class="pmeta">'+p.pos+' &middot; '+escapeHtml(p.team||"")+'</div></div>';
@@ -13424,14 +13453,86 @@ if (typeof module !== "undefined") {
     if (errors && errors.length){
       html += '<div class="note" style="margin-top:1rem;color:#b3402f">Validation issues: '+errors.join("; ")+'</div>';
     }
-    html += '<div class="draft-launch-row" style="margin-top:1.4rem">'
-      + '<button class="draft-launch-btn" id="ssLaunchBtn">Simulate the Season &rarr;</button>'
+    // Projection lands here once the math finishes.
+    html += '<div class="dr-card" id="drProjCard" style="margin-top:1.25rem">'
+      + '<div class="dr-card-title">Season Projection</div>'
+      + '<div id="drProjBody"><p class="sec-lede" id="drProjStatus">Running 300 simulated seasons with this roster&hellip;</p>'
+      + '<div class="proj-bar"><span id="drProjFill"></span></div></div>'
       + '</div>';
     body.innerHTML = html;
+
+    runRosterProjection();
+  }
+
+  // Replays the drafted rosters through hundreds of seasons and reports what
+  // this team is actually worth, then offers the single-season playthrough.
+  function runRosterProjection(){
+    // 300 runs puts the margin of error on expected wins near +/-0.12 — tight
+    // enough to compare drafts — while keeping the wait around 5 seconds.
+    var RUNS = 300;
+    if (!window.SeasonUI || !window.SeasonUI.projectSeasons) return;
+    window.SeasonUI.projectSeasons(
+      state.rosterState, state.order, USER_ID, RUNS,
+      function(done, total){
+        var fill = document.getElementById("drProjFill");
+        if (fill) fill.style.width = Math.round(100 * done / total) + "%";
+        var st = document.getElementById("drProjStatus");
+        if (st) st.textContent = "Running " + total + " simulated seasons with this roster… " + done + "/" + total;
+      },
+      function(r){ renderProjection(r); }
+    );
+  }
+
+  function renderProjection(r){
+    var wrap = document.getElementById("drProjBody");
+    if (!wrap) return;
+    var pct = function(v){ return v.toFixed(v >= 10 ? 0 : 1) + "%"; };
+
+    // Win-total distribution, scaled to the most common outcome.
+    var maxCount = 0;
+    for (var k in r.winCounts) if (r.winCounts[k] > maxCount) maxCount = r.winCounts[k];
+    var bars = "";
+    for (var w = 0; w <= r.regularWeeks; w++){
+      var c = r.winCounts[w] || 0;
+      if (!c && (w < r.worstWins || w > r.bestWins)) continue;
+      var h = maxCount ? Math.round(100 * c / maxCount) : 0;
+      bars += '<div class="proj-col" title="' + w + '-' + (r.regularWeeks - w) + ' in ' + c + ' of ' + r.runs + ' seasons">'
+        + '<div class="proj-col-bar" style="height:' + Math.max(h, 2) + '%"></div>'
+        + '<div class="proj-col-lbl">' + w + '</div></div>';
+    }
+
+    wrap.innerHTML =
+      '<p class="sec-lede">Across <strong>' + r.runs + '</strong> simulated seasons with these exact rosters — '
+        + 'the same roster, replayed, so luck averages out.</p>'
+      + '<div class="proj-grid">'
+        + '<div class="proj-stat"><b>' + r.meanWins.toFixed(1) + '</b><span>Expected Wins</span></div>'
+        + '<div class="proj-stat"><b>' + pct(r.playoffPct) + '</b><span>Make Playoffs</span></div>'
+        + '<div class="proj-stat"><b>' + pct(r.titlePct) + '</b><span>Win Title</span></div>'
+        + '<div class="proj-stat"><b>' + pct(r.cupPct) + '</b><span>Win Hawkins Cup</span></div>'
+        + '<div class="proj-stat"><b>' + r.meanFinish.toFixed(1) + '</b><span>Avg Finish (of 12)</span></div>'
+        + '<div class="proj-stat"><b>' + Math.round(r.meanPF) + '</b><span>Avg Points For</span></div>'
+      + '</div>'
+      + '<div class="proj-range">Typical range <strong>' + r.winsP10 + '&ndash;' + r.winsP90 + ' wins</strong>'
+        + ' &middot; best seen ' + r.bestWins + '-' + (r.regularWeeks - r.bestWins)
+        + ' &middot; worst ' + r.worstWins + '-' + (r.regularWeeks - r.worstWins) + '</div>'
+      + '<div class="proj-dist-title">Win total distribution</div>'
+      + '<div class="proj-dist">' + bars + '</div>'
+      + '<div class="draft-launch-row" style="margin-top:1.4rem">'
+        + '<button class="draft-launch-btn" id="ssLaunchBtn">Play Out a Full Season &rarr;</button>'
+        + '<button class="draft-launch-btn secondary" id="drReprojectBtn">Re-run Projection</button>'
+      + '</div>'
+      + '<p class="note" style="border:none;padding-left:0;margin-top:.6rem">Playing one season is for fun — the projection above is the better read on this draft.</p>';
+
     var launchBtn = document.getElementById("ssLaunchBtn");
     if (launchBtn) launchBtn.addEventListener("click", function(){
       document.getElementById("draftResults").classList.remove("on");
       window.SeasonUI.startFromDraft(state.rosterState, state.order, USER_ID);
+    });
+    var reBtn = document.getElementById("drReprojectBtn");
+    if (reBtn) reBtn.addEventListener("click", function(){
+      wrap.innerHTML = '<p class="sec-lede" id="drProjStatus">Running simulated seasons&hellip;</p>'
+        + '<div class="proj-bar"><span id="drProjFill"></span></div>';
+      runRosterProjection();
     });
   }
 
@@ -13439,26 +13540,166 @@ if (typeof module !== "undefined") {
     return state ? { rosterState: state.rosterState, order: state.order, userManagerId: USER_ID } : null;
   };
 
-  function gradeRoster(entry, config){
-    var starters = config.startingLineup;
-    var byPos = {};
-    entry.players.forEach(function(p){ (byPos[p.pos] = byPos[p.pos]||[]).push(p); });
-    var starterScore = 0, count=0;
-    Object.keys(starters).forEach(function(pos){
-      var key = pos==="DEF"?"DST":pos;
-      var list = (byPos[key]||[]).slice().sort(function(a,b){return (a.ecrRank||999)-(b.ecrRank||999);});
-      var need = starters[pos];
-      for (var i=0;i<need;i++){
-        count++;
-        if (list[i]) starterScore += 1;
-      }
+  // ---------------- Draft grading ----------------
+  // Three things actually decide whether a draft was good:
+  //   VALUE        — did you buy players below their market price (ADP)?
+  //   PROJECTION   — how much does your best starting nine actually score,
+  //                  measured against the other 11 teams in THIS draft?
+  //   CONSTRUCTION — is it a usable roster: starters covered, real depth at
+  //                  the positions that need it, no wasted picks, byes spread?
+  // The old grade only checked whether nine slots could be filled, which is
+  // true of essentially any completed 16-round roster — so everyone got an A.
+
+  // Best possible weekly output from a roster: fill each fixed slot with the
+  // highest projected player at that position, then FLEX from what's left.
+  function projectedStarterPoints(players, config){
+    var byPos = { QB:[], RB:[], WR:[], TE:[], K:[], DST:[] };
+    players.forEach(function(p){ if (byPos[p.pos]) byPos[p.pos].push(p); });
+    Object.keys(byPos).forEach(function(k){
+      byPos[k].sort(function(a,b){ return (b.weeklyBaseline||0)-(a.weeklyBaseline||0); });
     });
-    var pct = count ? starterScore/count : 0;
-    var letters = ["F","D","C","B","A"];
-    var idx = Math.min(4, Math.floor(pct*5));
+    var s = config.startingLineup;
+    var total = 0, missing = 0;
+    var take = function(pos, n){
+      var out = [];
+      for (var i=0;i<n;i++){
+        if (byPos[pos] && byPos[pos][i]) { out.push(byPos[pos][i]); total += (byPos[pos][i].weeklyBaseline||0); }
+        else missing++;
+      }
+      return out;
+    };
+    var usedQB = take("QB", s.QB), usedRB = take("RB", s.RB), usedWR = take("WR", s.WR),
+        usedTE = take("TE", s.TE), usedK = take("K", s.K), usedD = take("DST", s.DEF);
+    // FLEX: best remaining among the flex-eligible positions
+    var used = {};
+    [].concat(usedRB, usedWR, usedTE).forEach(function(p){ used[p.id] = true; });
+    var flexPool = [];
+    (config.flexEligible||["RB","WR","TE"]).forEach(function(pos){
+      (byPos[pos]||[]).forEach(function(p){ if (!used[p.id]) flexPool.push(p); });
+    });
+    flexPool.sort(function(a,b){ return (b.weeklyBaseline||0)-(a.weeklyBaseline||0); });
+    for (var f=0; f<(s.FLEX||0); f++){
+      if (flexPool[f]) total += (flexPool[f].weeklyBaseline||0); else missing++;
+    }
+    return { points: total, missingSlots: missing, byPos: byPos };
+  }
+
+  function gradeRoster(rosterState, userId, config){
+    var entry = rosterState[userId];
+    var players = entry.players.slice();
+
+    // ---- 1. VALUE vs ADP ----
+    // Positive = the player was still there AFTER his ADP, i.e. he fell to
+    // you. Negative = you reached ahead of the market. Only players with a
+    // real ESPN price count: late picks sit at ESPN's "undrafted" cap, where
+    // the gap is an artifact of draft length rather than a decision.
+    //
+    // Scored RELATIVE to the other 11 managers in this same draft. A raw
+    // number would be misleading — this league drafts 192 players where
+    // ESPN's ADP sample only drafts 170, so literally everyone looks like
+    // they're reaching by ~7 picks. Comparing within the draft cancels that
+    // out and leaves only the part that reflects an actual decision.
+    function avgValueFor(list){
+      var ds = [];
+      list.forEach(function(p){
+        if (p.adpSource !== "espn-live" || p.adpCapped || p.adpAvg == null) return;
+        ds.push(Math.max(-40, Math.min(40, p.pickNumber - p.adpAvg)));
+      });
+      return { avg: ds.length ? ds.reduce(function(a,b){return a+b;},0)/ds.length : 0, n: ds.length };
+    }
+    var mineVal = avgValueFor(players);
+    var avgValue = mineVal.avg, graded = mineVal.n;
+    var otherVals = [];
+    Object.keys(rosterState).forEach(function(mid){
+      if (mid === userId) return;
+      otherVals.push(avgValueFor(rosterState[mid].players).avg);
+    });
+    var vMean = otherVals.length ? otherVals.reduce(function(a,b){return a+b;},0)/otherVals.length : 0;
+    var vSd = otherVals.length
+      ? Math.sqrt(otherVals.reduce(function(a,b){return a+Math.pow(b-vMean,2);},0)/otherVals.length) : 1;
+    if (!vSd || !isFinite(vSd)) vSd = 1;
+    var valueZ = (avgValue - vMean) / vSd;
+    var valueScore = Math.max(0, Math.min(100, 55 + valueZ * 18));
+
+    // ---- 2. PROJECTION vs the rest of the league ----
+    var mine = projectedStarterPoints(players, config);
+    var others = [];
+    Object.keys(rosterState).forEach(function(mid){
+      if (mid === userId) return;
+      others.push(projectedStarterPoints(rosterState[mid].players, config).points);
+    });
+    // Scored on the SIZE of the gap, not raw rank. Finishing 12th of 12 by a
+    // single projected point is not an F roster, but a rank-based score would
+    // call it one — and since the CPUs draft competently, a normal user draft
+    // lands at a near-random rank, which made grades swing from F to A+ on
+    // noise. A z-score against the league keeps close packs close.
+    var oMean = others.length ? others.reduce(function(a,b){return a+b;},0)/others.length : mine.points;
+    var oSd = others.length
+      ? Math.sqrt(others.reduce(function(a,b){return a+Math.pow(b-oMean,2);},0)/others.length) : 1;
+    if (!oSd || !isFinite(oSd)) oSd = 1;
+    var projZ = (mine.points - oMean) / oSd;
+    var projScore = Math.max(0, Math.min(100, 55 + projZ * 17));
+
+    // ---- 3. CONSTRUCTION ----
+    var counts = {};
+    players.forEach(function(p){ counts[p.pos] = (counts[p.pos]||0)+1; });
+    var cons = 100, consNotes = [];
+    if (mine.missingSlots > 0){
+      cons -= mine.missingSlots * 25;
+      consNotes.push(mine.missingSlots + " starting slot" + (mine.missingSlots>1?"s":"") + " unfilled");
+    }
+    // Depth where it matters — RB/WR carry the bye/injury load.
+    var rbDepth = counts.RB||0, wrDepth = counts.WR||0;
+    if (rbDepth < 4){ cons -= (4-rbDepth)*8; consNotes.push("thin at RB (" + rbDepth + ")"); }
+    if (wrDepth < 4){ cons -= (4-wrDepth)*8; consNotes.push("thin at WR (" + wrDepth + ")"); }
+    // Wasted picks — a third QB or second kicker is a bench slot doing nothing.
+    var waste = Math.max(0,(counts.QB||0)-2) + Math.max(0,(counts.TE||0)-2)
+              + Math.max(0,(counts.K||0)-1) + Math.max(0,(counts.DST||0)-1);
+    if (waste){ cons -= waste*10; consNotes.push(waste + " wasted roster spot" + (waste>1?"s":"")); }
+    // Bye-week stacking among the projected starters.
+    var starterIds = {};
+    ["QB","RB","WR","TE","K","DST"].forEach(function(pos){
+      var need = pos==="DST" ? config.startingLineup.DEF : config.startingLineup[pos];
+      (mine.byPos[pos]||[]).slice(0, need||0).forEach(function(p){ starterIds[p.id]=p; });
+    });
+    var byes = {};
+    Object.keys(starterIds).forEach(function(id){
+      var b = starterIds[id].bye; if (b) byes[b] = (byes[b]||0)+1;
+    });
+    var worstBye = 0, worstWeek = null;
+    Object.keys(byes).forEach(function(w){ if (byes[w] > worstBye){ worstBye = byes[w]; worstWeek = w; } });
+    if (worstBye >= 3){ cons -= (worstBye-2)*7; consNotes.push(worstBye + " starters share the week " + worstWeek + " bye"); }
+    cons = Math.max(0, Math.min(100, cons));
+
+    // ---- Weighted overall ----
+    var score = valueScore*0.30 + projScore*0.45 + cons*0.25;
+    var letter = (function(s){
+      if (s>=93) return "A+"; if (s>=90) return "A"; if (s>=87) return "A-";
+      if (s>=83) return "B+"; if (s>=80) return "B"; if (s>=77) return "B-";
+      if (s>=73) return "C+"; if (s>=70) return "C"; if (s>=67) return "C-";
+      if (s>=63) return "D+"; if (s>=60) return "D"; if (s>=57) return "D-";
+      return "F";
+    })(score);
+
+    var rankInLeague = others.filter(function(v){ return v > mine.points; }).length + 1;
+    var rel = avgValue - vMean;   // picks of value vs. the rest of this draft
+    var valueWord = rel > 2 ? "waited longer than the room for the same players"
+                  : rel > -2 ? "drafted about where the room drafted"
+                  : "reached earlier than the room";
+    var ord = function(n){ return n + (n===1?"st":n===2?"nd":n===3?"rd":"th"); };
     return {
-      letter: letters[idx] + (pct>0.9?"":"" ),
-      summary: "Filled " + starterScore + " of " + count + " required starting slots with a rostered player, across a complete " + config.rounds + "-round roster.",
+      letter: letter,
+      score: score,
+      summary: "Your starting nine projects for " + mine.points.toFixed(1) + " points a week, "
+        + ord(rankInLeague) + " of " + (others.length+1) + " in this draft. On value you "
+        + valueWord + " (" + (rel>=0?"+":"") + rel.toFixed(1) + " picks vs the league average, "
+        + graded + " graded picks)."
+        + (consNotes.length ? " Construction flags: " + consNotes.join(", ") + "." : " No construction issues."),
+      parts: [
+        { label: "ADP Value",    score: valueScore, detail: (rel>=0?"+":"") + rel.toFixed(1) + " picks vs league avg" },
+        { label: "Projection",   score: projScore,  detail: mine.points.toFixed(1) + " pts/wk · " + ord(rankInLeague) + " of " + (others.length+1) },
+        { label: "Construction", score: cons,       detail: consNotes.length ? consNotes[0] : "clean roster" }
+      ]
     };
   }
 
@@ -18103,7 +18344,86 @@ if (typeof module !== "undefined") {
     });
   });
 
+  // ---------------- Multi-season roster projection ----------------
+  // A single simulated season says almost nothing about draft quality:
+  // scoring is calibrated to this league's real variance, so 7-7 vs 9-5 is
+  // mostly noise. Replaying the SAME rosters through hundreds of seasons
+  // turns that noise into a signal — expected wins, playoff odds, title
+  // odds, projected finish.
+  //
+  // Runs in chunks via setTimeout so the browser stays responsive, and
+  // saves/restores the live SS so a projection can never disturb a season
+  // the user is actually playing.
+  function projectSeasons(rosterState, order, userId, totalRuns, onProgress, onDone){
+    var teams = buildSeasonHandoff(rosterState, order, LEAGUE_CONFIG);
+    var savedSS = SS;
+    var agg = {
+      runs: 0, wins: [], pf: 0, pa: 0,
+      madePlayoffs: 0, wonTitle: 0, wonCup: 0, madeCup: 0,
+      finishes: [], winCounts: {},
+    };
+
+    function oneSeason(i){
+      SS = freshSS(teams, order, userId, "PROJ-" + i + "-" + Math.random().toString(36).slice(2, 9));
+      for (var w = 1; w <= TOTAL_WEEKS; w++) computeWeek(w);
+      var st = SS.standings[userId];
+      agg.runs++;
+      agg.wins.push(st.wins);
+      agg.winCounts[st.wins] = (agg.winCounts[st.wins] || 0) + 1;
+      agg.pf += st.pointsFor;
+      agg.pa += st.pointsAgainst;
+
+      var ranked = rankStandings(SS.standings, LEAGUE_CONFIG);
+      var mine = ranked.filter(function(r){ return r.managerId === userId; })[0];
+      agg.finishes.push(mine ? mine.rank : 12);
+
+      if (SS.playoffSeeding && SS.playoffSeeding.seeds.some(function(s){ return s.managerId === userId; })) agg.madePlayoffs++;
+      if (SS.playoffFinalResults && SS.playoffFinalResults[0].winner === userId) agg.wonTitle++;
+      if (SS.hawkinsCupQual && SS.hawkinsCupQual.some(function(q){ return q.managerId === userId && q.qualified; })) agg.madeCup++;
+      if (SS.cupFinalResults && SS.cupFinalResults[0].winner === userId) agg.wonCup++;
+    }
+
+    // Small chunks keep the main thread free: a full season costs ~17ms, so
+    // 5 per tick is ~85ms of work between yields — the progress bar stays
+    // smooth and the page never feels frozen.
+    var CHUNK = 5;
+    var i = 0;
+    function step(){
+      var end = Math.min(i + CHUNK, totalRuns);
+      for (; i < end; i++) oneSeason(i);
+      if (onProgress) onProgress(i, totalRuns);
+      if (i < totalRuns){
+        setTimeout(step, 0);
+      } else {
+        SS = savedSS; // never leave a projection's state behind
+        var n = agg.runs;
+        var meanWins = agg.wins.reduce(function(a,b){return a+b;}, 0) / n;
+        var sortedW = agg.wins.slice().sort(function(a,b){return a-b;});
+        var meanFinish = agg.finishes.reduce(function(a,b){return a+b;}, 0) / n;
+        onDone({
+          runs: n,
+          regularWeeks: REGULAR_WEEKS, // the draft room has its own closure; pass it through
+          meanWins: meanWins,
+          winsP10: sortedW[Math.floor(n * 0.10)],
+          winsP90: sortedW[Math.floor(n * 0.90)],
+          bestWins: sortedW[n - 1],
+          worstWins: sortedW[0],
+          winCounts: agg.winCounts,
+          meanPF: agg.pf / n,
+          meanPA: agg.pa / n,
+          playoffPct: 100 * agg.madePlayoffs / n,
+          titlePct: 100 * agg.wonTitle / n,
+          cupQualPct: 100 * agg.madeCup / n,
+          cupPct: 100 * agg.wonCup / n,
+          meanFinish: meanFinish,
+        });
+      }
+    }
+    setTimeout(step, 0);
+  }
+
   window.SeasonUI = {
+    projectSeasons: projectSeasons,
     startFromDraft: startFromDraft, resumeFromSave: resumeFromSave, checkForSave: checkForSave,
     getState: function(){ return SS; }, // debug/test hook, read-only convenience
   };
