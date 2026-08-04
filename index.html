@@ -13550,8 +13550,44 @@ if (typeof module !== "undefined") {
   // The old grade only checked whether nine slots could be filled, which is
   // true of essentially any completed 16-round roster — so everyone got an A.
 
+  // ---- Replacement level ----
+  // Raw starter points badly overrate quarterbacks in a 1-QB league: the 13th
+  // best QB still projects ~19 pts/wk, so Dak Prescott at ADP 90 is within a
+  // few points of the best player in the draft. Scored on raw points, every
+  // roster converges (the whole league packed inside a 2.4-point spread) and
+  // the grade can't see draft skill. Value over replacement fixes that — a
+  // player is worth what he beats the freely-available alternative by.
+  //
+  // Baselines are the last startable player at each position across the
+  // league: 12 QB slots, 24 RB + 24 WR + 12 TE plus the 12 FLEX spots, which
+  // in practice go mostly to RB/WR.
+  var _replCache = null;
+  function replacementLevels(config){
+    if (_replCache) return _replCache;
+    var T = config.teams, s = config.startingLineup, flex = s.FLEX || 0;
+    var need = {
+      QB:  T * s.QB,
+      RB:  T * s.RB + Math.round(T * flex * 0.40),
+      WR:  T * s.WR + Math.round(T * flex * 0.50),
+      TE:  T * s.TE + Math.round(T * flex * 0.10),
+      K:   T * s.K,
+      DST: T * s.DEF
+    };
+    var out = {};
+    Object.keys(need).forEach(function(pos){
+      var list = PLAYERS_DATA.filter(function(p){ return p.pos === pos; })
+        .sort(function(a,b){ return (b.weeklyBaseline||0)-(a.weeklyBaseline||0); });
+      var idx = Math.min(need[pos], list.length - 1);
+      out[pos] = list[idx] ? (list[idx].weeklyBaseline || 0) : 0;
+    });
+    _replCache = out;
+    return out;
+  }
+
   // Best possible weekly output from a roster: fill each fixed slot with the
   // highest projected player at that position, then FLEX from what's left.
+  // Returns both raw points (what the team actually scores) and VOR (what the
+  // roster is worth relative to replacement — the grading currency).
   function projectedStarterPoints(players, config){
     var byPos = { QB:[], RB:[], WR:[], TE:[], K:[], DST:[] };
     players.forEach(function(p){ if (byPos[p.pos]) byPos[p.pos].push(p); });
@@ -13559,11 +13595,16 @@ if (typeof module !== "undefined") {
       byPos[k].sort(function(a,b){ return (b.weeklyBaseline||0)-(a.weeklyBaseline||0); });
     });
     var s = config.startingLineup;
-    var total = 0, missing = 0;
+    var repl = replacementLevels(config);
+    var total = 0, vor = 0, missing = 0;
+    var credit = function(p){
+      total += (p.weeklyBaseline||0);
+      vor   += Math.max(0, (p.weeklyBaseline||0) - (repl[p.pos]||0));
+    };
     var take = function(pos, n){
       var out = [];
       for (var i=0;i<n;i++){
-        if (byPos[pos] && byPos[pos][i]) { out.push(byPos[pos][i]); total += (byPos[pos][i].weeklyBaseline||0); }
+        if (byPos[pos] && byPos[pos][i]) { out.push(byPos[pos][i]); credit(byPos[pos][i]); }
         else missing++;
       }
       return out;
@@ -13579,9 +13620,9 @@ if (typeof module !== "undefined") {
     });
     flexPool.sort(function(a,b){ return (b.weeklyBaseline||0)-(a.weeklyBaseline||0); });
     for (var f=0; f<(s.FLEX||0); f++){
-      if (flexPool[f]) total += (flexPool[f].weeklyBaseline||0); else missing++;
+      if (flexPool[f]) credit(flexPool[f]); else missing++;
     }
-    return { points: total, missingSlots: missing, byPos: byPos };
+    return { points: total, vor: vor, missingSlots: missing, byPos: byPos };
   }
 
   function gradeRoster(rosterState, userId, config){
@@ -13599,13 +13640,30 @@ if (typeof module !== "undefined") {
     // ESPN's ADP sample only drafts 170, so literally everyone looks like
     // they're reaching by ~7 picks. Comparing within the draft cancels that
     // out and leaves only the part that reflects an actual decision.
+    // Not every pick is worth the same. A flat average let a round-13
+    // bargain cancel out a round-1 reach, and counted "value" on a bench
+    // player who'll never start. Each pick is therefore weighted by:
+    //   ROUND  — round 1 decisions dominate; by round 8 a pick carries a
+    //            third the weight, by round 16 almost none.
+    //   VOR    — value bought on a player who beats replacement matters;
+    //            a bargain on someone worth +0 over the waiver wire doesn't.
+    var repl = replacementLevels(config);
     function avgValueFor(list){
-      var ds = [];
+      var num = 0, den = 0, n = 0;
       list.forEach(function(p){
         if (p.adpSource !== "espn-live" || p.adpCapped || p.adpAvg == null) return;
-        ds.push(Math.max(-40, Math.min(40, p.pickNumber - p.adpAvg)));
+        var delta = Math.max(-40, Math.min(40, p.pickNumber - p.adpAvg));
+        var vor   = Math.max(0, (p.weeklyBaseline||0) - (repl[p.pos]||0));
+        // Decay is deliberately mild: the VOR term above already loads most
+        // of the weight onto early picks (a round-1 stud is +11 over
+        // replacement, a round-14 flier +0). Stacking a steep round decay on
+        // top made the whole component ride on two or three picks, which
+        // turned the grade noisy — F's tripled on ordinary drafts.
+        var roundW = 1 / (1 + 0.15 * ((p.round||1) - 1));
+        var w = (1 + vor) * roundW;
+        num += delta * w; den += w; n++;
       });
-      return { avg: ds.length ? ds.reduce(function(a,b){return a+b;},0)/ds.length : 0, n: ds.length };
+      return { avg: den ? num/den : 0, n: n };
     }
     var mineVal = avgValueFor(players);
     var avgValue = mineVal.avg, graded = mineVal.n;
@@ -13615,30 +13673,35 @@ if (typeof module !== "undefined") {
       otherVals.push(avgValueFor(rosterState[mid].players).avg);
     });
     var vMean = otherVals.length ? otherVals.reduce(function(a,b){return a+b;},0)/otherVals.length : 0;
-    var vSd = otherVals.length
-      ? Math.sqrt(otherVals.reduce(function(a,b){return a+Math.pow(b-vMean,2);},0)/otherVals.length) : 1;
-    if (!vSd || !isFinite(vSd)) vSd = 1;
-    var valueZ = (avgValue - vMean) / vSd;
-    var valueScore = Math.max(0, Math.min(100, 55 + valueZ * 18));
+    // Scored on a FIXED points-per-pick scale rather than a z-score. The
+    // league's spread on weighted value is only ~1.45 picks, so dividing by
+    // it made a 3-pick difference swing the entire 0-100 range and sent
+    // ordinary drafts to F on noise. A fixed scale keeps the number stable
+    // and readable: every pick of value above the room is worth 9 points.
+    // Neutral point is 64, not 55. The three components feed a letter scale
+    // where C starts at 70, so centering them at 55 meant a perfectly
+    // league-average draft scored 65 — a D. At 64 an average draft lands at
+    // a C, +1 SD is a B, and +2 SD is an A.
+    var valueScore = Math.max(0, Math.min(100, 64 + (avgValue - vMean) * 9));
 
     // ---- 2. PROJECTION vs the rest of the league ----
     var mine = projectedStarterPoints(players, config);
     var others = [];
     Object.keys(rosterState).forEach(function(mid){
       if (mid === userId) return;
-      others.push(projectedStarterPoints(rosterState[mid].players, config).points);
+      others.push(projectedStarterPoints(rosterState[mid].players, config).vor);
     });
     // Scored on the SIZE of the gap, not raw rank. Finishing 12th of 12 by a
     // single projected point is not an F roster, but a rank-based score would
     // call it one — and since the CPUs draft competently, a normal user draft
     // lands at a near-random rank, which made grades swing from F to A+ on
     // noise. A z-score against the league keeps close packs close.
-    var oMean = others.length ? others.reduce(function(a,b){return a+b;},0)/others.length : mine.points;
+    var oMean = others.length ? others.reduce(function(a,b){return a+b;},0)/others.length : mine.vor;
     var oSd = others.length
       ? Math.sqrt(others.reduce(function(a,b){return a+Math.pow(b-oMean,2);},0)/others.length) : 1;
     if (!oSd || !isFinite(oSd)) oSd = 1;
-    var projZ = (mine.points - oMean) / oSd;
-    var projScore = Math.max(0, Math.min(100, 55 + projZ * 17));
+    var projZ = (mine.vor - oMean) / oSd;
+    var projScore = Math.max(0, Math.min(100, 64 + projZ * 17));
 
     // ---- 3. CONSTRUCTION ----
     var counts = {};
@@ -13681,7 +13744,7 @@ if (typeof module !== "undefined") {
       return "F";
     })(score);
 
-    var rankInLeague = others.filter(function(v){ return v > mine.points; }).length + 1;
+    var rankInLeague = others.filter(function(v){ return v > mine.vor; }).length + 1;
     var rel = avgValue - vMean;   // picks of value vs. the rest of this draft
     var valueWord = rel > 2 ? "waited longer than the room for the same players"
                   : rel > -2 ? "drafted about where the room drafted"
@@ -13690,14 +13753,15 @@ if (typeof module !== "undefined") {
     return {
       letter: letter,
       score: score,
-      summary: "Your starting nine projects for " + mine.points.toFixed(1) + " points a week, "
-        + ord(rankInLeague) + " of " + (others.length+1) + " in this draft. On value you "
+      summary: "Your starting nine projects for " + mine.points.toFixed(1) + " points a week — worth +"
+        + mine.vor.toFixed(1) + " over replacement, " + ord(rankInLeague) + " of " + (others.length+1)
+        + " in this draft. On value you "
         + valueWord + " (" + (rel>=0?"+":"") + rel.toFixed(1) + " picks vs the league average, "
         + graded + " graded picks)."
         + (consNotes.length ? " Construction flags: " + consNotes.join(", ") + "." : " No construction issues."),
       parts: [
         { label: "ADP Value",    score: valueScore, detail: (rel>=0?"+":"") + rel.toFixed(1) + " picks vs league avg" },
-        { label: "Projection",   score: projScore,  detail: mine.points.toFixed(1) + " pts/wk · " + ord(rankInLeague) + " of " + (others.length+1) },
+        { label: "Projection",   score: projScore,  detail: "+" + mine.vor.toFixed(1) + " VOR · " + mine.points.toFixed(1) + " pts/wk · " + ord(rankInLeague) + " of " + (others.length+1) },
         { label: "Construction", score: cons,       detail: consNotes.length ? consNotes[0] : "clean roster" }
       ]
     };
