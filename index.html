@@ -13708,8 +13708,14 @@ if (typeof module !== "undefined") {
     players.forEach(function(p){ counts[p.pos] = (counts[p.pos]||0)+1; });
     var cons = 100, consNotes = [];
     if (mine.missingSlots > 0){
-      cons -= mine.missingSlots * 25;
-      consNotes.push(mine.missingSlots + " starting slot" + (mine.missingSlots>1?"s":"") + " unfilled");
+      // Penalty deliberately modest: an unfilled slot gets auto-covered by a
+      // waiver-wire streamer, both in this engine and in a real league, so
+      // leaving the draft without a kicker costs a waiver claim rather than a
+      // starting spot. At the old -25/slot, rosters that skipped K/DST graded
+      // D/F while still averaging 6-7.6 wins — the grade was punishing a
+      // mistake the game quietly fixes for you.
+      cons -= mine.missingSlots * 10;
+      consNotes.push(mine.missingSlots + " starting slot" + (mine.missingSlots>1?"s":"") + " unfilled (streamer needed)");
     }
     // Depth where it matters — RB/WR carry the bye/injury load.
     var rbDepth = counts.RB||0, wrDepth = counts.WR||0;
@@ -16933,7 +16939,13 @@ function buildLeftoverPool(teams, allPlayers) {
 // bunched around the mean (sim SD 14.8 vs this league's real 23.4). These
 // target the CVs actually observed in PPR scoring: QB ~30%, RB ~54%,
 // WR ~59%, TE ~58%, K ~48%, DST ~65%.
-const POSITION_VOLATILITY = { QB: 0.60, RB: 1.08, WR: 1.18, TE: 1.15, K: 0.95, DST: 1.30 };
+// Target COEFFICIENT OF VARIATION per position (sd / mean of weekly scores),
+// consumed by the lognormal variance model in computePlayerWeek(). These are
+// the CVs real PPR scoring actually shows: quarterbacks are the steadiest,
+// defenses the most erratic. (Under the old additive model these same
+// behaviours were expressed as ~2x multipliers, since that formula's noise
+// term carried an SD of 0.5.)
+const POSITION_VOLATILITY = { QB: 0.30, RB: 0.54, WR: 0.59, TE: 0.58, K: 0.48, DST: 0.65 };
 // Extra per-position calibration on top of the universal CALIBRATION below —
 // TE's weekly baseline runs low enough that the same 1.14x everyone else
 // gets still leaves a "good week" for a top TE looking unremarkable; a
@@ -16976,8 +16988,10 @@ function computePlayerWeek(player, week, rng, defenseStrength, injuryState) {
   // league; now that receptions are actually in the projections, that same
   // multiplier ran team scores ~22 pts/week hot. 0.96 puts the simulated
   // mean on top of this league's real 2024-25 regular-season average
-  // (115.8 pts/team/week over 336 real team-weeks).
-  const CALIBRATION = 0.96;
+  // (115.8 pts/team/week over 336 real team-weeks). Nudged 0.96 -> 0.99 when
+  // weekly variance moved to the lognormal model, whose bad-game branch
+  // shaves a few percent off the average.
+  const CALIBRATION = 0.99;
   const posCalibration = POSITION_CALIBRATION[player.pos] || 1;
   const baseline = (player.weeklyBaseline || 0) * CALIBRATION * posCalibration;
   const defStrength = defenseStrength ? defenseStrength[player._opponentTeam] : null;
@@ -16995,14 +17009,41 @@ function computePlayerWeek(player, week, rng, defenseStrength, injuryState) {
     return result;
   }
 
-  const vol = POSITION_VOLATILITY[player.pos] || 0.35;
-  let variance = 1 + seededGaussish(rng) * vol;
-  // Bust-to-zero and boom tails, layered on top of normal variance.
-  const tail = rng();
-  if (tail < 0.035) variance = rng() * 0.15; // near-zero bust
-  else if (tail > 0.97) variance = 1.75 + rng() * 0.35; // boom — nudged up slightly from 1.7-2.0 to 1.75-2.1
+  // MULTIPLICATIVE (lognormal) week-to-week variance.
+  //
+  // This used to be additive — `1 + noise * vol` — which had two problems at
+  // the volatility levels real fantasy scoring needs. The multiplier went
+  // NEGATIVE about 5% of the time and got clamped to zero, so 4% of weeks
+  // landed on exactly 0.0; real receivers essentially never post a clean zero
+  // unless they're hurt or benched. And bolting separate boom/bust branches on
+  // top piled yet more weight onto both extremes, hollowing out the middle:
+  // a WR1 was producing 16% of weeks under 5 points and 37% over 20, when the
+  // truth is closer to 12% and 28%, with most weeks in the 8-18 band.
+  //
+  // exp(sigma*z - sigma^2/2) is always positive, right-skewed like real
+  // scoring (soft floor, long upside tail), and has mean exactly 1 — so team
+  // totals stay pinned to this league's real 115.8/week average.
+  //
+  // POSITION_VOLATILITY is now read as a target coefficient of variation.
+  const cv = POSITION_VOLATILITY[player.pos] || 0.5;
+  const sigma = Math.sqrt(Math.log(1 + cv * cv));
+  const z = seededGaussish(rng) / 0.5; // seededGaussish has SD 0.5 -> unit normal, bounded +/-3
+  let variance = Math.exp(sigma * z - (sigma * sigma) / 2);
+  // Genuine bad games — shadowed by a corner all afternoon, game script gone
+  // by halftime, in-game injury, a weather game that never develops. The
+  // lognormal curve alone leaves too clean a floor (under-5 weeks came out at
+  // 6% against a real ~12%), so this restores the real sub-5 tail without
+  // reintroducing the old spike of exact zeros.
+  if (rng() < 0.055) variance *= rng() * 0.35;
 
-  const actual = Math.max(0, baseline * matchAdj * variance);
+  // Ceiling per position. The lognormal body is right for ordinary weeks but
+  // its extreme tail is too fat for high-baseline players: a 3-sigma week was
+  // multiplying a 23-point projection by ~4.4x and producing 90-point
+  // receivers. These are roughly the best weeks the position actually
+  // produces in reality, so only the far tail gets clipped — p90 is untouched.
+  const MAX_WEEK = { QB: 58, RB: 55, WR: 55, TE: 45, K: 30, DST: 35 };
+  const ceiling = MAX_WEEK[player.pos] || 55;
+  const actual = Math.min(ceiling, Math.max(0, baseline * matchAdj * variance));
   result.actualPoints = Math.round(actual * 100) / 100;
   return result;
 }
