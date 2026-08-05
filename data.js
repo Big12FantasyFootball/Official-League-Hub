@@ -269,11 +269,96 @@ function renderEloLeaderboard(data) {
   `;
 }
 
+/*
+ * Live scoreboard — this week's real matchups straight from ESPN.
+ * Shows a "when the season starts" note until there are games to display,
+ * so the section exists on the page all preseason instead of appearing
+ * from nowhere in September.
+ */
+function renderScoreboard(data) {
+  const el = document.getElementById("live-scoreboard");
+  if (!el) return;
+
+  const games = (data.live && data.live.currentWeekMatchups) || [];
+  const played = games.filter((g) => (g.homeScore || 0) > 0 || (g.awayScore || 0) > 0);
+  if (!games.length || !played.length) {
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + 'Live matchups appear here once the season starts &mdash; scores update automatically every day.</p>';
+    return;
+  }
+
+  const week = data.live.currentMatchupPeriod;
+  const nameAt = data.managerNameAt;
+  const season = data.live.season;
+  const rows = games.map((g) => {
+    const home = nameAt(g.homeTeamId, season);
+    const away = nameAt(g.awayTeamId, season);
+    const hs = g.homeScore || 0, as = g.awayScore || 0;
+    const decided = g.winner && g.winner !== "UNDECIDED";
+    const homeWon = g.winner === "HOME", awayWon = g.winner === "AWAY";
+    return `<div class="sb-row">
+      <span class="sb-team${awayWon ? " sb-win" : ""}">${away}</span>
+      <span class="sb-score${awayWon ? " sb-win" : ""}">${as.toFixed(2)}</span>
+      <span class="sb-at">${decided ? "FINAL" : "vs"}</span>
+      <span class="sb-score${homeWon ? " sb-win" : ""}">${hs.toFixed(2)}</span>
+      <span class="sb-team sb-right${homeWon ? " sb-win" : ""}">${home}</span>
+    </div>`;
+  }).join("");
+
+  el.innerHTML = `<div class="sb-head">Week ${week}</div>${rows}`;
+}
+
+/*
+ * Live rosters — who's actually on each team in the real league, with a
+ * manager picker. Populates after the draft; shows a note until then.
+ */
+function renderLiveRosters(data) {
+  const el = document.getElementById("live-rosters");
+  if (!el) return;
+
+  const rosters = (data.live && data.live.rosters) || {};
+  const teamIds = Object.keys(rosters).filter((id) => (rosters[id] || []).length);
+  if (!teamIds.length) {
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + 'Rosters appear here once the draft is complete &mdash; they refresh automatically as adds and drops happen.</p>';
+    return;
+  }
+
+  const season = data.live.season;
+  const nameAt = data.managerNameAt;
+  const opts = teamIds
+    .sort((a, b) => nameAt(Number(a), season).localeCompare(nameAt(Number(b), season)))
+    .map((id) => `<option value="${id}">${nameAt(Number(id), season)}</option>`).join("");
+
+  el.innerHTML = `<select id="live-roster-pick" class="draft-select" style="margin-bottom:.8rem">${opts}</select>
+    <div id="live-roster-body"></div>`;
+
+  const POS_ORDER = { QB: 0, RB: 1, WR: 2, TE: 3, K: 4, DST: 5 };
+  function draw(teamId) {
+    const list = (rosters[teamId] || []).slice().sort((a, b) => {
+      if (a.starter !== b.starter) return a.starter ? -1 : 1;
+      return (POS_ORDER[a.pos] ?? 9) - (POS_ORDER[b.pos] ?? 9);
+    });
+    document.getElementById("live-roster-body").innerHTML = list.map((p) => `
+      <div class="lr-row${p.starter ? "" : " lr-bench"}">
+        <span class="lr-slot">${p.starter ? p.pos : "BN"}</span>
+        <span class="lr-name">${p.name || "&mdash;"}${p.injuryStatus && p.injuryStatus !== "ACTIVE"
+          ? `<span class="lr-inj">${p.injuryStatus.slice(0, 3)}</span>` : ""}</span>
+        <span class="lr-meta">${p.pos}${p.proTeam ? " &middot; " + p.proTeam : ""}</span>
+      </div>`).join("");
+  }
+  draw(teamIds[0]);
+  const sel = document.getElementById("live-roster-pick");
+  if (sel) sel.addEventListener("change", (e) => draw(e.target.value));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadB12Live()
     .then((data) => {
       renderEloColumn(data);
       renderEloLeaderboard(data);
+      renderScoreboard(data);
+      renderLiveRosters(data);
     })
     .catch((err) => console.error("B12Live load failed:", err));
 });

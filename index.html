@@ -1662,6 +1662,15 @@ table.sch-table tr:last-child td{border-bottom:none}
   <section class="panel" id="panel-schedule" role="tabpanel">
     <div class="panel-kicker">07 &middot; Calendar</div>
     <h1>2026 Schedule Book</h1>
+
+    <!-- Live from ESPN. Both render a "when the season starts" note until the
+         daily pull actually has games/rosters to show. -->
+    <div class="road-title">This Week&rsquo;s Scoreboard</div>
+    <div id="live-scoreboard"></div>
+
+    <div class="road-title" style="margin-top:2.5rem">Team Rosters</div>
+    <div id="live-rosters"></div>
+
     <div class="sch-hero">
       <div class="sch-kicker">Uploaded 2026 Regular Season Schedule</div>
       <div class="sch-title">14 Weeks, Cup Qualifier, Three Rivalry Weeks, Two Secondary Rivalry Weeks</div>
@@ -18564,6 +18573,23 @@ if (typeof module !== "undefined") {
   .elo-trend-down { color: #c0392b; font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
   .elo-trend-flat { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
   .elo-badge-new { background: var(--gold-soft); color: var(--gold); border: 1px solid rgba(161,98,7,.25); font-family: 'JetBrains Mono', monospace; font-size: .6rem; font-weight: 700; letter-spacing: .05em; padding: .15rem .45rem; border-radius: 4px; }
+  /* ---- Live scoreboard (real league, this week) ---- */
+  .sb-head{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+  .sb-row{display:grid;grid-template-columns:1fr 70px 58px 70px 1fr;align-items:center;gap:.4rem;padding:.6rem .8rem;border:1px solid var(--border);border-radius:10px;background:#fff;margin-bottom:.4rem}
+  .sb-team{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--ink)}
+  .sb-right{text-align:right}
+  .sb-score{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--muted);text-align:center}
+  .sb-at{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.08em;color:var(--muted);text-align:center}
+  .sb-win{color:var(--gold)}
+  /* ---- Live rosters ---- */
+  .lr-row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:.6rem;padding:.45rem .7rem;border-bottom:1px solid var(--border)}
+  .lr-row:last-child{border-bottom:none}
+  .lr-bench{opacity:.6}
+  .lr-slot{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.05em;color:var(--muted)}
+  .lr-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink)}
+  .lr-inj{font-family:'JetBrains Mono',monospace;font-size:.5rem;color:#c0392b;margin-left:.35rem}
+  .lr-meta{font-family:'Inter',sans-serif;font-size:.66rem;color:var(--muted)}
+
   /* Departed managers (Dillon Jacobs, Timmy Hoffman, Braden Lord) — same
      dimmed treatment as .inactive-manager rows elsewhere on the site, plus
      a FORMER badge matching the existing .inactive-pill style. */
