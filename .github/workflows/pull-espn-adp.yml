@@ -1,0 +1,27 @@
+name: Pull ESPN ADP
+
+on:
+  schedule:
+    - cron: '23 12 * * *'   # 8:23am ET daily — preseason only; disable after the draft
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: python espn_adp_pull.py
+      - name: Commit updated ADP
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html espn_adp.json
+          git diff --staged --quiet || git commit -m "Update ADP from ESPN [auto]"
+          git push
