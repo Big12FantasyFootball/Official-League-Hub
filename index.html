@@ -16954,7 +16954,28 @@ function buildLeftoverPool(teams, allPlayers) {
 // defenses the most erratic. (Under the old additive model these same
 // behaviours were expressed as ~2x multipliers, since that formula's noise
 // term carried an SD of 0.5.)
-const POSITION_VOLATILITY = { QB: 0.30, RB: 0.54, WR: 0.59, TE: 0.58, K: 0.48, DST: 0.65 };
+// Coefficient of variation for a LOW-VOLUME player at each position. The
+// volume-stability term in computePlayerWeek() scales these down toward the
+// figures real target-hogs actually post (WR ~0.50, RB ~0.50, QB ~0.32),
+// measured off 2024 PPR game logs.
+const POSITION_VOLATILITY = { QB: 0.44, RB: 0.72, WR: 0.74, TE: 0.74, K: 0.62, DST: 0.80 };
+// How much a full workload damps week-to-week swing. 0.32 takes an elite WR
+// from 0.74 down to ~0.50, matching Chase/Jefferson.
+const VOLUME_STABILITY = 0.40;
+
+// Best projected weekly output at each position — the yardstick a player's
+// volume is measured against. Cached; the pool never changes at runtime.
+let _eliteBaseCache = null;
+function eliteBaseline(pos) {
+  if (!_eliteBaseCache) {
+    _eliteBaseCache = {};
+    PLAYERS_DATA.forEach((p) => {
+      const b = p.weeklyBaseline || 0;
+      if (!_eliteBaseCache[p.pos] || b > _eliteBaseCache[p.pos]) _eliteBaseCache[p.pos] = b;
+    });
+  }
+  return _eliteBaseCache[pos] || 20;
+}
 // Extra per-position calibration on top of the universal CALIBRATION below —
 // TE's weekly baseline runs low enough that the same 1.14x everyone else
 // gets still leaves a "good week" for a top TE looking unremarkable; a
@@ -17000,7 +17021,7 @@ function computePlayerWeek(player, week, rng, defenseStrength, injuryState) {
   // (115.8 pts/team/week over 336 real team-weeks). Nudged 0.96 -> 0.99 when
   // weekly variance moved to the lognormal model, whose bad-game branch
   // shaves a few percent off the average.
-  const CALIBRATION = 0.99;
+  const CALIBRATION = 0.97;
   const posCalibration = POSITION_CALIBRATION[player.pos] || 1;
   const baseline = (player.weeklyBaseline || 0) * CALIBRATION * posCalibration;
   const defStrength = defenseStrength ? defenseStrength[player._opponentTeam] : null;
@@ -17034,7 +17055,15 @@ function computePlayerWeek(player, week, rng, defenseStrength, injuryState) {
   // totals stay pinned to this league's real 115.8/week average.
   //
   // POSITION_VOLATILITY is now read as a target coefficient of variation.
-  const cv = POSITION_VOLATILITY[player.pos] || 0.5;
+  // Volatility scales DOWN with projected volume. Verified against real 2024
+  // PPR logs: Ja'Marr Chase (175 targets) ran a 53% coefficient of variation
+  // and Justin Jefferson (154 targets) 40%, versus roughly 70% for a
+  // low-volume WR. Target share is a floor — a true WR1 catches six balls on
+  // a quiet day, while a WR4 on four targets is genuinely boom-or-bust.
+  // Applying one CV to every player at a position gave stars 21% single-digit
+  // weeks against a real 12%, which is exactly the complaint.
+  const stability = Math.min(1, (player.weeklyBaseline || 0) / eliteBaseline(player.pos));
+  const cv = (POSITION_VOLATILITY[player.pos] || 0.5) * (1 - VOLUME_STABILITY * stability);
   const sigma = Math.sqrt(Math.log(1 + cv * cv));
   const z = seededGaussish(rng) / 0.5; // seededGaussish has SD 0.5 -> unit normal, bounded +/-3
   let variance = Math.exp(sigma * z - (sigma * sigma) / 2);
@@ -17043,7 +17072,9 @@ function computePlayerWeek(player, week, rng, defenseStrength, injuryState) {
   // lognormal curve alone leaves too clean a floor (under-5 weeks came out at
   // 6% against a real ~12%), so this restores the real sub-5 tail without
   // reintroducing the old spike of exact zeros.
-  if (rng() < 0.055) variance *= rng() * 0.35;
+  // Bad games also scale with volume — a target hog rarely gets erased, a
+  // low-usage flier does it often.
+  if (rng() < 0.055 * (1 - 0.6 * stability)) variance *= rng() * 0.35;
 
   // Ceiling per position. The lognormal body is right for ordinary weeks but
   // its extreme tail is too fat for high-baseline players: a 3-sigma week was
