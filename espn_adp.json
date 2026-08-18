@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-08-17T20:01:38.299586+00:00",
+  "pulledAt": "2026-08-18T13:14:29.002497+00:00",
   "season": 2026,
   "players": [
     {
@@ -14,13 +14,6 @@
       "name": "Bijan Robinson",
       "pos": "RB",
       "adp": 2.6,
-      "percentOwned": 99.8
-    },
-    {
-      "playerId": 4426515,
-      "name": "Puka Nacua",
-      "pos": "WR",
-      "adp": 4.3,
       "percentOwned": 99.9
     },
     {
@@ -28,14 +21,21 @@
       "name": "Ja'Marr Chase",
       "pos": "WR",
       "adp": 4.3,
-      "percentOwned": 99.8
+      "percentOwned": 99.9
+    },
+    {
+      "playerId": 4426515,
+      "name": "Puka Nacua",
+      "pos": "WR",
+      "adp": 4.4,
+      "percentOwned": 99.9
     },
     {
       "playerId": 4430878,
       "name": "Jaxon Smith-Njigba",
       "pos": "WR",
       "adp": 5.9,
-      "percentOwned": 99.8
+      "percentOwned": 99.9
     },
     {
       "playerId": 3117251,
@@ -56,7 +56,7 @@
       "name": "Amon-Ra St. Brown",
       "pos": "WR",
       "adp": 8.4,
-      "percentOwned": 99.8
+      "percentOwned": 99.9
     },
     {
       "playerId": 4241389,
@@ -97,14 +97,14 @@
       "playerId": 4890973,
       "name": "Ashton Jeanty",
       "pos": "RB",
-      "adp": 17.7,
+      "adp": 17.5,
       "percentOwned": 99.6
     },
     {
       "playerId": 4870808,
       "name": "Jeremiyah Love",
       "pos": "RB",
-      "adp": 18.3,
+      "adp": 18.5,
       "percentOwned": 99.2
     },
     {
@@ -125,8 +125,8 @@
       "playerId": 3043078,
       "name": "Derrick Henry",
       "pos": "RB",
-      "adp": 20.1,
-      "percentOwned": 99.6
+      "adp": 20.0,
+      "percentOwned": 99.7
     },
     {
       "playerId": 3918298,
@@ -146,7 +146,7 @@
       "playerId": 4567048,
       "name": "Kenneth Walker III",
       "pos": "RB",
-      "adp": 23.8,
+      "adp": 23.6,
       "percentOwned": 99.3
     },
     {
@@ -160,15 +160,8 @@
       "playerId": 4362238,
       "name": "Chase Brown",
       "pos": "RB",
-      "adp": 24.5,
-      "percentOwned": 98.8
-    },
-    {
-      "playerId": 4685382,
-      "name": "Omarion Hampton",
-      "pos": "RB",
-      "adp": 26.8,
-      "percentOwned": 99.0
+      "adp": 24.2,
+      "percentOwned": 98.9
     },
     {
       "playerId": 4047646,
@@ -176,6 +169,13 @@
       "pos": "WR",
       "adp": 27.0,
       "percentOwned": 99.4
+    },
+    {
+      "playerId": 4685382,
+      "name": "Omarion Hampton",
+      "pos": "RB",
+      "adp": 27.5,
+      "percentOwned": 99.0
     },
     {
       "playerId": 4258173,
@@ -188,49 +188,49 @@
       "playerId": 4426354,
       "name": "George Pickens",
       "pos": "WR",
-      "adp": 29.0,
+      "adp": 29.2,
       "percentOwned": 99.6
-    },
-    {
-      "playerId": 4047365,
-      "name": "Josh Jacobs",
-      "pos": "RB",
-      "adp": 32.6,
-      "percentOwned": 99.0
     },
     {
       "playerId": 4427366,
       "name": "Breece Hall",
       "pos": "RB",
-      "adp": 32.9,
+      "adp": 32.2,
       "percentOwned": 98.2
+    },
+    {
+      "playerId": 4047365,
+      "name": "Josh Jacobs",
+      "pos": "RB",
+      "adp": 33.2,
+      "percentOwned": 99.0
     },
     {
       "playerId": 4361370,
       "name": "Chris Olave",
       "pos": "WR",
-      "adp": 35.9,
+      "adp": 35.5,
       "percentOwned": 98.4
     },
     {
       "playerId": 4569618,
       "name": "Garrett Wilson",
       "pos": "WR",
-      "adp": 36.0,
+      "adp": 36.1,
       "percentOwned": 98.2
     },
     {
       "playerId": 4595348,
       "name": "Malik Nabers",
       "pos": "WR",
-      "adp": 36.6,
+      "adp": 36.4,
       "percentOwned": 98.3
     },
     {
       "playerId": 4361579,
       "name": "Javonte Williams",
       "pos": "RB",
-      "adp": 38.4,
+      "adp": 38.2,
       "percentOwned": 97.7
     },
     {
@@ -248,38 +248,38 @@
       "percentOwned": 98.7
     },
     {
-      "playerId": 4685472,
-      "name": "Tetairoa McMillan",
-      "pos": "WR",
-      "adp": 42.3,
-      "percentOwned": 98.0
-    },
-    {
       "playerId": 4429615,
       "name": "Zay Flowers",
       "pos": "WR",
-      "adp": 42.4,
+      "adp": 42.3,
+      "percentOwned": 97.9
+    },
+    {
+      "playerId": 4685472,
+      "name": "Tetairoa McMillan",
+      "pos": "WR",
+      "adp": 42.5,
       "percentOwned": 97.9
     },
     {
       "playerId": 4430737,
       "name": "Kyren Williams",
       "pos": "RB",
-      "adp": 42.9,
+      "adp": 43.0,
       "percentOwned": 97.4
     },
     {
       "playerId": 4696981,
       "name": "Cam Skattebo",
       "pos": "RB",
-      "adp": 43.2,
+      "adp": 43.3,
       "percentOwned": 98.0
     },
     {
       "playerId": 4567750,
       "name": "Emeka Egbuka",
       "pos": "WR",
-      "adp": 44.6,
+      "adp": 44.7,
       "percentOwned": 97.3
     },
     {
@@ -314,21 +314,21 @@
       "playerId": 4239996,
       "name": "Travis Etienne Jr.",
       "pos": "RB",
-      "adp": 49.1,
+      "adp": 48.8,
       "percentOwned": 95.9
     },
     {
       "playerId": 4426348,
       "name": "Jayden Daniels",
       "pos": "QB",
-      "adp": 50.9,
+      "adp": 50.8,
       "percentOwned": 98.5
     },
     {
       "playerId": 4040715,
       "name": "Jalen Hurts",
       "pos": "QB",
-      "adp": 52.5,
+      "adp": 52.3,
       "percentOwned": 97.3
     },
     {
@@ -343,14 +343,14 @@
       "name": "Quinshon Judkins",
       "pos": "RB",
       "adp": 54.7,
-      "percentOwned": 94.6
+      "percentOwned": 94.5
     },
     {
       "playerId": 4596448,
       "name": "Bucky Irving",
       "pos": "RB",
       "adp": 56.1,
-      "percentOwned": 94.7
+      "percentOwned": 94.6
     },
     {
       "playerId": 4239993,
@@ -371,7 +371,7 @@
       "name": "Jaylen Waddle",
       "pos": "WR",
       "adp": 60.5,
-      "percentOwned": 94.4
+      "percentOwned": 94.3
     },
     {
       "playerId": 3121422,
@@ -384,7 +384,7 @@
       "playerId": 4430027,
       "name": "Sam LaPorta",
       "pos": "TE",
-      "adp": 65.7,
+      "adp": 65.6,
       "percentOwned": 94.6
     },
     {
@@ -395,60 +395,60 @@
       "percentOwned": 95.1
     },
     {
-      "playerId": 4426388,
-      "name": "Jameson Williams",
-      "pos": "WR",
-      "adp": 67.9,
-      "percentOwned": 93.1
-    },
-    {
       "playerId": 3915416,
       "name": "DJ Moore",
       "pos": "WR",
-      "adp": 68.6,
+      "adp": 67.8,
       "percentOwned": 91.8
+    },
+    {
+      "playerId": 4426388,
+      "name": "Jameson Williams",
+      "pos": "WR",
+      "adp": 68.2,
+      "percentOwned": 93.0
     },
     {
       "playerId": 4259545,
       "name": "D'Andre Swift",
       "pos": "RB",
-      "adp": 70.2,
+      "adp": 69.8,
       "percentOwned": 90.9
     },
     {
       "playerId": 4431299,
       "name": "Rome Odunze",
       "pos": "WR",
-      "adp": 70.5,
+      "adp": 70.1,
       "percentOwned": 91.6
     },
     {
       "playerId": 4871023,
       "name": "Carnell Tate",
       "pos": "WR",
-      "adp": 71.9,
-      "percentOwned": 92.5
+      "adp": 72.8,
+      "percentOwned": 92.3
     },
     {
       "playerId": 4035538,
       "name": "David Montgomery",
       "pos": "RB",
-      "adp": 75.0,
+      "adp": 74.8,
       "percentOwned": 90.4
-    },
-    {
-      "playerId": 4432710,
-      "name": "TreVeyon Henderson",
-      "pos": "RB",
-      "adp": 75.5,
-      "percentOwned": 90.9
     },
     {
       "playerId": 4689114,
       "name": "Jaxson Dart",
       "pos": "QB",
-      "adp": 76.1,
+      "adp": 76.2,
       "percentOwned": 92.9
+    },
+    {
+      "playerId": 4432710,
+      "name": "TreVeyon Henderson",
+      "pos": "RB",
+      "adp": 76.3,
+      "percentOwned": 90.8
     },
     {
       "playerId": 5083076,
@@ -468,22 +468,29 @@
       "playerId": 4882093,
       "name": "Bhayshul Tuten",
       "pos": "RB",
-      "adp": 78.1,
+      "adp": 77.7,
       "percentOwned": 88.3
     },
     {
       "playerId": 12483,
       "name": "Matthew Stafford",
       "pos": "QB",
-      "adp": 79.3,
-      "percentOwned": 92.3
+      "adp": 79.4,
+      "percentOwned": 92.4
     },
     {
       "playerId": 4685512,
       "name": "Jadarian Price",
       "pos": "RB",
-      "adp": 81.0,
+      "adp": 80.8,
       "percentOwned": 89.2
+    },
+    {
+      "playerId": 3128429,
+      "name": "Courtland Sutton",
+      "pos": "WR",
+      "adp": 84.5,
+      "percentOwned": 88.5
     },
     {
       "playerId": 3953687,
@@ -493,52 +500,45 @@
       "percentOwned": 99.7
     },
     {
-      "playerId": 3128429,
-      "name": "Courtland Sutton",
-      "pos": "WR",
-      "adp": 84.7,
-      "percentOwned": 88.5
-    },
-    {
       "playerId": -16034,
       "name": "Texans D/ST",
       "pos": "DST",
-      "adp": 86.9,
+      "adp": 86.6,
       "percentOwned": 98.7
     },
     {
       "playerId": 2577417,
       "name": "Dak Prescott",
       "pos": "QB",
-      "adp": 87.2,
+      "adp": 87.0,
       "percentOwned": 89.0
     },
     {
       "playerId": 4047650,
       "name": "DK Metcalf",
       "pos": "WR",
-      "adp": 87.5,
-      "percentOwned": 89.1
+      "adp": 87.4,
+      "percentOwned": 89.0
     },
     {
       "playerId": 4426338,
       "name": "Bo Nix",
       "pos": "QB",
-      "adp": 89.9,
+      "adp": 89.7,
       "percentOwned": 87.4
     },
     {
       "playerId": 4035687,
       "name": "Michael Pittman Jr.",
       "pos": "WR",
-      "adp": 90.8,
-      "percentOwned": 87.5
+      "adp": 90.7,
+      "percentOwned": 87.4
     },
     {
       "playerId": 4432708,
       "name": "Marvin Harrison Jr.",
       "pos": "WR",
-      "adp": 91.3,
+      "adp": 91.2,
       "percentOwned": 87.3
     },
     {
@@ -552,71 +552,71 @@
       "playerId": -16007,
       "name": "Broncos D/ST",
       "pos": "DST",
-      "adp": 93.8,
-      "percentOwned": 98.5
-    },
-    {
-      "playerId": 4360310,
-      "name": "Trevor Lawrence",
-      "pos": "QB",
-      "adp": 95.1,
-      "percentOwned": 86.2
+      "adp": 94.2,
+      "percentOwned": 98.4
     },
     {
       "playerId": 16737,
       "name": "Mike Evans",
       "pos": "WR",
-      "adp": 95.6,
+      "adp": 95.0,
       "percentOwned": 86.6
+    },
+    {
+      "playerId": 4360310,
+      "name": "Trevor Lawrence",
+      "pos": "QB",
+      "adp": 95.0,
+      "percentOwned": 86.2
     },
     {
       "playerId": 3916148,
       "name": "Tony Pollard",
       "pos": "RB",
-      "adp": 95.6,
-      "percentOwned": 85.8
-    },
-    {
-      "playerId": 4360078,
-      "name": "Alec Pierce",
-      "pos": "WR",
-      "adp": 98.2,
-      "percentOwned": 84.2
+      "adp": 97.7,
+      "percentOwned": 85.6
     },
     {
       "playerId": 4572680,
       "name": "Tucker Kraft",
       "pos": "TE",
-      "adp": 98.5,
-      "percentOwned": 86.2
+      "adp": 98.0,
+      "percentOwned": 86.3
+    },
+    {
+      "playerId": 4360078,
+      "name": "Alec Pierce",
+      "pos": "WR",
+      "adp": 98.1,
+      "percentOwned": 84.1
     },
     {
       "playerId": 3040151,
       "name": "George Kittle",
       "pos": "TE",
-      "adp": 98.9,
-      "percentOwned": 87.9
+      "adp": 99.2,
+      "percentOwned": 87.8
     },
     {
-      "playerId": -16014,
-      "name": "Rams D/ST",
-      "pos": "DST",
-      "adp": 100.0,
-      "percentOwned": 94.8
-    },
-    {
-      "playerId": 4880281,
-      "name": "Jordyn Tyson",
+      "playerId": 4432620,
+      "name": "Parker Washington",
       "pos": "WR",
-      "adp": 100.5,
-      "percentOwned": 83.9
+      "adp": 100.2,
+      "percentOwned": 83.2
     },
     {
       "playerId": 15847,
       "name": "Travis Kelce",
       "pos": "TE",
-      "adp": 100.7,
+      "adp": 100.4,
       "percentOwned": 87.3
+    },
+    {
+      "playerId": -16014,
+      "name": "Rams D/ST",
+      "pos": "DST",
+      "adp": 100.5,
+      "percentOwned": 94.8
     },
     {
       "playerId": 3121023,
@@ -626,206 +626,206 @@
       "percentOwned": 87.7
     },
     {
-      "playerId": 4432620,
-      "name": "Parker Washington",
-      "pos": "WR",
-      "adp": 100.8,
-      "percentOwned": 83.2
-    },
-    {
       "playerId": 4248528,
       "name": "Christian Watson",
       "pos": "WR",
-      "adp": 102.0,
+      "adp": 101.8,
       "percentOwned": 84.1
-    },
-    {
-      "playerId": 4569987,
-      "name": "Jaylen Warren",
-      "pos": "RB",
-      "adp": 103.6,
-      "percentOwned": 84.6
     },
     {
       "playerId": 4569173,
       "name": "Rhamondre Stevenson",
       "pos": "RB",
-      "adp": 104.8,
-      "percentOwned": 82.6
+      "adp": 102.2,
+      "percentOwned": 82.7
+    },
+    {
+      "playerId": 4569987,
+      "name": "Jaylen Warren",
+      "pos": "RB",
+      "adp": 103.5,
+      "percentOwned": 84.5
     },
     {
       "playerId": 4361741,
       "name": "Brock Purdy",
       "pos": "QB",
-      "adp": 105.0,
-      "percentOwned": 83.9
+      "adp": 104.8,
+      "percentOwned": 83.7
     },
     {
       "playerId": 4362081,
       "name": "Cameron Dicker",
       "pos": "K",
-      "adp": 105.2,
-      "percentOwned": 99.1
+      "adp": 105.1,
+      "percentOwned": 99.2
+    },
+    {
+      "playerId": 4880281,
+      "name": "Jordyn Tyson",
+      "pos": "WR",
+      "adp": 106.2,
+      "percentOwned": 80.9
     },
     {
       "playerId": 4432773,
       "name": "Brian Thomas Jr.",
       "pos": "WR",
-      "adp": 106.9,
-      "percentOwned": 83.2
-    },
-    {
-      "playerId": -16026,
-      "name": "Seahawks D/ST",
-      "pos": "DST",
-      "adp": 107.3,
-      "percentOwned": 97.3
+      "adp": 106.8,
+      "percentOwned": 83.1
     },
     {
       "playerId": 4360761,
       "name": "Michael Wilson",
       "pos": "WR",
-      "adp": 107.3,
-      "percentOwned": 82.2
+      "adp": 107.2,
+      "percentOwned": 82.1
+    },
+    {
+      "playerId": -16026,
+      "name": "Seahawks D/ST",
+      "pos": "DST",
+      "adp": 107.4,
+      "percentOwned": 97.3
     },
     {
       "playerId": 4701936,
       "name": "Matthew Golden",
       "pos": "WR",
-      "adp": 107.6,
-      "percentOwned": 82.0
+      "adp": 107.5,
+      "percentOwned": 81.9
     },
     {
       "playerId": 4038941,
       "name": "Justin Herbert",
       "pos": "QB",
-      "adp": 109.2,
-      "percentOwned": 85.6
+      "adp": 109.0,
+      "percentOwned": 85.7
     },
     {
       "playerId": 3139477,
       "name": "Patrick Mahomes",
       "pos": "QB",
-      "adp": 109.5,
-      "percentOwned": 84.5
+      "adp": 109.3,
+      "percentOwned": 84.4
     },
     {
       "playerId": 4038815,
       "name": "Rico Dowdle",
       "pos": "RB",
-      "adp": 109.9,
-      "percentOwned": 83.7
+      "adp": 109.5,
+      "percentOwned": 83.6
     },
     {
       "playerId": 4242355,
       "name": "Jake Ferguson",
       "pos": "TE",
       "adp": 112.3,
-      "percentOwned": 84.7
+      "percentOwned": 84.6
     },
     {
       "playerId": -16023,
       "name": "Steelers D/ST",
       "pos": "DST",
-      "adp": 115.0,
-      "percentOwned": 94.4
+      "adp": 115.1,
+      "percentOwned": 94.5
     },
     {
       "playerId": 2473037,
       "name": "Jason Myers",
       "pos": "K",
-      "adp": 115.8,
+      "adp": 115.9,
       "percentOwned": 97.4
-    },
-    {
-      "playerId": 4241416,
-      "name": "Chuba Hubbard",
-      "pos": "RB",
-      "adp": 117.0,
-      "percentOwned": 82.7
     },
     {
       "playerId": 3916433,
       "name": "Jakobi Meyers",
       "pos": "WR",
-      "adp": 117.3,
-      "percentOwned": 79.9
+      "adp": 116.8,
+      "percentOwned": 79.8
+    },
+    {
+      "playerId": 4241416,
+      "name": "Chuba Hubbard",
+      "pos": "RB",
+      "adp": 117.5,
+      "percentOwned": 82.5
     },
     {
       "playerId": 4569587,
       "name": "Wan'Dale Robinson",
       "pos": "WR",
-      "adp": 118.4,
-      "percentOwned": 79.7
+      "adp": 118.3,
+      "percentOwned": 79.5
     },
     {
       "playerId": 4685415,
       "name": "Travis Hunter",
       "pos": "WR",
-      "adp": 118.7,
-      "percentOwned": 72.7
+      "adp": 119.0,
+      "percentOwned": 72.5
     },
     {
       "playerId": 4688813,
       "name": "Josh Downs",
       "pos": "WR",
-      "adp": 121.7,
+      "adp": 121.2,
       "percentOwned": 76.3
-    },
-    {
-      "playerId": 4371733,
-      "name": "Kenny Gainwell",
-      "pos": "RB",
-      "adp": 123.0,
-      "percentOwned": 79.1
     },
     {
       "playerId": 4429205,
       "name": "Jordan Addison",
       "pos": "WR",
-      "adp": 123.0,
-      "percentOwned": 77.7
+      "adp": 122.6,
+      "percentOwned": 77.6
+    },
+    {
+      "playerId": 4371733,
+      "name": "Kenny Gainwell",
+      "pos": "RB",
+      "adp": 122.8,
+      "percentOwned": 79.0
     },
     {
       "playerId": 3116365,
       "name": "Mark Andrews",
       "pos": "TE",
-      "adp": 123.2,
+      "adp": 123.1,
       "percentOwned": 79.4
     },
     {
       "playerId": 4241985,
       "name": "J.K. Dobbins",
       "pos": "RB",
-      "adp": 123.8,
-      "percentOwned": 79.3
-    },
-    {
-      "playerId": 3042519,
-      "name": "Aaron Jones Sr.",
-      "pos": "RB",
-      "adp": 127.0,
-      "percentOwned": 78.9
+      "adp": 123.3,
+      "percentOwned": 79.2
     },
     {
       "playerId": 4678008,
       "name": "Jonathon Brooks",
       "pos": "RB",
-      "adp": 127.4,
-      "percentOwned": 74.6
+      "adp": 126.6,
+      "percentOwned": 74.7
+    },
+    {
+      "playerId": 3042519,
+      "name": "Aaron Jones Sr.",
+      "pos": "RB",
+      "adp": 128.2,
+      "percentOwned": 78.6
     },
     {
       "playerId": 4373678,
       "name": "Khalil Shakir",
       "pos": "WR",
-      "adp": 129.9,
-      "percentOwned": 72.5
+      "adp": 128.7,
+      "percentOwned": 72.4
     },
     {
       "playerId": 4361050,
       "name": "Isaiah Likely",
       "pos": "TE",
-      "adp": 130.3,
+      "adp": 130.2,
       "percentOwned": 77.6
     },
     {
@@ -836,46 +836,32 @@
       "percentOwned": 92.0
     },
     {
-      "playerId": 4697815,
-      "name": "Rachaad White",
+      "playerId": 4608686,
+      "name": "Kyle Monangai",
       "pos": "RB",
       "adp": 131.3,
-      "percentOwned": 75.8
+      "percentOwned": 76.3
+    },
+    {
+      "playerId": 2976212,
+      "name": "Stefon Diggs",
+      "pos": "WR",
+      "adp": 131.3,
+      "percentOwned": 65.2
     },
     {
       "playerId": -16033,
       "name": "Ravens D/ST",
       "pos": "DST",
       "adp": 131.6,
-      "percentOwned": 86.5
+      "percentOwned": 86.4
     },
     {
-      "playerId": 2976212,
-      "name": "Stefon Diggs",
-      "pos": "WR",
-      "adp": 131.6,
-      "percentOwned": 64.6
-    },
-    {
-      "playerId": 4608686,
-      "name": "Kyle Monangai",
+      "playerId": 4697815,
+      "name": "Rachaad White",
       "pos": "RB",
-      "adp": 132.0,
-      "percentOwned": 76.5
-    },
-    {
-      "playerId": 4870795,
-      "name": "Makai Lemon",
-      "pos": "WR",
-      "adp": 132.8,
-      "percentOwned": 77.5
-    },
-    {
-      "playerId": 4568490,
-      "name": "RJ Harvey",
-      "pos": "RB",
-      "adp": 133.1,
-      "percentOwned": 76.1
+      "adp": 131.8,
+      "percentOwned": 75.3
     },
     {
       "playerId": 2971573,
@@ -888,92 +874,106 @@
       "playerId": 4036133,
       "name": "T.J. Hockenson",
       "pos": "TE",
-      "adp": 133.7,
+      "adp": 133.6,
       "percentOwned": 70.0
+    },
+    {
+      "playerId": 4568490,
+      "name": "RJ Harvey",
+      "pos": "RB",
+      "adp": 134.2,
+      "percentOwned": 75.6
     },
     {
       "playerId": -16021,
       "name": "Eagles D/ST",
       "pos": "DST",
-      "adp": 134.6,
-      "percentOwned": 85.0
+      "adp": 134.7,
+      "percentOwned": 84.9
+    },
+    {
+      "playerId": 4870795,
+      "name": "Makai Lemon",
+      "pos": "WR",
+      "adp": 135.2,
+      "percentOwned": 77.0
     },
     {
       "playerId": 4385690,
       "name": "Dalton Kincaid",
       "pos": "TE",
-      "adp": 136.0,
-      "percentOwned": 65.1
+      "adp": 135.7,
+      "percentOwned": 65.3
     },
     {
       "playerId": 4686361,
       "name": "Cam Little",
       "pos": "K",
-      "adp": 136.7,
-      "percentOwned": 87.0
+      "adp": 136.9,
+      "percentOwned": 86.9
     },
     {
       "playerId": 4683062,
       "name": "Xavier Worthy",
       "pos": "WR",
-      "adp": 137.7,
-      "percentOwned": 71.8
+      "adp": 137.5,
+      "percentOwned": 71.5
     },
     {
       "playerId": 3126486,
       "name": "Deebo Samuel Sr.",
       "pos": "WR",
-      "adp": 138.1,
-      "percentOwned": 65.9
-    },
-    {
-      "playerId": 3046779,
-      "name": "Jared Goff",
-      "pos": "QB",
-      "adp": 139.0,
-      "percentOwned": 62.4
-    },
-    {
-      "playerId": 5083315,
-      "name": "Kenyon Sadiq",
-      "pos": "TE",
-      "adp": 139.4,
-      "percentOwned": 69.1
+      "adp": 137.8,
+      "percentOwned": 66.1
     },
     {
       "playerId": 4575131,
       "name": "Jacory Croskey-Merritt",
       "pos": "RB",
-      "adp": 139.9,
+      "adp": 138.9,
       "percentOwned": 68.4
+    },
+    {
+      "playerId": 3046779,
+      "name": "Jared Goff",
+      "pos": "QB",
+      "adp": 138.9,
+      "percentOwned": 62.6
     },
     {
       "playerId": 4362249,
       "name": "Jayden Reed",
       "pos": "WR",
-      "adp": 140.3,
+      "adp": 139.1,
       "percentOwned": 67.9
+    },
+    {
+      "playerId": 5083315,
+      "name": "Kenyon Sadiq",
+      "pos": "TE",
+      "adp": 140.0,
+      "percentOwned": 68.9
     },
     {
       "playerId": 4429096,
       "name": "Blake Corum",
       "pos": "RB",
       "adp": 141.1,
-      "percentOwned": 72.4
-    },
-    {
-      "playerId": 3046439,
-      "name": "Hunter Henry",
-      "pos": "TE",
-      "adp": 142.8,
-      "percentOwned": 57.5
+      "percentOwned": 72.2
     },
     {
       "playerId": 4429025,
       "name": "Quentin Johnston",
       "pos": "WR",
-      "adp": 143.3,
-      "percentOwned": 70.3
+      "adp": 142.6,
+      "percentOwned": 70.4
+    },
+    {
+      "playerId": 3046439,
+      "name": "Hunter Henry",
+      "pos": "TE",
+      "adp": 142.9,
+      "percentOwned": 57.6
     },
     {
       "playerId": 3055899,
@@ -986,120 +986,127 @@
       "playerId": 3917315,
       "name": "Kyler Murray",
       "pos": "QB",
-      "adp": 148.2,
-      "percentOwned": 54.4
+      "adp": 147.8,
+      "percentOwned": 54.5
     },
     {
       "playerId": 3116165,
       "name": "Chris Godwin Jr.",
       "pos": "WR",
-      "adp": 148.5,
-      "percentOwned": 69.0
+      "adp": 148.3,
+      "percentOwned": 68.8
+    },
+    {
+      "playerId": 4034949,
+      "name": "Eddy Pineiro",
+      "pos": "K",
+      "adp": 148.7,
+      "percentOwned": 79.8
     },
     {
       "playerId": 3052587,
       "name": "Baker Mayfield",
       "pos": "QB",
       "adp": 148.8,
-      "percentOwned": 46.5
-    },
-    {
-      "playerId": 4034949,
-      "name": "Eddy Pineiro",
-      "pos": "K",
-      "adp": 148.9,
-      "percentOwned": 79.8
+      "percentOwned": 46.6
     },
     {
       "playerId": -16017,
       "name": "Patriots D/ST",
       "pos": "DST",
       "adp": 149.1,
-      "percentOwned": 73.5
+      "percentOwned": 72.9
     },
     {
       "playerId": 4870653,
       "name": "KC Concepcion",
       "pos": "WR",
-      "adp": 151.1,
-      "percentOwned": 62.6
+      "adp": 150.9,
+      "percentOwned": 62.4
     },
     {
       "playerId": -16008,
       "name": "Lions D/ST",
       "pos": "DST",
       "adp": 151.4,
-      "percentOwned": 64.9
-    },
-    {
-      "playerId": 4429059,
-      "name": "Woody Marks",
-      "pos": "RB",
-      "adp": 152.5,
-      "percentOwned": 58.9
-    },
-    {
-      "playerId": 4426385,
-      "name": "Zach Charbonnet",
-      "pos": "RB",
-      "adp": 152.5,
-      "percentOwned": 58.7
+      "percentOwned": 65.1
     },
     {
       "playerId": 4360569,
       "name": "Jordan Mason",
       "pos": "RB",
-      "adp": 152.9,
-      "percentOwned": 51.8
+      "adp": 151.5,
+      "percentOwned": 52.5
     },
     {
-      "playerId": -16005,
-      "name": "Browns D/ST",
-      "pos": "DST",
-      "adp": 153.2,
-      "percentOwned": 59.7
+      "playerId": 4429059,
+      "name": "Woody Marks",
+      "pos": "RB",
+      "adp": 152.6,
+      "percentOwned": 58.5
+    },
+    {
+      "playerId": 4426385,
+      "name": "Zach Charbonnet",
+      "pos": "RB",
+      "adp": 153.3,
+      "percentOwned": 58.0
     },
     {
       "playerId": 4361432,
       "name": "Romeo Doubs",
       "pos": "WR",
-      "adp": 153.3,
-      "percentOwned": 59.5
+      "adp": 153.4,
+      "percentOwned": 59.2
+    },
+    {
+      "playerId": -16005,
+      "name": "Browns D/ST",
+      "pos": "DST",
+      "adp": 153.4,
+      "percentOwned": 59.1
     },
     {
       "playerId": 4689936,
       "name": "Jake Bates",
       "pos": "K",
-      "adp": 154.9,
-      "percentOwned": 70.5
+      "adp": 155.0,
+      "percentOwned": 70.4
     },
     {
       "playerId": 4360689,
       "name": "Tyler Shough",
       "pos": "QB",
-      "adp": 155.4,
-      "percentOwned": 41.5
+      "adp": 155.5,
+      "percentOwned": 41.2
     },
     {
       "playerId": 3054850,
       "name": "Alvin Kamara",
       "pos": "RB",
       "adp": 156.5,
-      "percentOwned": 48.4
-    },
-    {
-      "playerId": 4361529,
-      "name": "Isiah Pacheco",
-      "pos": "RB",
-      "adp": 159.1,
-      "percentOwned": 44.9
+      "percentOwned": 48.1
     },
     {
       "playerId": 4036378,
       "name": "Jordan Love",
       "pos": "QB",
       "adp": 159.2,
-      "percentOwned": 27.8
+      "percentOwned": 28.0
+    },
+    {
+      "playerId": 4032473,
+      "name": "Rashid Shaheed",
+      "pos": "WR",
+      "adp": 159.4,
+      "percentOwned": 37.1
+    },
+    {
+      "playerId": 4361529,
+      "name": "Isiah Pacheco",
+      "pos": "RB",
+      "adp": 159.5,
+      "percentOwned": 44.3
     },
     {
       "playerId": 3917792,
@@ -1113,140 +1120,140 @@
       "name": "Jayden Higgins",
       "pos": "WR",
       "adp": 159.7,
-      "percentOwned": 37.9
-    },
-    {
-      "playerId": 4032473,
-      "name": "Rashid Shaheed",
-      "pos": "WR",
-      "adp": 159.8,
-      "percentOwned": 36.9
+      "percentOwned": 37.8
     },
     {
       "playerId": 4695883,
       "name": "Jalen Coker",
       "pos": "WR",
       "adp": 161.2,
-      "percentOwned": 37.2
+      "percentOwned": 37.0
     },
     {
       "playerId": 17372,
       "name": "Chris Boswell",
       "pos": "K",
-      "adp": 162.2,
-      "percentOwned": 38.1
+      "adp": 162.3,
+      "percentOwned": 38.2
     },
     {
       "playerId": 3912547,
       "name": "Sam Darnold",
       "pos": "QB",
-      "adp": 162.6,
-      "percentOwned": 18.7
+      "adp": 162.5,
+      "percentOwned": 19.0
     },
     {
       "playerId": -16012,
       "name": "Chiefs D/ST",
       "pos": "DST",
-      "adp": 162.9,
-      "percentOwned": 34.7
+      "adp": 163.0,
+      "percentOwned": 34.6
     },
     {
       "playerId": -16024,
       "name": "Chargers D/ST",
       "pos": "DST",
       "adp": 163.2,
-      "percentOwned": 46.5
+      "percentOwned": 46.8
     },
     {
       "playerId": 4241463,
       "name": "Jerry Jeudy",
       "pos": "WR",
-      "adp": 163.2,
-      "percentOwned": 28.8
+      "adp": 163.5,
+      "percentOwned": 28.4
+    },
+    {
+      "playerId": 4710714,
+      "name": "De'Zhaun Stribling",
+      "pos": "WR",
+      "adp": 163.5,
+      "percentOwned": 21.6
     },
     {
       "playerId": 4697745,
       "name": "Tyler Loop",
       "pos": "K",
       "adp": 163.6,
-      "percentOwned": 49.2
+      "percentOwned": 49.1
     },
     {
       "playerId": 3929645,
       "name": "Juwan Johnson",
       "pos": "TE",
-      "adp": 164.5,
-      "percentOwned": 25.6
-    },
-    {
-      "playerId": 4710714,
-      "name": "De'Zhaun Stribling",
-      "pos": "WR",
-      "adp": 164.9,
-      "percentOwned": 19.9
+      "adp": 164.4,
+      "percentOwned": 25.8
     },
     {
       "playerId": 4432577,
       "name": "C.J. Stroud",
       "pos": "QB",
       "adp": 166.1,
-      "percentOwned": 16.7
+      "percentOwned": 17.0
     },
     {
       "playerId": 4567104,
       "name": "Will Reichard",
       "pos": "K",
       "adp": 166.2,
-      "percentOwned": 29.7
+      "percentOwned": 29.6
     },
     {
       "playerId": 4570037,
       "name": "Terrance Ferguson",
       "pos": "TE",
-      "adp": 166.3,
-      "percentOwned": 17.1
+      "adp": 166.2,
+      "percentOwned": 17.3
+    },
+    {
+      "playerId": 4428557,
+      "name": "Tyjae Spears",
+      "pos": "RB",
+      "adp": 166.4,
+      "percentOwned": 32.4
     },
     {
       "playerId": 4241474,
       "name": "Brian Robinson Jr.",
       "pos": "RB",
       "adp": 166.4,
-      "percentOwned": 17.3
+      "percentOwned": 17.4
     },
     {
       "playerId": -16006,
       "name": "Cowboys D/ST",
       "pos": "DST",
+      "adp": 166.4,
+      "percentOwned": 9.7
+    },
+    {
+      "playerId": 4360516,
+      "name": "Tyrone Tracy Jr.",
+      "pos": "RB",
       "adp": 166.5,
-      "percentOwned": 9.4
+      "percentOwned": 17.4
     },
     {
       "playerId": 4837248,
       "name": "Fernando Mendoza",
       "pos": "QB",
       "adp": 166.6,
-      "percentOwned": 12.3
-    },
-    {
-      "playerId": 4360516,
-      "name": "Tyrone Tracy Jr.",
-      "pos": "RB",
-      "adp": 166.7,
-      "percentOwned": 17.2
+      "percentOwned": 12.2
     },
     {
       "playerId": 4832800,
       "name": "Denzel Boston",
       "pos": "WR",
-      "adp": 166.8,
-      "percentOwned": 18.4
+      "adp": 166.7,
+      "percentOwned": 18.5
     },
     {
-      "playerId": 4428557,
-      "name": "Tyjae Spears",
-      "pos": "RB",
+      "playerId": 4870847,
+      "name": "Ja'Kobi Lane",
+      "pos": "WR",
       "adp": 166.9,
-      "percentOwned": 32.2
+      "percentOwned": 13.7
     },
     {
       "playerId": 4242512,
@@ -1256,67 +1263,53 @@
       "percentOwned": 14.7
     },
     {
-      "playerId": 17427,
-      "name": "Cairo Santos",
-      "pos": "K",
-      "adp": 167.3,
-      "percentOwned": 32.1
-    },
-    {
-      "playerId": 4870847,
-      "name": "Ja'Kobi Lane",
-      "pos": "WR",
-      "adp": 167.3,
-      "percentOwned": 12.5
-    },
-    {
       "playerId": 4362619,
       "name": "Chris Rodriguez Jr.",
       "pos": "RB",
-      "adp": 167.4,
-      "percentOwned": 17.8
+      "adp": 167.3,
+      "percentOwned": 17.6
     },
     {
       "playerId": -16030,
       "name": "Jaguars D/ST",
       "pos": "DST",
-      "adp": 167.5,
-      "percentOwned": 50.9
+      "adp": 167.4,
+      "percentOwned": 52.1
     },
     {
-      "playerId": 3925357,
-      "name": "Calvin Ridley",
-      "pos": "WR",
-      "adp": 167.8,
-      "percentOwned": 20.9
+      "playerId": 17427,
+      "name": "Cairo Santos",
+      "pos": "K",
+      "adp": 167.4,
+      "percentOwned": 32.0
     },
     {
       "playerId": 4430539,
       "name": "Brenton Strange",
       "pos": "TE",
       "adp": 167.8,
-      "percentOwned": 15.6
+      "percentOwned": 15.7
     },
     {
       "playerId": 3117256,
       "name": "Dalton Schultz",
       "pos": "TE",
       "adp": 167.8,
-      "percentOwned": 12.9
+      "percentOwned": 13.2
+    },
+    {
+      "playerId": 3925357,
+      "name": "Calvin Ridley",
+      "pos": "WR",
+      "adp": 167.9,
+      "percentOwned": 20.6
     },
     {
       "playerId": 4430834,
       "name": "Jalen McMillan",
       "pos": "WR",
       "adp": 167.9,
-      "percentOwned": 18.8
-    },
-    {
-      "playerId": 4429013,
-      "name": "Tank Bigsby",
-      "pos": "RB",
-      "adp": 168.0,
-      "percentOwned": 15.8
+      "percentOwned": 18.6
     },
     {
       "playerId": -16009,
@@ -1326,32 +1319,39 @@
       "percentOwned": 14.9
     },
     {
+      "playerId": 4429013,
+      "name": "Tank Bigsby",
+      "pos": "RB",
+      "adp": 168.2,
+      "percentOwned": 15.6
+    },
+    {
       "playerId": 4428718,
       "name": "Tre Tucker",
       "pos": "WR",
       "adp": 168.3,
-      "percentOwned": 16.7
+      "percentOwned": 17.0
     },
     {
       "playerId": 4688380,
       "name": "Cam Ward",
       "pos": "QB",
-      "adp": 168.3,
-      "percentOwned": 10.6
+      "adp": 168.4,
+      "percentOwned": 10.5
     },
     {
       "playerId": -16016,
       "name": "Vikings D/ST",
       "pos": "DST",
       "adp": 168.5,
-      "percentOwned": 20.4
+      "percentOwned": 19.9
     },
     {
       "playerId": -16025,
       "name": "49ers D/ST",
       "pos": "DST",
       "adp": 168.6,
-      "percentOwned": 7.5
+      "percentOwned": 7.4
     },
     {
       "playerId": 4685720,
@@ -1365,35 +1365,35 @@
       "name": "Jake Elliott",
       "pos": "K",
       "adp": 168.7,
-      "percentOwned": 8.1
+      "percentOwned": 8.2
     },
     {
       "playerId": 4360234,
       "name": "Evan McPherson",
       "pos": "K",
       "adp": 168.8,
-      "percentOwned": 14.3
+      "percentOwned": 14.4
     },
     {
       "playerId": 4361411,
       "name": "Pat Freiermuth",
       "pos": "TE",
       "adp": 168.8,
-      "percentOwned": 10.6
+      "percentOwned": 10.8
+    },
+    {
+      "playerId": 4869461,
+      "name": "Trey Smack",
+      "pos": "K",
+      "adp": 168.8,
+      "percentOwned": 6.7
     },
     {
       "playerId": 2977187,
       "name": "Cooper Kupp",
       "pos": "WR",
       "adp": 168.9,
-      "percentOwned": 9.5
-    },
-    {
-      "playerId": 4869461,
-      "name": "Trey Smack",
-      "pos": "K",
-      "adp": 168.9,
-      "percentOwned": 6.6
+      "percentOwned": 9.6
     },
     {
       "playerId": -16002,
@@ -1403,11 +1403,18 @@
       "percentOwned": 4.8
     },
     {
+      "playerId": 4373626,
+      "name": "Tyler Allgeier",
+      "pos": "RB",
+      "adp": 169.0,
+      "percentOwned": 18.6
+    },
+    {
       "playerId": -16003,
       "name": "Bears D/ST",
       "pos": "DST",
       "adp": 169.0,
-      "percentOwned": 9.8
+      "percentOwned": 10.0
     },
     {
       "playerId": 4576297,
@@ -1417,46 +1424,39 @@
       "percentOwned": 6.3
     },
     {
-      "playerId": 4366031,
-      "name": "Tank Dell",
-      "pos": "WR",
-      "adp": 169.1,
-      "percentOwned": 15.5
-    },
-    {
       "playerId": 8439,
       "name": "Aaron Rodgers",
       "pos": "QB",
       "adp": 169.1,
-      "percentOwned": 5.3
-    },
-    {
-      "playerId": 16733,
-      "name": "Odell Beckham Jr.",
-      "pos": "WR",
-      "adp": 169.1,
-      "percentOwned": 3.2
-    },
-    {
-      "playerId": 4373626,
-      "name": "Tyler Allgeier",
-      "pos": "RB",
-      "adp": 169.2,
-      "percentOwned": 18.0
+      "percentOwned": 5.4
     },
     {
       "playerId": 3150744,
       "name": "Chase McLaughlin",
       "pos": "K",
       "adp": 169.2,
-      "percentOwned": 16.3
+      "percentOwned": 16.2
+    },
+    {
+      "playerId": 16733,
+      "name": "Odell Beckham Jr.",
+      "pos": "WR",
+      "adp": 169.2,
+      "percentOwned": 3.2
+    },
+    {
+      "playerId": 4366031,
+      "name": "Tank Dell",
+      "pos": "WR",
+      "adp": 169.3,
+      "percentOwned": 15.3
     },
     {
       "playerId": -16019,
       "name": "Giants D/ST",
       "pos": "DST",
-      "adp": 169.3,
-      "percentOwned": 3.1
+      "adp": 169.4,
+      "percentOwned": 3.0
     },
     {
       "playerId": 4430802,
@@ -1484,7 +1484,14 @@
       "name": "Chig Okonkwo",
       "pos": "TE",
       "adp": 169.5,
-      "percentOwned": 8.5
+      "percentOwned": 8.4
+    },
+    {
+      "playerId": 3917232,
+      "name": "Tyler Bass",
+      "pos": "K",
+      "adp": 169.5,
+      "percentOwned": 3.6
     },
     {
       "playerId": 4432762,
@@ -1505,7 +1512,7 @@
       "name": "Buccaneers D/ST",
       "pos": "DST",
       "adp": 169.6,
-      "percentOwned": 10.0
+      "percentOwned": 9.9
     },
     {
       "playerId": 4912218,
@@ -1513,13 +1520,6 @@
       "pos": "WR",
       "adp": 169.6,
       "percentOwned": 4.0
-    },
-    {
-      "playerId": 3917232,
-      "name": "Tyler Bass",
-      "pos": "K",
-      "adp": 169.6,
-      "percentOwned": 3.5
     },
     {
       "playerId": -16028,
@@ -1540,7 +1540,7 @@
       "name": "Philip Rivers",
       "pos": "QB",
       "adp": 169.6,
-      "percentOwned": 0.5
+      "percentOwned": 0.4
     },
     {
       "playerId": 2985659,
@@ -1554,14 +1554,7 @@
       "name": "David Njoku",
       "pos": "TE",
       "adp": 169.7,
-      "percentOwned": 4.0
-    },
-    {
-      "playerId": -16004,
-      "name": "Bengals D/ST",
-      "pos": "DST",
-      "adp": 169.7,
-      "percentOwned": 3.0
+      "percentOwned": 4.1
     },
     {
       "playerId": -16013,
@@ -1575,7 +1568,7 @@
       "name": "Panthers D/ST",
       "pos": "DST",
       "adp": 169.7,
-      "percentOwned": 1.6
+      "percentOwned": 1.5
     },
     {
       "playerId": 4430841,
@@ -1583,6 +1576,13 @@
       "pos": "QB",
       "adp": 169.7,
       "percentOwned": 1.4
+    },
+    {
+      "playerId": 3930086,
+      "name": "Dawson Knox",
+      "pos": "TE",
+      "adp": 169.7,
+      "percentOwned": 0.9
     },
     {
       "playerId": 4258595,
@@ -1617,28 +1617,35 @@
       "name": "Younghoe Koo",
       "pos": "K",
       "adp": 169.7,
-      "percentOwned": 0.4
+      "percentOwned": 0.3
     },
     {
-      "playerId": 4597500,
-      "name": "Adonai Mitchell",
-      "pos": "WR",
+      "playerId": 4686658,
+      "name": "Mike Washington Jr.",
+      "pos": "RB",
       "adp": 169.8,
-      "percentOwned": 9.6
+      "percentOwned": 9.7
     },
     {
       "playerId": 3116406,
       "name": "Tyreek Hill",
       "pos": "WR",
       "adp": 169.8,
-      "percentOwned": 7.1
+      "percentOwned": 6.9
     },
     {
-      "playerId": 3124679,
-      "name": "Jason Sanders",
-      "pos": "K",
+      "playerId": 15818,
+      "name": "Keenan Allen",
+      "pos": "WR",
       "adp": 169.8,
-      "percentOwned": 1.0
+      "percentOwned": 4.4
+    },
+    {
+      "playerId": -16004,
+      "name": "Bengals D/ST",
+      "pos": "DST",
+      "adp": 169.8,
+      "percentOwned": 2.9
     },
     {
       "playerId": 5082424,
@@ -1648,18 +1655,25 @@
       "percentOwned": 1.0
     },
     {
-      "playerId": 3930086,
-      "name": "Dawson Knox",
-      "pos": "TE",
+      "playerId": 3124679,
+      "name": "Jason Sanders",
+      "pos": "K",
       "adp": 169.8,
-      "percentOwned": 0.9
+      "percentOwned": 1.0
     },
     {
       "playerId": 4372066,
       "name": "Jake Moody",
       "pos": "K",
       "adp": 169.8,
-      "percentOwned": 0.8
+      "percentOwned": 0.7
+    },
+    {
+      "playerId": 3124084,
+      "name": "Joey Slye",
+      "pos": "K",
+      "adp": 169.8,
+      "percentOwned": 0.5
     },
     {
       "playerId": 4258620,
@@ -1669,16 +1683,16 @@
       "percentOwned": 0.5
     },
     {
-      "playerId": 2573401,
-      "name": "Tyler Higbee",
-      "pos": "TE",
+      "playerId": 4714771,
+      "name": "Drew Allar",
+      "pos": "QB",
       "adp": 169.8,
       "percentOwned": 0.5
     },
     {
-      "playerId": 4714771,
-      "name": "Drew Allar",
-      "pos": "QB",
+      "playerId": 2573401,
+      "name": "Tyler Higbee",
+      "pos": "TE",
       "adp": 169.8,
       "percentOwned": 0.5
     },
@@ -1694,42 +1708,42 @@
       "name": "Ricky Pearsall",
       "pos": "WR",
       "adp": 169.9,
-      "percentOwned": 22.5
+      "percentOwned": 21.6
     },
     {
-      "playerId": 4686658,
-      "name": "Mike Washington Jr.",
-      "pos": "RB",
+      "playerId": 4597500,
+      "name": "Adonai Mitchell",
+      "pos": "WR",
       "adp": 169.9,
-      "percentOwned": 9.8
+      "percentOwned": 9.7
     },
     {
-      "playerId": 4595342,
-      "name": "Oronde Gadsden",
-      "pos": "TE",
+      "playerId": 4869645,
+      "name": "Caleb Douglas",
+      "pos": "WR",
       "adp": 169.9,
-      "percentOwned": 7.5
+      "percentOwned": 5.0
     },
     {
       "playerId": -16010,
       "name": "Titans D/ST",
       "pos": "DST",
       "adp": 169.9,
-      "percentOwned": 4.5
+      "percentOwned": 4.6
     },
     {
       "playerId": 14880,
       "name": "Kirk Cousins",
       "pos": "QB",
       "adp": 169.9,
-      "percentOwned": 1.9
+      "percentOwned": 2.0
     },
     {
       "playerId": 4682648,
       "name": "Malachi Fields",
       "pos": "WR",
       "adp": 169.9,
-      "percentOwned": 1.6
+      "percentOwned": 1.7
     },
     {
       "playerId": -16020,
@@ -1753,13 +1767,6 @@
       "percentOwned": 1.1
     },
     {
-      "playerId": 15818,
-      "name": "Keenan Allen",
-      "pos": "WR",
-      "adp": 169.9,
-      "percentOwned": 0.8
-    },
-    {
       "playerId": 4241372,
       "name": "Hollywood Brown",
       "pos": "WR",
@@ -1771,7 +1778,7 @@
       "name": "Justin Fields",
       "pos": "QB",
       "adp": 169.9,
-      "percentOwned": 0.7
+      "percentOwned": 0.6
     },
     {
       "playerId": 4685522,
@@ -1805,20 +1812,6 @@
       "playerId": 4429275,
       "name": "Trey Benson",
       "pos": "RB",
-      "adp": 169.9,
-      "percentOwned": 0.5
-    },
-    {
-      "playerId": 3124084,
-      "name": "Joey Slye",
-      "pos": "K",
-      "adp": 169.9,
-      "percentOwned": 0.5
-    },
-    {
-      "playerId": 4808766,
-      "name": "Mason Taylor",
-      "pos": "TE",
       "adp": 169.9,
       "percentOwned": 0.5
     },
@@ -1869,21 +1862,21 @@
       "name": "Zavion Thomas",
       "pos": "WR",
       "adp": 169.9,
-      "percentOwned": 0.4
+      "percentOwned": 0.3
     },
     {
       "playerId": 4241464,
       "name": "Mac Jones",
       "pos": "QB",
       "adp": 169.9,
-      "percentOwned": 0.4
+      "percentOwned": 0.3
     },
     {
       "playerId": 4613202,
       "name": "Kyle Williams",
       "pos": "WR",
       "adp": 169.9,
-      "percentOwned": 0.4
+      "percentOwned": 0.3
     },
     {
       "playerId": 4240472,
@@ -1928,29 +1921,22 @@
       "percentOwned": 0.3
     },
     {
-      "playerId": 11122,
-      "name": "Matt Prater",
-      "pos": "K",
+      "playerId": 4242433,
+      "name": "Joshua Palmer",
+      "pos": "WR",
       "adp": 169.9,
       "percentOwned": 0.3
     },
     {
+      "playerId": 11122,
+      "name": "Matt Prater",
+      "pos": "K",
+      "adp": 169.9,
+      "percentOwned": 0.2
+    },
+    {
       "playerId": 2973405,
       "name": "Kalif Raymond",
-      "pos": "WR",
-      "adp": 169.9,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 4243389,
-      "name": "Calvin Austin III",
-      "pos": "WR",
-      "adp": 169.9,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 4242433,
-      "name": "Joshua Palmer",
       "pos": "WR",
       "adp": 169.9,
       "percentOwned": 0.2
@@ -1963,8 +1949,8 @@
       "percentOwned": 0.2
     },
     {
-      "playerId": 4569382,
-      "name": "Jordan Whittington",
+      "playerId": 4243389,
+      "name": "Calvin Austin III",
       "pos": "WR",
       "adp": 169.9,
       "percentOwned": 0.2
@@ -1991,6 +1977,34 @@
       "percentOwned": 0.2
     },
     {
+      "playerId": 4685413,
+      "name": "Cade Klubnik",
+      "pos": "QB",
+      "adp": 169.9,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 4569382,
+      "name": "Jordan Whittington",
+      "pos": "WR",
+      "adp": 169.9,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 4571557,
+      "name": "Spencer Shrader",
+      "pos": "K",
+      "adp": 169.9,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 3120348,
+      "name": "JuJu Smith-Schuster",
+      "pos": "WR",
+      "adp": 169.9,
+      "percentOwned": 0.2
+    },
+    {
       "playerId": 4036131,
       "name": "Noah Fant",
       "pos": "TE",
@@ -2012,44 +2026,9 @@
       "percentOwned": 0.2
     },
     {
-      "playerId": 4571557,
-      "name": "Spencer Shrader",
-      "pos": "K",
-      "adp": 169.9,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 3120348,
-      "name": "JuJu Smith-Schuster",
-      "pos": "WR",
-      "adp": 169.9,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 4685413,
-      "name": "Cade Klubnik",
-      "pos": "QB",
-      "adp": 169.9,
-      "percentOwned": 0.2
-    },
-    {
       "playerId": 4372096,
       "name": "Luke Schoonmaker",
       "pos": "TE",
-      "adp": 169.9,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 4682652,
-      "name": "Devin Neal",
-      "pos": "RB",
-      "adp": 169.9,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 4434153,
-      "name": "Tyson Bagent",
-      "pos": "QB",
       "adp": 169.9,
       "percentOwned": 0.2
     },
@@ -2068,9 +2047,9 @@
       "percentOwned": 0.2
     },
     {
-      "playerId": 16339,
-      "name": "Brandon McManus",
-      "pos": "K",
+      "playerId": 4434153,
+      "name": "Tyson Bagent",
+      "pos": "QB",
       "adp": 169.9,
       "percentOwned": 0.2
     },
@@ -2089,6 +2068,20 @@
       "percentOwned": 0.2
     },
     {
+      "playerId": 5092508,
+      "name": "Colbie Young",
+      "pos": "WR",
+      "adp": 169.9,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 16339,
+      "name": "Brandon McManus",
+      "pos": "K",
+      "adp": 169.9,
+      "percentOwned": 0.2
+    },
+    {
       "playerId": 4708486,
       "name": "Jimmy Horn Jr.",
       "pos": "WR",
@@ -2099,13 +2092,6 @@
       "playerId": 4360405,
       "name": "Jake Bobo",
       "pos": "WR",
-      "adp": 169.9,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 4242392,
-      "name": "Brock Wright",
-      "pos": "TE",
       "adp": 169.9,
       "percentOwned": 0.2
     },
@@ -2131,9 +2117,23 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 4242392,
+      "name": "Brock Wright",
+      "pos": "TE",
+      "adp": 169.9,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 4240703,
       "name": "Kenny Pickett",
       "pos": "QB",
+      "adp": 169.9,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 4429202,
+      "name": "Israel Abanikanda",
+      "pos": "RB",
       "adp": 169.9,
       "percentOwned": 0.1
     },
@@ -2159,6 +2159,13 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 4685201,
+      "name": "Tanner McKee",
+      "pos": "QB",
+      "adp": 169.9,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 3115293,
       "name": "Kyle Allen",
       "pos": "QB",
@@ -2180,23 +2187,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4429202,
-      "name": "Israel Abanikanda",
-      "pos": "RB",
-      "adp": 169.9,
-      "percentOwned": 0.1
-    },
-    {
       "playerId": 4570688,
       "name": "Caden Davis",
       "pos": "K",
-      "adp": 169.9,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 3930066,
-      "name": "Van Jefferson",
-      "pos": "WR",
       "adp": 169.9,
       "percentOwned": 0.1
     },
@@ -2229,9 +2222,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 16728,
-      "name": "Teddy Bridgewater",
-      "pos": "QB",
+      "playerId": 2998565,
+      "name": "Mo Alie-Cox",
+      "pos": "TE",
       "adp": 169.9,
       "percentOwned": 0.1
     },
@@ -2239,6 +2232,13 @@
       "playerId": 4360967,
       "name": "Brevyn Spann-Ford",
       "pos": "TE",
+      "adp": 169.9,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 4568024,
+      "name": "Josh Williams",
+      "pos": "RB",
       "adp": 169.9,
       "percentOwned": 0.1
     },
@@ -2257,9 +2257,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 3051909,
-      "name": "Daniel Carlson",
-      "pos": "K",
+      "playerId": 16728,
+      "name": "Teddy Bridgewater",
+      "pos": "QB",
       "adp": 169.9,
       "percentOwned": 0.1
     },
@@ -2271,15 +2271,22 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 14881,
-      "name": "Russell Wilson",
+      "playerId": 3044720,
+      "name": "Joshua Dobbs",
       "pos": "QB",
       "adp": 169.9,
       "percentOwned": 0.1
     },
     {
-      "playerId": 3044720,
-      "name": "Joshua Dobbs",
+      "playerId": 3051909,
+      "name": "Daniel Carlson",
+      "pos": "K",
+      "adp": 169.9,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 14881,
+      "name": "Russell Wilson",
       "pos": "QB",
       "adp": 169.9,
       "percentOwned": 0.1
@@ -2292,8 +2299,22 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 4361418,
+      "name": "Will Levis",
+      "pos": "QB",
+      "adp": 169.9,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 3116593,
       "name": "Dalvin Cook",
+      "pos": "RB",
+      "adp": 169.9,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 4374033,
+      "name": "Jermar Jefferson",
       "pos": "RB",
       "adp": 169.9,
       "percentOwned": 0.1
@@ -2306,16 +2327,16 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 5092436,
-      "name": "Jude McAtamney",
+      "playerId": 3821683,
+      "name": "Austin Seibert",
       "pos": "K",
       "adp": 169.9,
       "percentOwned": 0.1
     },
     {
-      "playerId": 4374033,
-      "name": "Jermar Jefferson",
-      "pos": "RB",
+      "playerId": 4427985,
+      "name": "Bub Means",
+      "pos": "WR",
       "adp": 169.9,
       "percentOwned": 0.1
     },
@@ -2330,6 +2351,13 @@
       "playerId": 3728262,
       "name": "Ray-Ray McCloud III",
       "pos": "WR",
+      "adp": 169.9,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 5092436,
+      "name": "Jude McAtamney",
+      "pos": "K",
       "adp": 169.9,
       "percentOwned": 0.1
     },
@@ -2369,18 +2397,32 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 4869645,
-      "name": "Caleb Douglas",
+      "playerId": 4431506,
+      "name": "Ja'Corey Brooks",
       "pos": "WR",
+      "adp": 169.9,
+      "percentOwned": 0.0
+    },
+    {
+      "playerId": 4596334,
+      "name": "Keaton Mitchell",
+      "pos": "RB",
       "adp": 170.0,
-      "percentOwned": 4.5
+      "percentOwned": 9.2
+    },
+    {
+      "playerId": 4595342,
+      "name": "Oronde Gadsden",
+      "pos": "TE",
+      "adp": 170.0,
+      "percentOwned": 7.3
     },
     {
       "playerId": -16018,
       "name": "Saints D/ST",
       "pos": "DST",
       "adp": 170.0,
-      "percentOwned": 3.4
+      "percentOwned": 3.3
     },
     {
       "playerId": 4569923,
@@ -2418,11 +2460,25 @@
       "percentOwned": 0.7
     },
     {
+      "playerId": 4808766,
+      "name": "Mason Taylor",
+      "pos": "TE",
+      "adp": 170.0,
+      "percentOwned": 0.5
+    },
+    {
       "playerId": 5091739,
       "name": "Chris Brazzell II",
       "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.4
+    },
+    {
+      "playerId": 4360797,
+      "name": "Tutu Atwell",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.3
     },
     {
       "playerId": 4361577,
@@ -2439,8 +2495,8 @@
       "percentOwned": 0.3
     },
     {
-      "playerId": 4360797,
-      "name": "Tutu Atwell",
+      "playerId": 4608810,
+      "name": "Tez Johnson",
       "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.3
@@ -2453,16 +2509,16 @@
       "percentOwned": 0.3
     },
     {
-      "playerId": 4608810,
-      "name": "Tez Johnson",
-      "pos": "WR",
+      "playerId": 4429084,
+      "name": "Anthony Richardson Sr.",
+      "pos": "QB",
       "adp": 170.0,
       "percentOwned": 0.3
     },
     {
-      "playerId": 4429084,
-      "name": "Anthony Richardson Sr.",
-      "pos": "QB",
+      "playerId": 4241457,
+      "name": "Najee Harris",
+      "pos": "RB",
       "adp": 170.0,
       "percentOwned": 0.3
     },
@@ -2481,18 +2537,18 @@
       "percentOwned": 0.3
     },
     {
-      "playerId": 4241457,
-      "name": "Najee Harris",
-      "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.3
-    },
-    {
       "playerId": 4702559,
       "name": "Oscar Delp",
       "pos": "TE",
       "adp": 170.0,
-      "percentOwned": 0.3
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 4879276,
+      "name": "Bryce Lance",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.2
     },
     {
       "playerId": 3059915,
@@ -2509,36 +2565,8 @@
       "percentOwned": 0.2
     },
     {
-      "playerId": 4879276,
-      "name": "Bryce Lance",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.2
-    },
-    {
       "playerId": 4567156,
       "name": "Treylon Burks",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 4427834,
-      "name": "Erick All Jr.",
-      "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 3917914,
-      "name": "Olamide Zaccheaus",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 3045523,
-      "name": "Kendrick Bourne",
       "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.2
@@ -2551,9 +2579,51 @@
       "percentOwned": 0.2
     },
     {
+      "playerId": 4427834,
+      "name": "Erick All Jr.",
+      "pos": "TE",
+      "adp": 170.0,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 3045523,
+      "name": "Kendrick Bourne",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.2
+    },
+    {
       "playerId": 4432734,
       "name": "Jalen Milroe",
       "pos": "QB",
+      "adp": 170.0,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 5150247,
+      "name": "Malik Benson",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 3917914,
+      "name": "Olamide Zaccheaus",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 4682652,
+      "name": "Devin Neal",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 5082630,
+      "name": "Jalen Royals",
+      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.2
     },
@@ -2572,30 +2642,9 @@
       "percentOwned": 0.2
     },
     {
-      "playerId": 5082630,
-      "name": "Jalen Royals",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 5150247,
-      "name": "Malik Benson",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.2
-    },
-    {
       "playerId": 4605951,
       "name": "CJ Daniels",
       "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.2
-    },
-    {
-      "playerId": 2576980,
-      "name": "Marcus Mariota",
-      "pos": "QB",
       "adp": 170.0,
       "percentOwned": 0.2
     },
@@ -2621,16 +2670,23 @@
       "percentOwned": 0.2
     },
     {
-      "playerId": 5092508,
-      "name": "Colbie Young",
-      "pos": "WR",
+      "playerId": 15835,
+      "name": "Zach Ertz",
+      "pos": "TE",
       "adp": 170.0,
       "percentOwned": 0.2
     },
     {
-      "playerId": 15835,
-      "name": "Zach Ertz",
-      "pos": "TE",
+      "playerId": 2576980,
+      "name": "Marcus Mariota",
+      "pos": "QB",
+      "adp": 170.0,
+      "percentOwned": 0.2
+    },
+    {
+      "playerId": 4426386,
+      "name": "Roschon Johnson",
+      "pos": "RB",
       "adp": 170.0,
       "percentOwned": 0.2
     },
@@ -2656,13 +2712,6 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4426386,
-      "name": "Roschon Johnson",
-      "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
       "playerId": 4912052,
       "name": "Justin Joly",
       "pos": "TE",
@@ -2670,16 +2719,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4372019,
-      "name": "Jerome Ford",
+      "playerId": 4431562,
+      "name": "Phil Mafah",
       "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4565185,
-      "name": "Tai Felton",
-      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -2698,6 +2740,13 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 4372019,
+      "name": "Jerome Ford",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 4685504,
       "name": "Sam Roush",
       "pos": "TE",
@@ -2705,9 +2754,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4431562,
-      "name": "Phil Mafah",
-      "pos": "RB",
+      "playerId": 4565185,
+      "name": "Tai Felton",
+      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -2722,27 +2771,6 @@
       "playerId": 4710855,
       "name": "Konata Mumpfield",
       "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 3116407,
-      "name": "Mason Rudolph",
-      "pos": "QB",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4259305,
-      "name": "Bo Melton",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4685201,
-      "name": "Tanner McKee",
-      "pos": "QB",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -2789,6 +2817,20 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 3116407,
+      "name": "Mason Rudolph",
+      "pos": "QB",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 4259305,
+      "name": "Bo Melton",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 2975417,
       "name": "Patrick Ricard",
       "pos": "RB",
@@ -2810,6 +2852,13 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 3930066,
+      "name": "Van Jefferson",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 4710341,
       "name": "Jarquez Hunter",
       "pos": "RB",
@@ -2820,13 +2869,6 @@
       "playerId": 3127310,
       "name": "Drew Sample",
       "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4567096,
-      "name": "John Metchie III",
-      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -2845,23 +2887,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4239934,
-      "name": "AJ Dillon",
-      "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
       "playerId": 4383429,
       "name": "Jacob Saylors",
       "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4690923,
-      "name": "Ben Sinnott",
-      "pos": "TE",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -2901,9 +2929,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 2998565,
-      "name": "Mo Alie-Cox",
-      "pos": "TE",
+      "playerId": 4567096,
+      "name": "John Metchie III",
+      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -2922,6 +2950,13 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 4239934,
+      "name": "AJ Dillon",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 4426496,
       "name": "Cade Stover",
       "pos": "TE",
@@ -2936,9 +2971,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4568024,
-      "name": "Josh Williams",
-      "pos": "RB",
+      "playerId": 4690923,
+      "name": "Ben Sinnott",
+      "pos": "TE",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -3104,23 +3139,9 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4696736,
-      "name": "Tanner Brown",
-      "pos": "K",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
       "playerId": 4565859,
       "name": "Joe Royer",
       "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 2573079,
-      "name": "Carson Wentz",
-      "pos": "QB",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -3181,20 +3202,6 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 2975863,
-      "name": "Eric Saubert",
-      "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4360238,
-      "name": "Dameon Pierce",
-      "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
       "playerId": 4241476,
       "name": "Tyrell Shavers",
       "pos": "WR",
@@ -3230,8 +3237,22 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 4696736,
+      "name": "Tanner Brown",
+      "pos": "K",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 4567747,
       "name": "Garrett Nussmeier",
+      "pos": "QB",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 2573079,
+      "name": "Carson Wentz",
       "pos": "QB",
       "adp": 170.0,
       "percentOwned": 0.1
@@ -3247,20 +3268,6 @@
       "playerId": 4361372,
       "name": "Jeremy Ruckert",
       "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4361418,
-      "name": "Will Levis",
-      "pos": "QB",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4036032,
-      "name": "Brittain Brown",
-      "pos": "RB",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -3307,13 +3314,6 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 3843945,
-      "name": "Foster Moreau",
-      "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
       "playerId": 4241374,
       "name": "Grant Calcaterra",
       "pos": "TE",
@@ -3331,6 +3331,20 @@
       "playerId": 16460,
       "name": "Adam Thielen",
       "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 2975863,
+      "name": "Eric Saubert",
+      "pos": "TE",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 4360238,
+      "name": "Dameon Pierce",
+      "pos": "RB",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -3454,6 +3468,13 @@
       "percentOwned": 0.1
     },
     {
+      "playerId": 4036032,
+      "name": "Brittain Brown",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
       "playerId": 4361777,
       "name": "Zamir White",
       "pos": "RB",
@@ -3485,6 +3506,13 @@
       "playerId": 3123052,
       "name": "Michael Badgley",
       "pos": "K",
+      "adp": 170.0,
+      "percentOwned": 0.1
+    },
+    {
+      "playerId": 3843945,
+      "name": "Foster Moreau",
+      "pos": "TE",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -3534,20 +3562,6 @@
       "playerId": 4372505,
       "name": "Payne Durham",
       "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 3821683,
-      "name": "Austin Seibert",
-      "pos": "K",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
-      "playerId": 4427985,
-      "name": "Bub Means",
-      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.1
     },
@@ -3650,13 +3664,6 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4035886,
-      "name": "Khalil Herbert",
-      "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.1
-    },
-    {
       "playerId": 4050373,
       "name": "Quez Watkins",
       "pos": "WR",
@@ -3716,20 +3723,6 @@
       "playerId": 4362018,
       "name": "Blake Whiteheart",
       "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
-      "playerId": 4057082,
-      "name": "Mason Kinsey",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
-      "playerId": 4698191,
-      "name": "Chris Collier",
-      "pos": "RB",
       "adp": 170.0,
       "percentOwned": 0.0
     },
@@ -3916,6 +3909,13 @@
       "percentOwned": 0.0
     },
     {
+      "playerId": 4879250,
+      "name": "Cole Payton",
+      "pos": "QB",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
       "playerId": 4365395,
       "name": "Julian Hill",
       "pos": "TE",
@@ -3937,9 +3937,9 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 9614,
-      "name": "Marcedes Lewis",
-      "pos": "TE",
+      "playerId": 4035886,
+      "name": "Khalil Herbert",
+      "pos": "RB",
       "adp": 170.0,
       "percentOwned": 0.0
     },
@@ -4035,13 +4035,6 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 3045138,
-      "name": "Mike Williams",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
       "playerId": 4714365,
       "name": "Carson Steele",
       "pos": "RB",
@@ -4049,8 +4042,22 @@
       "percentOwned": 0.0
     },
     {
+      "playerId": 4057082,
+      "name": "Mason Kinsey",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
       "playerId": 4362162,
       "name": "SaRodorick Thompson Jr.",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
+      "playerId": 4698191,
+      "name": "Chris Collier",
       "pos": "RB",
       "adp": 170.0,
       "percentOwned": 0.0
@@ -4084,16 +4091,16 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 4362452,
-      "name": "Jaret Patterson",
-      "pos": "RB",
+      "playerId": 2576581,
+      "name": "Chris Moore",
+      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.0
     },
     {
-      "playerId": 2576581,
-      "name": "Chris Moore",
-      "pos": "WR",
+      "playerId": 5081335,
+      "name": "Drew Stevens",
+      "pos": "K",
       "adp": 170.0,
       "percentOwned": 0.0
     },
@@ -4322,13 +4329,6 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 4879250,
-      "name": "Cole Payton",
-      "pos": "QB",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
       "playerId": 4242519,
       "name": "Anders Carlson",
       "pos": "K",
@@ -4394,6 +4394,13 @@
     {
       "playerId": 4429262,
       "name": "Jaheim Bell",
+      "pos": "TE",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
+      "playerId": 9614,
+      "name": "Marcedes Lewis",
       "pos": "TE",
       "adp": 170.0,
       "percentOwned": 0.0
@@ -4553,13 +4560,6 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 4431506,
-      "name": "Ja'Corey Brooks",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
       "playerId": 4431509,
       "name": "Kaden Prather",
       "pos": "WR",
@@ -4602,13 +4602,6 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 3045169,
-      "name": "Tim Boyle",
-      "pos": "QB",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
       "playerId": 5085024,
       "name": "CJ Williams",
       "pos": "WR",
@@ -4616,9 +4609,9 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 3917612,
-      "name": "Ke'Shawn Vaughn",
-      "pos": "RB",
+      "playerId": 3045138,
+      "name": "Mike Williams",
+      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.0
     },
@@ -4721,6 +4714,13 @@
       "percentOwned": 0.0
     },
     {
+      "playerId": 2971618,
+      "name": "Nelson Agholor",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
       "playerId": 4243537,
       "name": "Gabe Davis",
       "pos": "WR",
@@ -4763,6 +4763,13 @@
       "percentOwned": 0.0
     },
     {
+      "playerId": 4362452,
+      "name": "Jaret Patterson",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
       "playerId": 4362504,
       "name": "Brevin Jordan",
       "pos": "TE",
@@ -4773,13 +4780,6 @@
       "playerId": 2574576,
       "name": "C.J. Uzomah",
       "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
-      "playerId": 3121410,
-      "name": "Parris Campbell",
-      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.0
     },
@@ -4917,6 +4917,13 @@
       "percentOwned": 0.0
     },
     {
+      "playerId": 4569609,
+      "name": "Evan Hull",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
       "playerId": 4039160,
       "name": "Kylen Granson",
       "pos": "TE",
@@ -4989,13 +4996,6 @@
     {
       "playerId": 4239944,
       "name": "Hunter Long",
-      "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
-      "playerId": 4590292,
-      "name": "Thomas Fidone II",
       "pos": "TE",
       "adp": 170.0,
       "percentOwned": 0.0
@@ -5141,13 +5141,6 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 3122154,
-      "name": "Khari Blasingame",
-      "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
       "playerId": 4686781,
       "name": "Brenden Rice",
       "pos": "WR",
@@ -5157,13 +5150,6 @@
     {
       "playerId": 3128390,
       "name": "Allen Lazard",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
-      "playerId": 4361332,
-      "name": "Shedrick Jackson",
       "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.0
@@ -5232,13 +5218,6 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 4240577,
-      "name": "Brandon Smith",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
       "playerId": 4361417,
       "name": "Zack Kuntz",
       "pos": "TE",
@@ -5276,13 +5255,6 @@
     {
       "playerId": 4363554,
       "name": "Thomas Odukoya",
-      "pos": "TE",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
-      "playerId": 4044144,
-      "name": "Kenny Yeboah",
       "pos": "TE",
       "adp": 170.0,
       "percentOwned": 0.0
@@ -5526,6 +5498,20 @@
       "percentOwned": 0.0
     },
     {
+      "playerId": 3045169,
+      "name": "Tim Boyle",
+      "pos": "QB",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
+      "playerId": 3917612,
+      "name": "Ke'Shawn Vaughn",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
       "playerId": 4362087,
       "name": "Keaontay Ingram",
       "pos": "RB",
@@ -5633,13 +5619,6 @@
     {
       "playerId": 2977800,
       "name": "Alex Erickson",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
-      "playerId": 2971618,
-      "name": "Nelson Agholor",
       "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.0
@@ -5766,6 +5745,13 @@
     {
       "playerId": 3115255,
       "name": "Brandon Powell",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
+      "playerId": 3121410,
+      "name": "Parris Campbell",
       "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.0
@@ -5932,13 +5918,6 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 4569609,
-      "name": "Evan Hull",
-      "pos": "RB",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
       "playerId": 4258248,
       "name": "Peyton Hendershot",
       "pos": "TE",
@@ -5991,6 +5970,20 @@
       "playerId": 4039274,
       "name": "Jonathan Ward",
       "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
+      "playerId": 4035170,
+      "name": "Marquez Callaway",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
+      "playerId": 4590292,
+      "name": "Thomas Fidone II",
+      "pos": "TE",
       "adp": 170.0,
       "percentOwned": 0.0
     },
@@ -6198,9 +6191,23 @@
       "percentOwned": 0.0
     },
     {
+      "playerId": 3122154,
+      "name": "Khari Blasingame",
+      "pos": "RB",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
       "playerId": 3916749,
       "name": "Giovanni Ricci",
       "pos": "TE",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
+      "playerId": 4361332,
+      "name": "Shedrick Jackson",
+      "pos": "WR",
       "adp": 170.0,
       "percentOwned": 0.0
     },
@@ -6261,6 +6268,13 @@
       "percentOwned": 0.0
     },
     {
+      "playerId": 4429006,
+      "name": "Rakim Jarrett",
+      "pos": "WR",
+      "adp": 170.0,
+      "percentOwned": 0.0
+    },
+    {
       "playerId": 4361426,
       "name": "Justin Shorter",
       "pos": "WR",
@@ -6303,32 +6317,18 @@
       "percentOwned": 0.0
     },
     {
-      "playerId": 4426990,
-      "name": "Jalen Moreno-Cropper",
-      "pos": "WR",
-      "adp": 170.0,
-      "percentOwned": 0.0
-    },
-    {
-      "playerId": 4596334,
-      "name": "Keaton Mitchell",
-      "pos": "RB",
-      "adp": 170.1,
-      "percentOwned": 9.0
-    },
-    {
       "playerId": -16011,
       "name": "Colts D/ST",
       "pos": "DST",
       "adp": 170.1,
-      "percentOwned": 4.0
+      "percentOwned": 3.9
     },
     {
       "playerId": 2578570,
       "name": "Jacoby Brissett",
       "pos": "QB",
       "adp": 170.1,
-      "percentOwned": 3.3
+      "percentOwned": 3.4
     },
     {
       "playerId": 5208518,
@@ -6343,6 +6343,13 @@
       "pos": "QB",
       "adp": 170.1,
       "percentOwned": 1.9
+    },
+    {
+      "playerId": 3895856,
+      "name": "Christian Kirk",
+      "pos": "WR",
+      "adp": 170.1,
+      "percentOwned": 1.7
     },
     {
       "playerId": 4259619,
@@ -6377,13 +6384,6 @@
       "name": "Kaleb Johnson",
       "pos": "RB",
       "adp": 170.1,
-      "percentOwned": 0.7
-    },
-    {
-      "playerId": 4040761,
-      "name": "Devin Singletary",
-      "pos": "RB",
-      "adp": 170.1,
       "percentOwned": 0.6
     },
     {
@@ -6391,7 +6391,7 @@
       "name": "Malik Davis",
       "pos": "RB",
       "adp": 170.1,
-      "percentOwned": 0.6
+      "percentOwned": 0.5
     },
     {
       "playerId": 4431545,
@@ -6412,7 +6412,7 @@
       "name": "Brashard Smith",
       "pos": "RB",
       "adp": 170.1,
-      "percentOwned": 0.4
+      "percentOwned": 0.3
     },
     {
       "playerId": 3929785,
@@ -6433,7 +6433,7 @@
       "name": "Tyler Badie",
       "pos": "RB",
       "adp": 170.1,
-      "percentOwned": 0.3
+      "percentOwned": 0.2
     },
     {
       "playerId": 4427728,
@@ -6478,18 +6478,11 @@
       "percentOwned": 0.1
     },
     {
-      "playerId": 4382466,
-      "name": "Jalen Nailor",
-      "pos": "WR",
+      "playerId": 4702555,
+      "name": "Jonah Coleman",
+      "pos": "RB",
       "adp": 170.2,
-      "percentOwned": 9.5
-    },
-    {
-      "playerId": 4569603,
-      "name": "Malik Washington",
-      "pos": "WR",
-      "adp": 170.2,
-      "percentOwned": 5.1
+      "percentOwned": 5.2
     },
     {
       "playerId": 10621,
@@ -6513,13 +6506,6 @@
       "percentOwned": 1.8
     },
     {
-      "playerId": 3895856,
-      "name": "Christian Kirk",
-      "pos": "WR",
-      "adp": 170.2,
-      "percentOwned": 1.8
-    },
-    {
       "playerId": 2576925,
       "name": "Darren Waller",
       "pos": "TE",
@@ -6527,23 +6513,16 @@
       "percentOwned": 1.7
     },
     {
-      "playerId": 4429086,
-      "name": "Michael Mayer",
-      "pos": "TE",
+      "playerId": 4431268,
+      "name": "Chimere Dike",
+      "pos": "WR",
       "adp": 170.2,
-      "percentOwned": 1.0
+      "percentOwned": 1.4
     },
     {
       "playerId": 4887558,
       "name": "Emanuel Wilson",
       "pos": "RB",
-      "adp": 170.2,
-      "percentOwned": 0.9
-    },
-    {
-      "playerId": 4429148,
-      "name": "Theo Johnson",
-      "pos": "TE",
       "adp": 170.2,
       "percentOwned": 0.9
     },
@@ -6562,11 +6541,18 @@
       "percentOwned": 0.7
     },
     {
+      "playerId": 4040761,
+      "name": "Devin Singletary",
+      "pos": "RB",
+      "adp": 170.2,
+      "percentOwned": 0.6
+    },
+    {
       "playerId": 3149687,
       "name": "Chris Brooks",
       "pos": "RB",
       "adp": 170.2,
-      "percentOwned": 0.7
+      "percentOwned": 0.6
     },
     {
       "playerId": 4431487,
@@ -6597,11 +6583,18 @@
       "percentOwned": 0.3
     },
     {
-      "playerId": 4702555,
-      "name": "Jonah Coleman",
-      "pos": "RB",
+      "playerId": 4382466,
+      "name": "Jalen Nailor",
+      "pos": "WR",
       "adp": 170.3,
-      "percentOwned": 4.8
+      "percentOwned": 9.5
+    },
+    {
+      "playerId": 4569603,
+      "name": "Malik Washington",
+      "pos": "WR",
+      "adp": 170.3,
+      "percentOwned": 5.2
     },
     {
       "playerId": 5123663,
@@ -6629,7 +6622,7 @@
       "name": "George Holani",
       "pos": "RB",
       "adp": 170.3,
-      "percentOwned": 3.4
+      "percentOwned": 3.3
     },
     {
       "playerId": 4243331,
@@ -6639,25 +6632,11 @@
       "percentOwned": 2.8
     },
     {
-      "playerId": 4685279,
-      "name": "Jaydon Blue",
-      "pos": "RB",
-      "adp": 170.3,
-      "percentOwned": 2.6
-    },
-    {
       "playerId": 3116164,
       "name": "Mike Gesicki",
       "pos": "TE",
       "adp": 170.3,
-      "percentOwned": 2.3
-    },
-    {
-      "playerId": 4431268,
-      "name": "Chimere Dike",
-      "pos": "WR",
-      "adp": 170.3,
-      "percentOwned": 1.4
+      "percentOwned": 2.2
     },
     {
       "playerId": 3916945,
@@ -6672,6 +6651,20 @@
       "pos": "WR",
       "adp": 170.3,
       "percentOwned": 1.1
+    },
+    {
+      "playerId": 4429086,
+      "name": "Michael Mayer",
+      "pos": "TE",
+      "adp": 170.3,
+      "percentOwned": 1.0
+    },
+    {
+      "playerId": 4429148,
+      "name": "Theo Johnson",
+      "pos": "TE",
+      "adp": 170.3,
+      "percentOwned": 0.9
     },
     {
       "playerId": 4362921,
@@ -6695,39 +6688,32 @@
       "percentOwned": 0.8
     },
     {
-      "playerId": 4361409,
-      "name": "Jahan Dotson",
-      "pos": "WR",
-      "adp": 170.3,
-      "percentOwned": 0.6
-    },
-    {
-      "playerId": 3886598,
-      "name": "Jauan Jennings",
-      "pos": "WR",
-      "adp": 170.4,
-      "percentOwned": 9.8
-    },
-    {
       "playerId": 4360438,
       "name": "Brandon Aiyuk",
       "pos": "WR",
       "adp": 170.4,
-      "percentOwned": 3.8
+      "percentOwned": 3.6
     },
     {
       "playerId": 4259147,
       "name": "Jake Tonges",
       "pos": "TE",
       "adp": 170.4,
-      "percentOwned": 3.2
+      "percentOwned": 3.3
     },
     {
       "playerId": 15864,
       "name": "Geno Smith",
       "pos": "QB",
       "adp": 170.4,
-      "percentOwned": 3.0
+      "percentOwned": 2.9
+    },
+    {
+      "playerId": 4685279,
+      "name": "Jaydon Blue",
+      "pos": "RB",
+      "adp": 170.4,
+      "percentOwned": 2.6
     },
     {
       "playerId": 4685555,
@@ -6735,6 +6721,13 @@
       "pos": "RB",
       "adp": 170.4,
       "percentOwned": 2.3
+    },
+    {
+      "playerId": 4242557,
+      "name": "Colby Parkinson",
+      "pos": "TE",
+      "adp": 170.4,
+      "percentOwned": 1.6
     },
     {
       "playerId": 4682745,
@@ -6786,18 +6779,25 @@
       "percentOwned": 0.7
     },
     {
-      "playerId": 4685261,
-      "name": "Germie Bernard",
+      "playerId": 4361409,
+      "name": "Jahan Dotson",
+      "pos": "WR",
+      "adp": 170.4,
+      "percentOwned": 0.6
+    },
+    {
+      "playerId": 3886598,
+      "name": "Jauan Jennings",
       "pos": "WR",
       "adp": 170.5,
-      "percentOwned": 9.8
+      "percentOwned": 9.7
     },
     {
       "playerId": 3045147,
       "name": "James Conner",
       "pos": "RB",
       "adp": 170.5,
-      "percentOwned": 5.7
+      "percentOwned": 5.5
     },
     {
       "playerId": 5083754,
@@ -6821,13 +6821,6 @@
       "percentOwned": 1.8
     },
     {
-      "playerId": 4242557,
-      "name": "Colby Parkinson",
-      "pos": "TE",
-      "adp": 170.5,
-      "percentOwned": 1.6
-    },
-    {
       "playerId": 4597703,
       "name": "Tory Horton",
       "pos": "WR",
@@ -6839,21 +6832,21 @@
       "name": "Jalen Tolbert",
       "pos": "WR",
       "adp": 170.5,
-      "percentOwned": 1.1
+      "percentOwned": 1.0
     },
     {
-      "playerId": 4870612,
-      "name": "Zachariah Branch",
+      "playerId": 4685261,
+      "name": "Germie Bernard",
       "pos": "WR",
       "adp": 170.6,
-      "percentOwned": 5.7
+      "percentOwned": 9.6
     },
     {
-      "playerId": 4429022,
-      "name": "Kayshon Boutte",
-      "pos": "WR",
+      "playerId": 4685247,
+      "name": "Braelon Allen",
+      "pos": "RB",
       "adp": 170.6,
-      "percentOwned": 3.3
+      "percentOwned": 7.9
     },
     {
       "playerId": 4696044,
@@ -6863,13 +6856,6 @@
       "percentOwned": 2.4
     },
     {
-      "playerId": 4430968,
-      "name": "Kimani Vidal",
-      "pos": "RB",
-      "adp": 170.6,
-      "percentOwned": 2.2
-    },
-    {
       "playerId": 4600981,
       "name": "Pat Bryant",
       "pos": "WR",
@@ -6877,46 +6863,74 @@
       "percentOwned": 2.2
     },
     {
-      "playerId": 4723820,
-      "name": "Omar Cooper Jr.",
-      "pos": "WR",
-      "adp": 170.7,
-      "percentOwned": 14.8
+      "playerId": 4430968,
+      "name": "Kimani Vidal",
+      "pos": "RB",
+      "adp": 170.6,
+      "percentOwned": 2.1
     },
     {
       "playerId": 4429501,
       "name": "Ray Davis",
       "pos": "RB",
       "adp": 170.7,
-      "percentOwned": 8.0
+      "percentOwned": 7.9
     },
     {
-      "playerId": 4685247,
-      "name": "Braelon Allen",
-      "pos": "RB",
+      "playerId": 4870612,
+      "name": "Zachariah Branch",
+      "pos": "WR",
       "adp": 170.7,
-      "percentOwned": 7.4
+      "percentOwned": 5.6
     },
     {
       "playerId": 4429023,
       "name": "MarShawn Lloyd",
       "pos": "RB",
       "adp": 170.7,
-      "percentOwned": 4.7
+      "percentOwned": 5.0
+    },
+    {
+      "playerId": 4429022,
+      "name": "Kayshon Boutte",
+      "pos": "WR",
+      "adp": 170.7,
+      "percentOwned": 3.3
+    },
+    {
+      "playerId": 4869961,
+      "name": "Chris Bell",
+      "pos": "WR",
+      "adp": 170.7,
+      "percentOwned": 3.1
+    },
+    {
+      "playerId": 4603186,
+      "name": "Jack Bech",
+      "pos": "WR",
+      "adp": 170.7,
+      "percentOwned": 2.3
+    },
+    {
+      "playerId": 4723820,
+      "name": "Omar Cooper Jr.",
+      "pos": "WR",
+      "adp": 170.8,
+      "percentOwned": 14.3
     },
     {
       "playerId": 4038441,
       "name": "Justice Hill",
       "pos": "RB",
       "adp": 170.8,
-      "percentOwned": 6.2
+      "percentOwned": 6.3
     },
     {
       "playerId": 4040655,
       "name": "Darnell Mooney",
       "pos": "WR",
       "adp": 170.8,
-      "percentOwned": 5.7
+      "percentOwned": 5.5
     },
     {
       "playerId": 4685397,
@@ -6924,13 +6938,6 @@
       "pos": "RB",
       "adp": 170.8,
       "percentOwned": 3.6
-    },
-    {
-      "playerId": 4869961,
-      "name": "Chris Bell",
-      "pos": "WR",
-      "adp": 170.8,
-      "percentOwned": 3.2
     },
     {
       "playerId": 4430034,
@@ -6947,60 +6954,53 @@
       "percentOwned": 2.7
     },
     {
-      "playerId": 4603186,
-      "name": "Jack Bech",
+      "playerId": 4586312,
+      "name": "Jaylin Noel",
       "pos": "WR",
       "adp": 170.8,
-      "percentOwned": 2.4
-    },
-    {
-      "playerId": 4569559,
-      "name": "Devaughn Vele",
-      "pos": "WR",
-      "adp": 170.8,
-      "percentOwned": 1.3
+      "percentOwned": 1.9
     },
     {
       "playerId": 5081397,
       "name": "Dylan Sampson",
       "pos": "RB",
       "adp": 170.9,
-      "percentOwned": 7.4
+      "percentOwned": 7.3
     },
     {
       "playerId": 4360939,
       "name": "Rashod Bateman",
       "pos": "WR",
       "adp": 170.9,
-      "percentOwned": 6.6
+      "percentOwned": 6.7
     },
     {
-      "playerId": 4686612,
-      "name": "Tre' Harris",
+      "playerId": 5081432,
+      "name": "Antonio Williams",
       "pos": "WR",
       "adp": 170.9,
-      "percentOwned": 3.9
+      "percentOwned": 4.7
     },
     {
       "playerId": 4428850,
       "name": "Dontayvion Wicks",
       "pos": "WR",
       "adp": 170.9,
-      "percentOwned": 3.7
+      "percentOwned": 3.9
     },
     {
-      "playerId": 4586312,
-      "name": "Jaylin Noel",
+      "playerId": 4569559,
+      "name": "Devaughn Vele",
       "pos": "WR",
       "adp": 170.9,
-      "percentOwned": 1.9
+      "percentOwned": 2.2
     },
     {
-      "playerId": 5081432,
-      "name": "Antonio Williams",
+      "playerId": 4686612,
+      "name": "Tre' Harris",
       "pos": "WR",
       "adp": 171.0,
-      "percentOwned": 4.9
+      "percentOwned": 3.9
     }
   ]
 }
