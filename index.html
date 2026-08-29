@@ -509,25 +509,30 @@ table.sch-table tr:last-child td{border-bottom:none}
 /* -- Intro screen -- */
 .draft-hero2{background:linear-gradient(135deg,var(--gold-soft),#fff 60%);border:1px solid rgba(161,98,7,.2);border-radius:14px;padding:1.8rem 2rem;margin-bottom:1.5rem}
 .draft-countdown{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
-.dn-tagline{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.01em;color:var(--muted);margin-bottom:.9rem}
-.dn-tagline.live{color:#b3261e;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
-.dn-banner{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:0 0 2.5rem;background:var(--ink);color:#fff}
-.dn-banner-top{padding:1.6rem 1.5rem 1.3rem;border-bottom:1px solid rgba(255,255,255,.12)}
-.dn-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.58rem;text-transform:uppercase;letter-spacing:.16em;color:#f4d876;margin-bottom:.5rem}
-.dn-when{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:2.1rem;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;margin-bottom:.5rem}
-.dn-when em{font-style:normal;color:#f4d876}
-.dn-copy{font-size:.86rem;line-height:1.6;color:rgba(255,255,255,.78);max-width:62ch;margin:0}
-.dn-clock{display:flex;gap:.55rem;flex-wrap:wrap;padding:1.1rem 1.5rem;background:rgba(255,255,255,.04)}
-.dn-cell{flex:1;min-width:66px;text-align:center;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.55rem .4rem;background:rgba(0,0,0,.18)}
-.dn-cell b{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.7rem;color:#f4d876;line-height:1}
-.dn-cell span{display:block;font-family:'JetBrains Mono',monospace;font-size:.52rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);margin-top:.25rem}
-.dn-strip{display:flex;flex-wrap:wrap;gap:.4rem;padding:0 1.5rem 1.4rem}
-.dn-slot{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:.3rem .7rem;font-size:.7rem;color:rgba(255,255,255,.85);background:rgba(255,255,255,.05)}
-.dn-slot b{font-family:'JetBrains Mono',monospace;color:#f4d876;margin-right:.35rem}
-.dn-slot.first{border-color:#f4d876;background:rgba(244,216,118,.14);color:#fff;font-weight:600}
-.dn-cta{padding:0 1.5rem 1.5rem}
-.dn-cta button{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;background:#f4d876;color:var(--ink);border:none;border-radius:8px;padding:.7rem 1.4rem;cursor:pointer}
-.dn-cta button:hover{background:#fff}
+/* Draft-night banner. Uses the site palette: cream/white surfaces, --gold
+   (#A16207) as the accent, --ink for headings. Selectors are scoped under
+   .dn-banner so they outrank the global ".panel p{color:var(--muted)}" rule. */
+.dn-tagline{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.01em;color:var(--gold);margin-bottom:.9rem}
+.dn-tagline.live{color:#B3261E;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+.dn-banner{border:1px solid rgba(161,98,7,.22);border-radius:14px;overflow:hidden;margin:0 0 2.5rem;background:#fff}
+.dn-banner-top{padding:1.7rem 1.75rem 1.4rem;background:linear-gradient(135deg,var(--gold-soft),#fff 65%);border-bottom:1px solid var(--border)}
+.dn-banner .dn-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);margin-bottom:.55rem}
+.dn-banner .dn-when{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:2.1rem;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;color:var(--ink);margin-bottom:.6rem}
+.dn-banner .dn-when em{font-style:normal;color:var(--gold)}
+.dn-banner .dn-copy{font-size:.88rem;line-height:1.7;color:var(--muted);max-width:64ch;margin:0}
+.dn-banner .dn-copy strong{color:var(--gold);font-weight:600}
+.dn-clock{display:flex;gap:.6rem;flex-wrap:wrap;padding:1.2rem 1.75rem;background:var(--bg);border-bottom:1px solid var(--border)}
+.dn-cell{flex:1;min-width:68px;text-align:center;border:1px solid var(--border);border-radius:10px;padding:.6rem .4rem;background:#fff}
+.dn-cell b{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.8rem;color:var(--gold);line-height:1}
+.dn-cell span{display:block;font-family:'JetBrains Mono',monospace;font-size:.53rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:.3rem}
+.dn-strip{display:flex;flex-wrap:wrap;gap:.4rem;padding:1.3rem 1.75rem 0}
+.dn-slot{border:1px solid var(--border);border-radius:999px;padding:.32rem .75rem;font-size:.72rem;color:var(--ink);background:#fff}
+.dn-slot b{font-family:'JetBrains Mono',monospace;color:var(--gold);margin-right:.35rem}
+.dn-slot.first{border-color:var(--ink);background:var(--ink);color:#fff;font-weight:600}
+.dn-slot.first b{color:#E3B341}
+.dn-cta{padding:1.3rem 1.75rem 1.6rem}
+.dn-cta button{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;background:var(--ink);color:#fff;border:2px solid var(--ink);border-radius:10px;padding:.75rem 1.5rem;cursor:pointer;transition:transform .12s ease}
+.dn-cta button:hover{transform:translateY(-1px);background:var(--gold);border-color:var(--gold)}
 .dc-chip{background:#fff;border:1px solid var(--border);border-radius:10px;padding:.6rem 1rem;text-align:center;min-width:74px}
 .dc-chip b{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;color:var(--gold)}
 .dc-chip span{display:block;font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -823,7 +828,7 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="dn-banner-top">
         <div class="dn-eyebrow">The Draw Is Final</div>
         <div class="dn-when">Draft Night &middot; Sunday, August 30 &middot; <em>9:00 PM ET</em></div>
-        <p class="dn-copy">Twelve managers. Sixteen rounds. One hundred ninety-two picks that decide who spends the next four months talking and who spends it explaining. <strong style="color:#f4d876">Aidan Goss</strong> opens the board at 1.01. <strong style="color:#f4d876">Nick Furnari</strong> closes round one and gets the turn. Everyone in between has about ninety seconds to decide whether they trust their board or their gut.</p>
+        <p class="dn-copy">Twelve managers. Sixteen rounds. One hundred ninety-two picks that decide who spends the next four months talking and who spends it explaining. <strong>Aidan Goss</strong> opens the board at 1.01. <strong>Nick Furnari</strong> closes round one and gets the turn. Everyone in between has about ninety seconds to decide whether they trust their board or their gut.</p>
       </div>
       <div class="dn-clock">
         <div class="dn-cell"><b id="hcdDays">&mdash;</b><span>Days</span></div>
