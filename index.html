@@ -19353,7 +19353,7 @@ if (typeof module !== "undefined") {
     var idToTeam = managerTeamIds(data);
     var proj = {};
     Object.keys(rosters).forEach(function(tid){
-      var players = availableOnly((rosters[tid] || []).map(findPlayer).filter(Boolean));
+      var players = forWeek((rosters[tid] || []).map(findPlayer).filter(Boolean));
       if (players.length >= 9) proj[tid] = bestLineup(players).points;
     });
     var vals = Object.keys(proj).map(function(k){ return proj[k]; });
@@ -19484,7 +19484,7 @@ if (typeof module !== "undefined") {
 
     var proj = {};
     teamIds.forEach(function(tid){
-      var players = availableOnly((rosters[tid] || []).map(findPlayer).filter(Boolean));
+      var players = forWeek((rosters[tid] || []).map(findPlayer).filter(Boolean));
       if (players.length >= 9) proj[tid] = bestLineup(players).points;
     });
     var ids = Object.keys(proj);
@@ -19575,12 +19575,32 @@ if (typeof module !== "undefined") {
   // does NOT, because a draft should be judged on the picks, not on who got
   // hurt afterwards.
   var UNAVAILABLE = { OUT: 1, INJURY_RESERVE: 1, SUSPENSION: 1, NOT_ACTIVE: 1 };
-  function availableOnly(players){
+  var GAMES = 17;
+
+  // TWO different numbers, for two different questions:
+  //
+  //   weeklyBaseline = seasonProj / 17  — season-long value. This is what the
+  //     draft grade uses. It answers "how much is this player worth over the
+  //     year", so a player expected to miss six games is correctly worth less.
+  //
+  //   gameRate = ESPN's appliedAverage  — points in a week he actually plays.
+  //     This is what the Week 1 lines and Cup odds use, because those project
+  //     one specific week.
+  //
+  // Getting this wrong is not academic. ESPN divides appliedAverage by
+  // EXPECTED GAMES PLAYED, so an injury INFLATES the per-game rate: Zach
+  // Charbonnet reads 12.18/game precisely because he's only expected to play
+  // 11 games. Using that rate for season value would reward rostering injured
+  // players. Josh Jacobs is the live example — 15.26 per game, 11.67 per
+  // season week, and Ryan Dann's grade rests partly on which one we use.
+  function forWeek(players){
     return players.map(function(p){
-      if (!p || !UNAVAILABLE[p.injuryStatus]) return p;
+      if (!p) return p;
       var copy = {};
       for (var k in p) if (Object.prototype.hasOwnProperty.call(p, k)) copy[k] = p[k];
-      copy.weeklyBaseline = 0;
+      copy.weeklyBaseline = UNAVAILABLE[p.injuryStatus]
+        ? 0
+        : (p.gameRate != null ? p.gameRate : p.weeklyBaseline);
       return copy;
     });
   }
@@ -19595,7 +19615,12 @@ if (typeof module !== "undefined") {
       if (row.pos === "DST" && row.proTeam) target = ix.byTeamDst[String(row.proTeam).toUpperCase()];
       if (!target) target = ix.byNamePos[norm(row.name) + "|" + row.pos];
       if (!target) return;
-      target.weeklyBaseline = row.weekly;
+      // Season-long value drives grading; the per-game rate drives weekly
+      // projections. See forWeek() for why these must not be conflated.
+      target.gameRate = row.weekly;
+      target.weeklyBaseline = (row.seasonProj != null && row.seasonProj > 0)
+        ? row.seasonProj / GAMES
+        : row.weekly;
       if (row.seasonProj != null) target.seasonProjFPTS = row.seasonProj;
       target.projSource = "espn-live";
       if (row.injuryStatus) target.injuryStatus = row.injuryStatus;
@@ -19643,7 +19668,7 @@ if (typeof module !== "undefined") {
   });
 
   window.__b12proj = { applyProjections: applyProjections, projectionNote: projectionNote,
-                       availableOnly: availableOnly,
+                       forWeek: forWeek,
                        meta: function(){ return PROJ_META; } };
 
   // exposed for headless testing
