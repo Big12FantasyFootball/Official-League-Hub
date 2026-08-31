@@ -3161,13 +3161,22 @@ table.sch-table tr:last-child td{border-bottom:none}
     panels.forEach(function(p){ p.classList.toggle('on', p.id === 'panel-' + key); });
     if(history.replaceState){ history.replaceState(null, '', '#' + key); }
   }
-  tabs.forEach(function(t){
-    t.addEventListener('click', function(){ activate(t.dataset.tab); });
+  // One delegated handler for EVERY [data-tab] element, wherever it lives.
+  // This used to bind only '.tab' and '.hero-cta button', which meant any
+  // data-tab button added elsewhere on the page (banner CTAs, in-copy links)
+  // silently did nothing. Delegation means new ones just work.
+  document.addEventListener('click', function(e){
+    var el = e.target.closest ? e.target.closest('[data-tab]') : null;
+    if (!el) return;
+    var key = el.dataset.tab;
+    if (!key || !document.getElementById('panel-' + key)) return;
+    e.preventDefault();          // stops <a href="#"> from jumping
+    activate(key);
+    // These buttons sit halfway down the page; without this you'd switch
+    // panels and still be looking at the middle of the new one.
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-  document.querySelector('.brand').addEventListener('click', function(e){ e.preventDefault(); activate('home'); });
-  document.querySelectorAll('.hero-cta button').forEach(function(b){
-    b.addEventListener('click', function(){ activate(b.dataset.tab); });
-  });
+  // .brand carries data-tab="home", so the delegated handler covers it too.
 
   // deep-link support: #schedule loads straight to that panel
   var initial = location.hash.replace('#','');
