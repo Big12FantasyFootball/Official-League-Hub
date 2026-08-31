@@ -577,6 +577,25 @@ table.sch-table tr:last-child td{border-bottom:none}
 .dg-grade.dg-A b{color:var(--gold)}
 .dg-grade.dg-D b,.dg-grade.dg-F b{color:#B3261E}
 @media(max-width:560px){.dg-card{flex-wrap:wrap}.dg-grade{order:-1;margin-left:auto}}
+/* Projected Hawkins Cup field */
+.cp-list{border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
+.cp-row{display:grid;grid-template-columns:2rem 1fr 3.6rem minmax(60px,1fr) 3.2rem;gap:.7rem;align-items:center;padding:.5rem .9rem;border-bottom:1px solid var(--border);font-size:.82rem}
+.cp-row:last-child{border-bottom:none}
+.cp-row.head{font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);background:var(--bg)}
+.cp-row.out{color:var(--muted);background:#FCFBF9}
+.cp-rank{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);text-align:center}
+.cp-mgr{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cp-row.out .cp-mgr{color:var(--muted)}
+.cp-proj{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--ink);text-align:right}
+.cp-row.out .cp-proj{color:var(--muted)}
+.cp-oddsbar{position:relative;height:8px;background:var(--bg);border-radius:4px;overflow:hidden;border:1px solid var(--border)}
+.cp-oddsfill{position:absolute;left:0;top:0;bottom:0;background:var(--gold);border-radius:3px}
+.cp-row.out .cp-oddsfill{background:#C9B896}
+.cp-odds{font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:500;color:var(--gold);text-align:right}
+.cp-row.out .cp-odds{color:var(--muted)}
+.cp-row.head .cp-odds,.cp-row.head .cp-proj{color:var(--muted);font-weight:400}
+.cp-cut{position:relative;padding:.35rem .9rem;background:var(--ink);color:#f4d876;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.11em;text-transform:uppercase}
+@media(max-width:620px){.cp-row{grid-template-columns:1.6rem 1fr 3.2rem 2.8rem}.cp-oddsbar{display:none}}
 /* Draft trends ("How The Board Fell"). rdt- prefix, deliberately distinct
    from the simulator's dr-/db- namespaces. */
 .rdt-chart{border:1px solid var(--border);border-radius:12px;background:#fff;padding:1.1rem 1.25rem;margin-bottom:1.5rem}
@@ -946,6 +965,9 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="stat-item"><strong>8</strong><span>Cup Bids</span></div>
       <div class="stat-item"><strong>$300</strong><span>Cup Prize</span></div>
     </div>
+
+    <div class="road-title" style="margin-top:2.5rem">Projected Cup Field</div>
+    <div id="cup-projection"></div>
 
     <div class="intro-row">
       <div class="legend-box" style="flex:1;min-width:280px">
@@ -19433,16 +19455,116 @@ if (typeof module !== "undefined") {
     }
   }
 
+  /* ============================================================
+     PROJECTED HAWKINS CUP FIELD
+     ------------------------------------------------------------
+     The top 8 of 12 Week 1 scores make the bracket. Ranking teams
+     by projection alone would imply the field is basically decided
+     — it isn't. Weekly scores have a ~23 point standard deviation,
+     which is enormous next to the ~10 points separating the best
+     projected roster from the worst.
+
+     So instead of just ranking, this runs a Monte Carlo: draw each
+     team's Week 1 score from a normal around its projection, take
+     the top 8, repeat 20,000 times. The resulting "Cup odds" are
+     the honest version of the story — the best roster in the league
+     still misses the field a meaningful share of the time.
+     ============================================================ */
+  var CUP_SIMS = 20000, CUP_SPOTS = 8;
+
+  function renderCupProjection(data){
+    var el = document.getElementById("cup-projection");
+    if (!el) return;
+    var rosters = (data.live && data.live.rosters) || {};
+    var teamIds = Object.keys(rosters).filter(function(t){ return (rosters[t]||[]).length; });
+    if (!teamIds.length) {
+      el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+        + "The projected Cup field appears once rosters have been pulled from ESPN.</p>";
+      return;
+    }
+
+    var proj = {};
+    teamIds.forEach(function(tid){
+      var players = (rosters[tid] || []).map(findPlayer).filter(Boolean);
+      if (players.length >= 9) proj[tid] = bestLineup(players).points;
+    });
+    var ids = Object.keys(proj);
+    if (ids.length < CUP_SPOTS + 1) { el.innerHTML = ""; return; }
+
+    var L = leagueScoring(data);
+    var raw = ids.map(function(t){ return proj[t]; });
+    var projMean = raw.reduce(function(a,b){ return a+b; }, 0) / raw.length;
+    var scale = projMean > 0 ? L.mean / projMean : 1;
+    var mu = ids.map(function(t){ return proj[t] * scale; });
+    var cut = L.mean + (-0.4307) * L.sd;   // 8th of 12 = 33rd percentile
+
+    // Monte Carlo. Box-Muller, seeded so the page is stable between reloads.
+    var seed = 20260909;
+    function rnd(){ seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }
+    function gauss(){
+      var u = rnd() || 1e-9, v = rnd();
+      return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+    }
+    var made = ids.map(function(){ return 0; });
+    var scores = new Array(ids.length);
+    for (var s = 0; s < CUP_SIMS; s++){
+      for (var i = 0; i < ids.length; i++) scores[i] = { i: i, v: mu[i] + gauss() * L.sd };
+      scores.sort(function(a,b){ return b.v - a.v; });
+      for (var k = 0; k < CUP_SPOTS && k < scores.length; k++) made[scores[k].i]++;
+    }
+
+    var season = data.live.season;
+    var rows = ids.map(function(t, i){
+      return { mgr: data.managerNameAt(Number(t), season), proj: mu[i],
+               odds: made[i] / CUP_SIMS };
+    }).sort(function(a,b){ return b.proj - a.proj; });
+
+    var best = rows[0], worst = rows[rows.length - 1];
+    var html = rows.map(function(r, i){
+      var inField = i < CUP_SPOTS;
+      var divider = i === CUP_SPOTS
+        ? '<div class="cp-cut"><span>Cup cut line &mdash; projected ' + cut.toFixed(0) + ' pts</span></div>'
+        : "";
+      return divider + '<div class="cp-row' + (inField ? "" : " out") + '">'
+        + '<span class="cp-rank">' + (i + 1) + '</span>'
+        + '<span class="cp-mgr">' + esc(r.mgr) + '</span>'
+        + '<span class="cp-proj">' + r.proj.toFixed(1) + '</span>'
+        + '<span class="cp-oddsbar"><span class="cp-oddsfill" style="width:'
+          + Math.round(r.odds * 100) + '%"></span></span>'
+        + '<span class="cp-odds">' + Math.round(r.odds * 100) + '%</span>'
+      + '</div>';
+    }).join("");
+
+    el.innerHTML =
+      '<p class="note" style="margin-bottom:1.2rem">Projected Week 1 score from each drafted roster, '
+      + 'with the odds of finishing top eight and making the Cup. '
+      + 'Odds come from ' + (CUP_SIMS / 1000) + ',000 simulated Week 1s &mdash; '
+      + 'weekly scoring swings about ' + L.sd.toFixed(0) + ' points either way, which is far more than the '
+      + (best.proj - worst.proj).toFixed(1) + ' points separating the best and worst rosters. '
+      + '<strong>Nobody is safe and nobody is out.</strong></p>'
+      + '<div class="cp-list">'
+        + '<div class="cp-row head"><span class="cp-rank"></span><span class="cp-mgr">Manager</span>'
+        + '<span class="cp-proj">Proj</span><span class="cp-oddsbar"></span><span class="cp-odds">Cup Odds</span></div>'
+        + html
+      + '</div>'
+      + '<p class="note" style="margin-top:1.1rem">Top projected roster (' + esc(best.mgr) + ') still misses the Cup '
+      + Math.round((1 - best.odds) * 100) + '% of the time. Bottom projected roster (' + esc(worst.mgr) + ') makes it '
+      + Math.round(worst.odds * 100) + '% of the time. Week 1 is a coin flip with extra steps.</p>';
+  }
+
   document.addEventListener("b12live:ready", function(e){
     try { render(e.detail); }
     catch (err) { console.error("draft grades failed:", err); }
     try { renderWeek1Lines(e.detail); }
     catch (err) { console.error("week 1 lines failed:", err); }
+    try { renderCupProjection(e.detail); }
+    catch (err) { console.error("cup projection failed:", err); }
   });
 
   // exposed for headless testing
   window.__b12grades = { computeGrades: computeGrades, findPlayer: findPlayer,
                          renderWeek1Lines: renderWeek1Lines, leagueScoring: leagueScoring,
+                         renderCupProjection: renderCupProjection,
                          normCdf: normCdf, managerTeamIds: managerTeamIds,
                          replacement: replacement, bestLineup: bestLineup };
 })();
