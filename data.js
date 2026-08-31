@@ -276,14 +276,19 @@ function renderEloLeaderboard(data) {
  * from nowhere in September.
  */
 function renderScoreboard(data) {
-  const el = document.getElementById("live-scoreboard");
-  if (!el) return;
+  // Rendered in two places: the Schedule panel and the Week 1 page.
+  const targets = ["live-scoreboard", "week1-scoreboard"]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  if (!targets.length) return;
+  const el = { set innerHTML(v) { targets.forEach((t) => { t.innerHTML = v; }); } };
 
   const games = (data.live && data.live.currentWeekMatchups) || [];
   const played = games.filter((g) => (g.homeScore || 0) > 0 || (g.awayScore || 0) > 0);
   if (!games.length || !played.length) {
     el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
-      + 'Live matchups appear here once the season starts &mdash; scores update automatically every day.</p>';
+      + 'Scores appear here once Week 1 kicks off &mdash; they update automatically '
+      + 'through Sunday and Monday night.</p>';
     return;
   }
 
@@ -308,48 +313,136 @@ function renderScoreboard(data) {
   el.innerHTML = `<div class="sb-head">Week ${week}</div>${rows}`;
 }
 
+// The teamId this site belongs to — used only to highlight his picks on the
+// draft board. Cosmetic; nothing breaks if the id is ever wrong.
+const SITE_TEAM_ID = 8; // Nick Hawkins, "Curse of Ra"
+
+function escHtml(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+  ));
+}
+
 /*
- * Live rosters — who's actually on each team in the real league, with a
- * manager picker. Populates after the draft; shows a note until then.
+ * The real draft board — every pick, grouped by round.
+ *
+ * espn_pull.py resolves player names from the roster payload, so a player who
+ * was drafted and has since been dropped comes back with a null name. Those
+ * still get a slot on the board (marked "dropped") rather than vanishing,
+ * which would silently renumber the round.
  */
-function renderLiveRosters(data) {
-  const el = document.getElementById("live-rosters");
+function renderDraftBoard(data) {
+  const el = document.getElementById("draft-board");
+  if (!el) return;
+
+  const picks = (data.live && data.live.draftPicks) || [];
+  if (!picks.length) {
+    const done = data.live && data.live.draftCompleted;
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + (done
+        ? "The draft is complete, but the results haven't been pulled yet. "
+          + "The board fills in on the next scheduled ESPN pull."
+        : "Draft results appear here as soon as the draft is complete.")
+      + "</p>";
+    return;
+  }
+
+  const season = data.live.season;
+  const nameAt = data.managerNameAt;
+
+  const rounds = new Map();
+  picks.forEach((p) => {
+    const r = p.round || 1;
+    if (!rounds.has(r)) rounds.set(r, []);
+    rounds.get(r).push(p);
+  });
+
+  const html = [...rounds.keys()].sort((a, b) => a - b).map((r) => {
+    const list = rounds.get(r)
+      .slice()
+      .sort((a, b) => (a.overallPickNumber || 0) - (b.overallPickNumber || 0));
+    const cells = list.map((p) => {
+      const label = `${r}.${String(p.roundPickNumber || 0).padStart(2, "0")}`;
+      const owner = nameAt(p.teamId, season);
+      const mine = p.teamId === SITE_TEAM_ID;
+      const who = p.name
+        ? escHtml(p.name)
+        : '<span style="color:var(--muted);font-style:italic">dropped since draft</span>';
+      const meta = [p.pos, p.proTeam].filter(Boolean).join(" · ");
+      return `<div class="db-pick${mine ? " mine" : ""}">
+        <span class="db-num">${label}</span>
+        <span class="db-body">
+          <span class="db-player">${who}</span>
+          <span class="db-owner">${escHtml(owner)}${meta ? ` <span class="db-pos">${escHtml(meta)}</span>` : ""}</span>
+        </span>
+      </div>`;
+    }).join("");
+    return `<div class="db-round">
+      <div class="db-round-head">Round ${r}</div>
+      <div class="db-grid">${cells}</div>
+    </div>`;
+  }).join("");
+
+  el.innerHTML = `<p class="note" style="margin-bottom:1.5rem">${picks.length} picks`
+    + ` &middot; ${rounds.size} rounds &middot; your picks are highlighted.</p>${html}`;
+}
+
+/*
+ * Rosters page — every team side by side, starters first then bench.
+ * Populates after the draft; shows a note until then.
+ */
+function renderRostersPage(data) {
+  const el = document.getElementById("rosters-body");
   if (!el) return;
 
   const rosters = (data.live && data.live.rosters) || {};
   const teamIds = Object.keys(rosters).filter((id) => (rosters[id] || []).length);
   if (!teamIds.length) {
     el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
-      + 'Rosters appear here once the draft is complete &mdash; they refresh automatically as adds and drops happen.</p>';
+      + "Rosters appear here once the draft results have been pulled from ESPN "
+      + "&mdash; they refresh automatically as adds, drops and trades happen.</p>";
     return;
   }
 
   const season = data.live.season;
   const nameAt = data.managerNameAt;
-  const opts = teamIds
-    .sort((a, b) => nameAt(Number(a), season).localeCompare(nameAt(Number(b), season)))
-    .map((id) => `<option value="${id}">${nameAt(Number(id), season)}</option>`).join("");
-
-  el.innerHTML = `<select id="live-roster-pick" class="draft-select" style="margin-bottom:.8rem">${opts}</select>
-    <div id="live-roster-body"></div>`;
-
   const POS_ORDER = { QB: 0, RB: 1, WR: 2, TE: 3, K: 4, DST: 5 };
-  function draw(teamId) {
-    const list = (rosters[teamId] || []).slice().sort((a, b) => {
-      if (a.starter !== b.starter) return a.starter ? -1 : 1;
-      return (POS_ORDER[a.pos] ?? 9) - (POS_ORDER[b.pos] ?? 9);
-    });
-    document.getElementById("live-roster-body").innerHTML = list.map((p) => `
-      <div class="lr-row${p.starter ? "" : " lr-bench"}">
-        <span class="lr-slot">${p.starter ? p.pos : "BN"}</span>
-        <span class="lr-name">${p.name || "&mdash;"}${p.injuryStatus && p.injuryStatus !== "ACTIVE"
-          ? `<span class="lr-inj">${p.injuryStatus.slice(0, 3)}</span>` : ""}</span>
-        <span class="lr-meta">${p.pos}${p.proTeam ? " &middot; " + p.proTeam : ""}</span>
-      </div>`).join("");
-  }
-  draw(teamIds[0]);
-  const sel = document.getElementById("live-roster-pick");
-  if (sel) sel.addEventListener("change", (e) => draw(e.target.value));
+  const teamNameById = {};
+  ((data.live && data.live.standings) || []).forEach((t) => { teamNameById[t.teamId] = t.name; });
+
+  const cards = teamIds
+    .map(Number)
+    .sort((a, b) => nameAt(a, season).localeCompare(nameAt(b, season)))
+    .map((id) => {
+      const list = (rosters[id] || []).slice().sort((a, b) => {
+        if (a.starter !== b.starter) return a.starter ? -1 : 1;
+        return (POS_ORDER[a.pos] ?? 9) - (POS_ORDER[b.pos] ?? 9);
+      });
+      let benchStarted = false;
+      const rows = list.map((p) => {
+        let divider = "";
+        if (!p.starter && !benchStarted) {
+          benchStarted = true;
+          divider = '<div class="rp-divider">Bench</div>';
+        }
+        const inj = p.injuryStatus && p.injuryStatus !== "ACTIVE"
+          ? `<span class="rp-inj">${escHtml(p.injuryStatus.slice(0, 3))}</span>` : "";
+        return `${divider}<div class="rp-row${p.starter ? "" : " bench"}">
+          <span class="rp-slot">${p.starter ? escHtml(p.pos) : "BN"}</span>
+          <span class="rp-name">${escHtml(p.name) || "&mdash;"}${inj}</span>
+          <span class="rp-meta">${escHtml(p.proTeam || "")}</span>
+        </div>`;
+      }).join("");
+      return `<div class="rp-card">
+        <div class="rp-head">
+          <div class="rp-mgr">${escHtml(nameAt(id, season))}</div>
+          <div class="rp-team">${escHtml(teamNameById[id] || "")}</div>
+        </div>
+        <div class="rp-list">${rows}</div>
+      </div>`;
+    }).join("");
+
+  el.innerHTML = `<div class="rp-grid">${cards}</div>`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -358,7 +451,8 @@ document.addEventListener("DOMContentLoaded", () => {
       renderEloColumn(data);
       renderEloLeaderboard(data);
       renderScoreboard(data);
-      renderLiveRosters(data);
+      renderDraftBoard(data);
+      renderRostersPage(data);
     })
     .catch((err) => console.error("B12Live load failed:", err));
 });
