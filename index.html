@@ -545,16 +545,21 @@ table.sch-table tr:last-child td{border-bottom:none}
 .sim-shelf-tag{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.1em;color:var(--gold);border:1px solid var(--border);border-radius:999px;padding:.2rem .55rem;text-transform:uppercase}
 .sim-shelf[open]{padding-bottom:1.5rem}
 /* Draft results board */
-.db-round{margin-bottom:1.6rem}
-.db-round-head{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-left:3px solid var(--gold);padding-left:.7rem;margin-bottom:.7rem}
-.db-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden}
-.db-pick{background:#fff;padding:.6rem .75rem;display:flex;gap:.6rem;align-items:baseline}
-.db-pick.mine{background:var(--gold-soft)}
-.db-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--gold);flex-shrink:0;min-width:2.6rem}
-.db-body{min-width:0}
-.db-player{font-size:.82rem;font-weight:600;color:var(--ink);line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.db-owner{font-size:.68rem;color:var(--muted);margin-top:.1rem}
-.db-pos{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--muted)}
+/* Real draft-results board. Prefixed "rdb-" NOT "db-": the practice
+   simulator's board further down this stylesheet already owns .db-round and
+   .db-pick (position:sticky and position:absolute respectively), and since it
+   is defined later it wins the cascade. Sharing the prefix collapsed this
+   whole board into one overlapping column. */
+.rdb-round{margin-bottom:1.6rem}
+.rdb-round-head{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-left:3px solid var(--gold);padding-left:.7rem;margin-bottom:.7rem}
+.rdb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.rdb-pick{background:#fff;padding:.6rem .75rem;display:flex;gap:.6rem;align-items:baseline}
+.rdb-pick.mine{background:var(--gold-soft)}
+.rdb-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--gold);flex-shrink:0;min-width:2.6rem}
+.rdb-body{min-width:0;flex:1}
+.rdb-player{display:block;font-size:.82rem;font-weight:600;color:var(--ink);line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rdb-owner{display:block;font-size:.68rem;color:var(--muted);margin-top:.1rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rdb-pos{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--muted)}
 /* Real draft grades */
 .dg-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .dg-card{display:flex;gap:1rem;align-items:flex-start;background:#fff;padding:1rem 1.1rem}
@@ -572,6 +577,32 @@ table.sch-table tr:last-child td{border-bottom:none}
 .dg-grade.dg-A b{color:var(--gold)}
 .dg-grade.dg-D b,.dg-grade.dg-F b{color:#B3261E}
 @media(max-width:560px){.dg-card{flex-wrap:wrap}.dg-grade{order:-1;margin-left:auto}}
+/* Draft trends ("How The Board Fell"). rdt- prefix, deliberately distinct
+   from the simulator's dr-/db- namespaces. */
+.rdt-chart{border:1px solid var(--border);border-radius:12px;background:#fff;padding:1.1rem 1.25rem;margin-bottom:1.5rem}
+.rdt-axis{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:.52rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:.7rem}
+.rdt-row{display:grid;grid-template-columns:2.2rem 1fr 3.4rem auto;gap:.7rem;align-items:center;padding:.42rem 0}
+.rdt-pos{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--ink)}
+.rdt-bar{position:relative;height:15px;background:var(--bg);border-radius:3px;overflow:hidden}
+.rdt-fill{position:absolute;top:0;bottom:0;border-radius:2px}
+.rdt-fill.early{background:#B3261E}
+.rdt-fill.late{background:var(--gold)}
+.rdt-mid{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--border)}
+.rdt-val{font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:500;text-align:right}
+.rdt-val.early{color:#B3261E}
+.rdt-val.late{color:var(--gold)}
+.rdt-note{font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--muted);white-space:nowrap}
+.rdt-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:1rem}
+.rdt-card{border:1px solid var(--border);border-radius:12px;background:#fff;padding:.9rem 1.1rem}
+.rdt-card-h{font-family:'JetBrains Mono',monospace;font-size:.56rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:.6rem}
+.rdt-item{display:flex;gap:.6rem;align-items:baseline;padding:.32rem 0;border-bottom:1px solid var(--border)}
+.rdt-item:last-child{border-bottom:none}
+.rdt-d{font-family:'JetBrains Mono',monospace;font-size:.64rem;font-weight:500;min-width:2.4rem;flex-shrink:0}
+.rdt-d.neg{color:#B3261E}
+.rdt-d.pos{color:var(--gold)}
+.rdt-nm{flex:1;min-width:0;font-size:.8rem;font-weight:600;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rdt-meta{font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--muted);flex-shrink:0}
+@media(max-width:620px){.rdt-row{grid-template-columns:2rem 1fr 3.2rem}.rdt-note{display:none}}
 /* Roster page */
 .rp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem}
 .rp-card{border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
@@ -2696,6 +2727,9 @@ table.sch-table tr:last-child td{border-bottom:none}
 
     <div class="road-title" style="margin-top:2rem">Draft Grades</div>
     <div id="draft-grades"></div>
+
+    <div class="road-title" style="margin-top:2.5rem">How The Board Fell</div>
+    <div id="draft-trends"></div>
 
     <div class="road-title" style="margin-top:2.5rem">The Board</div>
     <div id="draft-board"></div>

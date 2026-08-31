@@ -369,22 +369,121 @@ function renderDraftBoard(data) {
         ? escHtml(p.name)
         : '<span style="color:var(--muted);font-style:italic">dropped since draft</span>';
       const meta = [p.pos, p.proTeam].filter(Boolean).join(" · ");
-      return `<div class="db-pick${mine ? " mine" : ""}">
-        <span class="db-num">${label}</span>
-        <span class="db-body">
-          <span class="db-player">${who}</span>
-          <span class="db-owner">${escHtml(owner)}${meta ? ` <span class="db-pos">${escHtml(meta)}</span>` : ""}</span>
+      return `<div class="rdb-pick${mine ? " mine" : ""}">
+        <span class="rdb-num">${label}</span>
+        <span class="rdb-body">
+          <span class="rdb-player">${who}</span>
+          <span class="rdb-owner">${escHtml(owner)}${meta ? ` <span class="rdb-pos">${escHtml(meta)}</span>` : ""}</span>
         </span>
       </div>`;
     }).join("");
-    return `<div class="db-round">
-      <div class="db-round-head">Round ${r}</div>
-      <div class="db-grid">${cells}</div>
+    return `<div class="rdb-round">
+      <div class="rdb-round-head">Round ${r}</div>
+      <div class="rdb-grid">${cells}</div>
     </div>`;
   }).join("");
 
   el.innerHTML = `<p class="note" style="margin-bottom:1.5rem">${picks.length} picks`
     + ` &middot; ${rounds.size} rounds &middot; your picks are highlighted.</p>${html}`;
+}
+
+/*
+ * "How The Board Fell" — the league-wide shape of the draft.
+ *
+ * The single most useful number here is mean ADP deviation by position:
+ * pick number minus ADP, averaged. Negative means the league consistently
+ * took that position EARLIER than the market does. It explains why almost
+ * everybody's individual value score came out negative — you cannot all
+ * reach on running backs and also all beat ADP.
+ *
+ * K/DST are excluded for the same reason they're excluded from grading:
+ * their ADP in this pool is a synthetic bottom-of-board rank.
+ */
+function renderDraftTrends(data) {
+  const el = document.getElementById("draft-trends");
+  if (!el) return;
+  const raw = (data.live && data.live.draftPicks) || [];
+  const grader = window.__b12grades;
+  if (!raw.length || !grader) {
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + "Draft trends appear once the results have been pulled from ESPN.</p>";
+    return;
+  }
+
+  const picks = raw.map((pk) => ({ ...pk, p: grader.findPlayer(pk) })).filter((x) => x.p);
+  const priced = picks.filter((x) => x.p.pos !== "K" && x.p.pos !== "DST")
+    .map((x) => ({
+      name: x.p.name, pos: x.p.pos,
+      label: x.round + "." + String(x.roundPickNumber).padStart(2, "0"),
+      dev: x.overallPickNumber - x.p.adpAvg,
+    }));
+  if (!priced.length) { el.innerHTML = ""; return; }
+
+  const mean = (a) => a.reduce((x, y) => x + y, 0) / a.length;
+  const POS = ["RB", "WR", "TE", "QB"];
+  const stats = POS.map((pos) => {
+    const set = priced.filter((x) => x.pos === pos).map((x) => x.dev);
+    return set.length ? {
+      pos, n: set.length, dev: mean(set),
+      reached: set.filter((v) => v < -8).length,
+      stole: set.filter((v) => v > 8).length,
+    } : null;
+  }).filter(Boolean).sort((a, b) => a.dev - b.dev);
+
+  const maxAbs = Math.max(...stats.map((s) => Math.abs(s.dev)), 1);
+  const bars = stats.map((s) => {
+    const pct = Math.round((Math.abs(s.dev) / maxAbs) * 50);
+    const early = s.dev < 0;
+    return `<div class="rdt-row">
+      <span class="rdt-pos">${s.pos}</span>
+      <span class="rdt-bar">
+        <span class="rdt-fill ${early ? "early" : "late"}"
+              style="${early ? "right:50%" : "left:50%"};width:${pct}%"></span>
+        <span class="rdt-mid"></span>
+      </span>
+      <span class="rdt-val ${early ? "early" : "late"}">${s.dev > 0 ? "+" : ""}${s.dev.toFixed(1)}</span>
+      <span class="rdt-note">${s.reached} reaches / ${s.stole} steals of ${s.n}</span>
+    </div>`;
+  }).join("");
+
+  const firstOf = {};
+  picks.forEach((x) => { if (firstOf[x.p.pos] == null) firstOf[x.p.pos] = x.overallPickNumber; });
+  const r1 = picks.filter((x) => x.round === 1)
+    .reduce((acc, x) => { acc[x.p.pos] = (acc[x.p.pos] || 0) + 1; return acc; }, {});
+
+  const sorted = priced.slice().sort((a, b) => a.dev - b.dev);
+  const list = (arr, cls) => arr.map((x) => `<div class="rdt-item">
+      <span class="rdt-d ${cls}">${x.dev > 0 ? "+" : ""}${Math.round(x.dev)}</span>
+      <span class="rdt-nm">${escHtml(x.name)}</span>
+      <span class="rdt-meta">${x.pos} &middot; ${x.label}</span>
+    </div>`).join("");
+
+  const totalR = priced.filter((x) => x.dev < -8).length;
+  const totalS = priced.filter((x) => x.dev > 8).length;
+
+  el.innerHTML = `
+    <p class="note" style="margin-bottom:1.4rem">Mean ADP deviation by position &mdash; how many picks
+      earlier or later than the market this league took each position.
+      <strong>Negative = the room reached.</strong> K and D/ST are excluded (no real ADP).</p>
+    <div class="rdt-chart">
+      <div class="rdt-axis"><span>drafted earlier than ADP</span><span>later than ADP</span></div>
+      ${bars}
+    </div>
+    <div class="rdt-cards">
+      <div class="rdt-card">
+        <div class="rdt-card-h">Biggest Reaches</div>${list(sorted.slice(0, 5), "neg")}
+      </div>
+      <div class="rdt-card">
+        <div class="rdt-card-h">Biggest Steals</div>${list(sorted.slice(-5).reverse(), "pos")}
+      </div>
+    </div>
+    <p class="note" style="margin-top:1.3rem">Round 1 went
+      <strong>${r1.RB || 0} RB, ${r1.WR || 0} WR</strong>${(r1.QB || r1.TE) ? "" : " &mdash; no QB, no TE"}.
+      First QB off the board at pick <strong>${firstOf.QB || "&mdash;"}</strong>,
+      first TE at <strong>${firstOf.TE || "&mdash;"}</strong>.
+      Across ${priced.length} priced picks there were <strong>${totalR} reaches</strong>
+      and only <strong>${totalS} steals</strong>, which is why most managers show a negative
+      value score: the room bid RB and WR up, and left QB and TE sitting.</p>`;
 }
 
 /*
@@ -452,6 +551,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderEloLeaderboard(data);
       renderScoreboard(data);
       renderDraftBoard(data);
+      renderDraftTrends(data);
       renderRostersPage(data);
     })
     .catch((err) => console.error("B12Live load failed:", err));
