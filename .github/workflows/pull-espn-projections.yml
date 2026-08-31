@@ -1,0 +1,39 @@
+name: Pull ESPN Projections
+
+# Projections move daily during the season — injuries, depth-chart changes,
+# and ESPN's own model updates. This writes a small sidecar JSON rather than
+# rewriting index.html, so a daily commit stays cheap.
+#
+# 11:41 UTC = ~7:41am ET, early enough to catch overnight injury news before
+# anyone sets a lineup. Off-cadence minute because GitHub delays runs
+# scheduled on the hour.
+on:
+  schedule:
+    - cron: '41 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pull-espn-projections
+  cancel-in-progress: true
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: python espn_proj_pull.py
+      - name: Commit updated projections
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add espn_projections.json
+          git diff --staged --quiet || git commit -m "Update projections from ESPN [auto]"
+          git pull --rebase --autostash origin main || true
+          git push
