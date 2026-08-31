@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-08-31T05:57:42.473007+00:00",
+  "pulledAt": "2026-08-31T19:29:35.043343+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -7,7 +7,7 @@
   "standings": [
     {
       "teamId": 1,
-      "name": "Drake London and Friends",
+      "name": "    Unc Season",
       "abbrev": "NNT",
       "wins": 0,
       "losses": 0,
@@ -31,8 +31,8 @@
     },
     {
       "teamId": 3,
-      "name": "Seal Team Nix",
-      "abbrev": "STN",
+      "name": "Darth Nabers",
+      "abbrev": "DNS",
       "wins": 0,
       "losses": 0,
       "ties": 0,
@@ -254,8 +254,8 @@
         "name": "George Kittle",
         "pos": "TE",
         "proTeam": "SF",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 6,
+        "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
@@ -294,8 +294,8 @@
         "name": "Travis Kelce",
         "pos": "TE",
         "proTeam": "KC",
-        "lineupSlotId": 6,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
@@ -334,8 +334,8 @@
         "name": "Patriots D/ST",
         "pos": "DST",
         "proTeam": "NE",
-        "lineupSlotId": 16,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": null,
         "appliedTotal": 0
       },
@@ -426,8 +426,8 @@
         "name": "DK Metcalf",
         "pos": "WR",
         "proTeam": "PIT",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
@@ -436,8 +436,8 @@
         "name": "MarShawn Lloyd",
         "pos": "RB",
         "proTeam": "GB",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
@@ -2048,7 +2048,7 @@
         "proTeam": "GB",
         "lineupSlotId": 21,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "DAY_TO_DAY",
         "appliedTotal": 0
       },
       {
