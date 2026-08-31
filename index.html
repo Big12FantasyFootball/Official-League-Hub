@@ -1801,7 +1801,7 @@ table.sch-table tr:last-child td{border-bottom:none}
       </article>
     </div>
 
-    <div class="wk1-banner"><strong>Week 1 pressure point:</strong> Hawkins opens at Jojo Guarnaccia, Furnari draws Aidan Goss's debut, Drew Sanford and Brandon Beland meet in the only game between two new managers, Jake Joyce hosts Jalen Peretz as a 15.5-point favorite, and every manager is chasing a top-eight score for Hawkins Cup entry.</div>
+    <div class="wk1-banner" id="week1Pressure"><strong>Week 1 pressure point:</strong> Every manager is chasing a top-eight score for Hawkins Cup entry.</div>
   </section>
 
   <section class="panel" id="panel-schedule" role="tabpanel">
@@ -19367,6 +19367,60 @@ if (typeof module !== "undefined") {
         + " (raw " + proj[a].toFixed(1) + "/" + proj[h].toFixed(1)
         + ", scaled " + scale.toFixed(3) + " to the league's " + L.mean.toFixed(1) + " average)");
     });
+
+    // ---- per-game Cup context, and the pressure-point banner ----
+    // Cup field is the top 8 of 12 Week 1 scores, so the cut line sits at the
+    // 8th-highest — the 33rd percentile of the scoring distribution.
+    var Z_8_OF_12 = -0.4307;
+    var cut = L.mean + Z_8_OF_12 * L.sd;
+
+    var lineRows = [];
+    cards.forEach(function(el){
+      var a = idToTeam[el.dataset.away], h = idToTeam[el.dataset.home];
+      if (a == null || h == null || proj[a] == null || proj[h] == null) return;
+      var pa = proj[a] * scale, ph = proj[h] * scale;
+      var nameOf = function(id){
+        var mm = LEAGUE_CONFIG.managers.filter(function(m){ return m.id === id; })[0];
+        return mm ? mm.name.split(" ").slice(-1)[0] : id;
+      };
+      lineRows.push({ away: el.dataset.away, home: el.dataset.home,
+                      an: nameOf(el.dataset.away), hn: nameOf(el.dataset.home),
+                      pa: pa, ph: ph, edge: Math.abs(pa - ph), total: pa + ph });
+
+      var card = el.closest && el.closest(".match-card");
+      var cup = card && card.querySelector(".match-cup");
+      if (cup) {
+        var above = [];
+        if (pa >= cut) above.push(nameOf(el.dataset.away));
+        if (ph >= cut) above.push(nameOf(el.dataset.home));
+        var verdict = above.length === 2
+          ? "both project above it"
+          : above.length === 1
+            ? above[0] + " projects above it, the other doesn't"
+            : "neither projects above it";
+        cup.innerHTML = "Cup cut line ≈ " + cut.toFixed(0) + " pts. "
+          + esc(nameOf(el.dataset.away)) + " " + pa.toFixed(1) + ", "
+          + esc(nameOf(el.dataset.home)) + " " + ph.toFixed(1) + " — " + verdict + ".";
+      }
+    });
+
+    var banner = document.getElementById("week1Pressure");
+    if (banner && lineRows.length) {
+      var biggest = lineRows.slice().sort(function(x,y){ return y.edge - x.edge; })[0];
+      var closest = lineRows.slice().sort(function(x,y){ return x.edge - y.edge; })[0];
+      var highest = lineRows.slice().sort(function(x,y){ return y.total - x.total; })[0];
+      var favOf = function(g){ return g.pa >= g.ph ? g.an : g.hn; };
+      banner.innerHTML = "<strong>Week 1 pressure point:</strong> "
+        + "the board's biggest edge is <strong>" + esc(favOf(biggest)) + " -"
+        + (Math.round(biggest.edge * 2) / 2).toFixed(1) + "</strong>, which is still only a "
+        + Math.round(normCdf(biggest.edge / marginSd) * 100) + "% favourite. "
+        + esc(closest.an) + " and " + esc(closest.hn) + " are separated by "
+        + closest.edge.toFixed(1) + " projected points — a true coin flip. "
+        + esc(highest.an) + "–" + esc(highest.hn) + " has the highest total at "
+        + (Math.round(highest.total * 2) / 2).toFixed(1) + ". "
+        + "Everyone is chasing a top-eight score for Hawkins Cup entry, and the cut line "
+        + "projects around <strong>" + cut.toFixed(0) + "</strong>.";
+    }
 
     var note = document.getElementById("week1LinesNote");
     if (note) {
