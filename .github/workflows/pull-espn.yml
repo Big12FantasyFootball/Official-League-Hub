@@ -1,12 +1,36 @@
 name: Pull ESPN Fantasy Data
 
+# Cron is UTC. During the season the East Coast is on EDT (UTC-4) until
+# Nov 1, then EST (UTC-5). The windows below are written wide enough that
+# they still cover the games after that shift, so nothing needs editing
+# mid-season.
+#
+#   Sunday   1pm ET -> Monday 1am ET   : every 30 min  (the main slate + SNF)
+#   Monday   8pm ET -> Tuesday 1am ET  : every 30 min  (MNF)
+#   Tuesday  9am ET                    : once          (official final results)
+#   Wed-Sat  9am ET                    : once          (waivers, injuries, trades)
+#
+# GitHub delays scheduled runs under load, especially on the hour, so the
+# offsets are deliberately off-cadence rather than at :00.
 on:
   schedule:
-    - cron: '0 13 * * *'   # daily at 9am ET — adjust once the season's live
+    # Sunday afternoon through the small hours of Monday (17:00 Sun - 05:00 Mon UTC)
+    - cron: '7,37 17-23 * * 0'
+    - cron: '7,37 0-5 * * 1'
+    # Monday Night Football (00:00-05:00 Tue UTC = 8pm-1am ET Mon)
+    - cron: '7,37 0-5 * * 2'
+    # Daily catch-up at 9am ET (13:00 UTC) — finals, waivers, injuries
+    - cron: '13 13 * * *'
   workflow_dispatch:        # lets you trigger a run manually from the Actions tab
 
 permissions:
   contents: write
+
+# If a run is still going when the next one fires, let the newer one win
+# rather than stacking up commits from stale data.
+concurrency:
+  group: pull-espn
+  cancel-in-progress: true
 
 jobs:
   pull:
@@ -24,4 +48,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add espn_data.json
           git diff --staged --quiet || git commit -m "Update ESPN data [auto]"
+          # Another run may have pushed while this one was working; rebase
+          # onto it instead of failing the job outright.
+          git pull --rebase --autostash origin main || true
           git push
