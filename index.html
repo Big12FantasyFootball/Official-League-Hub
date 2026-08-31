@@ -554,7 +554,6 @@ table.sch-table tr:last-child td{border-bottom:none}
 .rdb-round-head{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-left:3px solid var(--gold);padding-left:.7rem;margin-bottom:.7rem}
 .rdb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden}
 .rdb-pick{background:#fff;padding:.6rem .75rem;display:flex;gap:.6rem;align-items:baseline}
-.rdb-pick.mine{background:var(--gold-soft)}
 .rdb-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--gold);flex-shrink:0;min-width:2.6rem}
 .rdb-body{min-width:0;flex:1}
 .rdb-player{display:block;font-size:.82rem;font-weight:600;color:var(--ink);line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -19283,7 +19282,7 @@ if (typeof module !== "undefined") {
       + 'Graded relative to this league &mdash; all twelve drafted from the same board, so '
       + 'the average draft sits at 77 (C+). Value is measured against ESPN ADP; lineup strength '
       + 'is points over replacement, which is why a first-round QB grades badly in a 1-QB league. '
-      + res.matched + '/' + res.total + ' picks matched to projections.</p>'
+      + res.matched + '/' + res.total + ' picks matched to projections. ' + projectionNote() + '</p>'
       + '<div class="dg-list">' + cards + '</div>';
   }
 
@@ -19354,7 +19353,7 @@ if (typeof module !== "undefined") {
     var idToTeam = managerTeamIds(data);
     var proj = {};
     Object.keys(rosters).forEach(function(tid){
-      var players = (rosters[tid] || []).map(findPlayer).filter(Boolean);
+      var players = availableOnly((rosters[tid] || []).map(findPlayer).filter(Boolean));
       if (players.length >= 9) proj[tid] = bestLineup(players).points;
     });
     var vals = Object.keys(proj).map(function(k){ return proj[k]; });
@@ -19485,7 +19484,7 @@ if (typeof module !== "undefined") {
 
     var proj = {};
     teamIds.forEach(function(tid){
-      var players = (rosters[tid] || []).map(findPlayer).filter(Boolean);
+      var players = availableOnly((rosters[tid] || []).map(findPlayer).filter(Boolean));
       if (players.length >= 9) proj[tid] = bestLineup(players).points;
     });
     var ids = Object.keys(proj);
@@ -19541,7 +19540,7 @@ if (typeof module !== "undefined") {
       + 'Odds come from ' + (CUP_SIMS / 1000) + ',000 simulated Week 1s &mdash; '
       + 'weekly scoring swings about ' + L.sd.toFixed(0) + ' points either way, which is far more than the '
       + (best.proj - worst.proj).toFixed(1) + ' points separating the best and worst rosters. '
-      + '<strong>Nobody is safe and nobody is out.</strong></p>'
+      + '<strong>Nobody is safe and nobody is out.</strong> ' + projectionNote() + '</p>'
       + '<div class="cp-list">'
         + '<div class="cp-row head"><span class="cp-rank"></span><span class="cp-mgr">Manager</span>'
         + '<span class="cp-proj">Proj</span><span class="cp-oddsbar"></span><span class="cp-odds">Cup Odds</span></div>'
@@ -19552,14 +19551,100 @@ if (typeof module !== "undefined") {
       + Math.round(worst.odds * 100) + '% of the time. Week 1 is a coin flip with extra steps.</p>';
   }
 
+  /* ============================================================
+     LIVE PROJECTION OVERLAY
+     ------------------------------------------------------------
+     PLAYERS_DATA ships with preseason projections baked in. Those
+     go stale fast — a player who lands on IR keeps a full-season
+     number forever. espn_proj_pull.py writes espn_projections.json
+     daily with ESPN's own projections, already scored with this
+     league's rules, and this overlays them before anything that
+     depends on projections renders.
+
+     The baked-in numbers stay as a fallback: if the file is missing
+     or malformed, the site still works, just with preseason values.
+     Nothing here mutates ADP — only weeklyBaseline/seasonProjFPTS.
+     ============================================================ */
+  var PROJ_META = null;
+
+  // ESPN's appliedAverage is points PER GAME PLAYED, not per week of the
+  // season — Zach Charbonnet sits at 12.2/game while flagged OUT. That rate
+  // is the right number for "how good is this player", but starting him in a
+  // Week 1 projection would be nonsense. So anything that projects a specific
+  // week zeroes out players who cannot play; the draft grade deliberately
+  // does NOT, because a draft should be judged on the picks, not on who got
+  // hurt afterwards.
+  var UNAVAILABLE = { OUT: 1, INJURY_RESERVE: 1, SUSPENSION: 1, NOT_ACTIVE: 1 };
+  function availableOnly(players){
+    return players.map(function(p){
+      if (!p || !UNAVAILABLE[p.injuryStatus]) return p;
+      var copy = {};
+      for (var k in p) if (Object.prototype.hasOwnProperty.call(p, k)) copy[k] = p[k];
+      copy.weeklyBaseline = 0;
+      return copy;
+    });
+  }
+
+  function applyProjections(payload){
+    if (!payload || !Array.isArray(payload.players) || !payload.players.length) return 0;
+    var ix = poolIndex();
+    var applied = 0;
+    payload.players.forEach(function(row){
+      if (row.weekly == null || !(row.weekly >= 0)) return;
+      var target = null;
+      if (row.pos === "DST" && row.proTeam) target = ix.byTeamDst[String(row.proTeam).toUpperCase()];
+      if (!target) target = ix.byNamePos[norm(row.name) + "|" + row.pos];
+      if (!target) return;
+      target.weeklyBaseline = row.weekly;
+      if (row.seasonProj != null) target.seasonProjFPTS = row.seasonProj;
+      target.projSource = "espn-live";
+      if (row.injuryStatus) target.injuryStatus = row.injuryStatus;
+      applied++;
+    });
+    if (applied) {
+      // Replacement levels and the elite-baseline cache are derived from
+      // weeklyBaseline, so they must be recomputed after an overlay.
+      _repl = null;
+      PROJ_META = { pulledAt: payload.pulledAt, count: applied, total: payload.count };
+    }
+    return applied;
+  }
+
+  function loadProjections(){
+    return fetch("espn_projections.json", { cache: "no-store" })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(j){ return applyProjections(j); })
+      .catch(function(){ return 0; });   // offline / missing file -> keep baked-in
+  }
+
+  function projectionNote(){
+    if (!PROJ_META) return "Projections are the preseason baseline baked into the site.";
+    var when = "";
+    try {
+      var d = new Date(PROJ_META.pulledAt);
+      if (!isNaN(d.getTime())) when = " (updated " + d.toLocaleDateString(undefined,
+        { month: "short", day: "numeric" }) + ")";
+    } catch (err) {}
+    return "Projections are live from ESPN" + when + ", already scored with this league's rules — "
+      + PROJ_META.count + " players matched.";
+  }
+
   document.addEventListener("b12live:ready", function(e){
-    try { render(e.detail); }
-    catch (err) { console.error("draft grades failed:", err); }
-    try { renderWeek1Lines(e.detail); }
-    catch (err) { console.error("week 1 lines failed:", err); }
-    try { renderCupProjection(e.detail); }
-    catch (err) { console.error("cup projection failed:", err); }
+    // Overlay first: grades, lines and Cup odds all read weeklyBaseline.
+    loadProjections().then(function(n){
+      if (n) console.info("projections: overlaid " + n + " players from espn_projections.json");
+      try { render(e.detail); }
+      catch (err) { console.error("draft grades failed:", err); }
+      try { renderWeek1Lines(e.detail); }
+      catch (err) { console.error("week 1 lines failed:", err); }
+      try { renderCupProjection(e.detail); }
+      catch (err) { console.error("cup projection failed:", err); }
+    });
   });
+
+  window.__b12proj = { applyProjections: applyProjections, projectionNote: projectionNote,
+                       availableOnly: availableOnly,
+                       meta: function(){ return PROJ_META; } };
 
   // exposed for headless testing
   window.__b12grades = { computeGrades: computeGrades, findPlayer: findPlayer,

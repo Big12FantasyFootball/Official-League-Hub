@@ -313,10 +313,6 @@ function renderScoreboard(data) {
   el.innerHTML = `<div class="sb-head">Week ${week}</div>${rows}`;
 }
 
-// The teamId this site belongs to — used only to highlight his picks on the
-// draft board. Cosmetic; nothing breaks if the id is ever wrong.
-const SITE_TEAM_ID = 8; // Nick Hawkins, "Curse of Ra"
-
 function escHtml(s) {
   return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => (
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
@@ -364,12 +360,11 @@ function renderDraftBoard(data) {
     const cells = list.map((p) => {
       const label = `${r}.${String(p.roundPickNumber || 0).padStart(2, "0")}`;
       const owner = nameAt(p.teamId, season);
-      const mine = p.teamId === SITE_TEAM_ID;
       const who = p.name
         ? escHtml(p.name)
         : '<span style="color:var(--muted);font-style:italic">dropped since draft</span>';
       const meta = [p.pos, p.proTeam].filter(Boolean).join(" · ");
-      return `<div class="rdb-pick${mine ? " mine" : ""}">
+      return `<div class="rdb-pick">
         <span class="rdb-num">${label}</span>
         <span class="rdb-body">
           <span class="rdb-player">${who}</span>
@@ -384,7 +379,7 @@ function renderDraftBoard(data) {
   }).join("");
 
   el.innerHTML = `<p class="note" style="margin-bottom:1.5rem">${picks.length} picks`
-    + ` &middot; ${rounds.size} rounds &middot; your picks are highlighted.</p>${html}`;
+    + ` &middot; ${rounds.size} rounds.</p>${html}`;
 }
 
 /*
