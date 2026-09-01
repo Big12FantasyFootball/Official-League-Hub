@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-01T04:54:26.305635+00:00",
+  "pulledAt": "2026-09-01T09:55:58.710456+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -674,16 +674,6 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4429013,
-        "name": "Tank Bigsby",
-        "pos": "RB",
-        "proTeam": "PHI",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
-      },
-      {
         "playerId": -16008,
         "name": "Lions D/ST",
         "pos": "DST",
@@ -691,6 +681,16 @@
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
+        "appliedTotal": 0
+      },
+      {
+        "playerId": 4819231,
+        "name": "Kaleb Johnson",
+        "pos": "RB",
+        "proTeam": "GB",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       }
     ],
@@ -846,10 +846,10 @@
         "appliedTotal": 0
       },
       {
-        "playerId": -16005,
-        "name": "Browns D/ST",
+        "playerId": -16010,
+        "name": "Titans D/ST",
         "pos": "DST",
-        "proTeam": "CLE",
+        "proTeam": "TEN",
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
@@ -968,16 +968,6 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4430834,
-        "name": "Jalen McMillan",
-        "pos": "WR",
-        "proTeam": "TB",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "QUESTIONABLE",
-        "appliedTotal": 0
-      },
-      {
         "playerId": -16026,
         "name": "Seahawks D/ST",
         "pos": "DST",
@@ -1014,6 +1004,16 @@
         "proTeam": "CHI",
         "lineupSlotId": 17,
         "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 0
+      },
+      {
+        "playerId": 4569603,
+        "name": "Malik Washington",
+        "pos": "WR",
+        "proTeam": "MIA",
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       }
@@ -3678,9 +3678,9 @@
       "roundPickNumber": 7,
       "teamId": 5,
       "playerId": 4430834,
-      "name": "Jalen McMillan",
-      "pos": "WR",
-      "proTeam": "TB",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -4030,9 +4030,9 @@
       "roundPickNumber": 3,
       "teamId": 3,
       "playerId": 4429013,
-      "name": "Tank Bigsby",
-      "pos": "RB",
-      "proTeam": "PHI",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -4250,9 +4250,9 @@
       "roundPickNumber": 11,
       "teamId": 4,
       "playerId": -16005,
-      "name": "Browns D/ST",
-      "pos": "DST",
-      "proTeam": "CLE",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
