@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-01T09:55:58.710456+00:00",
+  "pulledAt": "2026-09-01T17:18:31.056856+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -254,8 +254,8 @@
         "name": "George Kittle",
         "pos": "TE",
         "proTeam": "SF",
-        "lineupSlotId": 6,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
@@ -294,8 +294,8 @@
         "name": "Travis Kelce",
         "pos": "TE",
         "proTeam": "KC",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 6,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
@@ -360,13 +360,13 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 3046439,
-        "name": "Hunter Henry",
-        "pos": "TE",
-        "proTeam": "NE",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
+        "playerId": -16020,
+        "name": "Jets D/ST",
+        "pos": "DST",
+        "proTeam": "NYJ",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
         "appliedTotal": 0
       }
     ],
@@ -1086,7 +1086,7 @@
         "proTeam": "CAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
       {
@@ -4195,9 +4195,9 @@
       "roundPickNumber": 6,
       "teamId": 1,
       "playerId": 3046439,
-      "name": "Hunter Henry",
-      "pos": "TE",
-      "proTeam": "NE",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
