@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-02T17:07:31.024069+00:00",
+  "pulledAt": "2026-09-03T17:01:30.438957+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -370,10 +370,10 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4383429,
-        "name": "Jacob Saylors",
+        "playerId": 4429013,
+        "name": "Tank Bigsby",
         "pos": "RB",
-        "proTeam": "DET",
+        "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
@@ -1512,6 +1512,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
+      },
+      {
+        "playerId": 4430834,
+        "name": "Jalen McMillan",
+        "pos": "WR",
+        "proTeam": "TB",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "QUESTIONABLE",
+        "appliedTotal": 0
       }
     ],
     "9": [
@@ -1980,16 +1990,6 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4597500,
-        "name": "Adonai Mitchell",
-        "pos": "WR",
-        "proTeam": "NYJ",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
-      },
-      {
         "playerId": 4570037,
         "name": "Terrance Ferguson",
         "pos": "TE",
@@ -1997,6 +1997,16 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "QUESTIONABLE",
+        "appliedTotal": 0
+      },
+      {
+        "playerId": 3126486,
+        "name": "Deebo Samuel Sr.",
+        "pos": "WR",
+        "proTeam": "SF",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       }
     ],
@@ -3566,9 +3576,9 @@
       "roundPickNumber": 7,
       "teamId": 1,
       "playerId": 3126486,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Deebo Samuel Sr.",
+      "pos": "WR",
+      "proTeam": "SF",
       "keeper": false
     },
     {
@@ -3698,9 +3708,9 @@
       "roundPickNumber": 7,
       "teamId": 5,
       "playerId": 4430834,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Jalen McMillan",
+      "pos": "WR",
+      "proTeam": "TB",
       "keeper": false
     },
     {
@@ -4050,9 +4060,9 @@
       "roundPickNumber": 3,
       "teamId": 3,
       "playerId": 4429013,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Tank Bigsby",
+      "pos": "RB",
+      "proTeam": "PHI",
       "keeper": false
     },
     {
@@ -4116,9 +4126,9 @@
       "roundPickNumber": 9,
       "teamId": 11,
       "playerId": 4597500,
-      "name": "Adonai Mitchell",
-      "pos": "WR",
-      "proTeam": "NYJ",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
