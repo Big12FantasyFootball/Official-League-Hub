@@ -1,5 +1,5 @@
 {
- "pulledAt": "2026-09-03T15:09:11.789165+00:00",
+ "pulledAt": "2026-09-04T15:05:06.223907+00:00",
  "season": 2026,
  "source": "espn-kona_player_info",
  "scoring": "league-applied",
@@ -660,7 +660,7 @@
    "proTeam": "CHI",
    "seasonProj": 213.55,
    "weekly": 12.562,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 4372016,
@@ -687,7 +687,7 @@
    "proTeam": "CHI",
    "seasonProj": 210.47,
    "weekly": 12.381,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 3915416,
@@ -939,7 +939,7 @@
    "proTeam": "IND",
    "seasonProj": 185.43,
    "weekly": 10.908,
-   "injuryStatus": "QUESTIONABLE"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4360248,
@@ -4677,19 +4677,28 @@
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 4431562,
-   "name": "Phil Mafah",
-   "pos": "RB",
+   "playerId": 4605951,
+   "name": "CJ Daniels",
+   "pos": "WR",
+   "proTeam": "LAR",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 16339,
+   "name": "Brandon McManus",
+   "pos": "K",
    "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4605951,
-   "name": "CJ Daniels",
-   "pos": "WR",
-   "proTeam": "LAR",
+   "playerId": 4431562,
+   "name": "Phil Mafah",
+   "pos": "RB",
+   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -4704,33 +4713,6 @@
    "injuryStatus": "QUESTIONABLE"
   },
   {
-   "playerId": 16339,
-   "name": "Brandon McManus",
-   "pos": "K",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4429955,
-   "name": "Will Howard",
-   "pos": "QB",
-   "proTeam": "PIT",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "QUESTIONABLE"
-  },
-  {
-   "playerId": 3929785,
-   "name": "Nick Westbrook-Ikhine",
-   "pos": "WR",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 4243389,
    "name": "Calvin Austin III",
    "pos": "WR",
@@ -4740,22 +4722,22 @@
    "injuryStatus": "INJURY_RESERVE"
   },
   {
-   "playerId": 4568024,
-   "name": "Josh Williams",
-   "pos": "RB",
-   "proTeam": "FA",
+   "playerId": 4429955,
+   "name": "Will Howard",
+   "pos": "QB",
+   "proTeam": "PIT",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4682652,
-   "name": "Devin Neal",
-   "pos": "RB",
-   "proTeam": "NO",
+   "playerId": 3929785,
+   "name": "Nick Westbrook-Ikhine",
+   "pos": "WR",
+   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "INJURY_RESERVE"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4259553,
@@ -4776,26 +4758,26 @@
    "injuryStatus": "INJURY_RESERVE"
   },
   {
-   "playerId": 4912052,
-   "name": "Justin Joly",
-   "pos": "TE",
-   "proTeam": "MIA",
+   "playerId": 4568024,
+   "name": "Josh Williams",
+   "pos": "RB",
+   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3120348,
-   "name": "JuJu Smith-Schuster",
-   "pos": "WR",
-   "proTeam": "FA",
+   "playerId": 4682652,
+   "name": "Devin Neal",
+   "pos": "RB",
+   "proTeam": "NO",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "QUESTIONABLE"
   },
   {
-   "playerId": 4369863,
-   "name": "Cedric Tillman",
+   "playerId": 3120348,
+   "name": "JuJu Smith-Schuster",
    "pos": "WR",
    "proTeam": "FA",
    "seasonProj": 0.0,
@@ -4812,6 +4794,24 @@
    "injuryStatus": "ACTIVE"
   },
   {
+   "playerId": 4912052,
+   "name": "Justin Joly",
+   "pos": "TE",
+   "proTeam": "MIA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4369863,
+   "name": "Cedric Tillman",
+   "pos": "WR",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
    "playerId": 4372019,
    "name": "Jerome Ford",
    "pos": "RB",
@@ -4821,28 +4821,10 @@
    "injuryStatus": "QUESTIONABLE"
   },
   {
-   "playerId": 4240631,
-   "name": "DeeJay Dallas",
-   "pos": "RB",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 3116407,
    "name": "Mason Rudolph",
    "pos": "QB",
    "proTeam": "PIT",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3886812,
-   "name": "Jake Browning",
-   "pos": "QB",
-   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -4875,9 +4857,27 @@
    "injuryStatus": "ACTIVE"
   },
   {
+   "playerId": 4240631,
+   "name": "DeeJay Dallas",
+   "pos": "RB",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4428963,
    "name": "Cade York",
    "pos": "K",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3886812,
+   "name": "Jake Browning",
+   "pos": "QB",
    "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
@@ -4902,15 +4902,6 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3059989,
-   "name": "Nick Mullens",
-   "pos": "QB",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 4696736,
    "name": "Tanner Brown",
    "pos": "K",
@@ -4918,15 +4909,6 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4565859,
-   "name": "Joe Royer",
-   "pos": "TE",
-   "proTeam": "CLE",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "OUT"
   },
   {
    "playerId": 4683243,
@@ -5001,6 +4983,15 @@
    "injuryStatus": "ACTIVE"
   },
   {
+   "playerId": 3059989,
+   "name": "Nick Mullens",
+   "pos": "QB",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4573697,
    "name": "Mason Tipton",
    "pos": "WR",
@@ -5019,13 +5010,13 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4596545,
-   "name": "CJ Dippre",
+   "playerId": 4565859,
+   "name": "Joe Royer",
    "pos": "TE",
-   "proTeam": "FA",
+   "proTeam": "CLE",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 3050481,
@@ -5185,6 +5176,15 @@
    "name": "Ja'Lynn Polk",
    "pos": "WR",
    "proTeam": "NO",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4596545,
+   "name": "CJ Dippre",
+   "pos": "TE",
+   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
