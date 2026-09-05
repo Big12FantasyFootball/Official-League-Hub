@@ -1,9 +1,9 @@
 {
- "pulledAt": "2026-09-04T15:05:06.223907+00:00",
+ "pulledAt": "2026-09-05T13:59:32.723073+00:00",
  "season": 2026,
  "source": "espn-kona_player_info",
  "scoring": "league-applied",
- "count": 587,
+ "count": 586,
  "players": [
   {
    "playerId": 3918298,
@@ -4740,15 +4740,6 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4259553,
-   "name": "Stetson Bennett IV",
-   "pos": "QB",
-   "proTeam": "LAR",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 4432775,
    "name": "Dont'e Thornton Jr.",
    "pos": "WR",
@@ -4770,7 +4761,7 @@
    "playerId": 4682652,
    "name": "Devin Neal",
    "pos": "RB",
-   "proTeam": "NO",
+   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "QUESTIONABLE"
@@ -4785,10 +4776,10 @@
    "injuryStatus": "QUESTIONABLE"
   },
   {
-   "playerId": 4037235,
-   "name": "Greg Dortch",
-   "pos": "WR",
-   "proTeam": "FA",
+   "playerId": 4259553,
+   "name": "Stetson Bennett IV",
+   "pos": "QB",
+   "proTeam": "LAR",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -4819,6 +4810,15 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 4037235,
+   "name": "Greg Dortch",
+   "pos": "WR",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 3116407,
@@ -4974,15 +4974,6 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3926231,
-   "name": "Britain Covey",
-   "pos": "WR",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 3059989,
    "name": "Nick Mullens",
    "pos": "QB",
@@ -5055,15 +5046,6 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4239086,
-   "name": "Desmond Ridder",
-   "pos": "QB",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 4429684,
    "name": "Anthony Gould",
    "pos": "WR",
@@ -5077,15 +5059,6 @@
    "name": "Jelani Woods",
    "pos": "TE",
    "proTeam": "NYJ",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4057082,
-   "name": "Mason Kinsey",
-   "pos": "WR",
-   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -5118,17 +5091,8 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4362630,
-   "name": "Terrace Marshall Jr.",
-   "pos": "WR",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4241802,
-   "name": "Jalen Reagor",
+   "playerId": 3926231,
+   "name": "Britain Covey",
    "pos": "WR",
    "proTeam": "FA",
    "seasonProj": 0.0,
@@ -5208,9 +5172,9 @@
    "injuryStatus": "INJURY_RESERVE"
   },
   {
-   "playerId": 4240573,
-   "name": "Ihmir Smith-Marsette",
-   "pos": "WR",
+   "playerId": 4239086,
+   "name": "Desmond Ridder",
+   "pos": "QB",
    "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
@@ -5228,6 +5192,15 @@
   {
    "playerId": 4362019,
    "name": "A.T. Perry",
+   "pos": "WR",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4057082,
+   "name": "Mason Kinsey",
    "pos": "WR",
    "proTeam": "FA",
    "seasonProj": 0.0,
@@ -5260,6 +5233,24 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 4362630,
+   "name": "Terrace Marshall Jr.",
+   "pos": "WR",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4241802,
+   "name": "Jalen Reagor",
+   "pos": "WR",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4372758,
