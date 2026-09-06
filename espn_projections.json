@@ -1,5 +1,5 @@
 {
- "pulledAt": "2026-09-05T13:59:32.723073+00:00",
+ "pulledAt": "2026-09-06T14:22:45.433466+00:00",
  "season": 2026,
  "source": "espn-kona_player_info",
  "scoring": "league-applied",
@@ -4659,24 +4659,6 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4429939,
-   "name": "Jawhar Jordan",
-   "pos": "RB",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4428085,
-   "name": "Luke Musgrave",
-   "pos": "TE",
-   "proTeam": "GB",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "OUT"
-  },
-  {
    "playerId": 4605951,
    "name": "CJ Daniels",
    "pos": "WR",
@@ -4695,13 +4677,22 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4431562,
-   "name": "Phil Mafah",
+   "playerId": 4429939,
+   "name": "Jawhar Jordan",
    "pos": "RB",
    "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4428085,
+   "name": "Luke Musgrave",
+   "pos": "TE",
+   "proTeam": "GB",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 3043234,
@@ -4713,6 +4704,24 @@
    "injuryStatus": "QUESTIONABLE"
   },
   {
+   "playerId": 4429955,
+   "name": "Will Howard",
+   "pos": "QB",
+   "proTeam": "PIT",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4431562,
+   "name": "Phil Mafah",
+   "pos": "RB",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4243389,
    "name": "Calvin Austin III",
    "pos": "WR",
@@ -4722,13 +4731,22 @@
    "injuryStatus": "INJURY_RESERVE"
   },
   {
-   "playerId": 4429955,
-   "name": "Will Howard",
-   "pos": "QB",
-   "proTeam": "PIT",
+   "playerId": 4432775,
+   "name": "Dont'e Thornton Jr.",
+   "pos": "WR",
+   "proTeam": "LV",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 3120348,
+   "name": "JuJu Smith-Schuster",
+   "pos": "WR",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 3929785,
@@ -4740,13 +4758,13 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4432775,
-   "name": "Dont'e Thornton Jr.",
-   "pos": "WR",
-   "proTeam": "LV",
+   "playerId": 4259553,
+   "name": "Stetson Bennett IV",
+   "pos": "QB",
+   "proTeam": "LAR",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "INJURY_RESERVE"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4568024,
@@ -4765,24 +4783,6 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "QUESTIONABLE"
-  },
-  {
-   "playerId": 3120348,
-   "name": "JuJu Smith-Schuster",
-   "pos": "WR",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "QUESTIONABLE"
-  },
-  {
-   "playerId": 4259553,
-   "name": "Stetson Bennett IV",
-   "pos": "QB",
-   "proTeam": "LAR",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4912052,
@@ -5010,24 +5010,6 @@
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 3050481,
-   "name": "Tanner Hudson",
-   "pos": "TE",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 11394,
-   "name": "Josh Johnson",
-   "pos": "QB",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 4566192,
    "name": "Joshua Karty",
    "pos": "K",
@@ -5154,6 +5136,15 @@
    "injuryStatus": "ACTIVE"
   },
   {
+   "playerId": 3050481,
+   "name": "Tanner Hudson",
+   "pos": "TE",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4602788,
    "name": "Jackson Meeks",
    "pos": "TE",
@@ -5170,6 +5161,15 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 11394,
+   "name": "Josh Johnson",
+   "pos": "QB",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4239086,
