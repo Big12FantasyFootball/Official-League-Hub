@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-07T09:38:02.240397+00:00",
+  "pulledAt": "2026-09-07T18:14:48.737024+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -1170,16 +1170,6 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4832800,
-        "name": "Denzel Boston",
-        "pos": "WR",
-        "proTeam": "CLE",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
-      },
-      {
         "playerId": 4034949,
         "name": "Eddy Pineiro",
         "pos": "K",
@@ -1197,6 +1187,16 @@
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
+        "appliedTotal": 0
+      },
+      {
+        "playerId": 4682648,
+        "name": "Malachi Fields",
+        "pos": "WR",
+        "proTeam": "NYG",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       }
     ],
@@ -4004,9 +4004,9 @@
       "roundPickNumber": 9,
       "teamId": 6,
       "playerId": 4832800,
-      "name": "Denzel Boston",
-      "pos": "WR",
-      "proTeam": "CLE",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
