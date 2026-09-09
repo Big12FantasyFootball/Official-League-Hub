@@ -383,6 +383,94 @@ function renderDraftBoard(data) {
 }
 
 /*
+ * LIVE HAWKINS CUP QUALIFICATION
+ *
+ * Week 1 decides the Cup field: top 8 of 12 scores are in, bottom 4 are out.
+ * The bracket in hawkins-cup.js deliberately stays "TBD" until Week 1 is
+ * FINAL, because elo.js filters out any matchup still marked UNDECIDED — you
+ * don't want a seeded bracket reshuffling itself all Sunday afternoon.
+ *
+ * But that left nothing to watch during the games. This is the running
+ * leaderboard: current Week 1 points, who's in, who's out, and how far the
+ * bubble teams are from the cut. It is explicitly labelled IN PROGRESS until
+ * every game is decided, then switches to FINAL and matches the bracket.
+ *
+ * It reads currentWeekMatchups (which DOES carry in-progress scores) while
+ * Week 1 is live, and falls back to seasonMatchups once the league moves on
+ * to Week 2 so the page keeps showing the real qualification result.
+ */
+function renderCupQualification(data) {
+  const el = document.getElementById("cup-qualification");
+  if (!el) return;
+
+  const live = data.live || {};
+  const period = live.currentMatchupPeriod;
+  const season = live.season;
+  const nameAt = data.managerNameAt;
+
+  // Week 1 games, wherever they currently live.
+  let games = (live.seasonMatchups || []).filter((g) => g.matchupPeriodId === 1);
+  if (!games.length && period === 1) games = live.currentWeekMatchups || [];
+
+  const played = games.filter((g) => (g.homeScore || 0) > 0 || (g.awayScore || 0) > 0);
+  if (!games.length || !played.length) {
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + "Week 1 scoring hasn't started. Once it does, this becomes a running "
+      + "leaderboard of who's in the Cup field and who's on the wrong side of "
+      + "the cut &mdash; updated every 30 minutes through Sunday and Monday night.</p>";
+    return;
+  }
+
+  const decided = games.filter((g) => g.winner && g.winner !== "UNDECIDED").length;
+  const isFinal = decided === games.length && games.length >= 6;
+
+  const scores = [];
+  games.forEach((g) => {
+    scores.push({ teamId: g.homeTeamId, pts: g.homeScore || 0 });
+    scores.push({ teamId: g.awayTeamId, pts: g.awayScore || 0 });
+  });
+  scores.sort((a, b) => b.pts - a.pts);
+
+  const SPOTS = 8;
+  const cut = scores[SPOTS - 1] ? scores[SPOTS - 1].pts : 0;
+  const firstOut = scores[SPOTS] ? scores[SPOTS].pts : 0;
+
+  const rows = scores.map((s, i) => {
+    const inField = i < SPOTS;
+    // Distance to safety for those out, cushion above the line for those in.
+    const margin = inField ? s.pts - firstOut : s.pts - cut;
+    const divider = i === SPOTS
+      ? `<div class="cq-cut"><span>Cut line &mdash; ${cut.toFixed(2)} pts`
+        + `${isFinal ? "" : " (and moving)"}</span></div>`
+      : "";
+    return divider + `<div class="cq-row${inField ? "" : " out"}">
+      <span class="cq-rank">${i + 1}</span>
+      <span class="cq-mgr">${escHtml(nameAt(s.teamId, season))}</span>
+      <span class="cq-pts">${s.pts.toFixed(2)}</span>
+      <span class="cq-margin">${margin >= 0 ? "+" : ""}${margin.toFixed(2)}</span>
+      <span class="cq-tag">${inField ? "IN" : "OUT"}</span>
+    </div>`;
+  }).join("");
+
+  const banner = isFinal
+    ? '<div class="cq-status final">Final &mdash; Cup field is set</div>'
+    : `<div class="cq-status live">In progress &mdash; ${decided} of ${games.length} games final</div>`;
+
+  el.innerHTML = banner
+    + `<div class="cq-list">
+        <div class="cq-row head"><span class="cq-rank"></span><span class="cq-mgr">Manager</span>
+        <span class="cq-pts">Week 1</span><span class="cq-margin">Margin</span><span class="cq-tag"></span></div>
+        ${rows}
+      </div>`
+    + '<p class="note" style="margin-top:1rem">'
+    + (isFinal
+        ? "These are the final Week 1 scores. The eight above the line are seeded 1&ndash;8 in the bracket below."
+        : "Margin shows how much cushion each team has above the cut, or how far out they are. "
+          + "Nothing counts until every game is final &mdash; a Monday night player can still change the field.")
+    + "</p>";
+}
+
+/*
  * "How The Board Fell" — the league-wide shape of the draft.
  *
  * The single most useful number here is mean ADP deviation by position:
@@ -547,6 +635,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderScoreboard(data);
       renderDraftBoard(data);
       renderDraftTrends(data);
+      renderCupQualification(data);
       renderRostersPage(data);
     })
     .catch((err) => console.error("B12Live load failed:", err));

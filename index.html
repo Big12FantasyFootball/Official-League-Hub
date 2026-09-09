@@ -576,6 +576,26 @@ table.sch-table tr:last-child td{border-bottom:none}
 .dg-grade.dg-A b{color:var(--gold)}
 .dg-grade.dg-D b,.dg-grade.dg-F b{color:#B3261E}
 @media(max-width:560px){.dg-card{flex-wrap:wrap}.dg-grade{order:-1;margin-left:auto}}
+/* Live Week 1 Cup qualification */
+.cq-status{font-family:'JetBrains Mono',monospace;font-size:.56rem;text-transform:uppercase;letter-spacing:.13em;padding:.5rem .9rem;border-radius:8px 8px 0 0;border:1px solid var(--border);border-bottom:none}
+.cq-status.live{background:#B3261E;color:#fff;border-color:#B3261E}
+.cq-status.final{background:var(--ink);color:#f4d876;border-color:var(--ink)}
+.cq-list{border:1px solid var(--border);border-radius:0 0 12px 12px;background:#fff;overflow:hidden}
+.cq-row{display:grid;grid-template-columns:2rem 1fr 4.4rem 4.4rem 2.6rem;gap:.7rem;align-items:center;padding:.5rem .9rem;border-bottom:1px solid var(--border);font-size:.82rem}
+.cq-row:last-child{border-bottom:none}
+.cq-row.head{font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);background:var(--bg)}
+.cq-row.out{background:#FCFBF9}
+.cq-rank{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);text-align:center}
+.cq-mgr{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cq-row.out .cq-mgr{color:var(--muted)}
+.cq-pts{font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:500;color:var(--ink);text-align:right}
+.cq-margin{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--muted);text-align:right}
+.cq-row.out .cq-margin{color:#B3261E}
+.cq-tag{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.06em;color:var(--gold);text-align:right}
+.cq-row.out .cq-tag{color:#B3261E}
+.cq-row.head .cq-pts,.cq-row.head .cq-margin{font-weight:400;color:var(--muted)}
+.cq-cut{padding:.35rem .9rem;background:var(--ink);color:#f4d876;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.11em;text-transform:uppercase}
+@media(max-width:620px){.cq-row{grid-template-columns:1.6rem 1fr 3.8rem 2.4rem}.cq-margin{display:none}}
 /* Projected Hawkins Cup field */
 .cp-list{border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
 .cp-row{display:grid;grid-template-columns:2rem 1fr 3.6rem minmax(60px,1fr) 3.2rem;gap:.7rem;align-items:center;padding:.5rem .9rem;border-bottom:1px solid var(--border);font-size:.82rem}
@@ -964,6 +984,9 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="stat-item"><strong>8</strong><span>Cup Bids</span></div>
       <div class="stat-item"><strong>$300</strong><span>Cup Prize</span></div>
     </div>
+
+    <div class="road-title" style="margin-top:2.5rem">Week 1 Qualification &mdash; Live</div>
+    <div id="cup-qualification"></div>
 
     <div class="road-title" style="margin-top:2.5rem">Projected Cup Field</div>
     <div id="cup-projection"></div>
