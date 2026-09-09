@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-08T17:14:01.062573+00:00",
+  "pulledAt": "2026-09-09T17:08:21.224399+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -7,7 +7,7 @@
   "standings": [
     {
       "teamId": 1,
-      "name": "    Unc Season",
+      "name": "Lamar the Merrier",
       "abbrev": "NNT",
       "wins": 0,
       "losses": 0,
@@ -115,8 +115,8 @@
     },
     {
       "teamId": 10,
-      "name": "Brandon's Brilliant Team",
-      "abbrev": "BBT",
+      "name": "Team Beland",
+      "abbrev": "TB",
       "wins": 0,
       "losses": 0,
       "ties": 0,
@@ -360,20 +360,20 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4429022,
-        "name": "Kayshon Boutte",
-        "pos": "WR",
-        "proTeam": "HOU",
+        "playerId": 4429013,
+        "name": "Tank Bigsby",
+        "pos": "RB",
+        "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
-        "playerId": 4429013,
-        "name": "Tank Bigsby",
-        "pos": "RB",
-        "proTeam": "PHI",
+        "playerId": 4832800,
+        "name": "Denzel Boston",
+        "pos": "WR",
+        "proTeam": "CLE",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
@@ -388,7 +388,7 @@
         "proTeam": "SF",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -762,7 +762,7 @@
         "proTeam": "NE",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -1046,7 +1046,7 @@
         "proTeam": "LAR",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -1632,7 +1632,7 @@
         "proTeam": "SF",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -1904,8 +1904,8 @@
         "name": "Carnell Tate",
         "pos": "WR",
         "proTeam": "TEN",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
@@ -1924,9 +1924,9 @@
         "name": "Mike Evans",
         "pos": "WR",
         "proTeam": "SF",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "lineupSlotId": 23,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -2006,7 +2006,7 @@
         "proTeam": "LAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -4004,9 +4004,9 @@
       "roundPickNumber": 9,
       "teamId": 6,
       "playerId": 4832800,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Denzel Boston",
+      "pos": "WR",
+      "proTeam": "CLE",
       "keeper": false
     },
     {
