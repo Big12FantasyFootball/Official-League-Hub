@@ -1,25 +1,32 @@
 name: Pull ESPN Fantasy Data
 
-# Cron is UTC. During the season the East Coast is on EDT (UTC-4) until
-# Nov 1, then EST (UTC-5). The windows below are written wide enough that
-# they still cover the games after that shift, so nothing needs editing
-# mid-season.
+# Cron is UTC. The East Coast is on EDT (UTC-4) until Nov 1, then EST
+# (UTC-5), so the windows are written wide enough to survive that shift
+# without a mid-season edit.
 #
-#   Sunday   1pm ET -> Monday 1am ET   : every 30 min  (the main slate + SNF)
-#   Monday   8pm ET -> Tuesday 1am ET  : every 30 min  (MNF)
-#   Tuesday  9am ET                    : once          (official final results)
-#   Wed-Sat  9am ET                    : once          (waivers, injuries, trades)
+# The original version only covered Sunday afternoon through Monday night.
+# That was wrong: the 2026 season OPENS on Wednesday Sep 9 (NE @ SEA, 8:20pm
+# ET) with a second game Thursday Sep 10, and Thursday Night Football runs
+# most weeks after that. Saturday games appear in December, plus the Black
+# Friday game. Rather than enumerate every exception, the nightly window now
+# covers 8pm-1am ET EVERY day, which catches every primetime kickoff on any
+# day of the week:
+#
+#   Every night  8pm ET -> 1am ET   : every 30 min  (Wed/Thu/Fri/Sat/Sun/Mon
+#                                                    primetime, incl. SNF+MNF)
+#   Sunday       9am ET -> 8pm ET   : every 30 min  (London games + main slate)
+#   Daily        9am ET             : once          (finals, waivers, injuries)
 #
 # GitHub delays scheduled runs under load, especially on the hour, so the
-# offsets are deliberately off-cadence rather than at :00.
+# minute offsets are deliberately off-cadence.
 on:
   schedule:
-    # Sunday afternoon through the small hours of Monday (17:00 Sun - 05:00 Mon UTC)
-    - cron: '7,37 17-23 * * 0'
-    - cron: '7,37 0-5 * * 1'
-    # Monday Night Football (00:00-05:00 Tue UTC = 8pm-1am ET Mon)
-    - cron: '7,37 0-5 * * 2'
-    # Daily catch-up at 9am ET (13:00 UTC) — finals, waivers, injuries
+    # Every night, 8pm-1am ET (00:00-04:59 UTC). Covers Wednesday's opener,
+    # TNF, Sunday Night Football, Monday Night Football and Saturday games.
+    - cron: '7,37 0-4 * * *'
+    # Sunday daytime, 9am-8pm ET (13:00-23:59 UTC) — London kickoffs onward.
+    - cron: '7,37 13-23 * * 0'
+    # Daily catch-up at 9am ET (13:00 UTC) — official finals, waivers, injuries
     - cron: '13 13 * * *'
   workflow_dispatch:        # lets you trigger a run manually from the Actions tab
 
