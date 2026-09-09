@@ -310,7 +310,7 @@ function renderScoreboard(data) {
     </div>`;
   }).join("");
 
-  el.innerHTML = `<div class="sb-head">Week ${week}</div>${rows}`;
+  el.innerHTML = `<div class="sb-head">Week ${week}${freshnessLabel()}</div>${rows}`;
 }
 
 function escHtml(s) {
@@ -382,6 +382,126 @@ function renderDraftBoard(data) {
     + ` &middot; ${rounds.size} rounds.</p>${html}`;
 }
 
+/* ============================================================
+   DIRECT ESPN POLLING  —  真 live scoring
+   ------------------------------------------------------------
+   GitHub Actions cron can't run faster than every 5 minutes and
+   is delayed under load, so the committed espn_data.json is a
+   30-minute snapshot at best. That's fine for Elo and records,
+   useless for watching a Sunday.
+
+   This league is PUBLIC and ESPN's read API sends permissive CORS
+   headers, which means the visitor's own browser can call ESPN
+   directly — verified from this exact origin, 200 with readable
+   JSON in ~185ms. So scores refresh every 45 seconds in the page
+   without touching GitHub at all.
+
+   Design rules:
+     - espn_data.json remains the source of truth on first paint,
+       so the page is never blank and works offline.
+     - Polling only ever ADDS freshness. Any failure (CORS change,
+       rate limit, ESPN outage) silently falls back to the
+       committed snapshot rather than blanking the board.
+     - Three consecutive failures stops polling for the session.
+     - Paused while the tab is hidden; resumes on focus. No point
+       hammering ESPN for a tab nobody is looking at.
+   ============================================================ */
+const ESPN_LEAGUE = 1480327482;
+const POLL_MS = 45000;
+const POLL_MAX_FAILURES = 3;
+let LIVE_META = null;      // { asOf: Date, source: "espn-live" | "snapshot" }
+let _pollTimer = null, _pollFails = 0, _pollStopped = false;
+
+function espnMatchupUrl(season, period) {
+  return `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${season}`
+    + `/segments/0/leagues/${ESPN_LEAGUE}?view=mMatchupScore&scoringPeriodId=${period}`;
+}
+
+// ESPN's raw schedule -> the same shape espn_pull.py writes, so every
+// renderer downstream is unaware of which source it got.
+function normalizeEspnMatchups(schedule, period) {
+  const num = (v) => (v == null ? null : Math.round(Number(v) * 100) / 100);
+  return (schedule || [])
+    .filter((m) => m.matchupPeriodId === period)
+    .map((m) => {
+      const h = m.home || {}, a = m.away || {};
+      const pick = (s, live, proj) => ({
+        score: num(s.totalPoints) || 0,
+        live: num(s.totalPointsLive != null ? s.totalPointsLive : s.totalPoints) || 0,
+        proj: num(s.totalProjectedPointsLive != null
+          ? s.totalProjectedPointsLive : s.totalProjectedPoints),
+      });
+      const H = pick(h), A = pick(a);
+      return {
+        matchupPeriodId: m.matchupPeriodId,
+        homeTeamId: h.teamId, homeScore: H.score, homeLive: H.live, homeProjected: H.proj,
+        awayTeamId: a.teamId, awayScore: A.score, awayLive: A.live, awayProjected: A.proj,
+        winner: m.winner || "UNDECIDED",
+        playoffTierType: m.playoffTierType || "NONE",
+      };
+    });
+}
+
+async function pollEspnOnce() {
+  const data = window.B12Live;
+  if (!data || !data.live) return false;
+  const season = data.live.season;
+  const period = data.live.currentMatchupPeriod || 1;
+
+  const res = await fetch(espnMatchupUrl(season, period), { cache: "no-store" });
+  if (!res.ok) throw new Error("HTTP " + res.status);
+  const json = await res.json();
+  const games = normalizeEspnMatchups(json.schedule, period);
+  if (!games.length) throw new Error("no matchups for period " + period);
+
+  // Splice the fresh scores in. seasonMatchups keeps its finished weeks;
+  // only the current period is replaced.
+  data.live.currentWeekMatchups = games;
+  const others = (data.live.seasonMatchups || []).filter((g) => g.matchupPeriodId !== period);
+  const finishedNow = games.filter((g) => g.winner && g.winner !== "UNDECIDED");
+  data.live.seasonMatchups = others.concat(finishedNow);
+
+  LIVE_META = { asOf: new Date(), source: "espn-live" };
+
+  // Re-render only what depends on live scoring.
+  try { renderScoreboard(data); } catch (e) { console.error(e); }
+  try { renderCupQualification(data); } catch (e) { console.error(e); }
+  return true;
+}
+
+function startEspnPolling() {
+  if (_pollStopped) return;
+  const tick = async () => {
+    if (document.hidden) return;               // paused while tab is in the background
+    try {
+      await pollEspnOnce();
+      _pollFails = 0;
+    } catch (err) {
+      _pollFails += 1;
+      console.warn(`ESPN live poll failed (${_pollFails}/${POLL_MAX_FAILURES}):`, err.message);
+      if (_pollFails >= POLL_MAX_FAILURES) {
+        _pollStopped = true;
+        clearInterval(_pollTimer);
+        console.warn("Live polling disabled for this session — falling back to the "
+          + "committed espn_data.json snapshot.");
+        try { renderCupQualification(window.B12Live); } catch (e) {}
+      }
+    }
+  };
+  tick();
+  _pollTimer = setInterval(tick, POLL_MS);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) tick(); });
+}
+
+function freshnessLabel() {
+  if (!LIVE_META) return "";
+  const secs = Math.max(0, Math.round((Date.now() - LIVE_META.asOf.getTime()) / 1000));
+  const when = secs < 10 ? "just now"
+    : secs < 90 ? secs + "s ago"
+    : Math.round(secs / 60) + "m ago";
+  return ` &middot; live from ESPN, ${when}`;
+}
+
 /*
  * LIVE HAWKINS CUP QUALIFICATION
  *
@@ -412,12 +532,16 @@ function renderCupQualification(data) {
   let games = (live.seasonMatchups || []).filter((g) => g.matchupPeriodId === 1);
   if (!games.length && period === 1) games = live.currentWeekMatchups || [];
 
-  const played = games.filter((g) => (g.homeScore || 0) > 0 || (g.awayScore || 0) > 0);
-  if (!games.length || !played.length) {
+  // Because the ranking is projection-based, the board is meaningful BEFORE
+  // anyone has scored a point — it shows the projected field. Only bail if we
+  // have neither points nor projections to work with.
+  const anyPoints = games.some((g) => (g.homeScore || 0) > 0 || (g.awayScore || 0) > 0);
+  const anyProj = games.some((g) => g.homeProjected != null || g.awayProjected != null);
+  if (!games.length || (!anyPoints && !anyProj)) {
     el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
-      + "Week 1 scoring hasn't started. Once it does, this becomes a running "
-      + "leaderboard of who's in the Cup field and who's on the wrong side of "
-      + "the cut &mdash; updated every 30 minutes through Sunday and Monday night.</p>";
+      + "Week 1 projections aren't available yet. Once they are, this becomes a "
+      + "running leaderboard of who's in the Cup field and who's on the wrong "
+      + "side of the cut, refreshed live from ESPN.</p>";
     return;
   }
 
@@ -475,7 +599,7 @@ function renderCupQualification(data) {
 
   const banner = isFinal
     ? '<div class="cq-status final">Final &mdash; Cup field is set</div>'
-    : `<div class="cq-status live">Projected &mdash; ${decided} of ${games.length} games final</div>`;
+    : `<div class="cq-status live">Projected &mdash; ${decided} of ${games.length} games final${freshnessLabel()}</div>`;
 
   el.innerHTML = banner
     + `<div class="cq-list">
@@ -660,6 +784,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderDraftBoard(data);
       renderDraftTrends(data);
       renderCupQualification(data);
+      startEspnPolling();   // upgrade from the 30-min snapshot to 45-second live
       renderRostersPage(data);
     })
     .catch((err) => console.error("B12Live load failed:", err));
