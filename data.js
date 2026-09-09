@@ -580,6 +580,54 @@ function renderCupQualification(data) {
   const cut = scores[SPOTS - 1] ? rankBy(scores[SPOTS - 1]) : 0;
   const firstOut = scores[SPOTS] ? rankBy(scores[SPOTS]) : 0;
 
+  // ---- Cup odds ----------------------------------------------------------
+  // Moved here from the old roster-based "Projected Cup Field", now seeded
+  // from ESPN's projections. A ranking alone implies the field is settled; it
+  // isn't, because the gap between best and worst roster (~10 pts) is small
+  // next to weekly scoring noise (~23 pts).
+  //
+  // Crucially the uncertainty SHRINKS as the week resolves: with five of six
+  // games final there is very little left to happen, so odds should harden
+  // toward 100/0. Scaling the standard deviation by the square root of the
+  // unplayed fraction does that, and lands exactly on 0 when everything is in.
+  const odds = (() => {
+    const n = scores.length;
+    const remainingFrac = Math.max(0, 1 - decided / games.length);
+    if (isFinal || remainingFrac === 0) {
+      return scores.map((_, i) => (i < SPOTS ? 1 : 0));   // decided
+    }
+    // league scoring spread, from real history where available
+    const hist = (data.history && data.history.seasons) || {};
+    const past = [];
+    Object.keys(hist).forEach((s) => (hist[s].allMatchups || []).forEach((m) => {
+      if (m.winner === "UNDECIDED" || (m.playoffTierType || "NONE") !== "NONE") return;
+      past.push(m.homeScore, m.awayScore);
+    }));
+    let sd = 23.4;
+    if (past.length >= 50) {
+      const mu = past.reduce((a, b) => a + b, 0) / past.length;
+      sd = Math.sqrt(past.reduce((a, b) => a + (b - mu) * (b - mu), 0) / past.length);
+    }
+    sd *= Math.sqrt(remainingFrac);
+
+    const mu = scores.map(rankBy);
+    let seed = 20260913;
+    const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+    const gauss = () => {
+      const u = rnd() || 1e-9, v = rnd();
+      return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+    };
+    const SIMS = 20000;
+    const made = new Array(n).fill(0);
+    const draw = new Array(n);
+    for (let s = 0; s < SIMS; s++) {
+      for (let i = 0; i < n; i++) draw[i] = { i, v: mu[i] + gauss() * sd };
+      draw.sort((a, b) => b.v - a.v);
+      for (let k = 0; k < SPOTS && k < n; k++) made[draw[k].i]++;
+    }
+    return made.map((c) => c / SIMS);
+  })();
+
   const rows = scores.map((s, i) => {
     const inField = i < SPOTS;
     const margin = inField ? rankBy(s) - firstOut : rankBy(s) - cut;
@@ -593,6 +641,8 @@ function renderCupQualification(data) {
       <span class="cq-proj">${s.proj != null ? s.proj.toFixed(2) : "&mdash;"}</span>
       <span class="cq-pts">${s.pts.toFixed(2)}</span>
       <span class="cq-margin">${margin >= 0 ? "+" : ""}${margin.toFixed(2)}</span>
+      <span class="cq-oddsbar"><span class="cq-oddsfill" style="width:${Math.round(odds[i]*100)}%"></span></span>
+      <span class="cq-odds">${Math.round(odds[i]*100)}%</span>
       <span class="cq-tag">${inField ? "IN" : "OUT"}</span>
     </div>`;
   }).join("");
@@ -605,7 +655,8 @@ function renderCupQualification(data) {
     + `<div class="cq-list">
         <div class="cq-row head"><span class="cq-rank"></span><span class="cq-mgr">Manager</span>
         <span class="cq-proj">Proj</span><span class="cq-pts">Actual</span>
-        <span class="cq-margin">Margin</span><span class="cq-tag"></span></div>
+        <span class="cq-margin">Margin</span><span class="cq-oddsbar"></span>
+        <span class="cq-odds">Cup Odds</span><span class="cq-tag"></span></div>
         ${rows}
       </div>`
     + '<p class="note" style="margin-top:1rem">'
