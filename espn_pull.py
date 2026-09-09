@@ -106,12 +106,39 @@ def parse_matchups(data, current_period=None):
             continue
         home = m.get("home", {})
         away = m.get("away", {})
+
+        # ESPN's own live projected final score for each team. This is far more
+        # useful than raw points mid-week: with only one game played, actual
+        # points rank whoever happened to have a Thursday player first, while
+        # the projection ranks by where the week is actually heading. It is
+        # opponent-adjusted and injury-aware, and it converges to the real
+        # score as games finish.
+        def proj(side):
+            if not side:
+                return None
+            v = side.get("totalProjectedPointsLive")
+            if v is None:
+                v = side.get("totalProjectedPoints")
+            return round(float(v), 2) if v is not None else None
+
+        def live(side):
+            if not side:
+                return None
+            v = side.get("totalPointsLive")
+            if v is None:
+                v = side.get("totalPoints", 0)
+            return round(float(v or 0), 2)
+
         out.append({
             "matchupPeriodId": m.get("matchupPeriodId"),
             "homeTeamId": home.get("teamId"),
             "homeScore": home.get("totalPoints", 0),
+            "homeLive": live(home),
+            "homeProjected": proj(home),
             "awayTeamId": away.get("teamId"),
             "awayScore": away.get("totalPoints", 0) if away else None,
+            "awayLive": live(away),
+            "awayProjected": proj(away),
             "winner": m.get("winner"),  # "HOME", "AWAY", "UNDECIDED"
             "playoffTierType": m.get("playoffTierType", "NONE"),
         })

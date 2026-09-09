@@ -424,28 +424,49 @@ function renderCupQualification(data) {
   const decided = games.filter((g) => g.winner && g.winner !== "UNDECIDED").length;
   const isFinal = decided === games.length && games.length >= 6;
 
+  // Ranked by ESPN's LIVE PROJECTED final score, not by points already
+  // banked. With a Wednesday opener, raw points would rank whoever happened
+  // to own a Seahawk first and leave everyone else tied on zero — technically
+  // true, completely uninformative. The projection is opponent-adjusted,
+  // injury-aware, and converges on the real number as games finish.
+  //
+  // Once every game is final the projection is moot, so the board switches to
+  // actual points, which is what the bracket seeds off.
   const scores = [];
   games.forEach((g) => {
-    scores.push({ teamId: g.homeTeamId, pts: g.homeScore || 0 });
-    scores.push({ teamId: g.awayTeamId, pts: g.awayScore || 0 });
+    scores.push({
+      teamId: g.homeTeamId,
+      pts: g.homeLive != null ? g.homeLive : (g.homeScore || 0),
+      proj: g.homeProjected,
+    });
+    scores.push({
+      teamId: g.awayTeamId,
+      pts: g.awayLive != null ? g.awayLive : (g.awayScore || 0),
+      proj: g.awayProjected,
+    });
   });
-  scores.sort((a, b) => b.pts - a.pts);
+
+  // If projections are missing (older pull, or the pull predates this field)
+  // fall back to actual points so the board still works.
+  const haveProj = scores.filter((s) => s.proj != null).length === scores.length;
+  const rankBy = (s) => (isFinal || !haveProj ? s.pts : s.proj);
+  scores.sort((a, b) => rankBy(b) - rankBy(a));
 
   const SPOTS = 8;
-  const cut = scores[SPOTS - 1] ? scores[SPOTS - 1].pts : 0;
-  const firstOut = scores[SPOTS] ? scores[SPOTS].pts : 0;
+  const cut = scores[SPOTS - 1] ? rankBy(scores[SPOTS - 1]) : 0;
+  const firstOut = scores[SPOTS] ? rankBy(scores[SPOTS]) : 0;
 
   const rows = scores.map((s, i) => {
     const inField = i < SPOTS;
-    // Distance to safety for those out, cushion above the line for those in.
-    const margin = inField ? s.pts - firstOut : s.pts - cut;
+    const margin = inField ? rankBy(s) - firstOut : rankBy(s) - cut;
     const divider = i === SPOTS
-      ? `<div class="cq-cut"><span>Cut line &mdash; ${cut.toFixed(2)} pts`
-        + `${isFinal ? "" : " (and moving)"}</span></div>`
+      ? `<div class="cq-cut"><span>Cut line &mdash; ${cut.toFixed(2)}`
+        + `${isFinal ? " pts" : " projected (and moving)"}</span></div>`
       : "";
     return divider + `<div class="cq-row${inField ? "" : " out"}">
       <span class="cq-rank">${i + 1}</span>
       <span class="cq-mgr">${escHtml(nameAt(s.teamId, season))}</span>
+      <span class="cq-proj">${s.proj != null ? s.proj.toFixed(2) : "&mdash;"}</span>
       <span class="cq-pts">${s.pts.toFixed(2)}</span>
       <span class="cq-margin">${margin >= 0 ? "+" : ""}${margin.toFixed(2)}</span>
       <span class="cq-tag">${inField ? "IN" : "OUT"}</span>
@@ -454,19 +475,22 @@ function renderCupQualification(data) {
 
   const banner = isFinal
     ? '<div class="cq-status final">Final &mdash; Cup field is set</div>'
-    : `<div class="cq-status live">In progress &mdash; ${decided} of ${games.length} games final</div>`;
+    : `<div class="cq-status live">Projected &mdash; ${decided} of ${games.length} games final</div>`;
 
   el.innerHTML = banner
     + `<div class="cq-list">
         <div class="cq-row head"><span class="cq-rank"></span><span class="cq-mgr">Manager</span>
-        <span class="cq-pts">Week 1</span><span class="cq-margin">Margin</span><span class="cq-tag"></span></div>
+        <span class="cq-proj">Proj</span><span class="cq-pts">Actual</span>
+        <span class="cq-margin">Margin</span><span class="cq-tag"></span></div>
         ${rows}
       </div>`
     + '<p class="note" style="margin-top:1rem">'
     + (isFinal
-        ? "These are the final Week 1 scores. The eight above the line are seeded 1&ndash;8 in the bracket below."
-        : "Margin shows how much cushion each team has above the cut, or how far out they are. "
-          + "Nothing counts until every game is final &mdash; a Monday night player can still change the field.")
+        ? "Final Week 1 scores. The eight above the line are seeded 1&ndash;8 in the bracket below."
+        : "<strong>Ranked by ESPN's projected final score</strong>, which is the only meaningful "
+          + "ordering until everyone has played &mdash; actual points just favour whoever owns a "
+          + "Wednesday or Thursday player. Margin is against the projected cut line. "
+          + "Nothing is settled until the last Monday night snap.")
     + "</p>";
 }
 
