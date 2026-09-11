@@ -1,5 +1,5 @@
 {
- "pulledAt": "2026-09-10T15:08:10.960829+00:00",
+ "pulledAt": "2026-09-11T15:10:24.115633+00:00",
  "season": 2026,
  "source": "espn-kona_player_info",
  "scoring": "league-applied",
@@ -201,7 +201,7 @@
    "proTeam": "KC",
    "seasonProj": 290.96,
    "weekly": 17.115,
-   "injuryStatus": "QUESTIONABLE"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4360310,
@@ -480,7 +480,7 @@
    "proTeam": "SEA",
    "seasonProj": 242.53,
    "weekly": 14.267,
-   "injuryStatus": "QUESTIONABLE"
+   "injuryStatus": "DOUBTFUL"
   },
   {
    "playerId": 4361307,
@@ -507,7 +507,7 @@
    "proTeam": "LV",
    "seasonProj": 225.29,
    "weekly": 14.08,
-   "injuryStatus": "DOUBTFUL"
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 4426354,
@@ -534,7 +534,7 @@
    "proTeam": "BAL",
    "seasonProj": 238.47,
    "weekly": 14.028,
-   "injuryStatus": "QUESTIONABLE"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4685720,
@@ -1191,7 +1191,7 @@
    "proTeam": "SF",
    "seasonProj": 160.08,
    "weekly": 9.417,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 4574716,
@@ -1947,7 +1947,7 @@
    "proTeam": "ATL",
    "seasonProj": 115.29,
    "weekly": 6.782,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 3886598,
@@ -2568,7 +2568,7 @@
    "proTeam": "DEN",
    "seasonProj": 70.01,
    "weekly": 4.118,
-   "injuryStatus": "QUESTIONABLE"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": -16010,
@@ -3243,7 +3243,7 @@
    "proTeam": "LAR",
    "seasonProj": 30.89,
    "weekly": 1.817,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 5092508,
@@ -3270,7 +3270,7 @@
    "proTeam": "SF",
    "seasonProj": 29.11,
    "weekly": 1.712,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 4431574,
@@ -3477,7 +3477,7 @@
    "proTeam": "SF",
    "seasonProj": 20.32,
    "weekly": 1.195,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 4685555,
@@ -3495,7 +3495,7 @@
    "proTeam": "LAR",
    "seasonProj": 19.52,
    "weekly": 1.148,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 4710855,
@@ -3891,7 +3891,7 @@
    "proTeam": "LAR",
    "seasonProj": 10.03,
    "weekly": 0.59,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 4360086,
@@ -3909,7 +3909,7 @@
    "proTeam": "LAR",
    "seasonProj": 9.94,
    "weekly": 0.585,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 4878695,
@@ -4080,7 +4080,7 @@
    "proTeam": "IND",
    "seasonProj": 8.81,
    "weekly": 0.518,
-   "injuryStatus": "QUESTIONABLE"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4685504,
@@ -4413,7 +4413,7 @@
    "proTeam": "NYJ",
    "seasonProj": 2.29,
    "weekly": 0.134,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "DOUBTFUL"
   },
   {
    "playerId": 4570738,
@@ -4596,19 +4596,19 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3049899,
-   "name": "Younghoe Koo",
+   "playerId": 3124679,
+   "name": "Jason Sanders",
    "pos": "K",
-   "proTeam": "FA",
+   "proTeam": "NYJ",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3124679,
-   "name": "Jason Sanders",
+   "playerId": 3049899,
+   "name": "Younghoe Koo",
    "pos": "K",
-   "proTeam": "NYJ",
+   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -4674,7 +4674,7 @@
    "proTeam": "LAR",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 4428085,
@@ -4684,15 +4684,6 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4360698,
-   "name": "Joe Milton III",
-   "pos": "QB",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4259553,
@@ -4717,6 +4708,15 @@
    "name": "Will Howard",
    "pos": "QB",
    "proTeam": "PIT",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4360698,
+   "name": "Joe Milton III",
+   "pos": "QB",
+   "proTeam": "FA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -5250,7 +5250,7 @@
    "proTeam": "MIA",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "INJURY_RESERVE"
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 4426407,
