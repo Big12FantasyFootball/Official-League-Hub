@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-11T09:03:40.885574+00:00",
+  "pulledAt": "2026-09-11T17:00:08.793892+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -918,7 +918,7 @@
         "proTeam": "NE",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 5.6
       },
       {
@@ -1554,7 +1554,7 @@
         "proTeam": "TB",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 0
       }
     ],
