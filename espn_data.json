@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-11T17:00:08.793892+00:00",
+  "pulledAt": "2026-09-12T04:09:40.073871+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -156,11 +156,11 @@
       "homeTeamId": 5,
       "homeScore": 0.0,
       "homeLive": 45.8,
-      "homeProjected": 122.26,
+      "homeProjected": 121.48,
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 9.82,
-      "awayProjected": 111.25,
+      "awayProjected": 111.1,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 7,
       "homeScore": 0.0,
       "homeLive": 28.9,
-      "homeProjected": 118.1,
+      "homeProjected": 116.12,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 111.75,
+      "awayProjected": 111.78,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 7.0,
-      "homeProjected": 109.29,
+      "homeProjected": 109.02,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 14.5,
-      "awayProjected": 119.57,
+      "awayProjected": 119.65,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 10,
       "homeScore": 0.0,
       "homeLive": 16.5,
-      "homeProjected": 108.88,
+      "homeProjected": 108.87,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 23.5,
-      "awayProjected": 94.15,
+      "awayProjected": 94.03,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 11,
       "homeScore": 0.0,
       "homeLive": 16.9,
-      "homeProjected": 128.21,
+      "homeProjected": 128.03,
       "awayTeamId": 8,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 122.5,
+      "awayProjected": 122.43,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 118.66,
+      "homeProjected": 117.08,
       "awayTeamId": 6,
       "awayScore": 0.0,
       "awayLive": 25.7,
-      "awayProjected": 107.01,
+      "awayProjected": 108.09,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -310,7 +310,7 @@
         "proTeam": "IND",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -582,7 +582,7 @@
         "name": "Malik Nabers",
         "pos": "WR",
         "proTeam": "NYG",
-        "lineupSlotId": 4,
+        "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
@@ -592,7 +592,7 @@
         "name": "Emeka Egbuka",
         "pos": "WR",
         "proTeam": "TB",
-        "lineupSlotId": 23,
+        "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
@@ -668,16 +668,6 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4685415,
-        "name": "Travis Hunter",
-        "pos": "WR",
-        "proTeam": "JAX",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
-      },
-      {
         "playerId": 3139477,
         "name": "Patrick Mahomes",
         "pos": "QB",
@@ -732,6 +722,16 @@
         "name": "Kyle Williams",
         "pos": "WR",
         "proTeam": "NE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 0
+      },
+      {
+        "playerId": 4682648,
+        "name": "Malachi Fields",
+        "pos": "WR",
+        "proTeam": "NYG",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
@@ -1130,7 +1130,7 @@
         "proTeam": "CAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -1524,7 +1524,7 @@
         "proTeam": "LAC",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -1646,7 +1646,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -2132,7 +2132,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -3566,9 +3566,9 @@
       "roundPickNumber": 3,
       "teamId": 3,
       "playerId": 4685415,
-      "name": "Travis Hunter",
-      "pos": "WR",
-      "proTeam": "JAX",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
