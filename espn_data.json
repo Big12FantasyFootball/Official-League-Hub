@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-13T09:40:53.307369+00:00",
+  "pulledAt": "2026-09-13T16:56:31.205444+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -169,7 +169,7 @@
       "homeTeamId": 7,
       "homeScore": 0.0,
       "homeLive": 28.9,
-      "homeProjected": 116.12,
+      "homeProjected": 116.96,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -182,11 +182,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 7.0,
-      "homeProjected": 109.01,
+      "homeProjected": 109.35,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 14.5,
-      "awayProjected": 119.66,
+      "awayProjected": 119.65,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 10,
       "homeScore": 0.0,
       "homeLive": 16.5,
-      "homeProjected": 108.87,
+      "homeProjected": 108.86,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 23.5,
-      "awayProjected": 94.04,
+      "awayProjected": 94.06,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,7 +208,7 @@
       "homeTeamId": 11,
       "homeScore": 0.0,
       "homeLive": 16.9,
-      "homeProjected": 128.02,
+      "homeProjected": 128.06,
       "awayTeamId": 8,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -221,11 +221,11 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 117.08,
+      "homeProjected": 115.96,
       "awayTeamId": 6,
       "awayScore": 0.0,
       "awayLive": 25.7,
-      "awayProjected": 108.09,
+      "awayProjected": 108.1,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1554,7 +1554,7 @@
         "proTeam": "TB",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       }
     ],
@@ -1656,7 +1656,7 @@
         "proTeam": "SF",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 0
       },
       {
@@ -1778,7 +1778,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -2162,7 +2162,7 @@
         "proTeam": "NO",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
