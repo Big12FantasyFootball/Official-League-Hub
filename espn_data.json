@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-12T16:15:15.462048+00:00",
+  "pulledAt": "2026-09-13T04:21:38.039941+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 1,
@@ -160,7 +160,7 @@
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 9.82,
-      "awayProjected": 111.1,
+      "awayProjected": 111.09,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 7.0,
-      "homeProjected": 109.02,
+      "homeProjected": 109.01,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 14.5,
-      "awayProjected": 119.65,
+      "awayProjected": 119.66,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -199,7 +199,7 @@
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 23.5,
-      "awayProjected": 94.03,
+      "awayProjected": 94.04,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 11,
       "homeScore": 0.0,
       "homeLive": 16.9,
-      "homeProjected": 128.03,
+      "homeProjected": 128.02,
       "awayTeamId": 8,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 122.43,
+      "awayProjected": 122.07,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
