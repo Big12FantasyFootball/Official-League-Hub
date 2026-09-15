@@ -463,9 +463,17 @@ async function pollEspnOnce() {
 
   LIVE_META = { asOf: new Date(), source: "espn-live" };
 
-  // Re-render only what depends on live scoring.
+  // Re-render only what depends on live scoring. The Cup bracket is included
+  // because it can now seed off live scores when ESPN is slow to finalise a
+  // week — see hcGetTeamWeekScores.
   try { renderScoreboard(data); } catch (e) { console.error(e); }
   try { renderCupQualification(data); } catch (e) { console.error(e); }
+  try {
+    if (typeof computeHawkinsCup === "function") {
+      data.hawkinsCup = computeHawkinsCup(data.matches, season, data.managerNameAt, data.live);
+      renderHawkinsCup(data.hawkinsCup);
+    }
+  } catch (e) { console.error(e); }
   return true;
 }
 
