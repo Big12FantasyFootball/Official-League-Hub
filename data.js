@@ -276,8 +276,15 @@ function renderEloLeaderboard(data) {
  * from nowhere in September.
  */
 function renderScoreboard(data) {
-  // Rendered in two places: the Schedule panel and the Week 1 page.
-  const targets = ["live-scoreboard", "week1-scoreboard"]
+  /*
+   * CURRENT week only — so this is the Schedule panel's board, and nothing
+   * else. It used to also fill #week1-scoreboard on the Week 1 page, which
+   * was correct for exactly as long as the current week WAS Week 1. The
+   * moment ESPN rolled over to Week 2, the Week 1 tab started showing Week 2
+   * scores under a "Live Week 1 Scoreboard" heading. #week1-scoreboard is now
+   * a mount for renderWeek1Results(), which is pinned to Week 1 by design.
+   */
+  const targets = ["live-scoreboard"]
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   if (!targets.length) return;
@@ -286,8 +293,9 @@ function renderScoreboard(data) {
   const games = (data.live && data.live.currentWeekMatchups) || [];
   const played = games.filter((g) => (g.homeScore || 0) > 0 || (g.awayScore || 0) > 0);
   if (!games.length || !played.length) {
+    const wk = (data.live && data.live.currentMatchupPeriod) || 1;
     el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
-      + 'Scores appear here once Week 1 kicks off &mdash; they update automatically '
+      + `Scores appear here once Week ${wk} kicks off &mdash; they update automatically `
       + 'through Sunday and Monday night.</p>';
     return;
   }
@@ -474,6 +482,10 @@ async function pollEspnOnce() {
       renderHawkinsCup(data.hawkinsCup);
     }
   } catch (e) { console.error(e); }
+  // Cup scoreboard AFTER the bracket recompute above — it reads data.hawkinsCup,
+  // so running it first would paint a round stale by one tick.
+  try { renderCupScoreboard(data); } catch (e) { console.error(e); }
+  try { renderWeek2(data); } catch (e) { console.error(e); }
   return true;
 }
 
@@ -834,6 +846,340 @@ function renderRostersPage(data) {
   el.innerHTML = `<div class="rp-grid">${cards}</div>`;
 }
 
+/* ===========================================================================
+ * LIVE HAWKINS CUP SCOREBOARD  +  WEEK 2 PANEL
+ *
+ * THE THING TO UNDERSTAND BEFORE READING ANY OF THIS: a Cup pairing is not an
+ * ESPN matchup. The Cup seeds 1v8 / 4v5 / 2v7 / 3v6 off Week 1 point totals.
+ * ESPN's regular-season schedule was drawn months before those seeds existed.
+ * The two only coincide by luck.
+ *
+ * In Week 2 of 2026 exactly two of the four quarterfinals are also real ESPN
+ * head-to-heads (2v7 Guarnaccia/Beland, 4v5 Carullo/Peretz). The other two —
+ * 1v8 Lisa/Hawkins and 3v6 Furnari/Sweeney — are each playing somebody else
+ * entirely, and the Cup simply compares their two weekly totals.
+ *
+ * Consequence: a manager can win their ESPN matchup and be eliminated from the
+ * Cup on the same Sunday. If this board just mirrored ESPN's scoreboard it
+ * would show the wrong opponent for half the bracket and everyone would
+ * reasonably conclude the site was broken. So it renders the CUP opponent and
+ * names the ESPN opponent underneath whenever they differ.
+ * =========================================================================== */
+
+const CUP_ROUND_NAME = { 2: "Quarterfinals", 3: "Semifinals", 4: "Final" };
+
+/*
+ * Every team's number for a given week: live-first points, ESPN's live
+ * projection, who ESPN has them playing, and whether ESPN has stamped it
+ * final. currentWeekMatchups is checked first because it is the pool the
+ * 45-second poll refreshes; seasonMatchups backfills weeks the league has
+ * already moved past.
+ */
+function cupWeekScores(live, week) {
+  const out = {};
+  const pools = [live.currentWeekMatchups || [], live.seasonMatchups || []];
+  pools.forEach((pool) => {
+    pool.forEach((g) => {
+      if ((g.matchupPeriodId != null ? g.matchupPeriodId : g.week) !== week) return;
+      const decided = !!(g.winner && g.winner !== "UNDECIDED");
+      const put = (id, pts, proj, oppId) => {
+        if (id == null || out[id]) return;   // first pool wins — it's the freshest
+        out[id] = { pts: pts || 0, proj: proj != null ? proj : null, oppId, decided };
+      };
+      put(g.homeTeamId, g.homeLive != null ? g.homeLive : g.homeScore,
+          g.homeProjected, g.awayTeamId);
+      put(g.awayTeamId, g.awayLive != null ? g.awayLive : g.awayScore,
+          g.awayProjected, g.homeTeamId);
+    });
+  });
+  return out;
+}
+
+function renderCupScoreboard(data) {
+  const targets = ["cup-scoreboard", "cup-scoreboard-2"]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  if (!targets.length) return;
+  const write = (v) => targets.forEach((t) => { t.innerHTML = v; });
+
+  const live = data.live || {};
+  const season = live.season;
+  const nameAt = data.managerNameAt;
+  const cup = data.hawkinsCup
+    || (window.B12Live && window.B12Live.hawkinsCup)
+    || (typeof computeHawkinsCup === "function"
+        ? computeHawkinsCup(data.matches, season, nameAt, live)
+        : null);
+
+  if (!cup || cup.status !== "determined") {
+    write('<p class="note" style="border:none;padding-left:0">'
+      + 'The Cup field is set the moment Week 1 goes final. Quarterfinal cards '
+      + 'appear here with live scoring as soon as the bracket exists.</p>');
+    return;
+  }
+
+  // Show the furthest round that actually has pairings, never ahead of the
+  // week the league is on. cup.sf stays empty until every QF is final, and
+  // cup.final stays null until both SFs are — so this degrades backwards on
+  // its own without needing to know the calendar.
+  const period = live.currentMatchupPeriod || 2;
+  let pairs, roundWeek;
+  if (period >= 4 && cup.final) { pairs = [cup.final]; roundWeek = 4; }
+  else if (period >= 3 && cup.sf && cup.sf.length) { pairs = cup.sf; roundWeek = 3; }
+  else { pairs = cup.qf || []; roundWeek = 2; }
+  const roundName = CUP_ROUND_NAME[roundWeek] || "Quarterfinals";
+
+  if (!pairs.length) {
+    write('<p class="note" style="border:none;padding-left:0">'
+      + `The ${roundName.toLowerCase()} fill in once the previous round is final.</p>`);
+    return;
+  }
+
+  const scores = cupWeekScores(live, roundWeek);
+  const teamNameById = {};
+  Object.keys(TEAM_MANAGER_MAP).forEach((id) => {
+    teamNameById[id] = TEAM_MANAGER_MAP[id].team;
+  });
+
+  const cards = pairs.map((p, i) => {
+    const A = p.teamA, B = p.teamB;
+    if (!A || !B) return "";
+    const sa = scores[A.teamId] || { pts: 0, proj: null, oppId: null, decided: false };
+    const sb = scores[B.teamId] || { pts: 0, proj: null, oppId: null, decided: false };
+
+    // A Cup game is over only when BOTH sides' weeks are over — which for a
+    // split pairing means two different ESPN matchups both going final.
+    const done = sa.decided && sb.decided;
+    const started = sa.pts > 0 || sb.pts > 0;
+    const aWin = done && sa.pts >= sb.pts;   // ties break to the better seed
+    const bWin = done && sb.pts > sa.pts;
+    const state = done ? "Final" : started ? "Live" : "Pregame";
+    const stateCls = done ? "final" : started ? "live" : "";
+
+    const side = (t, s, win, lose) => `<div class="cs-side${win ? " win" : ""}${lose ? " lose" : ""}">
+      <span class="cs-seed">${t.seed != null ? "#" + t.seed : "&mdash;"}</span>
+      <span class="cs-who">
+        <span class="cs-mgr">${escHtml(t.name)}</span>
+        <span class="cs-team">${escHtml(teamNameById[t.teamId] || "")}</span>
+      </span>
+      <span class="cs-nums">
+        <span class="cs-pts">${s.pts.toFixed(2)}</span>
+        <span class="cs-proj">${s.proj != null ? "proj " + s.proj.toFixed(1) : "&nbsp;"}</span>
+      </span>
+    </div>`;
+
+    // Is this Cup pairing also the ESPN head-to-head? If not, say who each of
+    // them is actually playing — otherwise the numbers look unexplainable.
+    const sameGame = sa.oppId != null && sa.oppId === B.teamId;
+    let foot;
+    if (sameGame) {
+      foot = `<div class="cs-foot"><strong>Head to head on ESPN.</strong> `
+        + `This is their real Week ${roundWeek} matchup &mdash; the Cup result and the `
+        + `regular-season result are the same game.</div>`;
+    } else {
+      const aOpp = sa.oppId != null ? nameAt(sa.oppId, season) : "&mdash;";
+      const bOpp = sb.oppId != null ? nameAt(sb.oppId, season) : "&mdash;";
+      foot = `<div class="cs-foot cs-split"><strong>Not an ESPN matchup.</strong> `
+        + `${escHtml(A.name)} plays ${escHtml(aOpp)}, ${escHtml(B.name)} plays `
+        + `${escHtml(bOpp)}. The Cup compares their two weekly totals, so either can `
+        + `win on ESPN and still go out here.</div>`;
+    }
+
+    const margin = Math.abs(sa.pts - sb.pts);
+    const marginLine = started && !done
+      ? `<div class="cs-foot">${escHtml((sa.pts >= sb.pts ? A : B).name)} leads by `
+        + `<strong>${margin.toFixed(2)}</strong>.</div>`
+      : done
+        ? `<div class="cs-foot"><strong>${escHtml((aWin ? A : B).name)}</strong> advances by `
+          + `${margin.toFixed(2)}.</div>`
+        : "";
+
+    const label = roundWeek === 4 ? "Hawkins Cup Final"
+      : `${roundName.replace(/s$/, "")} ${i + 1}`;
+
+    return `<article class="cs-card">
+      <div class="cs-top">
+        <span class="cs-label">${label}</span>
+        <span class="cs-state ${stateCls}">${state}</span>
+      </div>
+      ${side(A, sa, aWin, bWin)}
+      ${side(B, sb, bWin, aWin)}
+      ${marginLine}
+      ${foot}
+    </article>`;
+  }).join("");
+
+  write(`<div class="cs-head">
+      <span class="cs-round">${roundName} &middot; Week ${roundWeek}</span>
+      <span class="cs-when">${cup.provisional ? "Seeds provisional &middot; " : ""}`
+    + `Live scoring${freshnessLabel()}</span>
+    </div>
+    <div class="cs-grid">${cards}</div>`);
+}
+
+/*
+ * Week 2's real ESPN scoreboard — all six matchups, live points plus ESPN's
+ * projected final, tagged with what each game means for the Cup.
+ *
+ * Unlike renderScoreboard() this renders BEFORE anyone has scored, because
+ * with projections there is something worth looking at on a Wednesday.
+ */
+function renderWeek2(data) {
+  const el = document.getElementById("week2-scoreboard");
+  if (!el) return;
+
+  const live = data.live || {};
+  const season = live.season;
+  const nameAt = data.managerNameAt;
+  const week = live.currentMatchupPeriod || 2;
+
+  let games = (live.currentWeekMatchups || []).filter((g) =>
+    g.matchupPeriodId === week);
+  if (!games.length) {
+    games = (live.seasonMatchups || []).filter((g) => g.matchupPeriodId === week);
+  }
+  if (!games.length) {
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + `Week ${week} matchups aren't posted yet. They appear here automatically.</p>`;
+    return;
+  }
+
+  const cup = data.hawkinsCup || (window.B12Live && window.B12Live.hawkinsCup);
+  const seedOf = {};
+  if (cup && cup.status === "determined") {
+    (cup.qualifiers || []).forEach((q) => { seedOf[q.teamId] = q.seed; });
+  }
+  // Which teams are still alive in whichever Cup round matches this week.
+  const alive = {};
+  if (cup && cup.status === "determined" && week === 2) {
+    (cup.qf || []).forEach((m) => { alive[m.teamA.teamId] = 1; alive[m.teamB.teamId] = 1; });
+  }
+
+  const cards = games.map((g, i) => {
+    const hs = g.homeLive != null ? g.homeLive : (g.homeScore || 0);
+    const as = g.awayLive != null ? g.awayLive : (g.awayScore || 0);
+    const done = !!(g.winner && g.winner !== "UNDECIDED");
+    const started = hs > 0 || as > 0;
+    const homeWon = done && g.winner === "HOME";
+    const awayWon = done && g.winner === "AWAY";
+
+    // Both teams in this ESPN game happen to be each other's Cup opponent?
+    // Then this single game decides a quarterfinal outright.
+    const isCupGame = alive[g.homeTeamId] && alive[g.awayTeamId]
+      && (cup.qf || []).some((m) =>
+        (m.teamA.teamId === g.homeTeamId && m.teamB.teamId === g.awayTeamId)
+        || (m.teamA.teamId === g.awayTeamId && m.teamB.teamId === g.homeTeamId));
+
+    const row = (id, pts, proj, win, lose) => `<div class="w2-grow${win ? " win" : ""}${lose ? " lose" : ""}">
+      <span class="w2-gname">${escHtml(nameAt(id, season))}`
+      + `${seedOf[id] ? ` <span class="w2-cuptag">#${seedOf[id]}</span>` : ""}</span>
+      <span class="w2-gpts">${pts.toFixed(2)}</span>
+      <span class="w2-gproj">${proj != null ? proj.toFixed(1) : "&mdash;"}</span>
+    </div>`;
+
+    return `<div class="w2-game">
+      <div class="w2-gtop">
+        <span>Game ${i + 1} &middot; Week ${week}</span>
+        <span class="${isCupGame ? "w2-cuptag" : ""}">${
+          done ? "Final" : started ? "Live" : "Pregame"
+        }${isCupGame ? " &middot; Cup QF" : ""}</span>
+      </div>
+      ${row(g.awayTeamId, as, g.awayProjected, awayWon, homeWon)}
+      ${row(g.homeTeamId, hs, g.homeProjected, homeWon, awayWon)}
+    </div>`;
+  }).join("");
+
+  const finals = games.filter((g) => g.winner && g.winner !== "UNDECIDED").length;
+  el.innerHTML = `<div class="sb-head">Week ${week} &middot; ${finals} of ${games.length} final${freshnessLabel()}</div>`
+    + `<div class="w2-sb">${cards}</div>`
+    + '<p class="note">Left column is live points, right column is ESPN\'s projected final. '
+    + 'A <span style="color:#A16207">#n</span> beside a name is that manager\'s Hawkins Cup seed &mdash; '
+    + 'no number means they were eliminated in Week 1.</p>';
+}
+
+/*
+ * Week 1, final. The permanent record of how the Cup field got cut: every
+ * score, the head-to-head result, and the seed it earned. Reads seasonMatchups
+ * so it survives the league moving on to later weeks.
+ */
+function renderWeek1Results(data) {
+  // Two mounts: the Week 2 page's recap, and the Week 1 page's own board
+  // (which renderScoreboard used to own and was about to mislabel).
+  const targets = ["week1-results", "week1-scoreboard"]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  if (!targets.length) return;
+  const el = { set innerHTML(v) { targets.forEach((t) => { t.innerHTML = v; }); } };
+
+  const live = data.live || {};
+  const season = live.season;
+  const nameAt = data.managerNameAt;
+
+  let games = (live.seasonMatchups || []).filter((g) => g.matchupPeriodId === 1);
+  if (!games.length) {
+    games = (live.currentWeekMatchups || []).filter((g) => g.matchupPeriodId === 1);
+  }
+  if (!games.length) {
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + 'Week 1 results load from ESPN once the week is on file.</p>';
+    return;
+  }
+
+  const rows = [];
+  games.forEach((g) => {
+    const hs = g.homeScore != null && g.homeScore > 0
+      ? g.homeScore : (g.homeLive || 0);
+    const as = g.awayScore != null && g.awayScore > 0
+      ? g.awayScore : (g.awayLive || 0);
+    rows.push({ teamId: g.homeTeamId, pts: hs, won: hs > as });
+    rows.push({ teamId: g.awayTeamId, pts: as, won: as > hs });
+  });
+  rows.sort((a, b) => b.pts - a.pts);
+
+  const SPOTS = 8;
+  const cut = rows[SPOTS - 1] ? rows[SPOTS - 1].pts : 0;
+  const firstOut = rows[SPOTS] ? rows[SPOTS].pts : 0;
+
+  const body = rows.map((r, i) => {
+    const inField = i < SPOTS;
+    const divider = i === SPOTS
+      ? `<div class="w1r-cut"><span>Cut line &mdash; ${cut.toFixed(2)} `
+        + `&middot; missed by ${(cut - firstOut).toFixed(2)}</span></div>`
+      : "";
+    return divider + `<div class="w1r-row${inField ? "" : " out"}">
+      <span class="w1r-seed">${inField ? i + 1 : "&mdash;"}</span>
+      <span class="w1r-mgr">${escHtml(nameAt(r.teamId, season))}</span>
+      <span class="w1r-pts">${r.pts.toFixed(2)}</span>
+      <span class="w1r-rec">${r.won ? "W" : "L"}</span>
+      <span class="w1r-tag">${inField ? "SEEDED" : "ELIMINATED"}</span>
+    </div>`;
+  }).join("");
+
+  // Count the actual crossovers rather than asserting a number. The first
+  // draft of this line claimed "four managers won and still missed" — in the
+  // real Week 1 that number was ZERO, and two managers lost and got in. Any
+  // hardcoded figure here is a sentence that goes stale or was never true.
+  const wonAndMissed = rows.filter((r, i) => r.won && i >= SPOTS).length;
+  const lostAndMade = rows.filter((r, i) => !r.won && i < SPOTS).length;
+  const plural = (n, s) => `${n} manager${n === 1 ? "" : "s"} ${n === 1 ? s[0] : s[1]}`;
+  const crossovers = [];
+  if (lostAndMade) crossovers.push(plural(lostAndMade, ["lost", "lost"]) + " their matchup and still got in");
+  if (wonAndMissed) crossovers.push(plural(wonAndMissed, ["won", "won"]) + " theirs and still missed");
+
+  el.innerHTML = `<div class="w1r-list">
+      <div class="w1r-row head"><span class="w1r-seed">Seed</span>
+      <span class="w1r-mgr">Manager</span><span class="w1r-pts">Week 1</span>
+      <span class="w1r-rec">H2H</span><span class="w1r-tag">Cup</span></div>
+      ${body}
+    </div>`
+    + '<p class="note">Seeds are Week 1 points, nothing else &mdash; the head-to-head '
+    + 'column is there to show how little it mattered. '
+    + (crossovers.length
+        ? crossovers.join(", and ").replace(/^./, (c) => c.toUpperCase()) + "."
+        : "Every Cup seed also won their matchup this time &mdash; that will not hold.")
+    + "</p>";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadB12Live()
     .then((data) => {
@@ -843,6 +1189,14 @@ document.addEventListener("DOMContentLoaded", () => {
       renderDraftBoard(data);
       renderDraftTrends(data);
       renderCupQualification(data);
+      renderWeek1Results(data);
+      // Both of these want data.hawkinsCup, which hawkins-cup.js sets from its
+      // own b12live:ready listener. That listener already ran synchronously
+      // inside loadB12Live()'s dispatchEvent, before this .then() — so the
+      // bracket exists by now. renderCupScoreboard falls back to computing it
+      // itself if that ever stops being true.
+      renderCupScoreboard(data);
+      renderWeek2(data);
       startEspnPolling();   // upgrade from the 30-min snapshot to 45-second live
       renderRostersPage(data);
     })
