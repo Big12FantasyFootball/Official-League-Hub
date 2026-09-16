@@ -1018,10 +1018,13 @@ table.sch-table tr:last-child td{border-bottom:none}
 
     <div class="dn-banner" id="draftNightBanner">
       <div class="dn-banner-top">
-        <div class="dn-eyebrow">Draft Complete &middot; Rosters Locked</div>
-        <div class="dn-when">Week 1 Kickoff &middot; <em>Wednesday, September 9</em></div>
-        <div class="dn-tagline" id="cdHeadline">Rosters are set. Week 1 decides who's in the first Hawkins Cup.</div>
-        <p class="dn-copy">The draft is over and nobody lost it &mdash; yet. Week 1 is the <strong>Hawkins Cup qualifier</strong>: the eight highest scorers get a bracket spot, the other four are out before September ends. You can win your matchup and still miss the Cup. You can lose and still get in. The only number that matters that week is your own.</p>
+        <!-- All four of these are rewritten by renderCountdown() from
+             LEAGUE_CONFIG.cupSchedule. The static text below is only what
+             shows for the instant before the first tick. -->
+        <div class="dn-eyebrow" id="dnEyebrow">Hawkins Cup &middot; Quarterfinals</div>
+        <div class="dn-when" id="dnWhen">Lineups Lock &middot; <em>Thursday, September 17</em></div>
+        <div class="dn-tagline" id="cdHeadline">Eight teams left. Four survive the week.</div>
+        <p class="dn-copy" id="dnCopy">Eight teams left. Your Week 2 score is your quarterfinal score &mdash; there is no second lineup. But your Cup opponent is your <strong>seed</strong> opponent, not necessarily the team ESPN has you playing, so you can win your matchup and still be knocked out.</p>
       </div>
       <div class="dn-clock">
         <div class="dn-cell"><b id="hcdDays">&mdash;</b><span>Days</span></div>
@@ -1573,8 +1576,8 @@ table.sch-table tr:last-child td{border-bottom:none}
 
   <section class="panel" id="panel-h2h" role="tabpanel">
     <div class="panel-kicker">04 &middot; Matchups</div>
-    <h1>Head-to-Head Records &middot; 2023&ndash;2025</h1>
-    <p class="sec-lede">Historical H2H regular-season records across the 2023, 2024, and 2025 seasons. <strong>Read: row manager's record vs. column manager.</strong> Brandon Beland and Aidan Goss are new for 2026 and start at 0&ndash;0 against the field, so their rows/columns are empty for now. Timmy Hoffman and Braden Lord are inactive but remain in the historical H2H where applicable.</p>
+    <h1>Head-to-Head Records &middot; 2023&ndash;Present</h1>
+    <p class="sec-lede" id="h2hLede">Historical head-to-head regular-season records, <strong>2023 through the current season</strong>. Read: row manager's record vs. column manager. Live 2026 results are folded in from ESPN as games finish. Timmy Hoffman, Braden Lord, Dillon Jacobs and Blake Dempsey are inactive but remain in the historical grid.</p>
 
     <div class="h2h-wrap"><div id="h2hMatrix"></div></div>
     <div class="h2leg">
@@ -3430,21 +3433,83 @@ const MGRS=[
 {id:"hoffman",name:"Timmy Hoffman"},
 {id:"lord",name:"Braden Lord"},
 {id:"dempsey",name:"Blake Dempsey"},
+// The three managers new for 2026. They have no 2023-25 history, so they only
+// ever appear via LIVE_H2H. Drew Sanford was missing from this list entirely,
+// which meant he had no row and no column — his games were silently dropped on
+// the way in (ingestLiveH2H can't resolve a name that isn't here) and the
+// matrix quietly showed 11 managers instead of 12.
 {id:"goss",name:"Aidan Goss"},
-{id:"beland",name:"Brandon Beland"}
+{id:"beland",name:"Brandon Beland"},
+{id:"sanford",name:"Drew Sanford"}
 ];
+
+/*
+ * 2026 results are NOT in the MATCHUPS literal above — that is a frozen
+ * transcript of 2023-2025 and nothing writes to it. Live games arrive from
+ * ESPN via data.js, so without this the Head-to-Head matrix silently stops
+ * counting the moment the current season starts: Beland and Goss would read
+ * 0-0 against the field forever, and everyone else's record would be stuck
+ * at last year's total.
+ *
+ * The join is by manager NAME because the two sides don't share a key —
+ * MGRS uses slugs ("hawkins"), ESPN uses numeric teamIds. managerNameAt()
+ * resolves a teamId for a given SEASON, which matters: team slots get handed
+ * to new managers, so teamId 10 is Braden Lord in 2025 and Brandon Beland in
+ * 2026. Resolving per-season is what keeps those records from merging.
+ */
+var LIVE_H2H = [];
+function ingestLiveH2H(detail){
+  if (!detail || !detail.managerNameAt) return;
+  var byName = {};
+  MGRS.forEach(function(m){ byName[m.name] = m.id; });
+
+  /*
+   * Read live.seasonMatchups, NOT detail.matches.
+   *
+   * Both hold the same finished games at page load, but only seasonMatchups
+   * is rewritten by the 45-second poll (pollEspnOnce splices fresh results
+   * into it). detail.matches is built once by elo.js during loadB12Live and
+   * never rebuilt, so sourcing from it would leave this matrix frozen at
+   * whatever was final when the tab opened — a game finishing on Sunday
+   * afternoon would not show up until someone reloaded.
+   *
+   * seasonMatchups carries matchupPeriodId rather than week, and no season
+   * field, so normalise here.
+   */
+  var live = detail.live || {};
+  var season = live.season;
+  var rows = live.seasonMatchups;
+  if (!rows || !rows.length) {
+    rows = (detail.matches || []).filter(function(m){ return m.season === season; });
+  }
+
+  var out = [];
+  (rows || []).forEach(function(m){
+    if ((m.playoffTierType || "NONE") !== "NONE") return;     // regular season only
+    if (m.winner === "UNDECIDED") return;                     // still being played
+    var hs = m.homeScore, as = m.awayScore;
+    if (hs == null || as == null) return;
+    if (!(hs > 0) && !(as > 0)) return;                       // unplayed
+    var a = byName[detail.managerNameAt(m.homeTeamId, season)];
+    var b = byName[detail.managerNameAt(m.awayTeamId, season)];
+    if (!a || !b || a === b) return;
+    out.push([m.week != null ? m.week : m.matchupPeriodId, a, hs, b, as]);
+  });
+  LIVE_H2H = out;
+}
 
 function buildH2H(){
   const ids=MGRS.map(m=>m.id);
   const rec={};
   ids.forEach(a=>ids.forEach(b=>{if(a!==b)rec[a+':'+b]={w:0,l:0}}));
-  [2023,2024,2025].forEach(yr=>{
-    MATCHUPS[yr].forEach(([wk,t1,s1,t2,s2])=>{
-      const w=s1>s2?t1:t2, l=s1>s2?t2:t1;
-      if(rec[w+':'+l])rec[w+':'+l].w++;
-      if(rec[l+':'+w])rec[l+':'+w].l++;
-    });
-  });
+  const tally=([wk,t1,s1,t2,s2])=>{
+    if(s1===s2)return;                       // a tie is neither a win nor a loss
+    const w=s1>s2?t1:t2, l=s1>s2?t2:t1;
+    if(rec[w+':'+l])rec[w+':'+l].w++;
+    if(rec[l+':'+w])rec[l+':'+w].l++;
+  };
+  [2023,2024,2025].forEach(yr=>{ MATCHUPS[yr].forEach(tally); });
+  LIVE_H2H.forEach(tally);
   const names={};MGRS.forEach(m=>names[m.id]=m.name);
   let h='<table class="h2ht"><thead><tr><th class="rh">vs &rarr;</th>';
   ids.forEach(id=>h+=`<th class="ch">${names[id]}</th>`);
@@ -3464,6 +3529,31 @@ function buildH2H(){
   document.getElementById('h2hMatrix').innerHTML=h;
 }
 if(document.getElementById('h2hMatrix')) buildH2H();
+
+/*
+ * Redraw when ESPN's season lands, and again on every poll tick — a game
+ * going final mid-Sunday changes a cell. buildH2H() rebuilds the entire
+ * matrix from MATCHUPS + LIVE_H2H each time, so re-running is idempotent and
+ * can't double-count.
+ */
+function refreshH2HFromLive(detail){
+  ingestLiveH2H(detail);
+  if (document.getElementById('h2hMatrix')) buildH2H();
+  var n = LIVE_H2H.length;
+  var season = (detail && detail.live && detail.live.season) || 2026;
+  var lede = document.getElementById("h2hLede");
+  if (lede) {
+    lede.innerHTML = "Historical head-to-head regular-season records, <strong>2023 through "
+      + "the current season</strong>. Read: row manager's record vs. column manager. "
+      + (n ? "Includes " + n + " completed " + season + " game" + (n === 1 ? "" : "s")
+           + ", updated live from ESPN."
+          : "No " + season + " games have finished yet, so this is 2023&ndash;2025 only.")
+      + " Timmy Hoffman, Braden Lord, Dillon Jacobs and Blake Dempsey are inactive but "
+      + "remain in the historical grid.";
+  }
+}
+document.addEventListener("b12live:ready",   function(e){ refreshH2HFromLive(e.detail); });
+document.addEventListener("b12live:updated", function(e){ refreshH2HFromLive(e.detail); });
 
 // year sub-tabs inside Season History
 (function(){
@@ -12694,6 +12784,40 @@ const LEAGUE_CONFIG = {
   week1KickoffDateTime: "2026-09-09T20:20:00-04:00",
   week1KickoffLabel: "Wednesday, September 9 &middot; 8:20 PM ET",
   week1SundayLabel: "Sunday, September 13",
+  /*
+   * Every deadline the home-page clock counts down to, in order.
+   *
+   * The countdown used to point at a single fixed date (draft night, then
+   * Week 1 kickoff). That works right up until the date passes, at which
+   * point the clock sticks on 0:00:00 and the banner keeps insisting Week 1
+   * is about to start — which is exactly what it was doing. A list the clock
+   * walks forward through can't get stuck: it always shows the next thing
+   * that hasn't happened, and says so plainly when the season runs out.
+   *
+   * Lock times are each NFL week's first kickoff (Thursday 8:15 PM ET, per
+   * ESPN's 2026 schedule), because that is when the first lineups lock.
+   * Explicit -04:00 (EDT) so it's the same instant in every time zone.
+   */
+  cupSchedule: [
+    { week: 2, round: "Quarterfinals", lock: "2026-09-17T20:15:00-04:00",
+      label: "Thursday, September 17 &middot; 8:15 PM ET",
+      eyebrow: "Hawkins Cup &middot; Quarterfinals",
+      copy: "Eight teams left. Your Week 2 score is your quarterfinal score &mdash; "
+          + "there is no second lineup. But your Cup opponent is your <strong>seed</strong> "
+          + "opponent, not necessarily the team ESPN has you playing, so you can win your "
+          + "matchup and still be knocked out." },
+    { week: 3, round: "Semifinals", lock: "2026-09-24T20:15:00-04:00",
+      label: "Thursday, September 24 &middot; 8:15 PM ET",
+      eyebrow: "Hawkins Cup &middot; Semifinals",
+      copy: "Four teams left. One weekend from the final, and still no separate "
+          + "lineup to hide behind &mdash; whatever you score in the regular season is "
+          + "what you carry into the bracket." },
+    { week: 4, round: "Final", lock: "2026-10-01T20:15:00-04:00",
+      label: "Thursday, October 1 &middot; 8:15 PM ET",
+      eyebrow: "Hawkins Cup &middot; Final",
+      copy: "Two teams, one weekend, $300 and the first Hawkins Cup. Everything "
+          + "since draft night comes down to a single score." },
+  ],
   // The real, locked-in 2026 order — drawn and final. Slot 1 drafts first.
   officialDraftOrder: [
     "goss",        // 1
@@ -14215,24 +14339,57 @@ if (typeof module !== "undefined") {
     });
   }
 
-  // The draft is done, so the clock now counts to Week 1 kickoff — which is
-  // also Hawkins Cup qualifying night. Explicit -04:00 (EDT) so 8:20 PM
-  // Eastern is the same instant for every manager, whatever zone they're in.
-  var WEEK1_FALLBACK = "2026-09-09T20:20:00-04:00";
-  function draftTarget(){
-    var t = new Date(LEAGUE_CONFIG.week1KickoffDateTime || WEEK1_FALLBACK);
-    return isNaN(t.getTime()) ? new Date(WEEK1_FALLBACK) : t;
+  /*
+   * The clock walks forward through LEAGUE_CONFIG.cupSchedule instead of
+   * pointing at one fixed date.
+   *
+   * The bug this replaces: the target was hardcoded to Week 1 kickoff
+   * (Sept 9). Once that passed, `diff` went permanently negative, the clock
+   * froze at 0/0/0 and the banner announced "WEEK 1 IS LIVE" indefinitely —
+   * a week after Week 1 ended. Any single fixed date has that failure mode
+   * built in; the only real fix is for the clock to know what comes next.
+   *
+   * nextDeadline() returns the first entry whose lock is still in the future,
+   * or null when the Cup is over. Null is a real state with its own copy, not
+   * a fallback to the last date.
+   */
+  function cupSchedule(){
+    var s = (LEAGUE_CONFIG && LEAGUE_CONFIG.cupSchedule) || [];
+    return s.filter(function(e){ return e && !isNaN(new Date(e.lock).getTime()); });
+  }
+  function nextDeadline(now){
+    var t = (now || new Date()).getTime();
+    var found = null;
+    cupSchedule().forEach(function(e){
+      if (found) return;
+      if (new Date(e.lock).getTime() > t) found = e;
+    });
+    return found;
+  }
+  // Which round is currently being PLAYED — i.e. the last one whose lock has
+  // passed. Used for the "live" banner so it names the right round.
+  function currentRound(now){
+    var t = (now || new Date()).getTime();
+    var cur = null;
+    cupSchedule().forEach(function(e){
+      if (new Date(e.lock).getTime() <= t) cur = e;
+    });
+    return cur;
   }
 
-  function renderCountdown(){
-    var target = draftTarget();
-    var now = new Date();
-    var diff = target - now;
-    var live = diff <= 0;
-    var d = Math.max(0, diff);
+  function renderCountdown(now){
+    now = now || new Date();
+    var next = nextDeadline(now);
+    var playing = currentRound(now);
+    var d = next ? Math.max(0, new Date(next.lock) - now) : 0;
+
     var set = function(id, val){
       var el2 = document.getElementById(id);
       if (el2) el2.textContent = val;
+    };
+    var setHtml = function(id, val){
+      var el2 = document.getElementById(id);
+      if (el2) el2.innerHTML = val;
     };
     var parts = {
       Days:  Math.floor(d/86400000),
@@ -14242,23 +14399,47 @@ if (typeof module !== "undefined") {
     };
     // "cd*" = the Draft Center clock, "hcd*" = the home-page banner clock.
     Object.keys(parts).forEach(function(k){
-      set("cd"+k, parts[k]);
-      set("hcd"+k, parts[k]);
+      set("cd"+k, next ? parts[k] : "—");
+      set("hcd"+k, next ? parts[k] : "—");
     });
 
     var head = document.getElementById("cdHeadline");
+    var days = Math.floor(d/86400000);
+
+    if (!next){
+      // Cup is over. Say that, rather than counting down to nothing.
+      setHtml("dnEyebrow", "Hawkins Cup &middot; Complete");
+      setHtml("dnWhen", "The bracket is finished");
+      setHtml("dnCopy", "Every Cup round has been played. The bracket and the full "
+        + "result are on the <strong>Hawkins Cup</strong> tab.");
+      if (head){
+        head.textContent = "The Hawkins Cup is decided.";
+        head.classList.remove("live");
+      }
+      return;
+    }
+
+    setHtml("dnEyebrow", next.eyebrow || ("Hawkins Cup &middot; " + next.round));
+    setHtml("dnCopy", next.copy || "");
+
+    if (playing && playing.week === next.week - 1) {
+      // Mid-week: the previous round's games are still running.
+      setHtml("dnWhen", playing.round + " In Progress &middot; <em>Live Now</em>");
+    } else {
+      setHtml("dnWhen", "Lineups Lock &middot; <em>" + (next.label || next.round) + "</em>");
+    }
+
     if (head){
-      if (live){
-        head.textContent = "WEEK 1 IS LIVE. Lineups are locked. The Cup is being decided right now.";
+      head.classList.remove("live");
+      if (d === 0){
+        head.textContent = next.round + " lineups are locked. It's being decided right now.";
         head.classList.add("live");
       } else {
-        var days = Math.floor(d/86400000);
         head.textContent =
-          days === 0 ? "Tonight. Set your lineup — Cup seeding starts the second kickoff happens."
-        : days === 1 ? "Tomorrow night. Eight teams make the Cup. Four watch."
-        : days <= 3  ? "Kickoff week. Every Week 1 point is a Hawkins Cup seeding point."
-        : "Rosters are set. Week 1 decides who's in the first Hawkins Cup.";
-        head.classList.remove("live");
+          days === 0 ? "Tonight. " + next.round + " lineups lock at kickoff."
+        : days === 1 ? "Tomorrow night. Win or go home in the " + next.round + "."
+        : days <= 3  ? next.round + " week. Your regular-season score is your Cup score."
+        : "Week " + next.week + " is the " + next.round + ". No second lineup, no second chance.";
       }
     }
   }

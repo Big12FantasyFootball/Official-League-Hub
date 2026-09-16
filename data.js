@@ -486,6 +486,19 @@ async function pollEspnOnce() {
   // so running it first would paint a round stale by one tick.
   try { renderCupScoreboard(data); } catch (e) { console.error(e); }
   try { renderWeek2(data); } catch (e) { console.error(e); }
+  try { renderWeek1Results(data); } catch (e) { console.error(e); }
+
+  /*
+   * Tell the page a poll landed. index.html's Head-to-Head matrix listens for
+   * this to fold newly-final games into its grid; without it the matrix would
+   * only ever reflect what was final when the tab was opened, because
+   * buildH2H() runs inline at parse time and data.matches is never rebuilt.
+   *
+   * Same detail object as b12live:ready, so a listener can handle both.
+   */
+  try {
+    document.dispatchEvent(new CustomEvent("b12live:updated", { detail: data }));
+  } catch (e) { console.error(e); }
   return true;
 }
 
