@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-16T04:24:15.890834+00:00",
+  "pulledAt": "2026-09-16T09:27:41.628348+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -156,7 +156,7 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 111.76,
+      "homeProjected": 116.32,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -182,11 +182,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 125.78,
+      "homeProjected": 128.1,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 123.12,
+      "awayProjected": 123.64,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,7 +208,7 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 123.05,
+      "homeProjected": 125.44,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -399,26 +399,6 @@
         "appliedTotal": 7.0
       },
       {
-        "playerId": 4567104,
-        "name": "Will Reichard",
-        "pos": "K",
-        "proTeam": "MIN",
-        "lineupSlotId": 17,
-        "starter": true,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 7.0
-      },
-      {
-        "playerId": 4429013,
-        "name": "Tank Bigsby",
-        "pos": "RB",
-        "proTeam": "PHI",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0.3
-      },
-      {
         "playerId": 4870795,
         "name": "Makai Lemon",
         "pos": "WR",
@@ -437,6 +417,46 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 18.0
+      },
+      {
+        "playerId": 4697745,
+        "name": "Tyler Loop",
+        "pos": "K",
+        "proTeam": "BAL",
+        "lineupSlotId": 17,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 14.0
+      },
+      {
+        "playerId": 3046439,
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "proTeam": "NE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 5.6
+      },
+      {
+        "playerId": 4685720,
+        "name": "Bryce Young",
+        "pos": "QB",
+        "proTeam": "CAR",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 31.44
+      },
+      {
+        "playerId": 4832955,
+        "name": "Emmett Johnson",
+        "pos": "RB",
+        "proTeam": "KC",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 8.8
       }
     ],
     "2": [
@@ -713,16 +733,6 @@
         "appliedTotal": 21.66
       },
       {
-        "playerId": -16008,
-        "name": "Lions D/ST",
-        "pos": "DST",
-        "proTeam": "DET",
-        "lineupSlotId": 16,
-        "starter": true,
-        "injuryStatus": null,
-        "appliedTotal": 5.0
-      },
-      {
         "playerId": 4819231,
         "name": "Kaleb Johnson",
         "pos": "RB",
@@ -771,6 +781,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 4.5
+      },
+      {
+        "playerId": -16027,
+        "name": "Buccaneers D/ST",
+        "pos": "DST",
+        "proTeam": "TB",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 8.0
       }
     ],
     "4": [
@@ -905,16 +925,6 @@
         "appliedTotal": 11.4
       },
       {
-        "playerId": -16010,
-        "name": "Titans D/ST",
-        "pos": "DST",
-        "proTeam": "TEN",
-        "lineupSlotId": 16,
-        "starter": true,
-        "injuryStatus": null,
-        "appliedTotal": -1.0
-      },
-      {
         "playerId": 4429086,
         "name": "Michael Mayer",
         "pos": "TE",
@@ -925,14 +935,24 @@
         "appliedTotal": 9.2
       },
       {
-        "playerId": 4832800,
-        "name": "Denzel Boston",
+        "playerId": 4569559,
+        "name": "Devaughn Vele",
         "pos": "WR",
-        "proTeam": "CLE",
+        "proTeam": "NO",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 13.9
+        "appliedTotal": 19.9
+      },
+      {
+        "playerId": -16003,
+        "name": "Bears D/ST",
+        "pos": "DST",
+        "proTeam": "CHI",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 2.0
       }
     ],
     "5": [
@@ -1095,6 +1115,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 9.2
+      },
+      {
+        "playerId": 4040761,
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "proTeam": "NYG",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 13.8
       }
     ],
     "6": [
@@ -1239,16 +1269,6 @@
         "appliedTotal": 10.0
       },
       {
-        "playerId": -16030,
-        "name": "Jaguars D/ST",
-        "pos": "DST",
-        "proTeam": "JAX",
-        "lineupSlotId": 16,
-        "starter": true,
-        "injuryStatus": null,
-        "appliedTotal": 14.0
-      },
-      {
         "playerId": 4576297,
         "name": "AJ Barner",
         "pos": "TE",
@@ -1257,6 +1277,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 3.3
+      },
+      {
+        "playerId": -16025,
+        "name": "49ers D/ST",
+        "pos": "DST",
+        "proTeam": "SF",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 9.0
       }
     ],
     "7": [
@@ -4063,9 +4093,9 @@
       "roundPickNumber": 9,
       "teamId": 6,
       "playerId": 4832800,
-      "name": "Denzel Boston",
-      "pos": "WR",
-      "proTeam": "CLE",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -4129,9 +4159,9 @@
       "roundPickNumber": 3,
       "teamId": 3,
       "playerId": 4429013,
-      "name": "Tank Bigsby",
-      "pos": "RB",
-      "proTeam": "PHI",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -4173,9 +4203,9 @@
       "roundPickNumber": 7,
       "teamId": 1,
       "playerId": 4567104,
-      "name": "Will Reichard",
-      "pos": "K",
-      "proTeam": "MIN",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -4294,9 +4324,9 @@
       "roundPickNumber": 6,
       "teamId": 1,
       "playerId": 3046439,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Hunter Henry",
+      "pos": "TE",
+      "proTeam": "NE",
       "keeper": false
     },
     {
@@ -4327,9 +4357,9 @@
       "roundPickNumber": 9,
       "teamId": 6,
       "playerId": -16030,
-      "name": "Jaguars D/ST",
-      "pos": "DST",
-      "proTeam": "JAX",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -4338,9 +4368,9 @@
       "roundPickNumber": 10,
       "teamId": 3,
       "playerId": -16008,
-      "name": "Lions D/ST",
-      "pos": "DST",
-      "proTeam": "DET",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
