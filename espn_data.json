@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-17T09:36:42.077500+00:00",
+  "pulledAt": "2026-09-17T17:36:17.966019+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -419,16 +419,6 @@
         "appliedTotal": 14.0
       },
       {
-        "playerId": 3046439,
-        "name": "Hunter Henry",
-        "pos": "TE",
-        "proTeam": "NE",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 5.6
-      },
-      {
         "playerId": 4685720,
         "name": "Bryce Young",
         "pos": "QB",
@@ -457,6 +447,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 15.3
+      },
+      {
+        "playerId": 3117256,
+        "name": "Dalton Schultz",
+        "pos": "TE",
+        "proTeam": "HOU",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 7.5
       }
     ],
     "2": [
@@ -753,16 +753,6 @@
         "appliedTotal": 8.0
       },
       {
-        "playerId": 4682648,
-        "name": "Malachi Fields",
-        "pos": "WR",
-        "proTeam": "NYG",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 4.5
-      },
-      {
         "playerId": -16027,
         "name": "Buccaneers D/ST",
         "pos": "DST",
@@ -791,6 +781,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 14.3
+      },
+      {
+        "playerId": 4429022,
+        "name": "Kayshon Boutte",
+        "pos": "WR",
+        "proTeam": "HOU",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 3.1
       }
     ],
     "4": [
@@ -1279,14 +1279,14 @@
         "appliedTotal": 9.0
       },
       {
-        "playerId": 4686361,
-        "name": "Cam Little",
-        "pos": "K",
-        "proTeam": "JAX",
+        "playerId": 4686422,
+        "name": "Xavier Hutchinson",
+        "pos": "WR",
+        "proTeam": "HOU",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 12.0
+        "appliedTotal": 6.2
       }
     ],
     "7": [
@@ -4104,9 +4104,9 @@
       "roundPickNumber": 10,
       "teamId": 3,
       "playerId": 4686361,
-      "name": "Cam Little",
-      "pos": "K",
-      "proTeam": "JAX",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -4324,9 +4324,9 @@
       "roundPickNumber": 6,
       "teamId": 1,
       "playerId": 3046439,
-      "name": "Hunter Henry",
-      "pos": "TE",
-      "proTeam": "NE",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
