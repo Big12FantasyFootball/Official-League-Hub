@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-17T04:30:16.367461+00:00",
+  "pulledAt": "2026-09-17T09:36:42.077500+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -743,16 +743,6 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4569603,
-        "name": "Malik Washington",
-        "pos": "WR",
-        "proTeam": "MIA",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 6.3
-      },
-      {
         "playerId": 17372,
         "name": "Chris Boswell",
         "pos": "K",
@@ -761,16 +751,6 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 8.0
-      },
-      {
-        "playerId": 4613202,
-        "name": "Kyle Williams",
-        "pos": "WR",
-        "proTeam": "NE",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
       },
       {
         "playerId": 4682648,
@@ -791,6 +771,26 @@
         "starter": true,
         "injuryStatus": null,
         "appliedTotal": 8.0
+      },
+      {
+        "playerId": 2991662,
+        "name": "Mack Hollins",
+        "pos": "WR",
+        "proTeam": "NE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 9.1
+      },
+      {
+        "playerId": 3051876,
+        "name": "Evan Engram",
+        "pos": "TE",
+        "proTeam": "DEN",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 14.3
       }
     ],
     "4": [
@@ -1277,6 +1277,16 @@
         "starter": true,
         "injuryStatus": null,
         "appliedTotal": 9.0
+      },
+      {
+        "playerId": 4686361,
+        "name": "Cam Little",
+        "pos": "K",
+        "proTeam": "JAX",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 12.0
       }
     ],
     "7": [
@@ -4094,9 +4104,9 @@
       "roundPickNumber": 10,
       "teamId": 3,
       "playerId": 4686361,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Cam Little",
+      "pos": "K",
+      "proTeam": "JAX",
       "keeper": false
     },
     {
