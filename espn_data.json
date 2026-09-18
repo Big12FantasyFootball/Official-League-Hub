@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-18T04:14:52.621464+00:00",
+  "pulledAt": "2026-09-18T09:08:37.320524+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -160,7 +160,7 @@
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 23.3,
-      "awayProjected": 118.43,
+      "awayProjected": 121.25,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -173,7 +173,7 @@
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 50.58,
-      "awayProjected": 123.07,
+      "awayProjected": 120.88,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -1431,16 +1431,6 @@
         "appliedTotal": 1.4
       },
       {
-        "playerId": -16016,
-        "name": "Vikings D/ST",
-        "pos": "DST",
-        "proTeam": "MIN",
-        "lineupSlotId": 16,
-        "starter": true,
-        "injuryStatus": null,
-        "appliedTotal": 5.0
-      },
-      {
         "playerId": 4869645,
         "name": "Caleb Douglas",
         "pos": "WR",
@@ -1449,6 +1439,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 14.4
+      },
+      {
+        "playerId": -16033,
+        "name": "Ravens D/ST",
+        "pos": "DST",
+        "proTeam": "BAL",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 8.0
       }
     ],
     "8": [
@@ -1783,6 +1783,16 @@
         "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 8.0
+      },
+      {
+        "playerId": 4569603,
+        "name": "Malik Washington",
+        "pos": "WR",
+        "proTeam": "MIA",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 6.3
       }
     ],
     "10": [
@@ -1811,8 +1821,8 @@
         "name": "Ladd McConkey",
         "pos": "WR",
         "proTeam": "LAC",
-        "lineupSlotId": 4,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 19.2
       },
@@ -1841,8 +1851,8 @@
         "name": "Rome Odunze",
         "pos": "WR",
         "proTeam": "CHI",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 4,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.2
       },
@@ -4313,9 +4323,9 @@
       "roundPickNumber": 5,
       "teamId": 12,
       "playerId": -16033,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Ravens D/ST",
+      "pos": "DST",
+      "proTeam": "BAL",
       "keeper": false
     },
     {
@@ -4390,9 +4400,9 @@
       "roundPickNumber": 12,
       "teamId": 7,
       "playerId": -16016,
-      "name": "Vikings D/ST",
-      "pos": "DST",
-      "proTeam": "MIN",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     }
   ]
