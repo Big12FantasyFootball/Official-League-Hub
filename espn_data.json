@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-18T09:08:37.320524+00:00",
+  "pulledAt": "2026-09-18T17:03:34.182370+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -160,7 +160,7 @@
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 23.3,
-      "awayProjected": 121.25,
+      "awayProjected": 122.4,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -733,16 +733,6 @@
         "appliedTotal": 21.66
       },
       {
-        "playerId": 4819231,
-        "name": "Kaleb Johnson",
-        "pos": "RB",
-        "proTeam": "GB",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
-      },
-      {
         "playerId": 17372,
         "name": "Chris Boswell",
         "pos": "K",
@@ -791,6 +781,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 3.1
+      },
+      {
+        "playerId": 4429835,
+        "name": "George Holani",
+        "pos": "RB",
+        "proTeam": "SEA",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 2.9
       }
     ],
     "4": [
@@ -1053,7 +1053,7 @@
         "proTeam": "CAR",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 33.8
       },
       {
@@ -1345,8 +1345,8 @@
         "name": "Michael Wilson",
         "pos": "WR",
         "proTeam": "ARI",
-        "lineupSlotId": 4,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 10.6
       },
@@ -1395,8 +1395,8 @@
         "name": "Xavier Worthy",
         "pos": "WR",
         "proTeam": "KC",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 4,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 4.8
       },
