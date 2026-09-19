@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-18T17:03:34.182370+00:00",
+  "pulledAt": "2026-09-19T04:11:18.386281+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -156,11 +156,11 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 116.19,
+      "homeProjected": 116.65,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 23.3,
-      "awayProjected": 122.4,
+      "awayProjected": 121.36,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 11,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 126.92,
+      "homeProjected": 126.19,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 50.58,
-      "awayProjected": 120.88,
+      "awayProjected": 120.55,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 22.5,
-      "homeProjected": 140.52,
+      "homeProjected": 134.21,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 35.2,
-      "awayProjected": 138.35,
+      "awayProjected": 137.08,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 122.89,
+      "homeProjected": 123.23,
       "awayTeamId": 8,
       "awayScore": 0.0,
       "awayLive": 17.2,
-      "awayProjected": 127.4,
+      "awayProjected": 123.43,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 12.1,
-      "homeProjected": 115.0,
+      "homeProjected": 111.38,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 116.2,
+      "awayProjected": 116.46,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 2,
       "homeScore": 0.0,
       "homeLive": 7.0,
-      "homeProjected": 122.06,
+      "homeProjected": 121.99,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 40.82,
-      "awayProjected": 134.3,
+      "awayProjected": 134.19,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -333,9 +333,9 @@
         "name": "George Kittle",
         "pos": "TE",
         "proTeam": "SF",
-        "lineupSlotId": 6,
-        "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 3.2
       },
       {
@@ -365,7 +365,7 @@
         "proTeam": "IND",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 10.1
       },
       {
@@ -453,8 +453,8 @@
         "name": "Dalton Schultz",
         "pos": "TE",
         "proTeam": "HOU",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 6,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.5
       }
@@ -809,9 +809,9 @@
         "name": "Brock Bowers",
         "pos": "TE",
         "proTeam": "LV",
-        "lineupSlotId": 6,
-        "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 0
       },
       {
@@ -929,8 +929,8 @@
         "name": "Michael Mayer",
         "pos": "TE",
         "proTeam": "LV",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 6,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 9.2
       },
@@ -993,7 +993,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 32.4
       },
       {
@@ -1135,7 +1135,7 @@
         "proTeam": "LAR",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 12.4
       },
       {
@@ -1153,9 +1153,9 @@
         "name": "Nico Collins",
         "pos": "WR",
         "proTeam": "HOU",
-        "lineupSlotId": 4,
-        "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "OUT",
         "appliedTotal": 21.2
       },
       {
@@ -1213,8 +1213,8 @@
         "name": "Quentin Johnston",
         "pos": "WR",
         "proTeam": "LAC",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 4,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 3.7
       },
@@ -1377,7 +1377,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 20.4
       },
       {
@@ -1477,9 +1477,9 @@
         "name": "Zay Flowers",
         "pos": "WR",
         "proTeam": "BAL",
-        "lineupSlotId": 4,
-        "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 26.0
       },
       {
@@ -1497,7 +1497,7 @@
         "name": "Luther Burden III",
         "pos": "WR",
         "proTeam": "CHI",
-        "lineupSlotId": 23,
+        "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 9.5
@@ -1529,7 +1529,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 7.0
       },
       {
@@ -1593,16 +1593,6 @@
         "appliedTotal": 0.9
       },
       {
-        "playerId": -16024,
-        "name": "Chargers D/ST",
-        "pos": "DST",
-        "proTeam": "LAC",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": null,
-        "appliedTotal": 0
-      },
-      {
         "playerId": -16009,
         "name": "Packers D/ST",
         "pos": "DST",
@@ -1621,6 +1611,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 16.4
+      },
+      {
+        "playerId": 4360939,
+        "name": "Rashod Bateman",
+        "pos": "WR",
+        "proTeam": "BAL",
+        "lineupSlotId": 23,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 0
       }
     ],
     "9": [
@@ -1731,7 +1731,7 @@
         "proTeam": "MIN",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": -0.38
       },
       {
@@ -1761,7 +1761,7 @@
         "proTeam": "NO",
         "lineupSlotId": 6,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 14.4
       },
       {
@@ -2207,7 +2207,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 12.2
       },
       {
@@ -4246,9 +4246,9 @@
       "roundPickNumber": 10,
       "teamId": 8,
       "playerId": -16024,
-      "name": "Chargers D/ST",
-      "pos": "DST",
-      "proTeam": "LAC",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
