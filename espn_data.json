@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-20T09:25:02.333932+00:00",
+  "pulledAt": "2026-09-20T16:45:32.446912+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -160,7 +160,7 @@
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 23.3,
-      "awayProjected": 121.33,
+      "awayProjected": 121.88,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 11,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 126.19,
+      "homeProjected": 126.16,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 50.58,
-      "awayProjected": 120.59,
+      "awayProjected": 120.6,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,7 +182,7 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 22.5,
-      "homeProjected": 134.28,
+      "homeProjected": 134.31,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 35.2,
@@ -195,7 +195,7 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 123.28,
+      "homeProjected": 123.31,
       "awayTeamId": 8,
       "awayScore": 0.0,
       "awayLive": 17.2,
@@ -208,7 +208,7 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 12.1,
-      "homeProjected": 111.42,
+      "homeProjected": 111.43,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -627,7 +627,7 @@
         "name": "Ja'Marr Chase",
         "pos": "WR",
         "proTeam": "CIN",
-        "lineupSlotId": 4,
+        "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 3.2
@@ -647,7 +647,7 @@
         "name": "Emeka Egbuka",
         "pos": "WR",
         "proTeam": "TB",
-        "lineupSlotId": 23,
+        "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.3
@@ -821,7 +821,7 @@
         "proTeam": "NO",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 28.2
       },
       {
@@ -1185,7 +1185,7 @@
         "proTeam": "CIN",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 14.16
       },
       {
@@ -1279,14 +1279,14 @@
         "appliedTotal": 9.0
       },
       {
-        "playerId": 4686422,
-        "name": "Xavier Hutchinson",
-        "pos": "WR",
-        "proTeam": "HOU",
+        "playerId": 4570037,
+        "name": "Terrance Ferguson",
+        "pos": "TE",
+        "proTeam": "LAR",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 6.2
+        "appliedTotal": 0
       }
     ],
     "7": [
@@ -4312,9 +4312,9 @@
       "roundPickNumber": 4,
       "teamId": 11,
       "playerId": 4570037,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Terrance Ferguson",
+      "pos": "TE",
+      "proTeam": "LAR",
       "keeper": false
     },
     {
