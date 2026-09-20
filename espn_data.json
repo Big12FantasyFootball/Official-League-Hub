@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-19T16:25:18.895135+00:00",
+  "pulledAt": "2026-09-20T04:30:39.761868+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -156,7 +156,7 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 116.67,
+      "homeProjected": 116.65,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 23.3,
@@ -169,11 +169,11 @@
       "homeTeamId": 11,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 126.2,
+      "homeProjected": 126.19,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 50.58,
-      "awayProjected": 120.58,
+      "awayProjected": 120.59,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 22.5,
-      "homeProjected": 134.26,
+      "homeProjected": 134.28,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 35.2,
-      "awayProjected": 137.06,
+      "awayProjected": 137.07,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -225,7 +225,7 @@
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 40.82,
-      "awayProjected": 134.24,
+      "awayProjected": 134.23,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -355,7 +355,7 @@
         "proTeam": "PIT",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 8.8
       },
       {
@@ -1479,7 +1479,7 @@
         "proTeam": "BAL",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 26.0
       },
       {
@@ -1721,7 +1721,7 @@
         "proTeam": "SF",
         "lineupSlotId": 21,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 0
       },
       {
