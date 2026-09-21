@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-21T10:09:38.923172+00:00",
+  "pulledAt": "2026-09-21T18:38:16.661912+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 2,
@@ -1043,7 +1043,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 0,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 44.98
       },
       {
@@ -1731,7 +1731,7 @@
         "proTeam": "MIN",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": -0.38
       },
       {
