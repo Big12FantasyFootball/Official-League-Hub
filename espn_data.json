@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-22T09:26:22.440288+00:00",
+  "pulledAt": "2026-09-22T17:37:06.343251+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 3,
@@ -156,11 +156,11 @@
       "homeTeamId": 2,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 121.33,
+      "homeProjected": 122.08,
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 124.31,
+      "awayProjected": 123.88,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 109.61,
+      "homeProjected": 106.71,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 98.6,
+      "awayProjected": 99.7,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 122.45,
+      "homeProjected": 108.61,
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 113.14,
+      "awayProjected": 112.17,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 10,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 113.15,
+      "homeProjected": 112.74,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 119.76,
+      "awayProjected": 119.75,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 95.33,
+      "homeProjected": 95.22,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 120.59,
+      "awayProjected": 120.51,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 85.02,
+      "homeProjected": 84.78,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 102.87,
+      "awayProjected": 116.76,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -437,20 +437,10 @@
         "name": "Patriots D/ST",
         "pos": "DST",
         "proTeam": "NE",
-        "lineupSlotId": 16,
-        "starter": true,
-        "injuryStatus": null,
-        "appliedTotal": 20.0
-      },
-      {
-        "playerId": 4870795,
-        "name": "Makai Lemon",
-        "pos": "WR",
-        "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 1.9
+        "injuryStatus": null,
+        "appliedTotal": 20.0
       },
       {
         "playerId": 3126486,
@@ -461,16 +451,6 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 6.5
-      },
-      {
-        "playerId": 4697745,
-        "name": "Tyler Loop",
-        "pos": "K",
-        "proTeam": "BAL",
-        "lineupSlotId": 17,
-        "starter": true,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 5.0
       },
       {
         "playerId": 4685720,
@@ -743,7 +723,7 @@
         "proTeam": "NYG",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 0.8
       },
       {
@@ -863,8 +843,8 @@
         "name": "Brock Bowers",
         "pos": "TE",
         "proTeam": "LV",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 6,
+        "starter": true,
         "injuryStatus": "OUT",
         "appliedTotal": 0
       },
@@ -933,8 +913,8 @@
         "name": "Khalil Shakir",
         "pos": "WR",
         "proTeam": "BUF",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 6.8
       },
@@ -943,8 +923,8 @@
         "name": "Dak Prescott",
         "pos": "QB",
         "proTeam": "DAL",
-        "lineupSlotId": 0,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 29.76
       },
@@ -953,8 +933,8 @@
         "name": "Tyler Shough",
         "pos": "QB",
         "proTeam": "NO",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 0,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 22.38
       },
@@ -983,8 +963,8 @@
         "name": "Michael Mayer",
         "pos": "TE",
         "proTeam": "LV",
-        "lineupSlotId": 6,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 5.3
       },
@@ -993,8 +973,8 @@
         "name": "Devaughn Vele",
         "pos": "WR",
         "proTeam": "NO",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.4
       },
@@ -1095,8 +1075,8 @@
         "name": "Caleb Williams",
         "pos": "QB",
         "proTeam": "CHI",
-        "lineupSlotId": 0,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "DOUBTFUL",
         "appliedTotal": 7.72
       },
@@ -1145,8 +1125,8 @@
         "name": "Daniel Jones",
         "pos": "QB",
         "proTeam": "IND",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 0,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.4
       },
@@ -3420,9 +3400,9 @@
       "roundPickNumber": 2,
       "teamId": 4,
       "playerId": 4870795,
-      "name": "Makai Lemon",
-      "pos": "WR",
-      "proTeam": "PHI",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
