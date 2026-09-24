@@ -22,9 +22,39 @@
  * be filtered out before calling this (they haven't happened yet).
  */
 
+/*
+ * kFactor was 32 — the chess default — but chess K is applied to a RAW result.
+ * Here it is multiplied by a margin-of-victory term that routinely reaches 3-4x,
+ * so the effective K was closer to 100 and single games swung ratings by up to
+ * 119 points on a 1500 scale. That is roughly four chess games' worth of
+ * movement from one Sunday, and it made the board track last week rather than
+ * true strength.
+ *
+ * Chosen by walk-forward evaluation over the real 2024-2026 match list: predict
+ * each game from the ratings as they stand, score the prediction, then update.
+ * 2024 is burn-in, so 101 games (2025 + 2026 to date) are graded.
+ *
+ *     K       Brier      accuracy   max single-game swing
+ *     32      0.2474     62.4%      119      <- old setting
+ *     20      0.2378     64.4%       49
+ *     16      0.2366     63.4%       38
+ *     12      0.2353     62.4%       37      <- chosen
+ *      8      0.2354     62.4%       22
+ *
+ * A coin flip scores 0.2500, so K=32 was capturing almost none of the available
+ * signal. Accuracy is unchanged at K=12 while Brier improves, which means the
+ * picks were already fine and it was the CONFIDENCE that was miscalibrated:
+ * K=32 was overconfident.
+ *
+ * Honest limit: a paired bootstrap puts K=12 ahead of K=32 in 89.7% of
+ * resamples, but the 95% CI is [-0.006, +0.031] and crosses zero. On 101 games
+ * this is suggestive, not significant. The independent reason to prefer it is
+ * that a 119-point swing from one game is not defensible whatever the test says.
+ * Revisit once there are a few hundred more games.
+ */
 const DEFAULT_OPTIONS = {
   startingRating: 1500,
-  kFactor: 32,
+  kFactor: 12,
   useMarginOfVictory: true,   // blowouts move ratings more than nail-biters
   movDampener: 2.2,           // higher = MOV matters less; tune to taste
 };
