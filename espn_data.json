@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-23T17:50:09.807186+00:00",
+  "pulledAt": "2026-09-24T04:17:53.812698+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 3,
@@ -156,11 +156,11 @@
       "homeTeamId": 2,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 121.99,
+      "homeProjected": 121.91,
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 123.8,
+      "awayProjected": 123.79,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 123.86,
+      "homeProjected": 123.78,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 126.12,
+      "awayProjected": 128.69,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 124.27,
+      "homeProjected": 124.2,
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 115.52,
+      "awayProjected": 115.44,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 10,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 115.71,
+      "homeProjected": 114.69,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 119.76,
+      "awayProjected": 119.57,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 126.13,
+      "homeProjected": 130.94,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 123.29,
+      "awayProjected": 123.09,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 117.51,
+      "homeProjected": 116.99,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 116.76,
+      "awayProjected": 116.84,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -479,7 +479,7 @@
         "proTeam": "DEN",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 14.8
       },
       {
@@ -591,7 +591,7 @@
         "proTeam": "MIN",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 10.5
       },
       {
@@ -1097,7 +1097,7 @@
         "proTeam": "CAR",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 14.6
       },
       {
@@ -1197,8 +1197,8 @@
         "name": "Nico Collins",
         "pos": "WR",
         "proTeam": "HOU",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 4,
+        "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
@@ -1277,8 +1277,8 @@
         "name": "KC Concepcion",
         "pos": "WR",
         "proTeam": "CLE",
-        "lineupSlotId": 4,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 8.2
       },
@@ -1329,7 +1329,7 @@
         "proTeam": "LAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 17.4
       }
     ],
@@ -1359,9 +1359,9 @@
         "name": "Travis Etienne Jr.",
         "pos": "RB",
         "proTeam": "NO",
-        "lineupSlotId": 2,
+        "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 7.1
       },
       {
@@ -1369,7 +1369,7 @@
         "name": "Jadarian Price",
         "pos": "RB",
         "proTeam": "SEA",
-        "lineupSlotId": 23,
+        "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 5.0
@@ -1421,7 +1421,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 7.8
       },
       {
@@ -2001,14 +2001,14 @@
         "appliedTotal": 12.3
       },
       {
-        "playerId": -16018,
-        "name": "Saints D/ST",
+        "playerId": -16002,
+        "name": "Bills D/ST",
         "pos": "DST",
-        "proTeam": "NO",
+        "proTeam": "BUF",
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
-        "appliedTotal": 8.0
+        "appliedTotal": 2.0
       }
     ],
     "11": [
@@ -2117,9 +2117,9 @@
         "name": "Jayden Reed",
         "pos": "WR",
         "proTeam": "GB",
-        "lineupSlotId": 20,
+        "lineupSlotId": 21,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 1.4
       },
       {
@@ -2261,7 +2261,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 3.8
       },
       {
