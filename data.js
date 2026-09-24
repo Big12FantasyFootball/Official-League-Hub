@@ -462,6 +462,24 @@ async function pollEspnOnce() {
   const games = normalizeEspnMatchups(json.schedule, period);
   if (!games.length) throw new Error("no matchups for period " + period);
 
+  /*
+   * The response already contains every week of the season, not just the one
+   * we asked for — we were throwing 78 of 84 games away. Strength of schedule
+   * needs the UNPLAYED fixtures to say anything about what's ahead, so keep
+   * the whole thing.
+   */
+  data.live.fullSchedule = (json.schedule || []).map((m) => {
+    const h = m.home || {}, a = m.away || {};
+    const num = (v) => (v == null ? null : Math.round(Number(v) * 100) / 100);
+    return {
+      matchupPeriodId: m.matchupPeriodId,
+      homeTeamId: h.teamId, awayTeamId: a.teamId,
+      homeScore: num(h.totalPoints) || 0, awayScore: num(a.totalPoints) || 0,
+      winner: m.winner || "UNDECIDED",
+      playoffTierType: m.playoffTierType || "NONE",
+    };
+  });
+
   // Splice the fresh scores in. seasonMatchups keeps its finished weeks;
   // only the current period is replaced.
   data.live.currentWeekMatchups = games;
@@ -487,6 +505,8 @@ async function pollEspnOnce() {
   try { renderCupScoreboard(data); } catch (e) { console.error(e); }
   try { renderWeek2(data); } catch (e) { console.error(e); }
   try { renderWeek1Results(data); } catch (e) { console.error(e); }
+  try { renderWeekHeader(data); } catch (e) { console.error(e); }
+  try { renderSOS(data); } catch (e) { console.error(e); }
 
   /*
    * Tell the page a poll landed. index.html's Head-to-Head matrix listens for
@@ -1193,6 +1213,179 @@ function renderWeek1Results(data) {
     + "</p>";
 }
 
+/*
+ * The week panel's own headings and copy.
+ *
+ * This used to be hand-written markup that said "Week 2" and described the
+ * quarterfinals. That is correct for seven days and wrong forever after, and
+ * rewriting it every Tuesday is how a site quietly starts lying. The panel
+ * now names itself from the live matchup period and the Cup schedule.
+ */
+function renderWeekHeader(data) {
+  const live = data.live || {};
+  const wk = live.currentMatchupPeriod || 1;
+  const cfg = (window.LEAGUE_CONFIG && window.LEAGUE_CONFIG.cupSchedule) || [];
+  const entry = cfg.filter((e) => e.week === wk)[0];
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.innerHTML = v; };
+
+  set("wkTabLabel", "Week " + wk);
+  set("wkTitle", entry ? `Week ${wk} &middot; ${entry.round}` : `Week ${wk}`);
+  set("wkKicker", entry
+    ? `Hawkins Cup ${entry.round} &middot; ${entry.label}`
+    : `Week ${wk} &middot; Regular Season`);
+
+  const cup = data.hawkinsCup || (window.B12Live && window.B12Live.hawkinsCup);
+  const alive = cup && cup.status === "determined" && entry
+    ? (entry.round === "Final" ? 2 : entry.round === "Semifinals" ? 4 : 8)
+    : null;
+
+  if (entry && alive) {
+    set("wkHeadline", alive === 2 ? "Two Left. One Cup."
+      : alive === 4 ? "Four Left. Two Survive."
+      : "Eight Left. Four Survive.");
+    set("wkCopy", `<strong>${alive} teams still alive.</strong> Your Week ${wk} score is your `
+      + `${entry.round.replace(/s$/, "").toLowerCase()} score &mdash; there is no second lineup. `
+      + `Your Cup opponent is your <strong>seed</strong> opponent, not necessarily the team `
+      + `ESPN has you playing, so you can win your matchup and still be knocked out.`);
+  } else {
+    set("wkHeadline", `Week ${wk}`);
+    set("wkCopy", "The Hawkins Cup is decided. What is left is the regular season, "
+      + "the playoff race, and pride.");
+  }
+
+  const tab = document.querySelector('[data-tab="thisweek"].tab');
+  if (tab) tab.textContent = "Week " + wk;
+}
+
+/* ===========================================================================
+ * STRENGTH OF SCHEDULE
+ *
+ * Replaces a static preseason table whose "Avg Opp" numbers (4.49 to 4.98)
+ * were a projection made before a single game was played, and which had not
+ * moved since.
+ *
+ * The metric here is deliberately boring and checkable: the average
+ * points-per-game scored by the opponents you face, using each opponent's
+ * own season-to-date scoring. Split into what you have already survived and
+ * what is still coming, because those answer different questions.
+ *
+ * Two honesty constraints:
+ *  - An opponent's PPG EXCLUDES the games they played against you. Otherwise
+ *    a manager who gets blown out drags down their own opponent rating, which
+ *    would make a brutal schedule look easy.
+ *  - Early in the season these averages are built on very few games and swing
+ *    hard. The renderer says how many, rather than implying more precision
+ *    than two weeks of football can support.
+ * =========================================================================== */
+function computeSOS(data) {
+  const live = data.live || {};
+  const season = live.season;
+  const period = live.currentMatchupPeriod || 1;
+  const sched = (live.fullSchedule && live.fullSchedule.length)
+    ? live.fullSchedule
+    : (live.seasonMatchups || []).concat(live.currentWeekMatchups || []);
+  if (!sched.length) return null;
+
+  const reg = sched.filter((g) => (g.playoffTierType || "NONE") === "NONE");
+  const played = reg.filter((g) => g.winner && g.winner !== "UNDECIDED");
+  if (!played.length) return null;
+
+  // teamId -> [{ opp, pts }] for games already played
+  const byTeam = {};
+  const push = (id, opp, pts) => { (byTeam[id] = byTeam[id] || []).push({ opp, pts }); };
+  played.forEach((g) => {
+    push(g.homeTeamId, g.awayTeamId, g.homeScore);
+    push(g.awayTeamId, g.homeTeamId, g.awayScore);
+  });
+
+  // An opponent's PPG, ignoring whatever they scored against `exclude`.
+  const ppgExcluding = (teamId, exclude) => {
+    const rows = (byTeam[teamId] || []).filter((r) => r.opp !== exclude);
+    if (!rows.length) return null;
+    return rows.reduce((a, r) => a + r.pts, 0) / rows.length;
+  };
+
+  const ids = Object.keys(byTeam).map(Number);
+  const leagueAvg = played.reduce((a, g) => a + g.homeScore + g.awayScore, 0)
+    / (played.length * 2);
+
+  const out = ids.map((id) => {
+    const faced = (byTeam[id] || []).map((r) => ppgExcluding(r.opp, id))
+      .filter((v) => v != null);
+    const remainingOpps = reg
+      .filter((g) => (!g.winner || g.winner === "UNDECIDED")
+        && (g.homeTeamId === id || g.awayTeamId === id))
+      .map((g) => (g.homeTeamId === id ? g.awayTeamId : g.homeTeamId));
+    const ahead = remainingOpps.map((o) => ppgExcluding(o, id)).filter((v) => v != null);
+    const mean = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : null);
+    return {
+      teamId: id,
+      played: (byTeam[id] || []).length,
+      facedPPG: mean(faced),
+      aheadPPG: mean(ahead),
+      remaining: remainingOpps.length,
+      ownPPG: mean((byTeam[id] || []).map((r) => r.pts)),
+    };
+  });
+
+  out.forEach((r) => {
+    r.facedDiff = r.facedPPG == null ? null : r.facedPPG - leagueAvg;
+    r.aheadDiff = r.aheadPPG == null ? null : r.aheadPPG - leagueAvg;
+  });
+  // Hardest road ahead first — that's the actionable ordering.
+  out.sort((a, b) => (b.aheadPPG || 0) - (a.aheadPPG || 0));
+  return { rows: out, leagueAvg, period, season,
+    gamesPlayed: played.length, totalGames: reg.length };
+}
+
+function renderSOS(data) {
+  // Two mounts: the current-week panel and the Schedule Book, where it
+  // replaced a static preseason projection.
+  const targets = ["sos-live", "sos-live-2"]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  if (!targets.length) return;
+  const el = { set innerHTML(v) { targets.forEach((t) => { t.innerHTML = v; }); } };
+  const s = computeSOS(data);
+  if (!s) {
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + "Strength of schedule becomes meaningful once games have been played. "
+      + "It appears here after Week 1.</p>";
+    return;
+  }
+  const nameAt = data.managerNameAt;
+  const label = (d) => d == null ? "&mdash;"
+    : d >= 6 ? "Brutal" : d >= 2 ? "Tough" : d >= -2 ? "Average"
+    : d >= -6 ? "Friendly" : "Cakewalk";
+  const cls = (d) => d == null ? "" : d >= 2 ? " hard" : d <= -2 ? " easy" : "";
+
+  const rows = s.rows.map((r, i) => `<div class="sos2-row">
+    <span class="sos2-rank">${i + 1}</span>
+    <span class="sos2-mgr">${escHtml(nameAt(r.teamId, s.season))}</span>
+    <span class="sos2-n${cls(r.facedDiff)}">${r.facedPPG != null ? r.facedPPG.toFixed(1) : "&mdash;"}</span>
+    <span class="sos2-n${cls(r.aheadDiff)}">${r.aheadPPG != null ? r.aheadPPG.toFixed(1) : "&mdash;"}</span>
+    <span class="sos2-d${cls(r.aheadDiff)}">${r.aheadDiff == null ? "&mdash;"
+      : (r.aheadDiff >= 0 ? "+" : "") + r.aheadDiff.toFixed(1)}</span>
+    <span class="sos2-tag${cls(r.aheadDiff)}">${label(r.aheadDiff)}</span>
+  </div>`).join("");
+
+  const wk = s.period;
+  el.innerHTML = `<div class="sos2-head">Through Week ${wk - 1} &middot; league average `
+    + `${s.leagueAvg.toFixed(1)} pts/game${freshnessLabel()}</div>
+    <div class="sos2-list">
+      <div class="sos2-row head"><span class="sos2-rank"></span><span class="sos2-mgr">Manager</span>
+      <span class="sos2-n">Faced</span><span class="sos2-n">Ahead</span>
+      <span class="sos2-d">vs Avg</span><span class="sos2-tag">Road Ahead</span></div>
+      ${rows}
+    </div>
+    <p class="note">Average points per game scored by the opponents you play, using each
+    opponent's own scoring so far. <strong>Faced</strong> is the schedule you have already
+    survived; <strong>Ahead</strong> is what is left. An opponent's average excludes
+    whatever they scored against <em>you</em> &mdash; otherwise losing badly would make
+    your own schedule look easy. Built on ${s.gamesPlayed} of ${s.totalGames} games, so
+    treat early-season gaps of a point or two as noise.</p>`;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadB12Live()
     .then((data) => {
@@ -1210,6 +1403,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // itself if that ever stops being true.
       renderCupScoreboard(data);
       renderWeek2(data);
+      renderWeekHeader(data);
+      renderSOS(data);
       startEspnPolling();   // upgrade from the 30-min snapshot to 45-second live
       renderRostersPage(data);
     })

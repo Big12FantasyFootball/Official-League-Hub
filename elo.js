@@ -33,12 +33,38 @@ function expectedScore(ratingA, ratingB) {
   return 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400));
 }
 
-// FiveThirtyEight-style margin-of-victory multiplier, adapted for fantasy
-// point differentials instead of point-spread-adjusted score margins.
-function movMultiplier(scoreA, scoreB, ratingA, ratingB, dampener) {
-  const margin = Math.abs(scoreA - scoreB);
-  const ratingDiff = ratingA - ratingB;
-  return Math.log(margin + 1) * (dampener / ((ratingDiff * 0.001) + dampener));
+/*
+ * FiveThirtyEight-style margin-of-victory multiplier, adapted for fantasy
+ * point differentials instead of point-spread-adjusted score margins.
+ *
+ * THE ARGUMENTS ARE WINNER-FIRST, AND THAT IS THE WHOLE POINT.
+ *
+ * This previously took (home, away) and computed ratingDiff as
+ * homeRating - awayRating. That is not what the 538 formula means. The term
+ * exists to correct for autocorrelation: when a strong team beats a weak one,
+ * the result is unsurprising and the rating should move LESS; when an underdog
+ * wins, it should move MORE. That requires WINNER minus LOSER.
+ *
+ * Using home minus away made the multiplier depend on which side ESPN happened
+ * to label "home" — a label that carries no meaning at all in fantasy football,
+ * where there is no venue and no home advantage. Measured on the real 2024-26
+ * match list, an identical game (favourite wins by 30 over an opponent rated
+ * 400 lower) produced a multiplier of 2.91 with the favourite at home and 4.20
+ * with the favourite away: a 44% larger rating swing from a coin-flip label.
+ * Seven of twelve managers changed rank once corrected.
+ *
+ * The clamp is not decoration. The denominator (ratingDiff * 0.001 + 2.2)
+ * reaches ZERO when the winner is rated ~2200 below the loser and goes NEGATIVE
+ * beyond that — which would flip the sign of the rating change and push the
+ * winner's rating DOWN. The league's widest gap today is ~454 so it has never
+ * fired, but a rating system that silently inverts past a threshold is not one
+ * to leave unguarded.
+ */
+function movMultiplier(winnerScore, loserScore, winnerRating, loserRating, dampener) {
+  const margin = Math.abs(winnerScore - loserScore);
+  const ratingDiff = winnerRating - loserRating;
+  const denom = Math.max((ratingDiff * 0.001) + dampener, 0.25);
+  return Math.log(margin + 1) * (dampener / denom);
 }
 
 function computeElo(matches, options = {}) {
@@ -99,14 +125,30 @@ function computeElo(matches, options = {}) {
     const expHome = expectedScore(rHome, rAway);
     const expAway = 1 - expHome;
 
+    /*
+     * Derive the result from the SCORES, not just ESPN's winner label. An
+     * exact tie is possible in fantasy and ESPN's label for one is not
+     * something to guess at — if the two totals are equal it is a tie, full
+     * stop. Previously a dead-even game would have been scored as a clean win
+     * for whichever side the label happened to name.
+     */
+    const isTie = homeScore != null && awayScore != null && homeScore === awayScore;
     let actualHome;
-    if (winner === "HOME") actualHome = 1;
+    if (isTie) actualHome = 0.5;
+    else if (winner === "HOME") actualHome = 1;
     else if (winner === "AWAY") actualHome = 0;
-    else actualHome = 0.5; // TIE
+    else actualHome = 0.5;
 
     let k = opts.kFactor;
-    if (opts.useMarginOfVictory && winner !== "TIE") {
-      k *= movMultiplier(homeScore, awayScore, rHome, rAway, opts.movDampener);
+    if (opts.useMarginOfVictory && !isTie) {
+      // Winner first — see the note on movMultiplier.
+      const homeWon = actualHome === 1;
+      k *= movMultiplier(
+        homeWon ? homeScore : awayScore,
+        homeWon ? awayScore : homeScore,
+        homeWon ? rHome : rAway,
+        homeWon ? rAway : rHome,
+        opts.movDampener);
     }
 
     const deltaHome = k * (actualHome - expHome);

@@ -682,6 +682,49 @@ table.sch-table tr:last-child td{border-bottom:none}
 .w1r-cut{padding:.35rem .9rem;background:var(--ink);color:#f4d876;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.11em;text-transform:uppercase}
 @media(max-width:620px){.w1r-row{grid-template-columns:1.7rem 1fr 4.2rem 4.6rem}.w1r-rec{display:none}}
 
+/* --- Live strength of schedule (sos2-). The old static .sos-table is left
+       alone; this is a separate namespace so the two can't collide. --- */
+.sos2-head{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.sos2-list{border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
+.sos2-row{display:grid;grid-template-columns:2rem 1fr 4.2rem 4.2rem 4rem 5.6rem;gap:.55rem;align-items:center;padding:.5rem .9rem;border-bottom:1px solid var(--border);font-size:.82rem}
+.sos2-row:last-child{border-bottom:none}
+.sos2-row.head{font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);background:var(--bg)}
+.sos2-rank{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);text-align:center}
+.sos2-mgr{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sos2-n{font-family:'JetBrains Mono',monospace;font-size:.78rem;text-align:right;color:var(--muted)}
+.sos2-n.hard{color:#B3261E}
+.sos2-n.easy{color:#2f9e44}
+.sos2-d{font-family:'JetBrains Mono',monospace;font-size:.7rem;text-align:right;color:var(--muted)}
+.sos2-d.hard{color:#B3261E}
+.sos2-d.easy{color:#2f9e44}
+.sos2-tag{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.06em;text-align:right;color:var(--muted)}
+.sos2-tag.hard{color:#B3261E}
+.sos2-tag.easy{color:#2f9e44}
+.sos2-row.head .sos2-n,.sos2-row.head .sos2-d,.sos2-row.head .sos2-tag{color:var(--muted)}
+@media(max-width:640px){.sos2-row{grid-template-columns:1.7rem 1fr 3.6rem 3.6rem}.sos2-d,.sos2-tag{display:none}}
+
+/* --- H2H composition strip (h2c-) and Manager Stats reconciliation (mrec) --- */
+.h2c{border:1px solid var(--border);border-radius:12px;background:#fff;padding:.2rem 0;margin-bottom:1.1rem}
+.h2c-row{display:grid;grid-template-columns:5.6rem 1fr;gap:.8rem;padding:.55rem .95rem;border-bottom:1px solid var(--border);font-size:.78rem;line-height:1.6}
+.h2c-row:last-child{border-bottom:none}
+.h2c-k{font-family:'JetBrains Mono',monospace;font-size:.54rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);padding-top:.25rem}
+.h2c-v{color:var(--muted)}
+.h2c-v b{font-family:'JetBrains Mono',monospace;font-size:.86rem;color:var(--ink);font-weight:500}
+.h2c-v strong{color:var(--ink)}
+.h2c-row.warn{background:rgba(161,98,7,.06)}
+.h2c-row.warn .h2c-k{color:var(--gold)}
+.mrec{border:1px solid var(--border);border-left-width:3px;border-radius:10px;padding:.75rem .95rem;margin-bottom:1.1rem;font-size:.78rem;line-height:1.6;background:#fff}
+.mrec.ok{border-left-color:#2f9e44}
+.mrec.bad{border-left-color:#B3261E;background:rgba(179,38,30,.04)}
+.mrec-head{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem}
+.mrec.ok .mrec-head{color:#2f9e44}
+.mrec.bad .mrec-head{color:#B3261E}
+.mrec-copy{color:var(--muted)}
+.mrec-copy strong{color:var(--ink)}
+.mrec-copy.gap{margin-top:.5rem;padding-top:.5rem;border-top:1px solid var(--border)}
+.mrec-list{margin:.3rem 0 0 1.1rem;color:#B3261E}
+@media(max-width:560px){.h2c-row{grid-template-columns:1fr;gap:.15rem}}
+
 /* Draft trends ("How The Board Fell"). rdt- prefix, deliberately distinct
    from the simulator's dr-/db- namespaces. */
 .rdt-chart{border:1px solid var(--border);border-radius:12px;background:#fff;padding:1.1rem 1.25rem;margin-bottom:1.5rem}
@@ -988,7 +1031,7 @@ table.sch-table tr:last-child td{border-bottom:none}
           <button class="tab" role="tab" aria-selected="false" data-tab="mgrs">Manager Stats</button>
           <button class="tab" role="tab" aria-selected="false" data-tab="h2h">Head-to-Head</button>
           <button class="tab" role="tab" aria-selected="false" data-tab="hist">Season History</button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="week2">Week 2</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="thisweek" id="wkTabLabel">Week 2</button>
           <button class="tab" role="tab" aria-selected="false" data-tab="week1">Week 1 Results</button>
           <button class="tab" role="tab" aria-selected="false" data-tab="rosters">Rosters</button>
           <button class="tab" role="tab" aria-selected="false" data-tab="schedule">Schedule</button>
@@ -1033,7 +1076,7 @@ table.sch-table tr:last-child td{border-bottom:none}
         <div class="dn-cell"><b id="hcdSecs">&mdash;</b><span>Secs</span></div>
       </div>
       <div class="dn-cta" style="padding-top:1.3rem">
-        <button data-tab="week2" type="button">Week 2 &amp; The Quarterfinals &rarr;</button>
+        <button data-tab="thisweek" type="button">This Week &amp; The Hawkins Cup &rarr;</button>
         <button data-tab="rosters" type="button" class="dn-alt">See The Rosters</button>
         <button data-tab="cup" type="button" class="dn-alt">Hawkins Cup</button>
       </div>
@@ -1518,6 +1561,9 @@ table.sch-table tr:last-child td{border-bottom:none}
     </div>
 
     <div class="road-title">Historical Manager Stats &middot; 2023&ndash;2025</div>
+    <!-- Filled by renderMgrReconcile(): a live check that this table and the
+         Head-to-Head grid actually agree. They disagreed for months. -->
+    <div id="mgrReconcile"></div>
     <div class="inactive-note2"><strong style="color:var(--ink)">Inactive manager key:</strong> Timmy Hoffman, Braden Lord, and Blake Dempsey are preserved in historical records but are not active members for 2026. Their rows are muted and marked inactive.</div>
     <div class="tbl-wrap">
       <table class="stbl2" id="mgr-tbl">
@@ -1579,13 +1625,14 @@ table.sch-table tr:last-child td{border-bottom:none}
     <h1>Head-to-Head Records &middot; 2023&ndash;Present</h1>
     <p class="sec-lede" id="h2hLede">Historical head-to-head regular-season records, <strong>2023 through the current season</strong>. Read: row manager's record vs. column manager. Live 2026 results are folded in from ESPN as games finish. Timmy Hoffman, Braden Lord, Dillon Jacobs and Blake Dempsey are inactive but remain in the historical grid.</p>
 
+    <div id="h2hComposition" class="h2c"></div>
     <div class="h2h-wrap"><div id="h2hMatrix"></div></div>
     <div class="h2leg">
       <div class="h2li"><div class="h2ls" style="background:rgba(47,158,68,.18)"></div>Winning record</div>
       <div class="h2li"><div class="h2ls" style="background:rgba(192,57,43,.14)"></div>Losing record</div>
       <div class="h2li"><div class="h2ls" style="background:#f2efe9"></div>Even / unplayed</div>
     </div>
-    <div class="note">Regular season only. Playoffs excluded. 2023 regular-season scores are included; postseason and non-winner-bracket games are ignored.</div>
+    <div class="note">Regular season and playoffs count. Consolation-ladder games &mdash; third-place, fifth-place, and the toilet bowl &mdash; are excluded. 2023 is regular season only: ESPN no longer serves that season, so the five 2023 playoff games were never recorded game-by-game.</div>
   </section>
 
   <section class="panel" id="panel-hist" role="tabpanel">
@@ -1860,21 +1907,27 @@ table.sch-table tr:last-child td{border-bottom:none}
        which is why the Cup gets its own scoreboard rather than being read off
        this one.
        ===================================================================== -->
-  <section class="panel" id="panel-week2" role="tabpanel">
+  <section class="panel" id="panel-thisweek" role="tabpanel">
     <div class="panel-kicker">06 &middot; This Week</div>
-    <h1>Week 2 &middot; Quarterfinal Week</h1>
+    <!-- Every heading in this panel is written by renderWeekHeader() from the
+         live matchup period. Hardcoding "Week 2" here was correct for seven
+         days and wrong every day after. -->
+    <h1 id="wkTitle">This Week</h1>
 
     <div class="w2-hero">
-      <div class="w2-kicker">Hawkins Cup Quarterfinals &middot; Sunday, September 20</div>
-      <div class="w2-title">Eight Left. Four Survive.</div>
-      <div class="w2-copy">Week 1 did its job: the field is cut, the seeds are locked, and four managers are already watching. Now the Cup starts for real. <strong>Your regular-season Week 2 score is your quarterfinal score</strong> &mdash; there is no second lineup and no second chance. But your Cup opponent is your <em>seed</em> opponent, not necessarily the team ESPN has you playing, so <strong>you can win your matchup and still be knocked out.</strong> Half this bracket is decided against somebody you never face.</div>
+      <div class="w2-kicker" id="wkKicker">Loading the current week&hellip;</div>
+      <div class="w2-title" id="wkHeadline">&nbsp;</div>
+      <div class="w2-copy" id="wkCopy">&nbsp;</div>
     </div>
 
-    <div class="road-title">Hawkins Cup &mdash; Live Quarterfinals</div>
+    <div class="road-title">Hawkins Cup &mdash; Live</div>
     <div id="cup-scoreboard"></div>
 
-    <div class="road-title" style="margin-top:2.5rem">Week 2 League Scoreboard</div>
+    <div class="road-title" style="margin-top:2.5rem">League Scoreboard</div>
     <div id="week2-scoreboard"></div>
+
+    <div class="road-title" style="margin-top:2.5rem">Strength Of Schedule</div>
+    <div id="sos-live"></div>
 
     <div class="road-title" style="margin-top:2.5rem">Week 1 Final &mdash; How The Field Was Set</div>
     <div id="week1-results"></div>
@@ -1918,7 +1971,7 @@ table.sch-table tr:last-child td{border-bottom:none}
         <div class="match-top"><div class="match-label">Game 2 &middot; Week 1</div><span class="match-tag">Defending Champ</span></div>
         <div class="match-teams"><div class="match-team"><strong>Bourne with Downs</strong><span>Jalen Peretz</span></div><div class="match-vs">@</div><div class="match-team"><strong>Seal Team Nix</strong><span>Jake Joyce</span></div></div>
         <div class="match-line" data-away="peretz" data-home="joyce"><div class="line-chip"><b>Spread</b><span>Joyce -15.5</span></div><div class="line-chip total-line"><b>O/U</b><span>234.5</span></div><div class="line-chip"><b>Lean</b><span>Seal Team Nix</span></div></div>
-        <div class="match-copy">The biggest mismatch on the board by rating &mdash; Joyce enters at 1766 Elo, the highest in the league, and Peretz at 1395. The champ opens at home against a manager who has every reason to want this one.</div>
+        <div class="match-copy">The biggest mismatch on the board by rating &mdash; Joyce enters at 1763 Elo, the highest in the league, and Peretz at 1398. The champ opens at home against a manager who has every reason to want this one.</div>
         <div class="match-cup">Week 1 is Hawkins Cup qualification &mdash; a high-scoring loss can still matter.</div>
       </article>
       <article class="match-card">
@@ -1990,20 +2043,10 @@ table.sch-table tr:last-child td{border-bottom:none}
       </div>
       <div class="sch-panel">
         <div class="sch-panel-title">Schedule Strength</div>
-        <table class="sos-table"><thead><tr><th>#</th><th>Manager</th><th>Avg Opp</th><th>Label</th></tr></thead><tbody>
-          <tr><td><span class="rank">1</span></td><td><div class="mgr">Aidan Goss</div><div class="team">Aidan's Astounding Team · West</div></td><td>4.98</td><td>Rookie tax is real</td></tr>
-          <tr><td><span class="rank">2</span></td><td><div class="mgr">Brandon Beland</div><div class="team">Brandon's Brilliant Team · East</div></td><td>4.92</td><td>Rookie tax is real</td></tr>
-          <tr><td><span class="rank">3</span></td><td><div class="mgr">Jalen Peretz</div><div class="team">Bourne with Downs · West</div></td><td>4.83</td><td>Middle grind</td></tr>
-          <tr><td><span class="rank">4</span></td><td><div class="mgr">Joseph Lisa</div><div class="team">Team Lisa · West</div></td><td>4.79</td><td>Middle grind</td></tr>
-          <tr><td><span class="rank">5</span></td><td><div class="mgr">Ryan Dann</div><div class="team">Team Dann · East</div></td><td>4.71</td><td>Middle grind</td></tr>
-          <tr><td><span class="rank">6</span></td><td><div class="mgr">Josh Sweeney</div><div class="team">Josh's Scary Team · West</div></td><td>4.68</td><td>Middle grind</td></tr>
-          <tr><td><span class="rank">7</span></td><td><div class="mgr">Nick Carullo</div><div class="team">Drake London and Friends · West</div></td><td>4.67</td><td>Middle grind</td></tr>
-          <tr><td><span class="rank">8</span></td><td><div class="mgr">Nick Hawkins</div><div class="team">Curse of Ra · East</div></td><td>4.61</td><td>Middle grind</td></tr>
-          <tr><td><span class="rank">9</span></td><td><div class="mgr">Jake Joyce</div><div class="team">Seal Team Nix · West</div></td><td>4.53</td><td>Friendlier path</td></tr>
-          <tr><td><span class="rank">10</span></td><td><div class="mgr">Nick Furnari</div><div class="team">Nick's Nitty Team · East</div></td><td>4.51</td><td>Friendlier path</td></tr>
-          <tr><td><span class="rank">11</span></td><td><div class="mgr">Drew Sanford</div><div class="team">Team Sanford · East</div></td><td>4.49</td><td>Replacement tax</td></tr>
-          <tr><td><span class="rank">12</span></td><td><div class="mgr">Jojo Guarnaccia</div><div class="team">Fortnite Grinder · East</div></td><td>4.49</td><td>Friendlier path</td></tr>
-        </tbody></table>
+        <!-- The static preseason table that used to live here listed an "Avg Opp"
+     projection (4.49-4.98) made before a single game was played, and it had
+     never moved since. Replaced by the live computation in renderSOS(). -->
+        <div id="sos-live-2"></div>
       </div>
     </div>
     <div class="sch-board">
@@ -3443,60 +3486,168 @@ const MGRS=[
 {id:"sanford",name:"Drew Sanford"}
 ];
 
-/*
- * 2026 results are NOT in the MATCHUPS literal above — that is a frozen
- * transcript of 2023-2025 and nothing writes to it. Live games arrive from
- * ESPN via data.js, so without this the Head-to-Head matrix silently stops
- * counting the moment the current season starts: Beland and Goss would read
- * 0-0 against the field forever, and everyone else's record would be stuck
- * at last year's total.
+/* ===========================================================================
+ * HEAD-TO-HEAD SOURCE OF TRUTH
  *
- * The join is by manager NAME because the two sides don't share a key —
- * MGRS uses slugs ("hawkins"), ESPN uses numeric teamIds. managerNameAt()
- * resolves a teamId for a given SEASON, which matters: team slots get handed
- * to new managers, so teamId 10 is Braden Lord in 2025 and Brandon Beland in
- * 2026. Resolving per-season is what keeps those records from merging.
+ * WHY THIS IS NOT JUST `MATCHUPS`:
+ *
+ * The MATCHUPS literal above is a hand-transcribed record, and it is WRONG.
+ * Reconciling it game-by-game against ESPN's own history file found seven
+ * scores that disagree, all in 2025 — and two of those flip the winner:
+ *
+ *   2025 wk9   literal: Sweeney 144.24 beat Jacobs 124.50
+ *              ESPN:    Jacobs  127.92 beat Sweeney 111.60
+ *   2025 wk12  literal: Lord    163.82 beat Lisa   119.16
+ *              ESPN:    Lisa    117.22 beat Lord    61.16
+ *
+ * ESPN is the league's actual platform, so ESPN wins. Independent
+ * confirmation: the static Manager Stats table's regular-season records match
+ * the ESPN-derived numbers EXACTLY for all sixteen managers, which means that
+ * table was built from ESPN and the H2H literal was the only thing using the
+ * bad transcription.
+ *
+ * So the hierarchy is:
+ *   2024, 2025  -> espn_history.json          (authoritative)
+ *   2026+       -> the live pull              (authoritative)
+ *   2023        -> the MATCHUPS literal ONLY  (ESPN 404s on 2023 — the league
+ *                  history doesn't go back that far, so this is the only
+ *                  record that exists. It is UNVERIFIED and regular-season
+ *                  only; the five 2023 playoff games were never transcribed.)
+ *
+ * WHAT COUNTS AS A HEAD-TO-HEAD GAME:
+ *   NONE                        regular season      -> counts
+ *   WINNERS_BRACKET             real playoffs       -> counts
+ *   WINNERS_CONSOLATION_LADDER  3rd/5th place games -> excluded
+ *   LOSERS_CONSOLATION_LADDER   toilet bowl         -> excluded
+ *   Hawkins Cup bracket                             -> counts (see below)
+ *
+ * THE HAWKINS CUP DOUBLE-COUNT, STATED PLAINLY: a Cup game is not a separate
+ * game. It reuses that week's regular-season score, compared against a seed
+ * opponent who is usually playing somebody else entirely. So a single Week 2
+ * performance can produce TWO head-to-head results — one against the ESPN
+ * opponent, one against the Cup opponent. That is intended (they're two
+ * different competitions) but it means H2H totals are deliberately larger
+ * than games played. The buckets are kept separate so Manager Stats can still
+ * reconcile against regular + playoff alone.
+ *
+ * The join is by manager NAME because the two sides don't share a key — MGRS
+ * uses slugs ("hawkins"), ESPN uses numeric teamIds. managerNameAt() resolves
+ * per SEASON, which matters: teamId 10 is Braden Lord in 2025 and Brandon
+ * Beland in 2026. Resolving per-season is what keeps those records separate.
+ * =========================================================================== */
+var H2H_TIERS_COUNTED = { "NONE": "regular", "WINNERS_BRACKET": "playoff" };
+// [week, idA, scoreA, idB, scoreB, bucket, season]
+var ALL_H2H = [];
+var H2H_STATS = { regular: 0, playoff: 0, cup: 0, consolationSkipped: 0, seasons: [] };
+
+function h2hRowsFromEspn(rows, season, nameAt, byName){
+  var out = [], skipped = 0;
+  (rows || []).forEach(function(m){
+    var tier = m.playoffTierType || "NONE";
+    var bucket = H2H_TIERS_COUNTED[tier];
+    if (!bucket){ skipped++; return; }            // consolation ladders
+    if (m.winner === "UNDECIDED") return;
+    var hs = m.homeScore, as = m.awayScore;
+    if (hs == null || as == null) return;
+    if (!(hs > 0) && !(as > 0)) return;           // unplayed
+    var a = byName[nameAt(m.homeTeamId, season)];
+    var b = byName[nameAt(m.awayTeamId, season)];
+    if (!a || !b || a === b) return;
+    out.push([m.week != null ? m.week : m.matchupPeriodId, a, hs, b, as, bucket, season]);
+  });
+  return { rows: out, skipped: skipped };
+}
+
+/*
+ * Hawkins Cup bracket games, turned into head-to-head rows.
+ *
+ * computeHawkinsCup() (hawkins-cup.js) already resolves each round against
+ * the real weekly scores, so this just reads the finished ones off. Rounds
+ * that haven't been played yet come back status "pending" and are skipped.
  */
-var LIVE_H2H = [];
+function h2hRowsFromCup(cup, season, nameAt, byName){
+  var out = [];
+  if (!cup || cup.status !== "determined") return out;
+  [["qf", 2], ["sf", 3], ["final", 4]].forEach(function(pair){
+    var key = pair[0], wk = pair[1];
+    var games = key === "final" ? (cup.final ? [cup.final] : []) : (cup[key] || []);
+    games.forEach(function(g){
+      if (!g || g.status !== "final") return;
+      if (g.scoreA == null || g.scoreB == null) return;
+      var a = byName[nameAt(g.teamA.teamId, season)];
+      var b = byName[nameAt(g.teamB.teamId, season)];
+      if (!a || !b || a === b) return;
+      out.push([wk, a, g.scoreA, b, g.scoreB, "cup", season]);
+    });
+  });
+  return out;
+}
+
 function ingestLiveH2H(detail){
   if (!detail || !detail.managerNameAt) return;
   var byName = {};
   MGRS.forEach(function(m){ byName[m.name] = m.id; });
+  var nameAt = detail.managerNameAt;
+  var all = [], stats = { regular: 0, playoff: 0, cup: 0, consolationSkipped: 0, seasons: [] };
+
+  // --- 2023: the literal, and only the literal ---------------------------
+  (MATCHUPS["2023"] || []).forEach(function(r){
+    all.push([r[0], r[1], r[2], r[3], r[4], "regular", 2023]);
+  });
+  if ((MATCHUPS["2023"] || []).length) stats.seasons.push(2023);
+
+  // --- 2024/2025 (and any other archived season): ESPN ---------------------
+  var hist = (detail.history && detail.history.seasons) || {};
+  Object.keys(hist).forEach(function(s){
+    var season = Number(s);
+    var r = h2hRowsFromEspn(hist[s].allMatchups, season, nameAt, byName);
+    all = all.concat(r.rows);
+    stats.consolationSkipped += r.skipped;
+    if (r.rows.length) stats.seasons.push(season);
+  });
 
   /*
-   * Read live.seasonMatchups, NOT detail.matches.
-   *
-   * Both hold the same finished games at page load, but only seasonMatchups
-   * is rewritten by the 45-second poll (pollEspnOnce splices fresh results
-   * into it). detail.matches is built once by elo.js during loadB12Live and
-   * never rebuilt, so sourcing from it would leave this matrix frozen at
-   * whatever was final when the tab opened — a game finishing on Sunday
-   * afternoon would not show up until someone reloaded.
-   *
-   * seasonMatchups carries matchupPeriodId rather than week, and no season
-   * field, so normalise here.
+   * If the history file failed to load we would silently drop 2024 and 2025
+   * entirely, and the matrix would quietly show a third of the real record.
+   * Fall back to the literal for exactly the seasons history didn't cover —
+   * wrong in seven games is still far better than absent.
    */
+  [2024, 2025].forEach(function(y){
+    if (hist[String(y)]) return;
+    (MATCHUPS[String(y)] || []).forEach(function(r){
+      all.push([r[0], r[1], r[2], r[3], r[4], "regular", y]);
+    });
+    if ((MATCHUPS[String(y)] || []).length) stats.seasons.push(y);
+  });
+
+  // --- current season: the live pull --------------------------------------
   var live = detail.live || {};
   var season = live.season;
   var rows = live.seasonMatchups;
   if (!rows || !rows.length) {
     rows = (detail.matches || []).filter(function(m){ return m.season === season; });
   }
+  var cur = h2hRowsFromEspn(rows, season, nameAt, byName);
+  all = all.concat(cur.rows);
+  stats.consolationSkipped += cur.skipped;
+  if (cur.rows.length && stats.seasons.indexOf(season) === -1) stats.seasons.push(season);
 
-  var out = [];
-  (rows || []).forEach(function(m){
-    if ((m.playoffTierType || "NONE") !== "NONE") return;     // regular season only
-    if (m.winner === "UNDECIDED") return;                     // still being played
-    var hs = m.homeScore, as = m.awayScore;
-    if (hs == null || as == null) return;
-    if (!(hs > 0) && !(as > 0)) return;                       // unplayed
-    var a = byName[detail.managerNameAt(m.homeTeamId, season)];
-    var b = byName[detail.managerNameAt(m.awayTeamId, season)];
-    if (!a || !b || a === b) return;
-    out.push([m.week != null ? m.week : m.matchupPeriodId, a, hs, b, as]);
-  });
-  LIVE_H2H = out;
+  // --- Hawkins Cup ---------------------------------------------------------
+  var cup = detail.hawkinsCup
+    || (typeof computeHawkinsCup === "function" && detail.matches
+        ? computeHawkinsCup(detail.matches, season, nameAt, live) : null);
+  all = all.concat(h2hRowsFromCup(cup, season, nameAt, byName));
+
+  all.forEach(function(r){ stats[r[5]] = (stats[r[5]] || 0) + 1; });
+  stats.seasons.sort(function(x, y){ return x - y; });
+  ALL_H2H = all;
+  H2H_STATS = stats;
 }
+// Kept as an alias: older code and tests referred to LIVE_H2H.
+Object.defineProperty(window, "LIVE_H2H", {
+  get: function(){ return ALL_H2H.filter(function(r){ return r[6] >= 2026; }); },
+  configurable: true,
+});
 
 function buildH2H(){
   const ids=MGRS.map(m=>m.id);
@@ -3508,8 +3659,18 @@ function buildH2H(){
     if(rec[w+':'+l])rec[w+':'+l].w++;
     if(rec[l+':'+w])rec[l+':'+w].l++;
   };
-  [2023,2024,2025].forEach(yr=>{ MATCHUPS[yr].forEach(tally); });
-  LIVE_H2H.forEach(tally);
+  /*
+   * ALL_H2H is the single source. Before ESPN's history has loaded it is
+   * empty, so seed it from the literal to avoid a blank grid on first paint;
+   * refreshH2HFromLive() replaces that with the authoritative version as soon
+   * as the payload arrives.
+   */
+  if (!ALL_H2H.length) {
+    [2023,2024,2025].forEach(yr=>{ (MATCHUPS[yr]||[]).forEach(tally); });
+  } else {
+    ALL_H2H.forEach(tally);
+  }
+  window.__h2hRec = rec;   // exposed for the Manager Stats reconciliation
   const names={};MGRS.forEach(m=>names[m.id]=m.name);
   let h='<table class="h2ht"><thead><tr><th class="rh">vs &rarr;</th>';
   ids.forEach(id=>h+=`<th class="ch">${names[id]}</th>`);
@@ -3536,9 +3697,77 @@ if(document.getElementById('h2hMatrix')) buildH2H();
  * matrix from MATCHUPS + LIVE_H2H each time, so re-running is idempotent and
  * can't double-count.
  */
+/*
+ * Per-manager totals straight out of ALL_H2H, split by bucket. This is what
+ * the Manager Stats reconciliation compares against, so it must be derived
+ * from the same rows the matrix draws — not recomputed from a second source,
+ * which is how the two drifted apart in the first place.
+ */
+/*
+ * opts.minSeason / opts.maxSeason matter more than they look. The Manager
+ * Stats table is explicitly "Historical Manager Stats · 2023–2025", so
+ * reconciling against an all-time H2H total compares two different things and
+ * reports a mismatch for every manager who has played a 2026 game. The first
+ * version of this did exactly that and flagged 12 of 16 managers as broken
+ * when nothing was broken at all.
+ */
+function h2hTotals(opts){
+  opts = opts || {};
+  var lo = opts.minSeason != null ? opts.minSeason : -Infinity;
+  var hi = opts.maxSeason != null ? opts.maxSeason : Infinity;
+  var t = {};
+  var touch = function(id){ t[id] = t[id] || {
+    regular:{w:0,l:0}, playoff:{w:0,l:0}, cup:{w:0,l:0} }; return t[id]; };
+  // Seed every known manager so a 0-0 manager still appears.
+  MGRS.forEach(function(m){ touch(m.id); });
+  ALL_H2H.forEach(function(r){
+    var season = r[6];
+    if (season < lo || season > hi) return;
+    var a = r[1], sa = r[2], b = r[3], sb2 = r[4], bucket = r[5];
+    touch(a); touch(b);
+    if (sa === sb2) return;
+    var w = sa > sb2 ? a : b, l = sa > sb2 ? b : a;
+    t[w][bucket].w++; t[l][bucket].l++;
+  });
+  return t;
+}
+
+function renderH2HComposition(){
+  var el = document.getElementById("h2hComposition");
+  if (!el) return;
+  var s = H2H_STATS;
+  var src = [];
+  if (s.seasons.indexOf(2023) > -1) src.push("2023 from the league's own transcript");
+  src.push("2024&ndash;2025 from ESPN");
+  if (s.seasons.indexOf(2026) > -1) src.push("2026 live from ESPN");
+  el.innerHTML =
+    '<div class="h2c-row"><span class="h2c-k">Counted</span>'
+    + '<span class="h2c-v"><b>' + s.regular + '</b> regular season'
+    + ' &middot; <b>' + s.playoff + '</b> playoff'
+    + ' &middot; <b>' + s.cup + '</b> Hawkins Cup</span></div>'
+    + '<div class="h2c-row"><span class="h2c-k">Excluded</span>'
+    + '<span class="h2c-v"><b>' + s.consolationSkipped + '</b> consolation-ladder games '
+    + '(3rd/5th place and toilet bowl). They are real games but they are not '
+    + 'competition for anything, so they stay out of the grid.</span></div>'
+    + '<div class="h2c-row"><span class="h2c-k">Sources</span>'
+    + '<span class="h2c-v">' + src.join(" &middot; ") + '.</span></div>'
+    + (s.cup ? '<div class="h2c-row warn"><span class="h2c-k">Cup</span>'
+        + '<span class="h2c-v">A Hawkins Cup result counts as <strong>its own game</strong>, '
+        + 'even though it reuses that week’s score. Two shapes of this:<br>'
+        + '&bull; <strong>Same opponent.</strong> Guarnaccia and Beland met in Week 2 on '
+        + 'ESPN <em>and</em> that game was Cup QF3. One contest, two competitions, so the '
+        + 'grid reads 2&ndash;0.<br>'
+        + '&bull; <strong>Different opponent.</strong> Lisa’s Week 2 score beat Sweeney '
+        + 'on ESPN and Hawkins in the Cup &mdash; one performance, two separate results '
+        + 'against two people.<br>'
+        + 'Either way the grid counts more games than were played, on purpose.</span></div>' : "");
+}
+
 function refreshH2HFromLive(detail){
   ingestLiveH2H(detail);
   if (document.getElementById('h2hMatrix')) buildH2H();
+  renderH2HComposition();
+  if (typeof renderMgrReconcile === "function") renderMgrReconcile();
   var n = LIVE_H2H.length;
   var season = (detail && detail.live && detail.live.season) || 2026;
   var lede = document.getElementById("h2hLede");
@@ -3552,6 +3781,96 @@ function refreshH2HFromLive(detail){
       + "remain in the historical grid.";
   }
 }
+/* ===========================================================================
+ * MANAGER STATS <-> HEAD-TO-HEAD RECONCILIATION
+ *
+ * Two tables on this site claim to describe the same games. They are built
+ * from different code paths, so they can disagree — and they DID: the H2H
+ * matrix was reading a hand-typed transcript with two flipped results while
+ * Manager Stats was built from ESPN.
+ *
+ * Rather than assert they agree, this checks, every load, and shows the
+ * result. The arithmetic that must hold for each manager:
+ *
+ *     H2H regular-season row total  ==  "RS Overall"
+ *     H2H playoff row total         ==  "Playoff Rec"  MINUS 2023 playoffs
+ *
+ * That second subtraction is not a fudge: ESPN 404s on the 2023 season, so
+ * the five 2023 playoff games exist only as aggregate totals inside the
+ * static table. They can never be placed in a grid cell because nobody
+ * recorded who played whom. The reconciliation states that gap rather than
+ * quietly absorbing it.
+ * =========================================================================== */
+function renderMgrReconcile(){
+  var host = document.getElementById("mgrReconcile");
+  if (!host) return;
+  var table = document.getElementById("mgr-tbl");
+  if (!table || !ALL_H2H.length) return;
+
+  var byName = {}; MGRS.forEach(function(m){ byName[m.name] = m.id; });
+  // The table covers 2023-2025 ONLY. Compare like with like.
+  var totals = h2hTotals({ maxSeason: 2025 });
+  var current = h2hTotals({ minSeason: 2026 });
+  var rows = [].slice.call(table.querySelectorAll("tbody tr"));
+  var mism = [], gaps = [], checked = 0, curW = 0, curL = 0;
+
+  rows.forEach(function(tr){
+    var nameEl = tr.querySelector(".mn2");
+    if (!nameEl) return;
+    var name = (nameEl.textContent || "").replace(/Inactive\s*$/, "").trim();
+    var id = byName[name];
+    var t = id && totals[id];
+    if (!t) return;
+    var cells = tr.querySelectorAll("td");
+    var rs = (cells[1] && cells[1].textContent || "").replace(/–|&ndash;/g, "-").trim();
+    var po = (cells[7] && cells[7].textContent || "").replace(/–|&ndash;/g, "-").trim();
+    checked++;
+
+    var mineRS = t.regular.w + "-" + t.regular.l;
+    if (mineRS !== rs) mism.push(name + ": table " + rs + ", grid " + mineRS + " (regular season)");
+
+    var pw = po.split("-").map(Number);
+    var dw = pw[0] - t.playoff.w, dl = pw[1] - t.playoff.l;
+    if (dw || dl) gaps.push({ name: name, w: dw, l: dl });
+
+    var c = current[id];
+    if (c) { curW += c.regular.w; curL += c.regular.l; }
+  });
+
+  var gapGames = gaps.reduce(function(n, g){ return n + g.w + g.l; }, 0);
+  var cls = mism.length ? "mrec bad" : "mrec ok";
+  var html = '<div class="' + cls + '">';
+  html += '<div class="mrec-head">' + (mism.length
+      ? "✕ " + mism.length + " manager" + (mism.length === 1 ? "" : "s")
+        + " disagree between Manager Stats and Head-to-Head"
+      : "✓ Regular-season records reconcile exactly for all " + checked
+        + " managers") + "</div>";
+  if (mism.length) {
+    html += '<ul class="mrec-list"><li>' + mism.join("</li><li>") + "</li></ul>";
+  } else {
+    html += '<div class="mrec-copy">Restricted to 2023–2025 — the range this table '
+      + 'covers — every manager’s Head-to-Head row adds up to their '
+      + '<strong>RS Overall</strong> record above. Both are built from ESPN’s own '
+      + 'results.'
+      + (curW + curL
+          ? ' The grid also carries <strong>' + ((curW + curL) / 2) + ' game'
+            + ((curW + curL) / 2 === 1 ? "" : "s") + '</strong> from the current season '
+            + 'that this table does not.'
+          : "")
+      + "</div>";
+  }
+  if (gapGames) {
+    html += '<div class="mrec-copy gap"><strong>Known gap:</strong> the Playoff Rec column '
+      + 'includes <strong>' + (gapGames / 2) + ' game' + (gapGames / 2 === 1 ? "" : "s")
+      + '</strong> from the 2023 postseason that cannot appear in the Head-to-Head grid. '
+      + 'ESPN no longer serves the 2023 season, and only the season totals were ever '
+      + 'written down — not who played whom. Affected: '
+      + gaps.map(function(g){ return g.name; }).join(", ") + '.</div>';
+  }
+  html += "</div>";
+  host.innerHTML = html;
+}
+
 document.addEventListener("b12live:ready",   function(e){ refreshH2HFromLive(e.detail); });
 document.addEventListener("b12live:updated", function(e){ refreshH2HFromLive(e.detail); });
 
