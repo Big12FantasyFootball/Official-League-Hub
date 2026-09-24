@@ -1334,8 +1334,28 @@ function computeSOS(data) {
   });
   // Hardest road ahead first — that's the actionable ordering.
   out.sort((a, b) => (b.aheadPPG || 0) - (a.aheadPPG || 0));
+
+  /*
+   * How far "ahead" actually reaches, stated rather than assumed.
+   *
+   * This only spans the rest of the season when live.fullSchedule is present.
+   * That field comes from espn_pull.py (and is refreshed by the browser poll);
+   * if an older snapshot is being served, the only unplayed games on hand are
+   * the CURRENT week, and "Ahead" quietly means "next opponent" while looking
+   * exactly like a rest-of-season number. Measure the span so the renderer can
+   * say which one the reader is looking at.
+   */
+  const futureWeeks = new Set();
+  reg.forEach((g) => {
+    if (!g.winner || g.winner === "UNDECIDED") futureWeeks.add(g.matchupPeriodId);
+  });
+  const weeks = [...futureWeeks].sort((a, b) => a - b);
   return { rows: out, leagueAvg, period, season,
-    gamesPlayed: played.length, totalGames: reg.length };
+    gamesPlayed: played.length, totalGames: reg.length,
+    aheadFrom: weeks[0], aheadTo: weeks[weeks.length - 1],
+    aheadWeeks: weeks.length,
+    // One unplayed week on the books means we're looking at a partial schedule.
+    partialSchedule: weeks.length <= 1 };
 }
 
 function renderSOS(data) {
@@ -1375,15 +1395,23 @@ function renderSOS(data) {
     <div class="sos2-list">
       <div class="sos2-row head"><span class="sos2-rank"></span><span class="sos2-mgr">Manager</span>
       <span class="sos2-n">Faced</span><span class="sos2-n">Ahead</span>
-      <span class="sos2-d">vs Avg</span><span class="sos2-tag">Road Ahead</span></div>
+      <span class="sos2-d">vs Avg</span><span class="sos2-tag">${s.partialSchedule ? "Next Up" : "Road Ahead"}</span></div>
       ${rows}
     </div>
     <p class="note">Average points per game scored by the opponents you play, using each
     opponent's own scoring so far. <strong>Faced</strong> is the schedule you have already
-    survived; <strong>Ahead</strong> is what is left. An opponent's average excludes
-    whatever they scored against <em>you</em> &mdash; otherwise losing badly would make
-    your own schedule look easy. Built on ${s.gamesPlayed} of ${s.totalGames} games, so
-    treat early-season gaps of a point or two as noise.</p>`;
+    survived; <strong>Ahead</strong> is ${s.partialSchedule
+      ? `<strong>Week ${s.aheadFrom} only</strong>`
+      : `every remaining regular-season game, <strong>Weeks ${s.aheadFrom}&ndash;${s.aheadTo}</strong>`}.
+    An opponent's average excludes whatever they scored against <em>you</em> &mdash;
+    otherwise losing badly would make your own schedule look easy. Built on
+    ${s.gamesPlayed} of ${s.totalGames} games, so treat early-season gaps of a point or
+    two as noise.</p>`
+    + (s.partialSchedule
+        ? '<p class="note" style="border-left-color:#B3261E">Only the current week’s '
+          + 'fixtures are on file, so <strong>Ahead is next week, not the rest of the '
+          + 'season</strong>. The full fixture list arrives with the next data pull.</p>'
+        : "");
 }
 
 document.addEventListener("DOMContentLoaded", () => {

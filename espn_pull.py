@@ -176,6 +176,42 @@ def parse_season_matchups(data):
     return out
 
 
+def parse_full_schedule(data):
+    """
+    EVERY regular-season fixture, played or not.
+
+    parse_season_matchups() deliberately drops undecided games, and
+    parse_matchups() only keeps the current week — so between them the
+    snapshot contained no record of who anyone plays NEXT. Strength of
+    schedule needs exactly that: without it the "rest of season" column
+    silently collapsed to "this week only" whenever the page was rendering
+    from the committed file rather than a live browser poll.
+
+    Scores are omitted on purpose; this is a fixture list, not results.
+    Playoff and consolation tiers are excluded because those opponents are
+    not knowable in advance.
+    """
+    out = []
+    for m in data.get("schedule", []):
+        if (m.get("playoffTierType") or "NONE") != "NONE":
+            continue
+        home = m.get("home", {}) or {}
+        away = m.get("away", {}) or {}
+        if home.get("teamId") is None or away.get("teamId") is None:
+            continue
+        out.append({
+            "matchupPeriodId": m.get("matchupPeriodId"),
+            "homeTeamId": home.get("teamId"),
+            "awayTeamId": away.get("teamId"),
+            "homeScore": round(float(home.get("totalPoints") or 0), 2),
+            "awayScore": round(float(away.get("totalPoints") or 0), 2),
+            "winner": m.get("winner", "UNDECIDED"),
+            "playoffTierType": "NONE",
+        })
+    out.sort(key=lambda x: (x["matchupPeriodId"] or 0, x["homeTeamId"] or 0))
+    return out
+
+
 def parse_rosters(data):
     """Map teamId -> rostered players, with enough detail to render a roster page."""
     teams = data.get("teams", [])
@@ -250,6 +286,7 @@ def main():
         "standings": parse_standings(data),
         "currentWeekMatchups": parse_matchups(data),
         "seasonMatchups": parse_season_matchups(data),
+        "fullSchedule": parse_full_schedule(data),
         "rosters": rosters,
         "draftPicks": parse_draft(data, rosters),
     }
