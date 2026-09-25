@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-25T09:44:59.176270+00:00",
+  "pulledAt": "2026-09-25T17:55:51.488283+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 3,
@@ -156,11 +156,11 @@
       "homeTeamId": 2,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 124.99,
+      "homeProjected": 125.03,
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 6.6,
-      "awayProjected": 120.18,
+      "awayProjected": 120.13,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,7 +182,7 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 1.0,
-      "homeProjected": 114.65,
+      "homeProjected": 115.99,
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -199,7 +199,7 @@
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 22.6,
-      "awayProjected": 128.14,
+      "awayProjected": 128.06,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,7 +208,7 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 116.68,
+      "homeProjected": 117.31,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 28.4,
@@ -225,7 +225,7 @@
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 18.48,
-      "awayProjected": 121.32,
+      "awayProjected": 121.35,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1125,7 +1125,7 @@
         "name": "DeVonta Smith",
         "pos": "WR",
         "proTeam": "PHI",
-        "lineupSlotId": 4,
+        "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 27.7
@@ -1195,8 +1195,8 @@
         "name": "Deebo Samuel Sr.",
         "pos": "WR",
         "proTeam": "SF",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 4,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 6.5
       },
@@ -1225,8 +1225,8 @@
         "name": "Dalton Schultz",
         "pos": "TE",
         "proTeam": "HOU",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 26.0
       },
@@ -1967,7 +1967,7 @@
         "proTeam": "HOU",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 0
       },
       {
@@ -1995,8 +1995,8 @@
         "name": "Joe Burrow",
         "pos": "QB",
         "proTeam": "CIN",
-        "lineupSlotId": 0,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 16.18
       },
@@ -2035,8 +2035,8 @@
         "name": "Justin Herbert",
         "pos": "QB",
         "proTeam": "LAC",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 0,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.88
       },
@@ -2249,7 +2249,7 @@
         "proTeam": "MIA",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 3.9
       },
       {
