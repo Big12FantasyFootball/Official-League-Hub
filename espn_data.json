@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-25T04:29:22.148718+00:00",
+  "pulledAt": "2026-09-25T09:44:59.176270+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 3,
@@ -2099,6 +2099,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.4
+      },
+      {
+        "playerId": 4832955,
+        "name": "Emmett Johnson",
+        "pos": "RB",
+        "proTeam": "KC",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 5.5
       }
     ],
     "7": [
@@ -2911,16 +2921,6 @@
         "appliedTotal": 8.5
       },
       {
-        "playerId": 3052587,
-        "name": "Baker Mayfield",
-        "pos": "QB",
-        "proTeam": "TB",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 12.18
-      },
-      {
         "playerId": 4362628,
         "name": "Ja'Marr Chase",
         "pos": "WR",
@@ -2949,6 +2949,16 @@
         "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
+      },
+      {
+        "playerId": 4362619,
+        "name": "Chris Rodriguez Jr.",
+        "pos": "RB",
+        "proTeam": "JAX",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 1.3
       }
     ],
     "12": [
@@ -4748,9 +4758,9 @@
       "roundPickNumber": 4,
       "teamId": 6,
       "playerId": 4362619,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Chris Rodriguez Jr.",
+      "pos": "RB",
+      "proTeam": "JAX",
       "keeper": false
     },
     {
@@ -4902,9 +4912,9 @@
       "roundPickNumber": 6,
       "teamId": 1,
       "playerId": 3052587,
-      "name": "Baker Mayfield",
-      "pos": "QB",
-      "proTeam": "TB",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
