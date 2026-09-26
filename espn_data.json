@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-25T17:55:51.488283+00:00",
+  "pulledAt": "2026-09-26T04:33:45.261798+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 3,
@@ -160,7 +160,7 @@
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 6.6,
-      "awayProjected": 120.13,
+      "awayProjected": 119.42,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,7 +182,7 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 1.0,
-      "homeProjected": 115.99,
+      "homeProjected": 114.65,
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -225,7 +225,7 @@
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 18.48,
-      "awayProjected": 121.35,
+      "awayProjected": 123.51,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1125,7 +1125,7 @@
         "name": "DeVonta Smith",
         "pos": "WR",
         "proTeam": "PHI",
-        "lineupSlotId": 23,
+        "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 27.7
@@ -1195,8 +1195,8 @@
         "name": "Deebo Samuel Sr.",
         "pos": "WR",
         "proTeam": "SF",
-        "lineupSlotId": 4,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 6.5
       },
@@ -1225,8 +1225,8 @@
         "name": "Dalton Schultz",
         "pos": "TE",
         "proTeam": "HOU",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 26.0
       },
@@ -1237,18 +1237,8 @@
         "proTeam": "DEN",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 14.8
-      },
-      {
-        "playerId": 4429013,
-        "name": "Tank Bigsby",
-        "pos": "RB",
-        "proTeam": "PHI",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "QUESTIONABLE",
-        "appliedTotal": 11.8
       },
       {
         "playerId": 4869461,
@@ -1269,6 +1259,16 @@
         "starter": true,
         "injuryStatus": null,
         "appliedTotal": 7.0
+      },
+      {
+        "playerId": 5081508,
+        "name": "Eli Heidenreich",
+        "pos": "RB",
+        "proTeam": "PIT",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 0
       }
     ],
     "2": [
@@ -1349,7 +1349,7 @@
         "proTeam": "MIN",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 10.5
       },
       {
@@ -1491,7 +1491,7 @@
         "proTeam": "PIT",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 6.4
       },
       {
@@ -1793,8 +1793,8 @@
         "name": "Jeremiyah Love",
         "pos": "RB",
         "proTeam": "ARI",
-        "lineupSlotId": 2,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.5
       },
@@ -1823,8 +1823,8 @@
         "name": "Jaylen Warren",
         "pos": "RB",
         "proTeam": "PIT",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 2,
+        "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 9.7
       },
@@ -1947,7 +1947,7 @@
         "proTeam": "LAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 0
       },
       {
@@ -1967,7 +1967,7 @@
         "proTeam": "HOU",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2139,7 +2139,7 @@
         "proTeam": "NO",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 7.1
       },
       {
@@ -2149,7 +2149,7 @@
         "proTeam": "SEA",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 5.0
       },
       {
@@ -2179,7 +2179,7 @@
         "proTeam": "TEN",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 7.5
       },
       {
@@ -2199,7 +2199,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 7.8
       },
       {
@@ -2463,7 +2463,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 3.0
       },
       {
@@ -2947,7 +2947,7 @@
         "proTeam": "MIA",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -3027,8 +3027,8 @@
         "name": "Courtland Sutton",
         "pos": "WR",
         "proTeam": "DEN",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 5.5
       },
@@ -3049,7 +3049,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 3.8
       },
       {
@@ -3087,8 +3087,8 @@
         "name": "Mark Andrews",
         "pos": "TE",
         "proTeam": "BAL",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 10.9
       },
@@ -5011,9 +5011,9 @@
       "roundPickNumber": 3,
       "teamId": 3,
       "playerId": 4429013,
-      "name": "Tank Bigsby",
-      "pos": "RB",
-      "proTeam": "PHI",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
