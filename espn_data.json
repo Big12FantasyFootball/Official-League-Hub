@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-28T04:54:43.649358+00:00",
+  "pulledAt": "2026-09-28T20:05:54.381138+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 3,
@@ -1915,7 +1915,7 @@
         "proTeam": "NYG",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0.9
       },
       {
@@ -2139,7 +2139,7 @@
         "proTeam": "NO",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 16.1
       },
       {
@@ -2979,7 +2979,7 @@
         "proTeam": "MIA",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 14.0
       },
       {
