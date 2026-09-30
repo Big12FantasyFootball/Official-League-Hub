@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-09-29T18:35:42.042856+00:00",
+  "pulledAt": "2026-09-30T05:07:47.002172+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 4,
@@ -182,7 +182,7 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 114.43,
+      "homeProjected": 113.76,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -2031,7 +2031,7 @@
         "proTeam": "DEN",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 6.4
       },
       {
@@ -3041,8 +3041,8 @@
         "name": "Drake Maye",
         "pos": "QB",
         "proTeam": "NE",
-        "lineupSlotId": 0,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 3.76
       },
@@ -3151,8 +3151,8 @@
         "name": "C.J. Stroud",
         "pos": "QB",
         "proTeam": "HOU",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 0,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.68
       },
