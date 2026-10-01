@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-01T05:22:27.157554+00:00",
+  "pulledAt": "2026-10-01T18:50:28.168759+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 4,
@@ -1981,6 +1981,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 18.48
+      },
+      {
+        "playerId": 4431299,
+        "name": "Rome Odunze",
+        "pos": "WR",
+        "proTeam": "CHI",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 7.4
       }
     ],
     "6": [
@@ -3856,9 +3866,9 @@
       "roundPickNumber": 2,
       "teamId": 10,
       "playerId": 4431299,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Rome Odunze",
+      "pos": "WR",
+      "proTeam": "CHI",
       "keeper": false
     },
     {
