@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-02T05:10:28.448490+00:00",
+  "pulledAt": "2026-10-02T18:22:20.628318+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 4,
@@ -156,7 +156,7 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 129.55,
+      "homeProjected": 128.2,
       "awayTeamId": 4,
       "awayScore": 0.0,
       "awayLive": 8.0,
@@ -169,11 +169,11 @@
       "homeTeamId": 11,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 122.79,
+      "homeProjected": 122.83,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 5.0,
-      "awayProjected": 128.36,
+      "awayProjected": 129.08,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 118.27,
+      "homeProjected": 121.5,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 117.68,
+      "awayProjected": 117.91,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 3.0,
-      "homeProjected": 111.07,
+      "homeProjected": 92.42,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 15.6,
-      "awayProjected": 127.76,
+      "awayProjected": 127.54,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 7,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 121.58,
+      "homeProjected": 121.57,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 3.5,
-      "awayProjected": 116.32,
+      "awayProjected": 111.66,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 117.85,
+      "homeProjected": 117.54,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 11.7,
-      "awayProjected": 121.16,
+      "awayProjected": 121.27,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1179,8 +1179,8 @@
         "name": "DeVonta Smith",
         "pos": "WR",
         "proTeam": "PHI",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 12.5
       },
@@ -1239,8 +1239,8 @@
         "name": "Dontayvion Wicks",
         "pos": "WR",
         "proTeam": "PHI",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 5.2
       },
@@ -1717,7 +1717,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 11.1
       },
       {
@@ -1899,7 +1899,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2283,7 +2283,7 @@
         "proTeam": "MIA",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2375,7 +2375,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2547,7 +2547,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 19.7
       },
       {
@@ -2809,7 +2809,7 @@
         "proTeam": "NYJ",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2851,7 +2851,7 @@
         "proTeam": "NYJ",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 8.5
       },
       {
