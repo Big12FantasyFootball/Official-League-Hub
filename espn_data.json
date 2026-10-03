@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-03T04:52:56.574429+00:00",
+  "pulledAt": "2026-10-03T17:13:20.010887+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 4,
@@ -156,7 +156,7 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 128.41,
+      "homeProjected": 125.77,
       "awayTeamId": 4,
       "awayScore": 0.0,
       "awayLive": 8.0,
@@ -173,7 +173,7 @@
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 5.0,
-      "awayProjected": 129.3,
+      "awayProjected": 129.99,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 121.51,
+      "homeProjected": 121.5,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 117.91,
+      "awayProjected": 115.32,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -199,7 +199,7 @@
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 15.6,
-      "awayProjected": 129.36,
+      "awayProjected": 129.34,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -212,7 +212,7 @@
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 3.5,
-      "awayProjected": 111.67,
+      "awayProjected": 111.74,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 118.05,
+      "homeProjected": 118.11,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 11.7,
-      "awayProjected": 121.35,
+      "awayProjected": 122.41,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -2545,9 +2545,9 @@
         "name": "Terry McLaurin",
         "pos": "WR",
         "proTeam": "WSH",
-        "lineupSlotId": 23,
-        "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 19.7
       },
       {
@@ -2655,8 +2655,8 @@
         "name": "Malik Washington",
         "pos": "WR",
         "proTeam": "MIA",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.1
       },
@@ -2697,8 +2697,8 @@
         "name": "Ladd McConkey",
         "pos": "WR",
         "proTeam": "LAC",
-        "lineupSlotId": 4,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 10.6
       },
@@ -2737,8 +2737,8 @@
         "name": "Stefon Diggs",
         "pos": "WR",
         "proTeam": "WSH",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 4,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.3
       },
@@ -3153,7 +3153,7 @@
         "proTeam": "IND",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 18.3
       },
       {
