@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-03T17:13:20.010887+00:00",
+  "pulledAt": "2026-10-04T05:25:58.899686+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 4,
@@ -160,7 +160,7 @@
       "awayTeamId": 4,
       "awayScore": 0.0,
       "awayLive": 8.0,
-      "awayProjected": 129.33,
+      "awayProjected": 129.59,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,7 +169,7 @@
       "homeTeamId": 11,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 122.84,
+      "homeProjected": 122.85,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 5.0,
@@ -182,11 +182,11 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 121.5,
+      "homeProjected": 121.49,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 115.32,
+      "awayProjected": 117.13,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,7 +208,7 @@
       "homeTeamId": 7,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 111.6,
+      "homeProjected": 123.13,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 3.5,
@@ -221,7 +221,7 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 118.11,
+      "homeProjected": 119.03,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 11.7,
@@ -1179,7 +1179,7 @@
         "name": "DeVonta Smith",
         "pos": "WR",
         "proTeam": "PHI",
-        "lineupSlotId": 20,
+        "lineupSlotId": 21,
         "starter": false,
         "injuryStatus": "OUT",
         "appliedTotal": 12.5
@@ -1243,16 +1243,6 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 5.2
-      },
-      {
-        "playerId": 4702555,
-        "name": "Jonah Coleman",
-        "pos": "RB",
-        "proTeam": "DEN",
-        "lineupSlotId": 21,
-        "starter": false,
-        "injuryStatus": "INJURY_RESERVE",
-        "appliedTotal": 0
       },
       {
         "playerId": -16004,
@@ -1323,6 +1313,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 31.4
+      },
+      {
+        "playerId": 4696044,
+        "name": "Kaelon Black",
+        "pos": "RB",
+        "proTeam": "SF",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 1.7
       }
     ],
     "2": [
@@ -2191,9 +2191,9 @@
         "name": "Jadarian Price",
         "pos": "RB",
         "proTeam": "SEA",
-        "lineupSlotId": 23,
-        "starter": true,
-        "injuryStatus": "OUT",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 1.2
       },
       {
@@ -2291,8 +2291,8 @@
         "name": "Emanuel Wilson",
         "pos": "RB",
         "proTeam": "SEA",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 1.4
       },
@@ -2585,8 +2585,8 @@
         "name": "Jacory Croskey-Merritt",
         "pos": "RB",
         "proTeam": "WSH",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 5.3
       },
@@ -2655,20 +2655,20 @@
         "name": "Malik Washington",
         "pos": "WR",
         "proTeam": "MIA",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.1
       },
       {
-        "playerId": -16030,
-        "name": "Jaguars D/ST",
+        "playerId": -16009,
+        "name": "Packers D/ST",
         "pos": "DST",
-        "proTeam": "JAX",
+        "proTeam": "GB",
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
-        "appliedTotal": 13.0
+        "appliedTotal": -6.0
       }
     ],
     "10": [
@@ -5175,9 +5175,9 @@
       "roundPickNumber": 1,
       "teamId": 9,
       "playerId": 4696044,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Kaelon Black",
+      "pos": "RB",
+      "proTeam": "SF",
       "keeper": false
     },
     {
@@ -5263,9 +5263,9 @@
       "roundPickNumber": 9,
       "teamId": 6,
       "playerId": -16030,
-      "name": "Jaguars D/ST",
-      "pos": "DST",
-      "proTeam": "JAX",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
