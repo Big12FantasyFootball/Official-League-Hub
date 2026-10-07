@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-06T18:53:13.991469+00:00",
+  "pulledAt": "2026-10-07T05:28:14.847152+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 5,
@@ -186,7 +186,7 @@
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 102.7,
+      "awayProjected": 121.52,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -199,7 +199,7 @@
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 104.01,
+      "awayProjected": 114.62,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -1243,8 +1243,8 @@
         "name": "Lamar Jackson",
         "pos": "QB",
         "proTeam": "BAL",
-        "lineupSlotId": 0,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 18.88
       },
@@ -1329,16 +1329,6 @@
         "appliedTotal": 19.0
       },
       {
-        "playerId": 14880,
-        "name": "Kirk Cousins",
-        "pos": "QB",
-        "proTeam": "LV",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 22.6
-      },
-      {
         "playerId": 4711533,
         "name": "Ollie Gordon II",
         "pos": "RB",
@@ -1367,6 +1357,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 1.3
+      },
+      {
+        "playerId": 2578570,
+        "name": "Jacoby Brissett",
+        "pos": "QB",
+        "proTeam": "ARI",
+        "lineupSlotId": 0,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 10.44
       }
     ],
     "2": [
@@ -1881,7 +1881,7 @@
         "name": "Jeremiyah Love",
         "pos": "RB",
         "proTeam": "ARI",
-        "lineupSlotId": 2,
+        "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 6.5
@@ -1891,7 +1891,7 @@
         "name": "D'Andre Swift",
         "pos": "RB",
         "proTeam": "CHI",
-        "lineupSlotId": 23,
+        "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.4
@@ -2559,8 +2559,8 @@
         "name": "Saquon Barkley",
         "pos": "RB",
         "proTeam": "PHI",
-        "lineupSlotId": 2,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 2.0
       },
@@ -2609,8 +2609,8 @@
         "name": "J.K. Dobbins",
         "pos": "RB",
         "proTeam": "DEN",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 2,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.2
       },
@@ -2703,16 +2703,6 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 12.0
-      },
-      {
-        "playerId": -16009,
-        "name": "Packers D/ST",
-        "pos": "DST",
-        "proTeam": "GB",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": null,
-        "appliedTotal": 10.0
       }
     ],
     "10": [
@@ -2875,16 +2865,6 @@
         "starter": false,
         "injuryStatus": null,
         "appliedTotal": 9.0
-      },
-      {
-        "playerId": 3886598,
-        "name": "Jauan Jennings",
-        "pos": "WR",
-        "proTeam": "MIN",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 1.8
       }
     ],
     "11": [
@@ -3029,16 +3009,6 @@
         "appliedTotal": 5.7
       },
       {
-        "playerId": 2578570,
-        "name": "Jacoby Brissett",
-        "pos": "QB",
-        "proTeam": "ARI",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 10.44
-      },
-      {
         "playerId": 2576925,
         "name": "Darren Waller",
         "pos": "TE",
@@ -3057,6 +3027,16 @@
         "starter": true,
         "injuryStatus": null,
         "appliedTotal": 5.0
+      },
+      {
+        "playerId": 14880,
+        "name": "Kirk Cousins",
+        "pos": "QB",
+        "proTeam": "LV",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 22.6
       }
     ],
     "12": [
