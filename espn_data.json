@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-09T05:41:03.864635+00:00",
+  "pulledAt": "2026-10-09T18:46:44.883057+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 5,
@@ -156,11 +156,11 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 17.2,
-      "homeProjected": 113.8,
+      "homeProjected": 113.82,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 7.9,
-      "awayProjected": 105.61,
+      "awayProjected": 105.55,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,7 +169,7 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 118.24,
+      "homeProjected": 118.27,
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 28.0,
@@ -182,7 +182,7 @@
       "homeTeamId": 5,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 117.86,
+      "homeProjected": 120.21,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 14.2,
@@ -195,11 +195,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 12.64,
-      "homeProjected": 106.51,
+      "homeProjected": 105.08,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 111.46,
+      "awayProjected": 111.04,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -225,7 +225,7 @@
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 128.64,
+      "awayProjected": 128.71,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1245,7 +1245,7 @@
         "proTeam": "BAL",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 18.88
       },
       {
@@ -1639,7 +1639,7 @@
         "proTeam": "NE",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 8.3
       },
       {
@@ -1721,7 +1721,7 @@
         "proTeam": "NO",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 19.6
       },
       {
@@ -2361,16 +2361,6 @@
         "appliedTotal": 23.6
       },
       {
-        "playerId": 4686612,
-        "name": "Tre' Harris",
-        "pos": "WR",
-        "proTeam": "LAC",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 9.0
-      },
-      {
         "playerId": 4685382,
         "name": "Omarion Hampton",
         "pos": "RB",
@@ -2379,6 +2369,16 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 13.3
+      },
+      {
+        "playerId": 4869645,
+        "name": "Caleb Douglas",
+        "pos": "WR",
+        "proTeam": "MIA",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "QUESTIONABLE",
+        "appliedTotal": 0
       }
     ],
     "8": [
@@ -2539,7 +2539,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 28.0
       },
       {
@@ -2863,7 +2863,7 @@
         "proTeam": "NYJ",
         "lineupSlotId": 21,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2915,7 +2915,7 @@
         "proTeam": "NYJ",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2935,7 +2935,7 @@
         "proTeam": "TEN",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 21.5
       },
       {
