@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-10T05:24:58.694008+00:00",
+  "pulledAt": "2026-10-10T17:48:40.139835+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 5,
@@ -156,11 +156,11 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 17.2,
-      "homeProjected": 113.85,
+      "homeProjected": 113.82,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 7.9,
-      "awayProjected": 105.57,
+      "awayProjected": 105.58,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -212,7 +212,7 @@
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 109.55,
+      "awayProjected": 119.22,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -225,7 +225,7 @@
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 128.71,
+      "awayProjected": 128.72,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1751,7 +1751,7 @@
         "proTeam": "ARI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "OUT",
         "appliedTotal": 8.2
       },
       {
@@ -2771,8 +2771,8 @@
         "name": "DJ Moore",
         "pos": "WR",
         "proTeam": "BUF",
-        "lineupSlotId": 4,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 2.7
       },
@@ -2891,8 +2891,8 @@
         "name": "Antonio Williams",
         "pos": "WR",
         "proTeam": "WSH",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 4,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 5.1
       }
