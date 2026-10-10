@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-09T18:46:44.883057+00:00",
+  "pulledAt": "2026-10-10T05:24:58.694008+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 5,
@@ -156,11 +156,11 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 17.2,
-      "homeProjected": 113.82,
+      "homeProjected": 113.85,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 7.9,
-      "awayProjected": 105.55,
+      "awayProjected": 105.57,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 118.27,
+      "homeProjected": 118.2,
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 28.0,
-      "awayProjected": 128.98,
+      "awayProjected": 129.06,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 5,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 120.21,
+      "homeProjected": 120.17,
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 14.2,
-      "awayProjected": 118.29,
+      "awayProjected": 118.27,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 12.64,
-      "homeProjected": 105.08,
+      "homeProjected": 105.12,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 111.04,
+      "awayProjected": 111.07,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 29.5,
-      "homeProjected": 122.47,
+      "homeProjected": 123.6,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 122.02,
+      "awayProjected": 109.55,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,7 +221,7 @@
       "homeTeamId": 2,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 131.47,
+      "homeProjected": 130.99,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -1235,7 +1235,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 21,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -1285,7 +1285,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 4.8
       },
       {
@@ -1349,16 +1349,6 @@
         "appliedTotal": 16.4
       },
       {
-        "playerId": 4696044,
-        "name": "Kaelon Black",
-        "pos": "RB",
-        "proTeam": "SF",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 1.3
-      },
-      {
         "playerId": 2578570,
         "name": "Jacoby Brissett",
         "pos": "QB",
@@ -1377,6 +1367,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 2.3
+      },
+      {
+        "playerId": 4682745,
+        "name": "Jaylen Wright",
+        "pos": "RB",
+        "proTeam": "MIA",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "QUESTIONABLE",
+        "appliedTotal": 0.7
       }
     ],
     "2": [
@@ -1549,7 +1549,7 @@
         "proTeam": "NYG",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 23.2
       },
       {
@@ -1771,7 +1771,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -1893,7 +1893,7 @@
         "proTeam": "ARI",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 6.5
       },
       {
@@ -1903,7 +1903,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 7.4
       },
       {
@@ -1953,7 +1953,7 @@
         "proTeam": "CHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
       {
@@ -2125,7 +2125,7 @@
         "proTeam": "LAC",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 5.0
       },
       {
@@ -2377,7 +2377,7 @@
         "proTeam": "MIA",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       }
     ],
@@ -2571,7 +2571,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 2.0
       },
       {
@@ -2641,7 +2641,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 7.0
       },
       {
@@ -2793,7 +2793,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 8.5
       },
       {
@@ -2823,7 +2823,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -2867,16 +2867,6 @@
         "appliedTotal": 0
       },
       {
-        "playerId": 4697745,
-        "name": "Tyler Loop",
-        "pos": "K",
-        "proTeam": "BAL",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 8.0
-      },
-      {
         "playerId": -16003,
         "name": "Bears D/ST",
         "pos": "DST",
@@ -2895,6 +2885,16 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 14.0
+      },
+      {
+        "playerId": 5081432,
+        "name": "Antonio Williams",
+        "pos": "WR",
+        "proTeam": "WSH",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 5.1
       }
     ],
     "11": [
@@ -2925,7 +2925,7 @@
         "proTeam": "NYG",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 7.6
       },
       {
@@ -2935,7 +2935,7 @@
         "proTeam": "TEN",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 21.5
       },
       {
@@ -2955,7 +2955,7 @@
         "proTeam": "SF",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 12.6
       },
       {
@@ -2985,7 +2985,7 @@
         "proTeam": "NYG",
         "lineupSlotId": 6,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 13.6
       },
       {
@@ -5229,9 +5229,9 @@
       "roundPickNumber": 1,
       "teamId": 9,
       "playerId": 4696044,
-      "name": "Kaelon Black",
-      "pos": "RB",
-      "proTeam": "SF",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
