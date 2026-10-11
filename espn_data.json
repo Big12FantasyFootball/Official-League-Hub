@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-10T17:48:40.139835+00:00",
+  "pulledAt": "2026-10-11T05:17:47.058629+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 5,
@@ -160,7 +160,7 @@
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 7.9,
-      "awayProjected": 105.58,
+      "awayProjected": 105.55,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 118.2,
+      "homeProjected": 118.23,
       "awayTeamId": 12,
       "awayScore": 0.0,
       "awayLive": 28.0,
-      "awayProjected": 129.06,
+      "awayProjected": 128.85,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -186,7 +186,7 @@
       "awayTeamId": 1,
       "awayScore": 0.0,
       "awayLive": 14.2,
-      "awayProjected": 118.27,
+      "awayProjected": 118.26,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 12.64,
-      "homeProjected": 105.12,
+      "homeProjected": 92.17,
       "awayTeamId": 9,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 111.07,
+      "awayProjected": 111.09,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 29.5,
-      "homeProjected": 123.6,
+      "homeProjected": 122.48,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 119.22,
+      "awayProjected": 119.23,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 2,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 130.99,
+      "homeProjected": 131.03,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 128.72,
+      "awayProjected": 128.77,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1639,7 +1639,7 @@
         "proTeam": "NE",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 8.3
       },
       {
@@ -2043,7 +2043,7 @@
         "name": "Puka Nacua",
         "pos": "WR",
         "proTeam": "LAR",
-        "lineupSlotId": 4,
+        "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 27.7
@@ -2083,7 +2083,7 @@
         "name": "Jaylen Waddle",
         "pos": "WR",
         "proTeam": "DEN",
-        "lineupSlotId": 23,
+        "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 14.5
@@ -2387,8 +2387,8 @@
         "name": "Ashton Jeanty",
         "pos": "RB",
         "proTeam": "LV",
-        "lineupSlotId": 2,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 18.6
       },
@@ -2447,8 +2447,8 @@
         "name": "Mike Washington Jr.",
         "pos": "RB",
         "proTeam": "LV",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 2,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 2.7
       },
