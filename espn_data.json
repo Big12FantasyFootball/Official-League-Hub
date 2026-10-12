@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-12T01:14:00.403822+00:00",
+  "pulledAt": "2026-10-12T05:30:12.473922+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 5,
@@ -139,7 +139,7 @@
     },
     {
       "teamId": 3,
-      "name": "Darth Nabers",
+      "name": "Seal Team Pitts",
       "abbrev": "DNS",
       "wins": 0,
       "losses": 4,
@@ -155,8 +155,8 @@
       "matchupPeriodId": 5,
       "homeTeamId": 3,
       "homeScore": 0.0,
-      "homeLive": 107.0,
-      "homeProjected": 112.03,
+      "homeLive": 122.2,
+      "homeProjected": 122.2,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 101.22,
@@ -168,12 +168,12 @@
       "matchupPeriodId": 5,
       "homeTeamId": 4,
       "homeScore": 0.0,
-      "homeLive": 93.44,
-      "homeProjected": 118.96,
+      "homeLive": 116.14,
+      "homeProjected": 116.14,
       "awayTeamId": 12,
       "awayScore": 0.0,
-      "awayLive": 144.76,
-      "awayProjected": 137.61,
+      "awayLive": 137.76,
+      "awayProjected": 137.76,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -211,8 +211,8 @@
       "homeProjected": 111.53,
       "awayTeamId": 10,
       "awayScore": 0.0,
-      "awayLive": 86.94,
-      "awayProjected": 132.26,
+      "awayLive": 102.44,
+      "awayProjected": 135.94,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -224,8 +224,8 @@
       "homeProjected": 118.0,
       "awayTeamId": 7,
       "awayScore": 0.0,
-      "awayLive": 104.14,
-      "awayProjected": 115.43,
+      "awayLive": 122.94,
+      "awayProjected": 122.94,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1306,7 +1306,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": null,
-        "appliedTotal": 16.0
+        "appliedTotal": 12.0
       },
       {
         "playerId": 5083315,
@@ -1590,7 +1590,7 @@
         "lineupSlotId": 6,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 7.7
+        "appliedTotal": 22.9
       },
       {
         "playerId": 4038815,
@@ -1712,7 +1712,7 @@
         "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 30.4
+        "appliedTotal": 43.5
       },
       {
         "playerId": 4361370,
@@ -1832,7 +1832,7 @@
         "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 30.8
+        "appliedTotal": 40.4
       },
       {
         "playerId": 4360939,
@@ -1842,7 +1842,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 6.6
+        "appliedTotal": 17.8
       },
       {
         "playerId": 4430027,
@@ -1994,7 +1994,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 25.9
+        "appliedTotal": 27.3
       },
       {
         "playerId": 17427,
@@ -2228,7 +2228,7 @@
         "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 14.6
+        "appliedTotal": 33.4
       },
       {
         "playerId": 4239996,
@@ -2744,7 +2744,7 @@
         "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 21.4
+        "appliedTotal": 36.9
       },
       {
         "playerId": 4612826,
@@ -3168,7 +3168,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 13.6
+        "appliedTotal": 18.5
       },
       {
         "playerId": 15818,
@@ -3218,7 +3218,7 @@
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
-        "appliedTotal": 21.0
+        "appliedTotal": 14.0
       },
       {
         "playerId": 4363538,
