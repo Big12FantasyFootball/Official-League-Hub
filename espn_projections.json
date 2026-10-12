@@ -1,26 +1,17 @@
 {
- "pulledAt": "2026-10-11T16:45:11.194553+00:00",
+ "pulledAt": "2026-10-12T20:24:40.174478+00:00",
  "season": 2026,
  "source": "espn-kona_player_info",
  "scoring": "league-applied",
- "count": 638,
+ "count": 642,
  "players": [
   {
    "playerId": 4429795,
    "name": "Jahmyr Gibbs",
    "pos": "RB",
    "proTeam": "DET",
-   "seasonProj": 334.31,
-   "weekly": 25.716,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3918298,
-   "name": "Josh Allen",
-   "pos": "QB",
-   "proTeam": "BUF",
-   "seasonProj": 285.47,
-   "weekly": 21.96,
+   "seasonProj": 314.47,
+   "weekly": 26.206,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -28,8 +19,17 @@
    "name": "Bijan Robinson",
    "pos": "RB",
    "proTeam": "ATL",
-   "seasonProj": 285.08,
-   "weekly": 21.929,
+   "seasonProj": 268.89,
+   "weekly": 22.408,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3918298,
+   "name": "Josh Allen",
+   "pos": "QB",
+   "proTeam": "BUF",
+   "seasonProj": 266.15,
+   "weekly": 22.179,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -37,62 +37,8 @@
    "name": "Kenneth Walker III",
    "pos": "RB",
    "proTeam": "KC",
-   "seasonProj": 283.54,
-   "weekly": 21.811,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4362628,
-   "name": "Ja'Marr Chase",
-   "pos": "WR",
-   "proTeam": "CIN",
-   "seasonProj": 275.63,
-   "weekly": 21.202,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4426515,
-   "name": "Puka Nacua",
-   "pos": "WR",
-   "proTeam": "LAR",
-   "seasonProj": 272.52,
-   "weekly": 20.963,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4430878,
-   "name": "Jaxon Smith-Njigba",
-   "pos": "WR",
-   "proTeam": "SEA",
-   "seasonProj": 265.71,
-   "weekly": 20.439,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3117251,
-   "name": "Christian McCaffrey",
-   "pos": "RB",
-   "proTeam": "SF",
-   "seasonProj": 264.61,
-   "weekly": 20.354,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3916387,
-   "name": "Lamar Jackson",
-   "pos": "QB",
-   "proTeam": "BAL",
-   "seasonProj": 240.98,
-   "weekly": 20.081,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4361741,
-   "name": "Brock Purdy",
-   "pos": "QB",
-   "proTeam": "SF",
-   "seasonProj": 259.3,
-   "weekly": 19.946,
+   "seasonProj": 284.03,
+   "weekly": 21.848,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -100,8 +46,44 @@
    "name": "Jayden Daniels",
    "pos": "QB",
    "proTeam": "WSH",
-   "seasonProj": 258.12,
-   "weekly": 19.856,
+   "seasonProj": 259.94,
+   "weekly": 21.661,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4362628,
+   "name": "Ja'Marr Chase",
+   "pos": "WR",
+   "proTeam": "CIN",
+   "seasonProj": 259.29,
+   "weekly": 21.607,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3916387,
+   "name": "Lamar Jackson",
+   "pos": "QB",
+   "proTeam": "BAL",
+   "seasonProj": 235.52,
+   "weekly": 21.411,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4431452,
+   "name": "Drake Maye",
+   "pos": "QB",
+   "proTeam": "NE",
+   "seasonProj": 247.43,
+   "weekly": 20.619,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4426515,
+   "name": "Puka Nacua",
+   "pos": "WR",
+   "proTeam": "LAR",
+   "seasonProj": 246.85,
+   "weekly": 20.571,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -109,26 +91,26 @@
    "name": "Derrick Henry",
    "pos": "RB",
    "proTeam": "BAL",
-   "seasonProj": 256.36,
-   "weekly": 19.72,
+   "seasonProj": 245.21,
+   "weekly": 20.434,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4241389,
-   "name": "CeeDee Lamb",
-   "pos": "WR",
-   "proTeam": "DAL",
-   "seasonProj": 255.3,
-   "weekly": 19.638,
-   "injuryStatus": "QUESTIONABLE"
+   "playerId": 3117251,
+   "name": "Christian McCaffrey",
+   "pos": "RB",
+   "proTeam": "SF",
+   "seasonProj": 243.73,
+   "weekly": 20.311,
+   "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4360310,
-   "name": "Trevor Lawrence",
+   "playerId": 4361741,
+   "name": "Brock Purdy",
    "pos": "QB",
-   "proTeam": "JAX",
-   "seasonProj": 249.71,
-   "weekly": 19.209,
+   "proTeam": "SF",
+   "seasonProj": 240.51,
+   "weekly": 20.043,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -136,17 +118,17 @@
    "name": "Joe Burrow",
    "pos": "QB",
    "proTeam": "CIN",
-   "seasonProj": 247.41,
-   "weekly": 19.031,
+   "seasonProj": 238.61,
+   "weekly": 19.885,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4242335,
-   "name": "Jonathan Taylor",
-   "pos": "RB",
-   "proTeam": "IND",
-   "seasonProj": 246.71,
-   "weekly": 18.978,
+   "playerId": 4430878,
+   "name": "Jaxon Smith-Njigba",
+   "pos": "WR",
+   "proTeam": "SEA",
+   "seasonProj": 238.04,
+   "weekly": 19.837,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -154,161 +136,8 @@
    "name": "Amon-Ra St. Brown",
    "pos": "WR",
    "proTeam": "DET",
-   "seasonProj": 246.06,
-   "weekly": 18.927,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3139477,
-   "name": "Patrick Mahomes",
-   "pos": "QB",
-   "proTeam": "KC",
-   "seasonProj": 241.76,
-   "weekly": 18.597,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360689,
-   "name": "Tyler Shough",
-   "pos": "QB",
-   "proTeam": "NO",
-   "seasonProj": 240.99,
-   "weekly": 18.538,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4685720,
-   "name": "Bryce Young",
-   "pos": "QB",
-   "proTeam": "CAR",
-   "seasonProj": 236.82,
-   "weekly": 18.217,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 2577417,
-   "name": "Dak Prescott",
-   "pos": "QB",
-   "proTeam": "DAL",
-   "seasonProj": 236.15,
-   "weekly": 18.165,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4262921,
-   "name": "Justin Jefferson",
-   "pos": "WR",
-   "proTeam": "MIN",
-   "seasonProj": 233.04,
-   "weekly": 17.926,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4040715,
-   "name": "Jalen Hurts",
-   "pos": "QB",
-   "proTeam": "PHI",
-   "seasonProj": 232.95,
-   "weekly": 17.919,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3046779,
-   "name": "Jared Goff",
-   "pos": "QB",
-   "proTeam": "DET",
-   "seasonProj": 230.3,
-   "weekly": 17.716,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4429615,
-   "name": "Zay Flowers",
-   "pos": "WR",
-   "proTeam": "BAL",
-   "seasonProj": 211.39,
-   "weekly": 17.616,
-   "injuryStatus": "QUESTIONABLE"
-  },
-  {
-   "playerId": 4379399,
-   "name": "James Cook III",
-   "pos": "RB",
-   "proTeam": "BUF",
-   "seasonProj": 228.36,
-   "weekly": 17.566,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4431452,
-   "name": "Drake Maye",
-   "pos": "QB",
-   "proTeam": "NE",
-   "seasonProj": 228.0,
-   "weekly": 17.539,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4361579,
-   "name": "Javonte Williams",
-   "pos": "RB",
-   "proTeam": "DAL",
-   "seasonProj": 226.98,
-   "weekly": 17.46,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4890973,
-   "name": "Ashton Jeanty",
-   "pos": "RB",
-   "proTeam": "LV",
-   "seasonProj": 226.62,
-   "weekly": 17.432,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4361307,
-   "name": "Trey McBride",
-   "pos": "TE",
-   "proTeam": "ARI",
-   "seasonProj": 224.41,
-   "weekly": 17.262,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4361370,
-   "name": "Chris Olave",
-   "pos": "WR",
-   "proTeam": "NO",
-   "seasonProj": 224.4,
-   "weekly": 17.261,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4430737,
-   "name": "Kyren Williams",
-   "pos": "RB",
-   "proTeam": "LAR",
-   "seasonProj": 223.14,
-   "weekly": 17.165,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3122840,
-   "name": "Deshaun Watson",
-   "pos": "QB",
-   "proTeam": "CLE",
-   "seasonProj": 221.66,
-   "weekly": 17.05,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 12483,
-   "name": "Matthew Stafford",
-   "pos": "QB",
-   "proTeam": "LAR",
-   "seasonProj": 221.05,
-   "weekly": 17.004,
+   "seasonProj": 236.43,
+   "weekly": 19.702,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -316,71 +145,53 @@
    "name": "Caleb Williams",
    "pos": "QB",
    "proTeam": "CHI",
-   "seasonProj": 201.59,
-   "weekly": 16.799,
+   "seasonProj": 207.95,
+   "weekly": 18.904,
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 3917315,
-   "name": "Kyler Murray",
+   "playerId": 4360310,
+   "name": "Trevor Lawrence",
    "pos": "QB",
-   "proTeam": "MIN",
-   "seasonProj": 217.37,
-   "weekly": 16.721,
+   "proTeam": "JAX",
+   "seasonProj": 224.09,
+   "weekly": 18.675,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4362238,
-   "name": "Chase Brown",
-   "pos": "RB",
-   "proTeam": "CIN",
-   "seasonProj": 216.57,
-   "weekly": 16.659,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4258173,
-   "name": "Nico Collins",
+   "playerId": 4241389,
+   "name": "CeeDee Lamb",
    "pos": "WR",
-   "proTeam": "HOU",
-   "seasonProj": 215.09,
-   "weekly": 16.545,
-   "injuryStatus": "ACTIVE"
+   "proTeam": "DAL",
+   "seasonProj": 223.16,
+   "weekly": 18.597,
+   "injuryStatus": "QUESTIONABLE"
   },
   {
-   "playerId": 4426338,
-   "name": "Bo Nix",
+   "playerId": 3046779,
+   "name": "Jared Goff",
    "pos": "QB",
-   "proTeam": "DEN",
-   "seasonProj": 214.43,
-   "weekly": 16.495,
+   "proTeam": "DET",
+   "seasonProj": 223.04,
+   "weekly": 18.586,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4837248,
-   "name": "Fernando Mendoza",
+   "playerId": 3139477,
+   "name": "Patrick Mahomes",
    "pos": "QB",
-   "proTeam": "LV",
-   "seasonProj": 130.76,
-   "weekly": 16.345,
+   "proTeam": "KC",
+   "seasonProj": 239.49,
+   "weekly": 18.422,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4427366,
-   "name": "Breece Hall",
-   "pos": "RB",
-   "proTeam": "NYJ",
-   "seasonProj": 194.58,
-   "weekly": 16.215,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4685472,
-   "name": "Tetairoa McMillan",
-   "pos": "WR",
+   "playerId": 4685720,
+   "name": "Bryce Young",
+   "pos": "QB",
    "proTeam": "CAR",
-   "seasonProj": 208.49,
-   "weekly": 16.037,
+   "seasonProj": 237.95,
+   "weekly": 18.304,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -388,8 +199,62 @@
    "name": "Jordan Love",
    "pos": "QB",
    "proTeam": "GB",
-   "seasonProj": 207.86,
-   "weekly": 15.989,
+   "seasonProj": 218.14,
+   "weekly": 18.178,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4262921,
+   "name": "Justin Jefferson",
+   "pos": "WR",
+   "proTeam": "MIN",
+   "seasonProj": 216.22,
+   "weekly": 18.019,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4361307,
+   "name": "Trey McBride",
+   "pos": "TE",
+   "proTeam": "ARI",
+   "seasonProj": 212.42,
+   "weekly": 17.701,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4379399,
+   "name": "James Cook III",
+   "pos": "RB",
+   "proTeam": "BUF",
+   "seasonProj": 211.78,
+   "weekly": 17.648,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4242335,
+   "name": "Jonathan Taylor",
+   "pos": "RB",
+   "proTeam": "IND",
+   "seasonProj": 211.09,
+   "weekly": 17.591,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4430737,
+   "name": "Kyren Williams",
+   "pos": "RB",
+   "proTeam": "LAR",
+   "seasonProj": 209.28,
+   "weekly": 17.44,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 2577417,
+   "name": "Dak Prescott",
+   "pos": "QB",
+   "proTeam": "DAL",
+   "seasonProj": 207.29,
+   "weekly": 17.274,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -397,8 +262,80 @@
    "name": "Brock Bowers",
    "pos": "TE",
    "proTeam": "LV",
-   "seasonProj": 207.74,
-   "weekly": 15.98,
+   "seasonProj": 207.03,
+   "weekly": 17.252,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4040715,
+   "name": "Jalen Hurts",
+   "pos": "QB",
+   "proTeam": "PHI",
+   "seasonProj": 205.59,
+   "weekly": 17.132,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3917315,
+   "name": "Kyler Murray",
+   "pos": "QB",
+   "proTeam": "MIN",
+   "seasonProj": 205.13,
+   "weekly": 17.094,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4890973,
+   "name": "Ashton Jeanty",
+   "pos": "RB",
+   "proTeam": "LV",
+   "seasonProj": 204.66,
+   "weekly": 17.055,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4361579,
+   "name": "Javonte Williams",
+   "pos": "RB",
+   "proTeam": "DAL",
+   "seasonProj": 204.54,
+   "weekly": 17.045,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4360689,
+   "name": "Tyler Shough",
+   "pos": "QB",
+   "proTeam": "NO",
+   "seasonProj": 203.44,
+   "weekly": 16.954,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4427366,
+   "name": "Breece Hall",
+   "pos": "RB",
+   "proTeam": "NYJ",
+   "seasonProj": 186.17,
+   "weekly": 16.924,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4429615,
+   "name": "Zay Flowers",
+   "pos": "WR",
+   "proTeam": "BAL",
+   "seasonProj": 201.74,
+   "weekly": 16.811,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4837248,
+   "name": "Fernando Mendoza",
+   "pos": "QB",
+   "proTeam": "LV",
+   "seasonProj": 116.93,
+   "weekly": 16.704,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -406,80 +343,26 @@
    "name": "Jacoby Brissett",
    "pos": "QB",
    "proTeam": "ARI",
-   "seasonProj": 207.43,
-   "weekly": 15.956,
+   "seasonProj": 199.47,
+   "weekly": 16.622,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4426502,
-   "name": "Drake London",
+   "playerId": 4361370,
+   "name": "Chris Olave",
    "pos": "WR",
-   "proTeam": "ATL",
-   "seasonProj": 206.79,
-   "weekly": 15.907,
+   "proTeam": "NO",
+   "seasonProj": 198.0,
+   "weekly": 16.5,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3912547,
-   "name": "Sam Darnold",
+   "playerId": 3122840,
+   "name": "Deshaun Watson",
    "pos": "QB",
-   "proTeam": "SEA",
-   "seasonProj": 206.74,
-   "weekly": 15.903,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4432577,
-   "name": "C.J. Stroud",
-   "pos": "QB",
-   "proTeam": "HOU",
-   "seasonProj": 203.18,
-   "weekly": 15.629,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360761,
-   "name": "Michael Wilson",
-   "pos": "WR",
-   "proTeam": "ARI",
-   "seasonProj": 198.74,
-   "weekly": 15.288,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4596448,
-   "name": "Bucky Irving",
-   "pos": "RB",
-   "proTeam": "TB",
-   "seasonProj": 196.96,
-   "weekly": 15.151,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 16800,
-   "name": "Davante Adams",
-   "pos": "WR",
-   "proTeam": "LAR",
-   "seasonProj": 195.19,
-   "weekly": 15.014,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 15864,
-   "name": "Geno Smith",
-   "pos": "QB",
-   "proTeam": "NYJ",
-   "seasonProj": 194.78,
-   "weekly": 14.983,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4569618,
-   "name": "Garrett Wilson",
-   "pos": "WR",
-   "proTeam": "NYJ",
-   "seasonProj": 194.08,
-   "weekly": 14.929,
+   "proTeam": "CLE",
+   "seasonProj": 196.97,
+   "weekly": 16.414,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -487,8 +370,26 @@
    "name": "Aaron Rodgers",
    "pos": "QB",
    "proTeam": "PIT",
-   "seasonProj": 193.97,
-   "weekly": 14.921,
+   "seasonProj": 196.84,
+   "weekly": 16.404,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 12483,
+   "name": "Matthew Stafford",
+   "pos": "QB",
+   "proTeam": "LAR",
+   "seasonProj": 195.23,
+   "weekly": 16.269,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4258173,
+   "name": "Nico Collins",
+   "pos": "WR",
+   "proTeam": "HOU",
+   "seasonProj": 194.27,
+   "weekly": 16.189,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -496,215 +397,26 @@
    "name": "DeVonta Smith",
    "pos": "WR",
    "proTeam": "PHI",
-   "seasonProj": 177.41,
-   "weekly": 14.784,
+   "seasonProj": 177.58,
+   "weekly": 16.143,
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 14880,
-   "name": "Kirk Cousins",
-   "pos": "QB",
-   "proTeam": "LV",
-   "seasonProj": 73.7,
-   "weekly": 14.739,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3929630,
-   "name": "Saquon Barkley",
-   "pos": "RB",
-   "proTeam": "PHI",
-   "seasonProj": 176.65,
-   "weekly": 14.721,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4685702,
-   "name": "Quinshon Judkins",
-   "pos": "RB",
-   "proTeam": "CLE",
-   "seasonProj": 190.98,
-   "weekly": 14.691,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4428331,
-   "name": "Rashee Rice",
+   "playerId": 4595348,
+   "name": "Malik Nabers",
    "pos": "WR",
-   "proTeam": "KC",
-   "seasonProj": 190.51,
-   "weekly": 14.655,
-   "injuryStatus": "QUESTIONABLE"
-  },
-  {
-   "playerId": 4241416,
-   "name": "Chuba Hubbard",
-   "pos": "RB",
-   "proTeam": "CAR",
-   "seasonProj": 188.01,
-   "weekly": 14.463,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4248528,
-   "name": "Christian Watson",
-   "pos": "WR",
-   "proTeam": "GB",
-   "seasonProj": 185.85,
-   "weekly": 14.296,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3915416,
-   "name": "DJ Moore",
-   "pos": "WR",
-   "proTeam": "BUF",
-   "seasonProj": 171.12,
-   "weekly": 14.26,
-   "injuryStatus": "QUESTIONABLE"
-  },
-  {
-   "playerId": 4047646,
-   "name": "A.J. Brown",
-   "pos": "WR",
-   "proTeam": "NE",
-   "seasonProj": 156.81,
-   "weekly": 14.255,
-   "injuryStatus": "INJURY_RESERVE"
-  },
-  {
-   "playerId": 4432620,
-   "name": "Parker Washington",
-   "pos": "WR",
-   "proTeam": "JAX",
-   "seasonProj": 185.25,
-   "weekly": 14.25,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360423,
-   "name": "Michael Penix Jr.",
-   "pos": "QB",
-   "proTeam": "ATL",
-   "seasonProj": 185.15,
-   "weekly": 14.242,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4882093,
-   "name": "Bhayshul Tuten",
-   "pos": "RB",
-   "proTeam": "JAX",
-   "seasonProj": 183.67,
-   "weekly": 14.128,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3040151,
-   "name": "George Kittle",
-   "pos": "TE",
-   "proTeam": "SF",
-   "seasonProj": 183.57,
-   "weekly": 14.121,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4569987,
-   "name": "Jaylen Warren",
-   "pos": "RB",
-   "proTeam": "PIT",
-   "seasonProj": 183.37,
-   "weekly": 14.105,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4695883,
-   "name": "Jalen Coker",
-   "pos": "WR",
-   "proTeam": "CAR",
-   "seasonProj": 180.82,
-   "weekly": 13.91,
-   "injuryStatus": "QUESTIONABLE"
-  },
-  {
-   "playerId": 4038941,
-   "name": "Justin Herbert",
-   "pos": "QB",
-   "proTeam": "LAC",
-   "seasonProj": 180.54,
-   "weekly": 13.888,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4871023,
-   "name": "Carnell Tate",
-   "pos": "WR",
-   "proTeam": "TEN",
-   "seasonProj": 177.99,
-   "weekly": 13.691,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4239993,
-   "name": "Tee Higgins",
-   "pos": "WR",
-   "proTeam": "CIN",
-   "seasonProj": 177.85,
-   "weekly": 13.681,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4433970,
-   "name": "J.J. McCarthy",
-   "pos": "QB",
    "proTeam": "NYG",
-   "seasonProj": 136.21,
-   "weekly": 13.621,
+   "seasonProj": 193.68,
+   "weekly": 16.14,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4870808,
-   "name": "Jeremiyah Love",
-   "pos": "RB",
-   "proTeam": "ARI",
-   "seasonProj": 176.22,
-   "weekly": 13.556,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4426354,
-   "name": "George Pickens",
+   "playerId": 4685472,
+   "name": "Tetairoa McMillan",
    "pos": "WR",
-   "proTeam": "DAL",
-   "seasonProj": 176.03,
-   "weekly": 13.541,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4242512,
-   "name": "Malik Willis",
-   "pos": "QB",
-   "proTeam": "MIA",
-   "seasonProj": 175.77,
-   "weekly": 13.521,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4259545,
-   "name": "D'Andre Swift",
-   "pos": "RB",
-   "proTeam": "CHI",
-   "seasonProj": 175.51,
-   "weekly": 13.5,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3916148,
-   "name": "Tony Pollard",
-   "pos": "RB",
-   "proTeam": "TEN",
-   "seasonProj": 174.2,
-   "weekly": 13.4,
+   "proTeam": "CAR",
+   "seasonProj": 209.43,
+   "weekly": 16.11,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -712,26 +424,161 @@
    "name": "Mike Evans",
    "pos": "WR",
    "proTeam": "SF",
-   "seasonProj": 173.54,
-   "weekly": 13.349,
+   "seasonProj": 193.32,
+   "weekly": 16.11,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4688380,
-   "name": "Cam Ward",
-   "pos": "QB",
-   "proTeam": "TEN",
-   "seasonProj": 173.54,
-   "weekly": 13.349,
+   "playerId": 4596448,
+   "name": "Bucky Irving",
+   "pos": "RB",
+   "proTeam": "TB",
+   "seasonProj": 191.99,
+   "weekly": 15.999,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4595348,
-   "name": "Malik Nabers",
+   "playerId": 4047646,
+   "name": "A.J. Brown",
    "pos": "WR",
+   "proTeam": "NE",
+   "seasonProj": 175.52,
+   "weekly": 15.956,
+   "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 4428331,
+   "name": "Rashee Rice",
+   "pos": "WR",
+   "proTeam": "KC",
+   "seasonProj": 189.03,
+   "weekly": 15.752,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 4569987,
+   "name": "Jaylen Warren",
+   "pos": "RB",
+   "proTeam": "PIT",
+   "seasonProj": 187.19,
+   "weekly": 15.6,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4362238,
+   "name": "Chase Brown",
+   "pos": "RB",
+   "proTeam": "CIN",
+   "seasonProj": 186.33,
+   "weekly": 15.528,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4432577,
+   "name": "C.J. Stroud",
+   "pos": "QB",
+   "proTeam": "HOU",
+   "seasonProj": 186.24,
+   "weekly": 15.52,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4426502,
+   "name": "Drake London",
+   "pos": "WR",
+   "proTeam": "ATL",
+   "seasonProj": 186.18,
+   "weekly": 15.515,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4433970,
+   "name": "J.J. McCarthy",
+   "pos": "QB",
    "proTeam": "NYG",
-   "seasonProj": 172.01,
-   "weekly": 13.232,
+   "seasonProj": 108.16,
+   "weekly": 15.451,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4248528,
+   "name": "Christian Watson",
+   "pos": "WR",
+   "proTeam": "GB",
+   "seasonProj": 184.85,
+   "weekly": 15.404,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4432620,
+   "name": "Parker Washington",
+   "pos": "WR",
+   "proTeam": "JAX",
+   "seasonProj": 184.33,
+   "weekly": 15.361,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4426338,
+   "name": "Bo Nix",
+   "pos": "QB",
+   "proTeam": "DEN",
+   "seasonProj": 183.99,
+   "weekly": 15.332,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4695883,
+   "name": "Jalen Coker",
+   "pos": "WR",
+   "proTeam": "CAR",
+   "seasonProj": 181.53,
+   "weekly": 15.128,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 2969939,
+   "name": "Jameis Winston",
+   "pos": "QB",
+   "proTeam": "NYG",
+   "seasonProj": 74.39,
+   "weekly": 14.878,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4241416,
+   "name": "Chuba Hubbard",
+   "pos": "RB",
+   "proTeam": "CAR",
+   "seasonProj": 192.82,
+   "weekly": 14.832,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4569618,
+   "name": "Garrett Wilson",
+   "pos": "WR",
+   "proTeam": "NYJ",
+   "seasonProj": 177.86,
+   "weekly": 14.821,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3912547,
+   "name": "Sam Darnold",
+   "pos": "QB",
+   "proTeam": "SEA",
+   "seasonProj": 177.76,
+   "weekly": 14.813,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 14880,
+   "name": "Kirk Cousins",
+   "pos": "QB",
+   "proTeam": "LV",
+   "seasonProj": 73.9,
+   "weekly": 14.78,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -739,71 +586,143 @@
    "name": "Matthew Golden",
    "pos": "WR",
    "proTeam": "GB",
-   "seasonProj": 171.88,
-   "weekly": 13.221,
+   "seasonProj": 177.16,
+   "weekly": 14.764,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3121422,
-   "name": "Terry McLaurin",
+   "playerId": 4360761,
+   "name": "Michael Wilson",
    "pos": "WR",
-   "proTeam": "WSH",
-   "seasonProj": 171.15,
-   "weekly": 13.165,
+   "proTeam": "ARI",
+   "seasonProj": 177.09,
+   "weekly": 14.758,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3917792,
-   "name": "Daniel Jones",
-   "pos": "QB",
-   "proTeam": "IND",
-   "seasonProj": 169.04,
-   "weekly": 13.003,
+   "playerId": 4239993,
+   "name": "Tee Higgins",
+   "pos": "WR",
+   "proTeam": "CIN",
+   "seasonProj": 176.64,
+   "weekly": 14.72,
    "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 16800,
+   "name": "Davante Adams",
+   "pos": "WR",
+   "proTeam": "LAR",
+   "seasonProj": 176.27,
+   "weekly": 14.689,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3929630,
+   "name": "Saquon Barkley",
+   "pos": "RB",
+   "proTeam": "PHI",
+   "seasonProj": 161.04,
+   "weekly": 14.64,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 15864,
+   "name": "Geno Smith",
+   "pos": "QB",
+   "proTeam": "NYJ",
+   "seasonProj": 174.36,
+   "weekly": 14.53,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4882093,
+   "name": "Bhayshul Tuten",
+   "pos": "RB",
+   "proTeam": "JAX",
+   "seasonProj": 173.63,
+   "weekly": 14.469,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4360423,
+   "name": "Michael Penix Jr.",
+   "pos": "QB",
+   "proTeam": "ATL",
+   "seasonProj": 173.45,
+   "weekly": 14.454,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 3915416,
+   "name": "DJ Moore",
+   "pos": "WR",
+   "proTeam": "BUF",
+   "seasonProj": 157.91,
+   "weekly": 14.355,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 4259545,
+   "name": "D'Andre Swift",
+   "pos": "RB",
+   "proTeam": "CHI",
+   "seasonProj": 167.43,
+   "weekly": 13.953,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4685702,
+   "name": "Quinshon Judkins",
+   "pos": "RB",
+   "proTeam": "CLE",
+   "seasonProj": 167.24,
+   "weekly": 13.936,
+   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 3052587,
    "name": "Baker Mayfield",
    "pos": "QB",
    "proTeam": "TB",
-   "seasonProj": 139.33,
-   "weekly": 12.666,
+   "seasonProj": 152.39,
+   "weekly": 13.853,
    "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 3040151,
+   "name": "George Kittle",
+   "pos": "TE",
+   "proTeam": "SF",
+   "seasonProj": 165.53,
+   "weekly": 13.794,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4361050,
    "name": "Isaiah Likely",
    "pos": "TE",
    "proTeam": "NYG",
-   "seasonProj": 163.53,
-   "weekly": 12.58,
+   "seasonProj": 165.31,
+   "weekly": 13.776,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4569173,
-   "name": "Rhamondre Stevenson",
-   "pos": "RB",
-   "proTeam": "NE",
-   "seasonProj": 162.97,
-   "weekly": 12.536,
+   "playerId": 4242512,
+   "name": "Malik Willis",
+   "pos": "QB",
+   "proTeam": "MIA",
+   "seasonProj": 164.66,
+   "weekly": 13.722,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4430027,
-   "name": "Sam LaPorta",
-   "pos": "TE",
-   "proTeam": "DET",
-   "seasonProj": 162.0,
-   "weekly": 12.461,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4696981,
-   "name": "Cam Skattebo",
-   "pos": "RB",
-   "proTeam": "NYG",
-   "seasonProj": 161.74,
-   "weekly": 12.441,
+   "playerId": 4426354,
+   "name": "George Pickens",
+   "pos": "WR",
+   "proTeam": "DAL",
+   "seasonProj": 164.04,
+   "weekly": 13.67,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -811,134 +730,26 @@
    "name": "Zach Charbonnet",
    "pos": "RB",
    "proTeam": "SEA",
-   "seasonProj": 149.14,
-   "weekly": 12.428,
+   "seasonProj": 145.08,
+   "weekly": 13.189,
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 4047365,
-   "name": "Josh Jacobs",
+   "playerId": 3916148,
+   "name": "Tony Pollard",
    "pos": "RB",
-   "proTeam": "GB",
-   "seasonProj": 124.18,
-   "weekly": 12.418,
-   "injuryStatus": "DAY_TO_DAY"
-  },
-  {
-   "playerId": 4239996,
-   "name": "Travis Etienne Jr.",
-   "pos": "RB",
-   "proTeam": "NO",
-   "seasonProj": 122.53,
-   "weekly": 12.253,
-   "injuryStatus": "INJURY_RESERVE"
-  },
-  {
-   "playerId": 4047650,
-   "name": "DK Metcalf",
-   "pos": "WR",
-   "proTeam": "PIT",
-   "seasonProj": 158.21,
-   "weekly": 12.17,
+   "proTeam": "TEN",
+   "seasonProj": 157.76,
+   "weekly": 13.147,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3042519,
-   "name": "Aaron Jones Sr.",
-   "pos": "RB",
-   "proTeam": "MIN",
-   "seasonProj": 156.81,
-   "weekly": 12.062,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4035538,
-   "name": "David Montgomery",
-   "pos": "RB",
-   "proTeam": "HOU",
-   "seasonProj": 156.61,
-   "weekly": 12.047,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5083076,
-   "name": "Harold Fannin Jr.",
-   "pos": "TE",
-   "proTeam": "CLE",
-   "seasonProj": 155.23,
-   "weekly": 11.941,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4832800,
-   "name": "Denzel Boston",
-   "pos": "WR",
-   "proTeam": "CLE",
-   "seasonProj": 154.6,
-   "weekly": 11.892,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4685278,
-   "name": "Luther Burden III",
-   "pos": "WR",
-   "proTeam": "CHI",
-   "seasonProj": 153.44,
-   "weekly": 11.803,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4431459,
-   "name": "Tyler Warren",
-   "pos": "TE",
+   "playerId": 3917792,
+   "name": "Daniel Jones",
+   "pos": "QB",
    "proTeam": "IND",
-   "seasonProj": 152.96,
-   "weekly": 11.766,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3126486,
-   "name": "Deebo Samuel Sr.",
-   "pos": "WR",
-   "proTeam": "SF",
-   "seasonProj": 152.3,
-   "weekly": 11.715,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4372016,
-   "name": "Jaylen Waddle",
-   "pos": "WR",
-   "proTeam": "DEN",
-   "seasonProj": 149.06,
-   "weekly": 11.466,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4568490,
-   "name": "RJ Harvey",
-   "pos": "RB",
-   "proTeam": "DEN",
-   "seasonProj": 147.78,
-   "weekly": 11.368,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4685382,
-   "name": "Omarion Hampton",
-   "pos": "RB",
-   "proTeam": "LAC",
-   "seasonProj": 145.98,
-   "weekly": 11.229,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 15847,
-   "name": "Travis Kelce",
-   "pos": "TE",
-   "proTeam": "KC",
-   "seasonProj": 143.33,
-   "weekly": 11.025,
+   "seasonProj": 153.16,
+   "weekly": 12.763,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -946,53 +757,134 @@
    "name": "Ollie Gordon II",
    "pos": "RB",
    "proTeam": "MIA",
-   "seasonProj": 142.43,
-   "weekly": 10.956,
+   "seasonProj": 152.72,
+   "weekly": 12.727,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4429205,
-   "name": "Jordan Addison",
-   "pos": "WR",
-   "proTeam": "MIN",
-   "seasonProj": 130.79,
-   "weekly": 10.9,
-   "injuryStatus": "OUT"
+   "playerId": 4430027,
+   "name": "Sam LaPorta",
+   "pos": "TE",
+   "proTeam": "DET",
+   "seasonProj": 152.65,
+   "weekly": 12.721,
+   "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4360078,
-   "name": "Alec Pierce",
+   "playerId": 4569173,
+   "name": "Rhamondre Stevenson",
+   "pos": "RB",
+   "proTeam": "NE",
+   "seasonProj": 152.56,
+   "weekly": 12.713,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4047365,
+   "name": "Josh Jacobs",
+   "pos": "RB",
+   "proTeam": "GB",
+   "seasonProj": 88.67,
+   "weekly": 12.667,
+   "injuryStatus": "DAY_TO_DAY"
+  },
+  {
+   "playerId": 3121422,
+   "name": "Terry McLaurin",
    "pos": "WR",
-   "proTeam": "IND",
-   "seasonProj": 108.53,
-   "weekly": 10.853,
+   "proTeam": "WSH",
+   "seasonProj": 150.75,
+   "weekly": 12.562,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4038941,
+   "name": "Justin Herbert",
+   "pos": "QB",
+   "proTeam": "LAC",
+   "seasonProj": 150.35,
+   "weekly": 12.529,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4239996,
+   "name": "Travis Etienne Jr.",
+   "pos": "RB",
+   "proTeam": "NO",
+   "seasonProj": 124.96,
+   "weekly": 12.496,
    "injuryStatus": "INJURY_RESERVE"
   },
   {
-   "playerId": 3121023,
-   "name": "Dallas Goedert",
-   "pos": "TE",
-   "proTeam": "PHI",
-   "seasonProj": 140.82,
-   "weekly": 10.832,
+   "playerId": 4688380,
+   "name": "Cam Ward",
+   "pos": "QB",
+   "proTeam": "TEN",
+   "seasonProj": 147.61,
+   "weekly": 12.301,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3916433,
-   "name": "Jakobi Meyers",
+   "playerId": 4431459,
+   "name": "Tyler Warren",
+   "pos": "TE",
+   "proTeam": "IND",
+   "seasonProj": 145.45,
+   "weekly": 12.121,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4832800,
+   "name": "Denzel Boston",
    "pos": "WR",
-   "proTeam": "JAX",
-   "seasonProj": 140.6,
-   "weekly": 10.815,
+   "proTeam": "CLE",
+   "seasonProj": 143.69,
+   "weekly": 11.974,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4572680,
-   "name": "Tucker Kraft",
-   "pos": "TE",
-   "proTeam": "GB",
-   "seasonProj": 140.56,
-   "weekly": 10.812,
+   "playerId": 4685278,
+   "name": "Luther Burden III",
+   "pos": "WR",
+   "proTeam": "CHI",
+   "seasonProj": 143.23,
+   "weekly": 11.936,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4870808,
+   "name": "Jeremiyah Love",
+   "pos": "RB",
+   "proTeam": "ARI",
+   "seasonProj": 142.94,
+   "weekly": 11.911,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3042519,
+   "name": "Aaron Jones Sr.",
+   "pos": "RB",
+   "proTeam": "MIN",
+   "seasonProj": 142.11,
+   "weekly": 11.842,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4047650,
+   "name": "DK Metcalf",
+   "pos": "WR",
+   "proTeam": "PIT",
+   "seasonProj": 141.84,
+   "weekly": 11.82,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4871023,
+   "name": "Carnell Tate",
+   "pos": "WR",
+   "proTeam": "TEN",
+   "seasonProj": 140.1,
+   "weekly": 11.675,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1000,161 +892,26 @@
    "name": "Stefon Diggs",
    "pos": "WR",
    "proTeam": "WSH",
-   "seasonProj": 129.67,
-   "weekly": 10.806,
+   "seasonProj": 128.15,
+   "weekly": 11.65,
    "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4567750,
+   "name": "Emeka Egbuka",
+   "pos": "WR",
+   "proTeam": "TB",
+   "seasonProj": 139.61,
+   "weekly": 11.634,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4241985,
    "name": "J.K. Dobbins",
    "pos": "RB",
    "proTeam": "DEN",
-   "seasonProj": 140.43,
-   "weekly": 10.802,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3953687,
-   "name": "Brandon Aubrey",
-   "pos": "K",
-   "proTeam": "DAL",
-   "seasonProj": 139.98,
-   "weekly": 10.768,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4612826,
-   "name": "Ladd McConkey",
-   "pos": "WR",
-   "proTeam": "LAC",
-   "seasonProj": 129.03,
-   "weekly": 10.752,
-   "injuryStatus": "QUESTIONABLE"
-  },
-  {
-   "playerId": 3116365,
-   "name": "Mark Andrews",
-   "pos": "TE",
-   "proTeam": "BAL",
-   "seasonProj": 137.63,
-   "weekly": 10.587,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4569603,
-   "name": "Malik Washington",
-   "pos": "WR",
-   "proTeam": "MIA",
-   "seasonProj": 137.36,
-   "weekly": 10.566,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4431299,
-   "name": "Rome Odunze",
-   "pos": "WR",
-   "proTeam": "CHI",
-   "seasonProj": 137.17,
-   "weekly": 10.551,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4870653,
-   "name": "KC Concepcion",
-   "pos": "WR",
-   "proTeam": "CLE",
-   "seasonProj": 136.53,
-   "weekly": 10.502,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4685512,
-   "name": "Jadarian Price",
-   "pos": "RB",
-   "proTeam": "SEA",
-   "seasonProj": 104.58,
-   "weekly": 10.458,
-   "injuryStatus": "INJURY_RESERVE"
-  },
-  {
-   "playerId": 4597500,
-   "name": "Adonai Mitchell",
-   "pos": "WR",
-   "proTeam": "NYJ",
-   "seasonProj": 124.74,
-   "weekly": 10.395,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4426388,
-   "name": "Jameson Williams",
-   "pos": "WR",
-   "proTeam": "DET",
-   "seasonProj": 135.01,
-   "weekly": 10.386,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3128429,
-   "name": "Courtland Sutton",
-   "pos": "WR",
-   "proTeam": "DEN",
-   "seasonProj": 134.67,
-   "weekly": 10.36,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4688813,
-   "name": "Josh Downs",
-   "pos": "WR",
-   "proTeam": "IND",
-   "seasonProj": 134.35,
-   "weekly": 10.335,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360569,
-   "name": "Jordan Mason",
-   "pos": "RB",
-   "proTeam": "MIN",
-   "seasonProj": 123.41,
-   "weekly": 10.284,
-   "injuryStatus": "INJURY_RESERVE"
-  },
-  {
-   "playerId": 3929645,
-   "name": "Juwan Johnson",
-   "pos": "TE",
-   "proTeam": "NO",
-   "seasonProj": 133.43,
-   "weekly": 10.264,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4880281,
-   "name": "Jordyn Tyson",
-   "pos": "WR",
-   "proTeam": "NO",
-   "seasonProj": 101.03,
-   "weekly": 10.103,
-   "injuryStatus": "INJURY_RESERVE"
-  },
-  {
-   "playerId": 4431492,
-   "name": "Roman Wilson",
-   "pos": "WR",
-   "proTeam": "PIT",
-   "seasonProj": 130.87,
-   "weekly": 10.067,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4036133,
-   "name": "T.J. Hockenson",
-   "pos": "TE",
-   "proTeam": "MIN",
-   "seasonProj": 130.06,
-   "weekly": 10.004,
+   "seasonProj": 137.69,
+   "weekly": 11.474,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1162,80 +919,71 @@
    "name": "Kyle Monangai",
    "pos": "RB",
    "proTeam": "CHI",
-   "seasonProj": 118.75,
-   "weekly": 9.896,
+   "seasonProj": 124.93,
+   "weekly": 11.357,
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 4373678,
-   "name": "Khalil Shakir",
-   "pos": "WR",
-   "proTeam": "BUF",
-   "seasonProj": 128.59,
-   "weekly": 9.892,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4567750,
-   "name": "Emeka Egbuka",
-   "pos": "WR",
-   "proTeam": "TB",
-   "seasonProj": 128.22,
-   "weekly": 9.863,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4683062,
-   "name": "Xavier Worthy",
-   "pos": "WR",
-   "proTeam": "KC",
-   "seasonProj": 128.03,
-   "weekly": 9.849,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4430539,
-   "name": "Brenton Strange",
-   "pos": "TE",
-   "proTeam": "JAX",
-   "seasonProj": 127.54,
-   "weekly": 9.811,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4432710,
-   "name": "TreVeyon Henderson",
+   "playerId": 4696981,
+   "name": "Cam Skattebo",
    "pos": "RB",
-   "proTeam": "NE",
-   "seasonProj": 127.18,
-   "weekly": 9.783,
+   "proTeam": "NYG",
+   "seasonProj": 135.19,
+   "weekly": 11.266,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4686361,
-   "name": "Cam Little",
-   "pos": "K",
-   "proTeam": "JAX",
-   "seasonProj": 126.12,
-   "weekly": 9.702,
-   "injuryStatus": "ACTIVE"
+   "playerId": 4685512,
+   "name": "Jadarian Price",
+   "pos": "RB",
+   "proTeam": "SEA",
+   "seasonProj": 112.65,
+   "weekly": 11.265,
+   "injuryStatus": "INJURY_RESERVE"
   },
   {
    "playerId": 4567104,
    "name": "Will Reichard",
    "pos": "K",
    "proTeam": "MIN",
-   "seasonProj": 123.31,
-   "weekly": 9.486,
+   "seasonProj": 134.85,
+   "weekly": 11.237,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4723086,
-   "name": "Colston Loveland",
+   "playerId": 4035538,
+   "name": "David Montgomery",
+   "pos": "RB",
+   "proTeam": "HOU",
+   "seasonProj": 123.54,
+   "weekly": 11.231,
+   "injuryStatus": "DOUBTFUL"
+  },
+  {
+   "playerId": 4429205,
+   "name": "Jordan Addison",
+   "pos": "WR",
+   "proTeam": "MIN",
+   "seasonProj": 134.31,
+   "weekly": 11.193,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4572680,
+   "name": "Tucker Kraft",
    "pos": "TE",
-   "proTeam": "CHI",
-   "seasonProj": 120.97,
-   "weekly": 9.305,
+   "proTeam": "GB",
+   "seasonProj": 132.33,
+   "weekly": 11.028,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 15847,
+   "name": "Travis Kelce",
+   "pos": "TE",
+   "proTeam": "KC",
+   "seasonProj": 142.34,
+   "weekly": 10.949,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1243,44 +991,80 @@
    "name": "Ka'imi Fairbairn",
    "pos": "K",
    "proTeam": "HOU",
-   "seasonProj": 119.44,
-   "weekly": 9.188,
+   "seasonProj": 131.27,
+   "weekly": 10.939,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4385690,
-   "name": "Dalton Kincaid",
-   "pos": "TE",
-   "proTeam": "BUF",
-   "seasonProj": 119.37,
-   "weekly": 9.182,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4034949,
-   "name": "Eddy Pineiro",
-   "pos": "K",
-   "proTeam": "SF",
-   "seasonProj": 119.36,
-   "weekly": 9.182,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4569587,
-   "name": "Wan'Dale Robinson",
+   "playerId": 4426388,
+   "name": "Jameson Williams",
    "pos": "WR",
-   "proTeam": "TEN",
-   "seasonProj": 118.61,
-   "weekly": 9.124,
+   "proTeam": "DET",
+   "seasonProj": 129.46,
+   "weekly": 10.788,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3055899,
-   "name": "Harrison Butker",
-   "pos": "K",
-   "proTeam": "KC",
-   "seasonProj": 118.31,
-   "weekly": 9.101,
+   "playerId": 4360078,
+   "name": "Alec Pierce",
+   "pos": "WR",
+   "proTeam": "IND",
+   "seasonProj": 107.58,
+   "weekly": 10.758,
+   "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 4887558,
+   "name": "Emanuel Wilson",
+   "pos": "RB",
+   "proTeam": "SEA",
+   "seasonProj": 21.35,
+   "weekly": 10.674,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4431299,
+   "name": "Rome Odunze",
+   "pos": "WR",
+   "proTeam": "CHI",
+   "seasonProj": 128.06,
+   "weekly": 10.671,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4372016,
+   "name": "Jaylen Waddle",
+   "pos": "WR",
+   "proTeam": "DEN",
+   "seasonProj": 127.8,
+   "weekly": 10.65,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4036133,
+   "name": "T.J. Hockenson",
+   "pos": "TE",
+   "proTeam": "MIN",
+   "seasonProj": 127.58,
+   "weekly": 10.631,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 3121023,
+   "name": "Dallas Goedert",
+   "pos": "TE",
+   "proTeam": "PHI",
+   "seasonProj": 127.21,
+   "weekly": 10.601,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4569603,
+   "name": "Malik Washington",
+   "pos": "WR",
+   "proTeam": "MIA",
+   "seasonProj": 127.01,
+   "weekly": 10.584,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1288,44 +1072,116 @@
    "name": "Spencer Shrader",
    "pos": "K",
    "proTeam": "IND",
-   "seasonProj": 118.29,
-   "weekly": 9.099,
+   "seasonProj": 126.99,
+   "weekly": 10.582,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 5083315,
-   "name": "Kenyon Sadiq",
+   "playerId": 5083076,
+   "name": "Harold Fannin Jr.",
    "pos": "TE",
-   "proTeam": "NYJ",
-   "seasonProj": 118.07,
-   "weekly": 9.083,
+   "proTeam": "CLE",
+   "seasonProj": 126.65,
+   "weekly": 10.554,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4361432,
-   "name": "Romeo Doubs",
-   "pos": "WR",
-   "proTeam": "NE",
-   "seasonProj": 117.38,
-   "weekly": 9.029,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4574716,
-   "name": "Harrison Mevis",
+   "playerId": 3953687,
+   "name": "Brandon Aubrey",
    "pos": "K",
-   "proTeam": "LAR",
-   "seasonProj": 117.19,
-   "weekly": 9.015,
+   "proTeam": "DAL",
+   "seasonProj": 123.95,
+   "weekly": 10.329,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4428718,
-   "name": "Tre Tucker",
+   "playerId": 4597500,
+   "name": "Adonai Mitchell",
    "pos": "WR",
-   "proTeam": "LV",
-   "seasonProj": 115.88,
-   "weekly": 8.914,
+   "proTeam": "NYJ",
+   "seasonProj": 113.58,
+   "weekly": 10.326,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4612826,
+   "name": "Ladd McConkey",
+   "pos": "WR",
+   "proTeam": "LAC",
+   "seasonProj": 123.81,
+   "weekly": 10.318,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 5082424,
+   "name": "Dominic Zvada",
+   "pos": "K",
+   "proTeam": "NYG",
+   "seasonProj": 123.08,
+   "weekly": 10.256,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4568490,
+   "name": "RJ Harvey",
+   "pos": "RB",
+   "proTeam": "DEN",
+   "seasonProj": 122.53,
+   "weekly": 10.211,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4880281,
+   "name": "Jordyn Tyson",
+   "pos": "WR",
+   "proTeam": "NO",
+   "seasonProj": 101.81,
+   "weekly": 10.181,
+   "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 4361411,
+   "name": "Pat Freiermuth",
+   "pos": "TE",
+   "proTeam": "PIT",
+   "seasonProj": 121.92,
+   "weekly": 10.16,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4430539,
+   "name": "Brenton Strange",
+   "pos": "TE",
+   "proTeam": "JAX",
+   "seasonProj": 121.15,
+   "weekly": 10.096,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4685382,
+   "name": "Omarion Hampton",
+   "pos": "RB",
+   "proTeam": "LAC",
+   "seasonProj": 121.06,
+   "weekly": 10.088,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3126486,
+   "name": "Deebo Samuel Sr.",
+   "pos": "WR",
+   "proTeam": "SF",
+   "seasonProj": 110.7,
+   "weekly": 10.063,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 3116365,
+   "name": "Mark Andrews",
+   "pos": "TE",
+   "proTeam": "BAL",
+   "seasonProj": 119.45,
+   "weekly": 9.954,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1333,179 +1189,8 @@
    "name": "Tyler Loop",
    "pos": "K",
    "proTeam": "BAL",
-   "seasonProj": 115.03,
-   "weekly": 8.848,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4032473,
-   "name": "Rashid Shaheed",
-   "pos": "WR",
-   "proTeam": "SEA",
-   "seasonProj": 115.0,
-   "weekly": 8.847,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4689936,
-   "name": "Jake Bates",
-   "pos": "K",
-   "proTeam": "DET",
-   "seasonProj": 114.91,
-   "weekly": 8.84,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 2473037,
-   "name": "Jason Myers",
-   "pos": "K",
-   "proTeam": "SEA",
-   "seasonProj": 114.8,
-   "weekly": 8.831,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4887558,
-   "name": "Emanuel Wilson",
-   "pos": "RB",
-   "proTeam": "SEA",
-   "seasonProj": 26.42,
-   "weekly": 8.807,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 15818,
-   "name": "Keenan Allen",
-   "pos": "WR",
-   "proTeam": "IND",
-   "seasonProj": 114.14,
-   "weekly": 8.78,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4362081,
-   "name": "Cameron Dicker",
-   "pos": "K",
-   "proTeam": "LAC",
-   "seasonProj": 113.17,
-   "weekly": 8.706,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3054850,
-   "name": "Alvin Kamara",
-   "pos": "RB",
-   "proTeam": "NO",
-   "seasonProj": 113.07,
-   "weekly": 8.698,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4428850,
-   "name": "Dontayvion Wicks",
-   "pos": "WR",
-   "proTeam": "PHI",
-   "seasonProj": 113.02,
-   "weekly": 8.694,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5083754,
-   "name": "Ryan Flournoy",
-   "pos": "WR",
-   "proTeam": "DAL",
-   "seasonProj": 112.05,
-   "weekly": 8.619,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 10621,
-   "name": "Nick Folk",
-   "pos": "K",
-   "proTeam": "ATL",
-   "seasonProj": 111.99,
-   "weekly": 8.615,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360234,
-   "name": "Evan McPherson",
-   "pos": "K",
-   "proTeam": "CIN",
-   "seasonProj": 111.66,
-   "weekly": 8.589,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4568263,
-   "name": "Ryan Fitzgerald",
-   "pos": "K",
-   "proTeam": "CAR",
-   "seasonProj": 111.03,
-   "weekly": 8.541,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4869461,
-   "name": "Trey Smack",
-   "pos": "K",
-   "proTeam": "GB",
-   "seasonProj": 110.63,
-   "weekly": 8.51,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 17427,
-   "name": "Cairo Santos",
-   "pos": "K",
-   "proTeam": "CHI",
-   "seasonProj": 109.02,
-   "weekly": 8.386,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3917232,
-   "name": "Tyler Bass",
-   "pos": "K",
-   "proTeam": "BUF",
-   "seasonProj": 108.7,
-   "weekly": 8.362,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3051909,
-   "name": "Daniel Carlson",
-   "pos": "K",
-   "proTeam": "NO",
-   "seasonProj": 108.04,
-   "weekly": 8.311,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4361411,
-   "name": "Pat Freiermuth",
-   "pos": "TE",
-   "proTeam": "PIT",
-   "seasonProj": 107.2,
-   "weekly": 8.246,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4363538,
-   "name": "Chad Ryland",
-   "pos": "K",
-   "proTeam": "ARI",
-   "seasonProj": 107.09,
-   "weekly": 8.238,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4686422,
-   "name": "Xavier Hutchinson",
-   "pos": "WR",
-   "proTeam": "HOU",
-   "seasonProj": 106.63,
-   "weekly": 8.202,
+   "seasonProj": 119.45,
+   "weekly": 9.954,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1513,35 +1198,116 @@
    "name": "Matt Gay",
    "pos": "K",
    "proTeam": "LV",
-   "seasonProj": 106.34,
-   "weekly": 8.18,
+   "seasonProj": 119.33,
+   "weekly": 9.944,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 5081335,
-   "name": "Drew Stevens",
-   "pos": "K",
-   "proTeam": "WSH",
-   "seasonProj": 106.14,
-   "weekly": 8.165,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3124679,
-   "name": "Jason Sanders",
-   "pos": "K",
-   "proTeam": "NYJ",
-   "seasonProj": 105.68,
-   "weekly": 8.129,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4635008,
-   "name": "Keon Coleman",
+   "playerId": 4373678,
+   "name": "Khalil Shakir",
    "pos": "WR",
    "proTeam": "BUF",
-   "seasonProj": 105.67,
-   "weekly": 8.128,
+   "seasonProj": 118.16,
+   "weekly": 9.846,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3929645,
+   "name": "Juwan Johnson",
+   "pos": "TE",
+   "proTeam": "NO",
+   "seasonProj": 117.84,
+   "weekly": 9.82,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4683062,
+   "name": "Xavier Worthy",
+   "pos": "WR",
+   "proTeam": "KC",
+   "seasonProj": 127.1,
+   "weekly": 9.777,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4686361,
+   "name": "Cam Little",
+   "pos": "K",
+   "proTeam": "JAX",
+   "seasonProj": 117.3,
+   "weekly": 9.775,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4431492,
+   "name": "Roman Wilson",
+   "pos": "WR",
+   "proTeam": "PIT",
+   "seasonProj": 97.53,
+   "weekly": 9.753,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4361432,
+   "name": "Romeo Doubs",
+   "pos": "WR",
+   "proTeam": "NE",
+   "seasonProj": 115.07,
+   "weekly": 9.589,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3916433,
+   "name": "Jakobi Meyers",
+   "pos": "WR",
+   "proTeam": "JAX",
+   "seasonProj": 115.02,
+   "weekly": 9.585,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4432710,
+   "name": "TreVeyon Henderson",
+   "pos": "RB",
+   "proTeam": "NE",
+   "seasonProj": 114.28,
+   "weekly": 9.524,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 4360569,
+   "name": "Jordan Mason",
+   "pos": "RB",
+   "proTeam": "MIN",
+   "seasonProj": 113.67,
+   "weekly": 9.473,
+   "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 4685261,
+   "name": "Germie Bernard",
+   "pos": "WR",
+   "proTeam": "PIT",
+   "seasonProj": 113.13,
+   "weekly": 9.427,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 10621,
+   "name": "Nick Folk",
+   "pos": "K",
+   "proTeam": "ATL",
+   "seasonProj": 112.59,
+   "weekly": 9.382,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3055899,
+   "name": "Harrison Butker",
+   "pos": "K",
+   "proTeam": "KC",
+   "seasonProj": 120.75,
+   "weekly": 9.288,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1549,44 +1315,116 @@
    "name": "Chris Boswell",
    "pos": "K",
    "proTeam": "PIT",
-   "seasonProj": 105.6,
-   "weekly": 8.123,
+   "seasonProj": 110.29,
+   "weekly": 9.191,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4575131,
-   "name": "Jacory Croskey-Merritt",
-   "pos": "RB",
-   "proTeam": "WSH",
-   "seasonProj": 105.49,
-   "weekly": 8.114,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4569559,
-   "name": "Devaughn Vele",
-   "pos": "WR",
-   "proTeam": "NO",
-   "seasonProj": 105.43,
-   "weekly": 8.11,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3117256,
-   "name": "Dalton Schultz",
+   "playerId": 4385690,
+   "name": "Dalton Kincaid",
    "pos": "TE",
-   "proTeam": "HOU",
-   "seasonProj": 104.99,
-   "weekly": 8.076,
+   "proTeam": "BUF",
+   "seasonProj": 110.1,
+   "weekly": 9.175,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4429096,
-   "name": "Blake Corum",
-   "pos": "RB",
-   "proTeam": "LAR",
-   "seasonProj": 104.95,
-   "weekly": 8.073,
+   "playerId": 2473037,
+   "name": "Jason Myers",
+   "pos": "K",
+   "proTeam": "SEA",
+   "seasonProj": 109.11,
+   "weekly": 9.092,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4688813,
+   "name": "Josh Downs",
+   "pos": "WR",
+   "proTeam": "IND",
+   "seasonProj": 108.89,
+   "weekly": 9.074,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3128429,
+   "name": "Courtland Sutton",
+   "pos": "WR",
+   "proTeam": "DEN",
+   "seasonProj": 107.74,
+   "weekly": 8.978,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4428718,
+   "name": "Tre Tucker",
+   "pos": "WR",
+   "proTeam": "LV",
+   "seasonProj": 107.44,
+   "weekly": 8.954,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4689936,
+   "name": "Jake Bates",
+   "pos": "K",
+   "proTeam": "DET",
+   "seasonProj": 106.55,
+   "weekly": 8.879,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4870653,
+   "name": "KC Concepcion",
+   "pos": "WR",
+   "proTeam": "CLE",
+   "seasonProj": 106.17,
+   "weekly": 8.848,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 4569587,
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "proTeam": "TEN",
+   "seasonProj": 105.66,
+   "weekly": 8.805,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 5081335,
+   "name": "Drew Stevens",
+   "pos": "K",
+   "proTeam": "WSH",
+   "seasonProj": 105.6,
+   "weekly": 8.8,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4428850,
+   "name": "Dontayvion Wicks",
+   "pos": "WR",
+   "proTeam": "PHI",
+   "seasonProj": 105.27,
+   "weekly": 8.772,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 2985659,
+   "name": "Wil Lutz",
+   "pos": "K",
+   "proTeam": "DEN",
+   "seasonProj": 104.22,
+   "weekly": 8.685,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4723086,
+   "name": "Colston Loveland",
+   "pos": "TE",
+   "proTeam": "CHI",
+   "seasonProj": 104.06,
+   "weekly": 8.672,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1594,8 +1432,107 @@
    "name": "AJ Barner",
    "pos": "TE",
    "proTeam": "SEA",
-   "seasonProj": 104.8,
-   "weekly": 8.062,
+   "seasonProj": 103.92,
+   "weekly": 8.66,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4574716,
+   "name": "Harrison Mevis",
+   "pos": "K",
+   "proTeam": "LAR",
+   "seasonProj": 103.22,
+   "weekly": 8.602,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4568263,
+   "name": "Ryan Fitzgerald",
+   "pos": "K",
+   "proTeam": "CAR",
+   "seasonProj": 111.4,
+   "weekly": 8.569,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4032473,
+   "name": "Rashid Shaheed",
+   "pos": "WR",
+   "proTeam": "SEA",
+   "seasonProj": 102.51,
+   "weekly": 8.542,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4428557,
+   "name": "Tyjae Spears",
+   "pos": "RB",
+   "proTeam": "TEN",
+   "seasonProj": 101.48,
+   "weekly": 8.457,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4429059,
+   "name": "Woody Marks",
+   "pos": "RB",
+   "proTeam": "HOU",
+   "seasonProj": 101.43,
+   "weekly": 8.453,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 17427,
+   "name": "Cairo Santos",
+   "pos": "K",
+   "proTeam": "CHI",
+   "seasonProj": 101.41,
+   "weekly": 8.451,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4034949,
+   "name": "Eddy Pineiro",
+   "pos": "K",
+   "proTeam": "SF",
+   "seasonProj": 101.23,
+   "weekly": 8.436,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 15818,
+   "name": "Keenan Allen",
+   "pos": "WR",
+   "proTeam": "IND",
+   "seasonProj": 100.32,
+   "weekly": 8.36,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 5083754,
+   "name": "Ryan Flournoy",
+   "pos": "WR",
+   "proTeam": "DAL",
+   "seasonProj": 99.11,
+   "weekly": 8.259,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3150744,
+   "name": "Chase McLaughlin",
+   "pos": "K",
+   "proTeam": "TB",
+   "seasonProj": 99.0,
+   "weekly": 8.25,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4429096,
+   "name": "Blake Corum",
+   "pos": "RB",
+   "proTeam": "LAR",
+   "seasonProj": 98.6,
+   "weekly": 8.216,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1603,71 +1540,35 @@
    "name": "Andre Szmyt",
    "pos": "K",
    "proTeam": "CLE",
-   "seasonProj": 104.71,
-   "weekly": 8.054,
+   "seasonProj": 98.16,
+   "weekly": 8.18,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 5082424,
-   "name": "Dominic Zvada",
-   "pos": "K",
-   "proTeam": "NYG",
-   "seasonProj": 104.56,
-   "weekly": 8.043,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4241474,
-   "name": "Brian Robinson Jr.",
-   "pos": "RB",
-   "proTeam": "ATL",
-   "seasonProj": 103.94,
-   "weekly": 7.995,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4373626,
-   "name": "Tyler Allgeier",
-   "pos": "RB",
-   "proTeam": "ARI",
-   "seasonProj": 103.86,
-   "weekly": 7.989,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4429086,
-   "name": "Michael Mayer",
+   "playerId": 3046439,
+   "name": "Hunter Henry",
    "pos": "TE",
-   "proTeam": "LV",
-   "seasonProj": 103.75,
-   "weekly": 7.981,
+   "proTeam": "NE",
+   "seasonProj": 98.13,
+   "weekly": 8.178,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4869645,
-   "name": "Caleb Douglas",
-   "pos": "WR",
-   "proTeam": "MIA",
-   "seasonProj": 95.75,
-   "weekly": 7.979,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 3150744,
-   "name": "Chase McLaughlin",
+   "playerId": 3917232,
+   "name": "Tyler Bass",
    "pos": "K",
-   "proTeam": "TB",
-   "seasonProj": 103.11,
-   "weekly": 7.931,
+   "proTeam": "BUF",
+   "seasonProj": 97.99,
+   "weekly": 8.166,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3050478,
-   "name": "Jake Elliott",
-   "pos": "K",
-   "proTeam": "PHI",
-   "seasonProj": 102.69,
-   "weekly": 7.899,
+   "playerId": 3054850,
+   "name": "Alvin Kamara",
+   "pos": "RB",
+   "proTeam": "NO",
+   "seasonProj": 97.81,
+   "weekly": 8.151,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1675,8 +1576,80 @@
    "name": "Cade Otton",
    "pos": "TE",
    "proTeam": "TB",
-   "seasonProj": 102.18,
-   "weekly": 7.86,
+   "seasonProj": 97.78,
+   "weekly": 8.148,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4575131,
+   "name": "Jacory Croskey-Merritt",
+   "pos": "RB",
+   "proTeam": "WSH",
+   "seasonProj": 97.59,
+   "weekly": 8.132,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4360248,
+   "name": "Kyle Pitts Sr.",
+   "pos": "TE",
+   "proTeam": "ATL",
+   "seasonProj": 97.03,
+   "weekly": 8.086,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4362081,
+   "name": "Cameron Dicker",
+   "pos": "K",
+   "proTeam": "LAC",
+   "seasonProj": 96.95,
+   "weekly": 8.079,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4869461,
+   "name": "Trey Smack",
+   "pos": "K",
+   "proTeam": "GB",
+   "seasonProj": 96.89,
+   "weekly": 8.074,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4596334,
+   "name": "Keaton Mitchell",
+   "pos": "RB",
+   "proTeam": "LAC",
+   "seasonProj": 96.8,
+   "weekly": 8.067,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4635008,
+   "name": "Keon Coleman",
+   "pos": "WR",
+   "proTeam": "BUF",
+   "seasonProj": 96.45,
+   "weekly": 8.037,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4697815,
+   "name": "Rachaad White",
+   "pos": "RB",
+   "proTeam": "WSH",
+   "seasonProj": 96.11,
+   "weekly": 8.009,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4569559,
+   "name": "Devaughn Vele",
+   "pos": "WR",
+   "proTeam": "NO",
+   "seasonProj": 95.76,
+   "weekly": 7.98,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1689,138 +1662,57 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4685261,
-   "name": "Germie Bernard",
-   "pos": "WR",
-   "proTeam": "PIT",
-   "seasonProj": 100.8,
-   "weekly": 7.754,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 4434153,
    "name": "Tyson Bagent",
    "pos": "QB",
    "proTeam": "CHI",
-   "seasonProj": 15.45,
-   "weekly": 7.726,
+   "seasonProj": 15.43,
+   "weekly": 7.717,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4596334,
-   "name": "Keaton Mitchell",
-   "pos": "RB",
-   "proTeam": "LAC",
-   "seasonProj": 100.33,
-   "weekly": 7.718,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4429059,
-   "name": "Woody Marks",
-   "pos": "RB",
-   "proTeam": "HOU",
-   "seasonProj": 100.28,
-   "weekly": 7.714,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4682745,
-   "name": "Jaylen Wright",
-   "pos": "RB",
-   "proTeam": "MIA",
-   "seasonProj": 99.67,
-   "weekly": 7.667,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3046439,
-   "name": "Hunter Henry",
-   "pos": "TE",
-   "proTeam": "NE",
-   "seasonProj": 99.57,
-   "weekly": 7.659,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4697815,
-   "name": "Rachaad White",
-   "pos": "RB",
-   "proTeam": "WSH",
-   "seasonProj": 99.51,
-   "weekly": 7.655,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 2973405,
-   "name": "Kalif Raymond",
-   "pos": "WR",
-   "proTeam": "CHI",
-   "seasonProj": 99.3,
-   "weekly": 7.638,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4432773,
-   "name": "Brian Thomas Jr.",
-   "pos": "WR",
-   "proTeam": "JAX",
-   "seasonProj": 99.24,
-   "weekly": 7.634,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 2985659,
-   "name": "Wil Lutz",
+   "playerId": 4360234,
+   "name": "Evan McPherson",
    "pos": "K",
-   "proTeam": "DEN",
-   "seasonProj": 98.52,
-   "weekly": 7.578,
+   "proTeam": "CIN",
+   "seasonProj": 92.0,
+   "weekly": 7.666,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4682648,
-   "name": "Malachi Fields",
+   "playerId": 3116165,
+   "name": "Chris Godwin Jr.",
    "pos": "WR",
-   "proTeam": "NYG",
-   "seasonProj": 98.48,
-   "weekly": 7.576,
+   "proTeam": "TB",
+   "seasonProj": 90.74,
+   "weekly": 7.562,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4038815,
-   "name": "Rico Dowdle",
-   "pos": "RB",
-   "proTeam": "PIT",
-   "seasonProj": 90.22,
-   "weekly": 7.518,
+   "playerId": 4869645,
+   "name": "Caleb Douglas",
+   "pos": "WR",
+   "proTeam": "MIA",
+   "seasonProj": 90.72,
+   "weekly": 7.56,
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 4360238,
-   "name": "Dameon Pierce",
-   "pos": "RB",
-   "proTeam": "PHI",
-   "seasonProj": 7.34,
-   "weekly": 7.344,
+   "playerId": 3117256,
+   "name": "Dalton Schultz",
+   "pos": "TE",
+   "proTeam": "HOU",
+   "seasonProj": 90.55,
+   "weekly": 7.545,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4685247,
-   "name": "Braelon Allen",
+   "playerId": 4241474,
+   "name": "Brian Robinson Jr.",
    "pos": "RB",
-   "proTeam": "NYJ",
-   "seasonProj": 95.16,
-   "weekly": 7.32,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4569923,
-   "name": "Andy Borregales",
-   "pos": "K",
-   "proTeam": "NE",
-   "seasonProj": 94.92,
-   "weekly": 7.302,
+   "proTeam": "ATL",
+   "seasonProj": 88.31,
+   "weekly": 7.359,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1828,53 +1720,8 @@
    "name": "Kenny Gainwell",
    "pos": "RB",
    "proTeam": "TB",
-   "seasonProj": 94.88,
-   "weekly": 7.298,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3124084,
-   "name": "Joey Slye",
-   "pos": "K",
-   "proTeam": "TEN",
-   "seasonProj": 94.59,
-   "weekly": 7.276,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4426386,
-   "name": "Roschon Johnson",
-   "pos": "RB",
-   "proTeam": "CHI",
-   "seasonProj": 7.26,
-   "weekly": 7.258,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4243371,
-   "name": "Riley Patterson",
-   "pos": "K",
-   "proTeam": "MIA",
-   "seasonProj": 94.14,
-   "weekly": 7.241,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4686612,
-   "name": "Tre' Harris",
-   "pos": "WR",
-   "proTeam": "LAC",
-   "seasonProj": 93.81,
-   "weekly": 7.216,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4869961,
-   "name": "Chris Bell",
-   "pos": "WR",
-   "proTeam": "MIA",
-   "seasonProj": 93.71,
-   "weekly": 7.209,
+   "seasonProj": 88.22,
+   "weekly": 7.351,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1882,17 +1729,44 @@
    "name": "Isaac TeSlaa",
    "pos": "WR",
    "proTeam": "DET",
-   "seasonProj": 93.6,
-   "weekly": 7.2,
+   "seasonProj": 88.06,
+   "weekly": 7.338,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4870795,
-   "name": "Makai Lemon",
+   "playerId": 4038815,
+   "name": "Rico Dowdle",
+   "pos": "RB",
+   "proTeam": "PIT",
+   "seasonProj": 80.36,
+   "weekly": 7.306,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4426386,
+   "name": "Roschon Johnson",
+   "pos": "RB",
+   "proTeam": "CHI",
+   "seasonProj": 7.26,
+   "weekly": 7.26,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4360939,
+   "name": "Rashod Bateman",
    "pos": "WR",
-   "proTeam": "PHI",
-   "seasonProj": 93.41,
-   "weekly": 7.186,
+   "proTeam": "BAL",
+   "seasonProj": 86.77,
+   "weekly": 7.231,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4569923,
+   "name": "Andy Borregales",
+   "pos": "K",
+   "proTeam": "NE",
+   "seasonProj": 86.53,
+   "weekly": 7.211,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1900,17 +1774,17 @@
    "name": "Quentin Johnston",
    "pos": "WR",
    "proTeam": "LAC",
-   "seasonProj": 86.05,
-   "weekly": 7.171,
+   "seasonProj": 79.27,
+   "weekly": 7.207,
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 4360248,
-   "name": "Kyle Pitts Sr.",
-   "pos": "TE",
-   "proTeam": "ATL",
-   "seasonProj": 92.09,
-   "weekly": 7.084,
+   "playerId": 2973405,
+   "name": "Kalif Raymond",
+   "pos": "WR",
+   "proTeam": "CHI",
+   "seasonProj": 86.43,
+   "weekly": 7.202,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -1918,18 +1792,9 @@
    "name": "Darren Waller",
    "pos": "TE",
    "proTeam": "CAR",
-   "seasonProj": 91.97,
-   "weekly": 7.075,
+   "seasonProj": 92.21,
+   "weekly": 7.093,
    "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4429835,
-   "name": "George Holani",
-   "pos": "RB",
-   "proTeam": "SEA",
-   "seasonProj": 14.08,
-   "weekly": 7.042,
-   "injuryStatus": "QUESTIONABLE"
   },
   {
    "playerId": 4035671,
@@ -1941,282 +1806,66 @@
    "injuryStatus": "ACTIVE"
   },
   {
+   "playerId": 4429086,
+   "name": "Michael Mayer",
+   "pos": "TE",
+   "proTeam": "LV",
+   "seasonProj": 84.31,
+   "weekly": 7.026,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4870795,
+   "name": "Makai Lemon",
+   "pos": "WR",
+   "proTeam": "PHI",
+   "seasonProj": 84.01,
+   "weekly": 7.001,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4373626,
+   "name": "Tyler Allgeier",
+   "pos": "RB",
+   "proTeam": "ARI",
+   "seasonProj": 83.84,
+   "weekly": 6.986,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4363538,
+   "name": "Chad Ryland",
+   "pos": "K",
+   "proTeam": "ARI",
+   "seasonProj": 83.22,
+   "weekly": 6.935,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4242355,
    "name": "Jake Ferguson",
    "pos": "TE",
    "proTeam": "DAL",
-   "seasonProj": 91.31,
-   "weekly": 7.024,
+   "seasonProj": 82.44,
+   "weekly": 6.87,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3116165,
-   "name": "Chris Godwin Jr.",
-   "pos": "WR",
-   "proTeam": "TB",
-   "seasonProj": 89.91,
-   "weekly": 6.916,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360939,
-   "name": "Rashod Bateman",
-   "pos": "WR",
-   "proTeam": "BAL",
-   "seasonProj": 87.94,
-   "weekly": 6.765,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4384852,
-   "name": "Dohnte Meyers",
-   "pos": "WR",
-   "proTeam": "CIN",
-   "seasonProj": 86.79,
-   "weekly": 6.676,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4428557,
-   "name": "Tyjae Spears",
+   "playerId": 4685247,
+   "name": "Braelon Allen",
    "pos": "RB",
-   "proTeam": "TEN",
-   "seasonProj": 86.68,
-   "weekly": 6.668,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 2969939,
-   "name": "Jameis Winston",
-   "pos": "QB",
-   "proTeam": "NYG",
-   "seasonProj": 39.99,
-   "weekly": 6.665,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3045523,
-   "name": "Kendrick Bourne",
-   "pos": "WR",
-   "proTeam": "ARI",
-   "seasonProj": 86.28,
-   "weekly": 6.637,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3116164,
-   "name": "Mike Gesicki",
-   "pos": "TE",
-   "proTeam": "CIN",
-   "seasonProj": 83.9,
-   "weekly": 6.454,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4361409,
-   "name": "Jahan Dotson",
-   "pos": "WR",
-   "proTeam": "ATL",
-   "seasonProj": 83.29,
-   "weekly": 6.407,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5081432,
-   "name": "Antonio Williams",
-   "pos": "WR",
-   "proTeam": "WSH",
-   "seasonProj": 82.01,
-   "weekly": 6.308,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4431545,
-   "name": "Will Shipley",
-   "pos": "RB",
-   "proTeam": "PHI",
-   "seasonProj": 80.66,
-   "weekly": 6.204,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4596472,
-   "name": "Jalon Daniels",
-   "pos": "QB",
-   "proTeam": "TB",
-   "seasonProj": 24.71,
-   "weekly": 6.176,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4431280,
-   "name": "Troy Franklin",
-   "pos": "WR",
-   "proTeam": "DEN",
-   "seasonProj": 79.95,
-   "weekly": 6.15,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4595342,
-   "name": "Oronde Gadsden",
-   "pos": "TE",
-   "proTeam": "LAC",
-   "seasonProj": 78.21,
-   "weekly": 6.017,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 2977187,
-   "name": "Cooper Kupp",
-   "pos": "WR",
-   "proTeam": "SEA",
-   "seasonProj": 77.41,
-   "weekly": 5.954,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5220680,
-   "name": "Ted Hurst III",
-   "pos": "WR",
-   "proTeam": "TB",
-   "seasonProj": 77.37,
-   "weekly": 5.951,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4570037,
-   "name": "Terrance Ferguson",
-   "pos": "TE",
-   "proTeam": "LAR",
-   "seasonProj": 59.45,
-   "weekly": 5.945,
-   "injuryStatus": "INJURY_RESERVE"
-  },
-  {
-   "playerId": 4686728,
-   "name": "Gunnar Helm",
-   "pos": "TE",
-   "proTeam": "TEN",
-   "seasonProj": 77.08,
-   "weekly": 5.929,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360635,
-   "name": "Chig Okonkwo",
-   "pos": "TE",
-   "proTeam": "WSH",
-   "seasonProj": 76.12,
-   "weekly": 5.855,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4427095,
-   "name": "DeMario Douglas",
-   "pos": "WR",
-   "proTeam": "NE",
-   "seasonProj": 75.68,
-   "weekly": 5.821,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3134353,
-   "name": "Tim Patrick",
-   "pos": "WR",
    "proTeam": "NYJ",
-   "seasonProj": 5.74,
-   "weekly": 5.736,
+   "seasonProj": 82.43,
+   "weekly": 6.869,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": -16014,
-   "name": "Rams D/ST",
-   "pos": "DST",
-   "proTeam": "LAR",
-   "seasonProj": 96.08,
-   "weekly": 5.652,
-   "injuryStatus": null
-  },
-  {
-   "playerId": -16030,
-   "name": "Jaguars D/ST",
-   "pos": "DST",
-   "proTeam": "JAX",
-   "seasonProj": 96.09,
-   "weekly": 5.652,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4367209,
-   "name": "Greg Dulcich",
-   "pos": "TE",
-   "proTeam": "MIA",
-   "seasonProj": 73.35,
-   "weekly": 5.642,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3116389,
-   "name": "Samaje Perine",
-   "pos": "RB",
-   "proTeam": "CIN",
-   "seasonProj": 72.52,
-   "weekly": 5.578,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16026,
-   "name": "Seahawks D/ST",
-   "pos": "DST",
-   "proTeam": "SEA",
-   "seasonProj": 94.56,
-   "weekly": 5.562,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4879194,
-   "name": "Josh Cameron",
-   "pos": "WR",
-   "proTeam": "JAX",
-   "seasonProj": 72.15,
-   "weekly": 5.55,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4382466,
-   "name": "Jalen Nailor",
-   "pos": "WR",
-   "proTeam": "LV",
-   "seasonProj": 66.55,
-   "weekly": 5.546,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": -16016,
-   "name": "Vikings D/ST",
-   "pos": "DST",
-   "proTeam": "MIN",
-   "seasonProj": 92.09,
-   "weekly": 5.417,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4586312,
-   "name": "Jaylin Noel",
-   "pos": "WR",
-   "proTeam": "HOU",
-   "seasonProj": 70.35,
-   "weekly": 5.412,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4430802,
-   "name": "Darnell Washington",
-   "pos": "TE",
-   "proTeam": "PIT",
-   "seasonProj": 69.6,
-   "weekly": 5.354,
+   "playerId": 3124679,
+   "name": "Jason Sanders",
+   "pos": "K",
+   "proTeam": "NYJ",
+   "seasonProj": 82.26,
+   "weekly": 6.855,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2224,35 +1873,368 @@
    "name": "Darnell Mooney",
    "pos": "WR",
    "proTeam": "NYG",
-   "seasonProj": 68.72,
-   "weekly": 5.286,
+   "seasonProj": 81.98,
+   "weekly": 6.832,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4362619,
-   "name": "Chris Rodriguez Jr.",
-   "pos": "RB",
-   "proTeam": "JAX",
-   "seasonProj": 68.33,
-   "weekly": 5.256,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16001,
-   "name": "Falcons D/ST",
-   "pos": "DST",
+   "playerId": 4361409,
+   "name": "Jahan Dotson",
+   "pos": "WR",
    "proTeam": "ATL",
-   "seasonProj": 88.58,
-   "weekly": 5.21,
+   "seasonProj": 81.05,
+   "weekly": 6.754,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4360635,
+   "name": "Chig Okonkwo",
+   "pos": "TE",
+   "proTeam": "WSH",
+   "seasonProj": 80.19,
+   "weekly": 6.683,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4686422,
+   "name": "Xavier Hutchinson",
+   "pos": "WR",
+   "proTeam": "HOU",
+   "seasonProj": 80.16,
+   "weekly": 6.68,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3050478,
+   "name": "Jake Elliott",
+   "pos": "K",
+   "proTeam": "PHI",
+   "seasonProj": 79.36,
+   "weekly": 6.613,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4430802,
+   "name": "Darnell Washington",
+   "pos": "TE",
+   "proTeam": "PIT",
+   "seasonProj": 79.33,
+   "weekly": 6.611,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 5083315,
+   "name": "Kenyon Sadiq",
+   "pos": "TE",
+   "proTeam": "NYJ",
+   "seasonProj": 77.12,
+   "weekly": 6.426,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 3116389,
+   "name": "Samaje Perine",
+   "pos": "RB",
+   "proTeam": "CIN",
+   "seasonProj": 76.77,
+   "weekly": 6.398,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3045523,
+   "name": "Kendrick Bourne",
+   "pos": "WR",
+   "proTeam": "ARI",
+   "seasonProj": 76.73,
+   "weekly": 6.394,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4432773,
+   "name": "Brian Thomas Jr.",
+   "pos": "WR",
+   "proTeam": "JAX",
+   "seasonProj": 76.7,
+   "weekly": 6.392,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4596472,
+   "name": "Jalon Daniels",
+   "pos": "QB",
+   "proTeam": "TB",
+   "seasonProj": 12.73,
+   "weekly": 6.364,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4427095,
+   "name": "DeMario Douglas",
+   "pos": "WR",
+   "proTeam": "NE",
+   "seasonProj": 76.0,
+   "weekly": 6.333,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4430968,
+   "name": "Kimani Vidal",
+   "pos": "RB",
+   "proTeam": "LAC",
+   "seasonProj": 75.66,
+   "weekly": 6.305,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4429023,
+   "name": "MarShawn Lloyd",
+   "pos": "RB",
+   "proTeam": "GB",
+   "seasonProj": 75.44,
+   "weekly": 6.287,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3051909,
+   "name": "Daniel Carlson",
+   "pos": "K",
+   "proTeam": "NO",
+   "seasonProj": 75.41,
+   "weekly": 6.284,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4241463,
+   "name": "Jerry Jeudy",
+   "pos": "WR",
+   "proTeam": "CLE",
+   "seasonProj": 75.17,
+   "weekly": 6.264,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4686612,
+   "name": "Tre' Harris",
+   "pos": "WR",
+   "proTeam": "LAC",
+   "seasonProj": 74.76,
+   "weekly": 6.23,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 4382466,
+   "name": "Jalen Nailor",
+   "pos": "WR",
+   "proTeam": "LV",
+   "seasonProj": 68.11,
+   "weekly": 6.192,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4682648,
+   "name": "Malachi Fields",
+   "pos": "WR",
+   "proTeam": "NYG",
+   "seasonProj": 73.51,
+   "weekly": 6.126,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4384852,
+   "name": "Dohnte Meyers",
+   "pos": "WR",
+   "proTeam": "CIN",
+   "seasonProj": 72.7,
+   "weekly": 6.059,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3051876,
+   "name": "Evan Engram",
+   "pos": "TE",
+   "proTeam": "DEN",
+   "seasonProj": 71.41,
+   "weekly": 5.951,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4367209,
+   "name": "Greg Dulcich",
+   "pos": "TE",
+   "proTeam": "MIA",
+   "seasonProj": 70.47,
+   "weekly": 5.873,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4243371,
+   "name": "Riley Patterson",
+   "pos": "K",
+   "proTeam": "MIA",
+   "seasonProj": 70.47,
+   "weekly": 5.872,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4869961,
+   "name": "Chris Bell",
+   "pos": "WR",
+   "proTeam": "MIA",
+   "seasonProj": 69.91,
+   "weekly": 5.825,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4570037,
+   "name": "Terrance Ferguson",
+   "pos": "TE",
+   "proTeam": "LAR",
+   "seasonProj": 58.08,
+   "weekly": 5.808,
+   "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 4429835,
+   "name": "George Holani",
+   "pos": "RB",
+   "proTeam": "SEA",
+   "seasonProj": 11.58,
+   "weekly": 5.792,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3116164,
+   "name": "Mike Gesicki",
+   "pos": "TE",
+   "proTeam": "CIN",
+   "seasonProj": 69.35,
+   "weekly": 5.779,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4431487,
+   "name": "Savion Williams",
+   "pos": "WR",
+   "proTeam": "GB",
+   "seasonProj": 63.19,
+   "weekly": 5.744,
+   "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 2977187,
+   "name": "Cooper Kupp",
+   "pos": "WR",
+   "proTeam": "SEA",
+   "seasonProj": 68.38,
+   "weekly": 5.698,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4038441,
+   "name": "Justice Hill",
+   "pos": "RB",
+   "proTeam": "BAL",
+   "seasonProj": 68.29,
+   "weekly": 5.69,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4601080,
+   "name": "Raheim Sanders",
+   "pos": "RB",
+   "proTeam": "CLE",
+   "seasonProj": 66.72,
+   "weekly": 5.56,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": -16014,
+   "name": "Rams D/ST",
+   "pos": "DST",
+   "proTeam": "LAR",
+   "seasonProj": 94.02,
+   "weekly": 5.531,
    "injuryStatus": null
   },
   {
-   "playerId": 4569371,
-   "name": "Isaiah Williams",
+   "playerId": 4879194,
+   "name": "Josh Cameron",
    "pos": "WR",
-   "proTeam": "NYJ",
-   "seasonProj": 67.45,
-   "weekly": 5.189,
+   "proTeam": "JAX",
+   "seasonProj": 65.64,
+   "weekly": 5.47,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4431545,
+   "name": "Will Shipley",
+   "pos": "RB",
+   "proTeam": "PHI",
+   "seasonProj": 54.65,
+   "weekly": 5.465,
+   "injuryStatus": "DOUBTFUL"
+  },
+  {
+   "playerId": 5081432,
+   "name": "Antonio Williams",
+   "pos": "WR",
+   "proTeam": "WSH",
+   "seasonProj": 64.71,
+   "weekly": 5.393,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3124084,
+   "name": "Joey Slye",
+   "pos": "K",
+   "proTeam": "TEN",
+   "seasonProj": 64.64,
+   "weekly": 5.387,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4685307,
+   "name": "Kevin Coleman Jr.",
+   "pos": "WR",
+   "proTeam": "MIA",
+   "seasonProj": 64.47,
+   "weekly": 5.372,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16030,
+   "name": "Jaguars D/ST",
+   "pos": "DST",
+   "proTeam": "JAX",
+   "seasonProj": 90.71,
+   "weekly": 5.336,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 5220680,
+   "name": "Ted Hurst III",
+   "pos": "WR",
+   "proTeam": "TB",
+   "seasonProj": 63.98,
+   "weekly": 5.332,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16016,
+   "name": "Vikings D/ST",
+   "pos": "DST",
+   "proTeam": "MIN",
+   "seasonProj": 89.97,
+   "weekly": 5.292,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4692835,
+   "name": "Jalen Brooks",
+   "pos": "WR",
+   "proTeam": "ARI",
+   "seasonProj": 62.49,
+   "weekly": 5.207,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2260,44 +2242,17 @@
    "name": "Texans D/ST",
    "pos": "DST",
    "proTeam": "HOU",
-   "seasonProj": 88.05,
-   "weekly": 5.179,
+   "seasonProj": 88.0,
+   "weekly": 5.176,
    "injuryStatus": null
   },
   {
-   "playerId": -16025,
-   "name": "49ers D/ST",
-   "pos": "DST",
-   "proTeam": "SF",
-   "seasonProj": 87.7,
-   "weekly": 5.159,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4601080,
-   "name": "Raheim Sanders",
-   "pos": "RB",
-   "proTeam": "CLE",
-   "seasonProj": 66.49,
-   "weekly": 5.115,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16012,
-   "name": "Chiefs D/ST",
-   "pos": "DST",
-   "proTeam": "KC",
-   "seasonProj": 86.92,
-   "weekly": 5.113,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 3051876,
-   "name": "Evan Engram",
-   "pos": "TE",
+   "playerId": 4431280,
+   "name": "Troy Franklin",
+   "pos": "WR",
    "proTeam": "DEN",
-   "seasonProj": 65.96,
-   "weekly": 5.074,
+   "seasonProj": 61.81,
+   "weekly": 5.151,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2305,17 +2260,26 @@
    "name": "Brycen Tremayne",
    "pos": "WR",
    "proTeam": "CAR",
-   "seasonProj": 65.7,
-   "weekly": 5.054,
+   "seasonProj": 65.91,
+   "weekly": 5.07,
    "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16026,
+   "name": "Seahawks D/ST",
+   "pos": "DST",
+   "proTeam": "SEA",
+   "seasonProj": 85.81,
+   "weekly": 5.047,
+   "injuryStatus": null
   },
   {
    "playerId": 4372780,
    "name": "Tommy Tremble",
    "pos": "TE",
    "proTeam": "CAR",
-   "seasonProj": 65.31,
-   "weekly": 5.023,
+   "seasonProj": 65.44,
+   "weekly": 5.034,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2328,48 +2292,48 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4613202,
-   "name": "Kyle Williams",
-   "pos": "WR",
-   "proTeam": "NE",
-   "seasonProj": 64.82,
-   "weekly": 4.986,
+   "playerId": 2983509,
+   "name": "Dare Ogunbowale",
+   "pos": "RB",
+   "proTeam": "HOU",
+   "seasonProj": 4.95,
+   "weekly": 4.947,
    "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4586312,
+   "name": "Jaylin Noel",
+   "pos": "WR",
+   "proTeam": "HOU",
+   "seasonProj": 58.92,
+   "weekly": 4.91,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4682745,
+   "name": "Jaylen Wright",
+   "pos": "RB",
+   "proTeam": "MIA",
+   "seasonProj": 58.9,
+   "weekly": 4.908,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16025,
+   "name": "49ers D/ST",
+   "pos": "DST",
+   "proTeam": "SF",
+   "seasonProj": 83.32,
+   "weekly": 4.901,
+   "injuryStatus": null
   },
   {
    "playerId": 4696044,
    "name": "Kaelon Black",
    "pos": "RB",
    "proTeam": "SF",
-   "seasonProj": 64.5,
-   "weekly": 4.962,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4430191,
-   "name": "Skyy Moore",
-   "pos": "WR",
-   "proTeam": "GB",
-   "seasonProj": 64.34,
-   "weekly": 4.949,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4241457,
-   "name": "Najee Harris",
-   "pos": "RB",
-   "proTeam": "NYG",
-   "seasonProj": 63.75,
-   "weekly": 4.904,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4429022,
-   "name": "Kayshon Boutte",
-   "pos": "WR",
-   "proTeam": "HOU",
-   "seasonProj": 63.23,
-   "weekly": 4.864,
+   "seasonProj": 57.9,
+   "weekly": 4.825,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2377,161 +2341,35 @@
    "name": "Jalen Royals",
    "pos": "WR",
    "proTeam": "KC",
-   "seasonProj": 62.84,
-   "weekly": 4.834,
+   "seasonProj": 62.32,
+   "weekly": 4.794,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4686658,
-   "name": "Mike Washington Jr.",
-   "pos": "RB",
-   "proTeam": "LV",
-   "seasonProj": 62.24,
-   "weekly": 4.788,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16017,
-   "name": "Patriots D/ST",
-   "pos": "DST",
-   "proTeam": "NE",
-   "seasonProj": 81.14,
-   "weekly": 4.773,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 2576581,
-   "name": "Chris Moore",
-   "pos": "WR",
-   "proTeam": "BAL",
-   "seasonProj": 61.53,
-   "weekly": 4.733,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4430968,
-   "name": "Kimani Vidal",
-   "pos": "RB",
-   "proTeam": "LAC",
-   "seasonProj": 60.96,
-   "weekly": 4.689,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4242557,
-   "name": "Colby Parkinson",
+   "playerId": 4241263,
+   "name": "Charlie Kolar",
    "pos": "TE",
-   "proTeam": "LAR",
-   "seasonProj": 60.85,
-   "weekly": 4.68,
+   "proTeam": "LAC",
+   "seasonProj": 57.29,
+   "weekly": 4.774,
    "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4239934,
-   "name": "AJ Dillon",
-   "pos": "RB",
-   "proTeam": "CAR",
-   "seasonProj": 60.73,
-   "weekly": 4.671,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4038441,
-   "name": "Justice Hill",
-   "pos": "RB",
-   "proTeam": "BAL",
-   "seasonProj": 60.6,
-   "weekly": 4.662,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4241463,
-   "name": "Jerry Jeudy",
-   "pos": "WR",
-   "proTeam": "CLE",
-   "seasonProj": 60.51,
-   "weekly": 4.655,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3915411,
-   "name": "Ty Johnson",
-   "pos": "RB",
-   "proTeam": "BUF",
-   "seasonProj": 60.02,
-   "weekly": 4.617,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16033,
-   "name": "Ravens D/ST",
-   "pos": "DST",
-   "proTeam": "BAL",
-   "seasonProj": 78.05,
-   "weekly": 4.591,
-   "injuryStatus": null
-  },
-  {
-   "playerId": -16007,
-   "name": "Broncos D/ST",
-   "pos": "DST",
-   "proTeam": "DEN",
-   "seasonProj": 77.44,
-   "weekly": 4.555,
-   "injuryStatus": null
   },
   {
    "playerId": 4567156,
    "name": "Treylon Burks",
    "pos": "WR",
    "proTeam": "WSH",
-   "seasonProj": 58.4,
-   "weekly": 4.493,
+   "seasonProj": 56.8,
+   "weekly": 4.733,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": -16020,
-   "name": "Jets D/ST",
-   "pos": "DST",
-   "proTeam": "NYJ",
-   "seasonProj": 74.12,
-   "weekly": 4.36,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4036131,
-   "name": "Noah Fant",
+   "playerId": 4808766,
+   "name": "Mason Taylor",
    "pos": "TE",
-   "proTeam": "NO",
-   "seasonProj": 55.13,
-   "weekly": 4.241,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4685307,
-   "name": "Kevin Coleman Jr.",
-   "pos": "WR",
-   "proTeam": "MIA",
-   "seasonProj": 54.84,
-   "weekly": 4.218,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16005,
-   "name": "Browns D/ST",
-   "pos": "DST",
-   "proTeam": "CLE",
-   "seasonProj": 71.46,
-   "weekly": 4.203,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4429023,
-   "name": "MarShawn Lloyd",
-   "pos": "RB",
-   "proTeam": "GB",
-   "seasonProj": 54.58,
-   "weekly": 4.198,
+   "proTeam": "NYJ",
+   "seasonProj": 56.42,
+   "weekly": 4.702,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2539,35 +2377,53 @@
    "name": "Steelers D/ST",
    "pos": "DST",
    "proTeam": "PIT",
-   "seasonProj": 71.29,
-   "weekly": 4.194,
+   "seasonProj": 79.61,
+   "weekly": 4.683,
    "injuryStatus": null
   },
   {
-   "playerId": 4883647,
-   "name": "Elic Ayomanor",
+   "playerId": 4429022,
+   "name": "Kayshon Boutte",
    "pos": "WR",
-   "proTeam": "TEN",
-   "seasonProj": 54.3,
-   "weekly": 4.177,
+   "proTeam": "HOU",
+   "seasonProj": 56.1,
+   "weekly": 4.675,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": -16004,
-   "name": "Bengals D/ST",
+   "playerId": 4362619,
+   "name": "Chris Rodriguez Jr.",
+   "pos": "RB",
+   "proTeam": "JAX",
+   "seasonProj": 55.64,
+   "weekly": 4.637,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16033,
+   "name": "Ravens D/ST",
    "pos": "DST",
-   "proTeam": "CIN",
-   "seasonProj": 70.23,
-   "weekly": 4.131,
+   "proTeam": "BAL",
+   "seasonProj": 78.75,
+   "weekly": 4.632,
    "injuryStatus": null
   },
   {
-   "playerId": 4240472,
-   "name": "Noah Gray",
-   "pos": "TE",
-   "proTeam": "KC",
-   "seasonProj": 53.54,
-   "weekly": 4.119,
+   "playerId": 3915411,
+   "name": "Ty Johnson",
+   "pos": "RB",
+   "proTeam": "BUF",
+   "seasonProj": 55.42,
+   "weekly": 4.618,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4241457,
+   "name": "Najee Harris",
+   "pos": "RB",
+   "proTeam": "NYG",
+   "seasonProj": 54.76,
+   "weekly": 4.563,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2575,8 +2431,152 @@
    "name": "Sione Vaki",
    "pos": "RB",
    "proTeam": "DET",
-   "seasonProj": 53.49,
-   "weekly": 4.115,
+   "seasonProj": 53.69,
+   "weekly": 4.474,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4426844,
+   "name": "Elijah Higgins",
+   "pos": "TE",
+   "proTeam": "ARI",
+   "seasonProj": 53.09,
+   "weekly": 4.424,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16020,
+   "name": "Jets D/ST",
+   "pos": "DST",
+   "proTeam": "NYJ",
+   "seasonProj": 75.18,
+   "weekly": 4.422,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4242557,
+   "name": "Colby Parkinson",
+   "pos": "TE",
+   "proTeam": "LAR",
+   "seasonProj": 52.25,
+   "weekly": 4.354,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4035656,
+   "name": "Ben Skowronek",
+   "pos": "WR",
+   "proTeam": "PIT",
+   "seasonProj": 8.68,
+   "weekly": 4.339,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": -16007,
+   "name": "Broncos D/ST",
+   "pos": "DST",
+   "proTeam": "DEN",
+   "seasonProj": 73.49,
+   "weekly": 4.323,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4686728,
+   "name": "Gunnar Helm",
+   "pos": "TE",
+   "proTeam": "TEN",
+   "seasonProj": 51.75,
+   "weekly": 4.313,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4695193,
+   "name": "Efton Chism III",
+   "pos": "WR",
+   "proTeam": "NE",
+   "seasonProj": 51.66,
+   "weekly": 4.305,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4239934,
+   "name": "AJ Dillon",
+   "pos": "RB",
+   "proTeam": "CAR",
+   "seasonProj": 55.84,
+   "weekly": 4.295,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16017,
+   "name": "Patriots D/ST",
+   "pos": "DST",
+   "proTeam": "NE",
+   "seasonProj": 72.94,
+   "weekly": 4.291,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4831959,
+   "name": "Eli Raridon",
+   "pos": "TE",
+   "proTeam": "NE",
+   "seasonProj": 51.3,
+   "weekly": 4.275,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4696882,
+   "name": "Devontez Walker",
+   "pos": "WR",
+   "proTeam": "BAL",
+   "seasonProj": 49.79,
+   "weekly": 4.149,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4430191,
+   "name": "Skyy Moore",
+   "pos": "WR",
+   "proTeam": "GB",
+   "seasonProj": 49.11,
+   "weekly": 4.093,
+   "injuryStatus": "QUESTIONABLE"
+  },
+  {
+   "playerId": 4870612,
+   "name": "Zachariah Branch",
+   "pos": "WR",
+   "proTeam": "ATL",
+   "seasonProj": 49.06,
+   "weekly": 4.089,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4240472,
+   "name": "Noah Gray",
+   "pos": "TE",
+   "proTeam": "KC",
+   "seasonProj": 53.11,
+   "weekly": 4.085,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16012,
+   "name": "Chiefs D/ST",
+   "pos": "DST",
+   "proTeam": "KC",
+   "seasonProj": 68.58,
+   "weekly": 4.034,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4249836,
+   "name": "Pierre Strong Jr.",
+   "pos": "RB",
+   "proTeam": "GB",
+   "seasonProj": 47.83,
+   "weekly": 3.986,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2584,36 +2584,9 @@
    "name": "Tez Johnson",
    "pos": "WR",
    "proTeam": "TB",
-   "seasonProj": 53.09,
-   "weekly": 4.083,
+   "seasonProj": 47.82,
+   "weekly": 3.985,
    "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16021,
-   "name": "Eagles D/ST",
-   "pos": "DST",
-   "proTeam": "PHI",
-   "seasonProj": 69.06,
-   "weekly": 4.062,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4241983,
-   "name": "Cody White",
-   "pos": "WR",
-   "proTeam": "LV",
-   "seasonProj": 51.36,
-   "weekly": 3.951,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16003,
-   "name": "Bears D/ST",
-   "pos": "DST",
-   "proTeam": "CHI",
-   "seasonProj": 66.81,
-   "weekly": 3.93,
-   "injuryStatus": null
   },
   {
    "playerId": 4037457,
@@ -2625,93 +2598,102 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4686472,
-   "name": "Marvin Mims Jr.",
-   "pos": "WR",
-   "proTeam": "DEN",
-   "seasonProj": 50.8,
-   "weekly": 3.908,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4808766,
-   "name": "Mason Taylor",
-   "pos": "TE",
-   "proTeam": "NYJ",
-   "seasonProj": 50.72,
+   "playerId": 3068267,
+   "name": "Austin Ekeler",
+   "pos": "RB",
+   "proTeam": "WSH",
+   "seasonProj": 46.82,
    "weekly": 3.902,
    "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4429676,
-   "name": "Tyler Goodson",
-   "pos": "RB",
-   "proTeam": "DAL",
-   "seasonProj": 50.31,
-   "weekly": 3.87,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16011,
-   "name": "Colts D/ST",
-   "pos": "DST",
-   "proTeam": "IND",
-   "seasonProj": 65.35,
-   "weekly": 3.844,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4431487,
-   "name": "Savion Williams",
-   "pos": "WR",
-   "proTeam": "GB",
-   "seasonProj": 44.9,
-   "weekly": 3.742,
-   "injuryStatus": "INJURY_RESERVE"
-  },
-  {
-   "playerId": -16010,
-   "name": "Titans D/ST",
-   "pos": "DST",
-   "proTeam": "TEN",
-   "seasonProj": 62.84,
-   "weekly": 3.696,
-   "injuryStatus": null
   },
   {
    "playerId": -16028,
    "name": "Commanders D/ST",
    "pos": "DST",
    "proTeam": "WSH",
-   "seasonProj": 62.02,
-   "weekly": 3.648,
+   "seasonProj": 65.94,
+   "weekly": 3.879,
    "injuryStatus": null
   },
   {
-   "playerId": 3068267,
-   "name": "Austin Ekeler",
-   "pos": "RB",
-   "proTeam": "WSH",
-   "seasonProj": 47.12,
-   "weekly": 3.624,
+   "playerId": 4241983,
+   "name": "Cody White",
+   "pos": "WR",
+   "proTeam": "LV",
+   "seasonProj": 46.11,
+   "weekly": 3.843,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4432260,
-   "name": "Matthew Hibner",
-   "pos": "TE",
-   "proTeam": "BAL",
-   "seasonProj": 46.86,
-   "weekly": 3.604,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16029,
-   "name": "Panthers D/ST",
+   "playerId": -16021,
+   "name": "Eagles D/ST",
    "pos": "DST",
-   "proTeam": "CAR",
-   "seasonProj": 61.21,
-   "weekly": 3.601,
+   "proTeam": "PHI",
+   "seasonProj": 64.87,
+   "weekly": 3.816,
+   "injuryStatus": null
+  },
+  {
+   "playerId": -16005,
+   "name": "Browns D/ST",
+   "pos": "DST",
+   "proTeam": "CLE",
+   "seasonProj": 64.67,
+   "weekly": 3.804,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4432708,
+   "name": "Marvin Harrison Jr.",
+   "pos": "WR",
+   "proTeam": "ARI",
+   "seasonProj": 41.78,
+   "weekly": 3.798,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16001,
+   "name": "Falcons D/ST",
+   "pos": "DST",
+   "proTeam": "ATL",
+   "seasonProj": 64.45,
+   "weekly": 3.791,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4429676,
+   "name": "Tyler Goodson",
+   "pos": "RB",
+   "proTeam": "DAL",
+   "seasonProj": 45.41,
+   "weekly": 3.785,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3134353,
+   "name": "Tim Patrick",
+   "pos": "WR",
+   "proTeam": "NYJ",
+   "seasonProj": 45.11,
+   "weekly": 3.759,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4686472,
+   "name": "Marvin Mims Jr.",
+   "pos": "WR",
+   "proTeam": "DEN",
+   "seasonProj": 44.93,
+   "weekly": 3.744,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16004,
+   "name": "Bengals D/ST",
+   "pos": "DST",
+   "proTeam": "CIN",
+   "seasonProj": 63.23,
+   "weekly": 3.719,
    "injuryStatus": null
   },
   {
@@ -2719,26 +2701,89 @@
    "name": "Buccaneers D/ST",
    "pos": "DST",
    "proTeam": "TB",
-   "seasonProj": 60.12,
-   "weekly": 3.536,
+   "seasonProj": 63.2,
+   "weekly": 3.717,
    "injuryStatus": null
+  },
+  {
+   "playerId": 4883647,
+   "name": "Elic Ayomanor",
+   "pos": "WR",
+   "proTeam": "TEN",
+   "seasonProj": 44.21,
+   "weekly": 3.684,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4686658,
+   "name": "Mike Washington Jr.",
+   "pos": "RB",
+   "proTeam": "LV",
+   "seasonProj": 43.86,
+   "weekly": 3.655,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3925357,
+   "name": "Calvin Ridley",
+   "pos": "WR",
+   "proTeam": "TEN",
+   "seasonProj": 43.67,
+   "weekly": 3.639,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4575665,
+   "name": "Jacob Cowing",
+   "pos": "WR",
+   "proTeam": "SF",
+   "seasonProj": 42.02,
+   "weekly": 3.502,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": -16002,
    "name": "Bills D/ST",
    "pos": "DST",
    "proTeam": "BUF",
-   "seasonProj": 59.04,
-   "weekly": 3.473,
+   "seasonProj": 58.31,
+   "weekly": 3.43,
    "injuryStatus": null
   },
   {
-   "playerId": -16019,
-   "name": "Giants D/ST",
+   "playerId": 4036131,
+   "name": "Noah Fant",
+   "pos": "TE",
+   "proTeam": "NO",
+   "seasonProj": 40.78,
+   "weekly": 3.399,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3843945,
+   "name": "Foster Moreau",
+   "pos": "TE",
+   "proTeam": "HOU",
+   "seasonProj": 40.51,
+   "weekly": 3.376,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4613202,
+   "name": "Kyle Williams",
+   "pos": "WR",
+   "proTeam": "NE",
+   "seasonProj": 40.11,
+   "weekly": 3.343,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16024,
+   "name": "Chargers D/ST",
    "pos": "DST",
-   "proTeam": "NYG",
-   "seasonProj": 58.09,
-   "weekly": 3.417,
+   "proTeam": "LAC",
+   "seasonProj": 55.52,
+   "weekly": 3.266,
    "injuryStatus": null
   },
   {
@@ -2746,35 +2791,35 @@
    "name": "Seth McGowan",
    "pos": "RB",
    "proTeam": "IND",
-   "seasonProj": 43.33,
-   "weekly": 3.333,
+   "seasonProj": 38.99,
+   "weekly": 3.249,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": -16008,
-   "name": "Lions D/ST",
+   "playerId": -16009,
+   "name": "Packers D/ST",
    "pos": "DST",
-   "proTeam": "DET",
-   "seasonProj": 56.52,
-   "weekly": 3.324,
+   "proTeam": "GB",
+   "seasonProj": 54.97,
+   "weekly": 3.234,
    "injuryStatus": null
   },
   {
-   "playerId": 4692835,
-   "name": "Jalen Brooks",
-   "pos": "WR",
-   "proTeam": "ARI",
-   "seasonProj": 42.26,
-   "weekly": 3.251,
-   "injuryStatus": "ACTIVE"
+   "playerId": -16019,
+   "name": "Giants D/ST",
+   "pos": "DST",
+   "proTeam": "NYG",
+   "seasonProj": 54.87,
+   "weekly": 3.228,
+   "injuryStatus": null
   },
   {
-   "playerId": 4599739,
-   "name": "Kendre Miller",
-   "pos": "RB",
-   "proTeam": "NO",
-   "seasonProj": 41.86,
-   "weekly": 3.22,
+   "playerId": 4595342,
+   "name": "Oronde Gadsden",
+   "pos": "TE",
+   "proTeam": "LAC",
+   "seasonProj": 38.58,
+   "weekly": 3.215,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2782,80 +2827,80 @@
    "name": "John Metchie III",
    "pos": "WR",
    "proTeam": "CAR",
-   "seasonProj": 41.61,
-   "weekly": 3.201,
+   "seasonProj": 41.78,
+   "weekly": 3.213,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4241263,
-   "name": "Charlie Kolar",
+   "playerId": -16008,
+   "name": "Lions D/ST",
+   "pos": "DST",
+   "proTeam": "DET",
+   "seasonProj": 54.44,
+   "weekly": 3.202,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 3050481,
+   "name": "Tanner Hudson",
    "pos": "TE",
-   "proTeam": "LAC",
-   "seasonProj": 38.13,
-   "weekly": 3.178,
+   "proTeam": "CIN",
+   "seasonProj": 38.31,
+   "weekly": 3.192,
    "injuryStatus": "QUESTIONABLE"
   },
   {
-   "playerId": 3917914,
-   "name": "Olamide Zaccheaus",
-   "pos": "WR",
-   "proTeam": "ATL",
-   "seasonProj": 41.08,
-   "weekly": 3.16,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4819231,
-   "name": "Kaleb Johnson",
-   "pos": "RB",
-   "proTeam": "GB",
-   "seasonProj": 40.99,
-   "weekly": 3.153,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16013,
-   "name": "Raiders D/ST",
-   "pos": "DST",
-   "proTeam": "LV",
-   "seasonProj": 53.05,
-   "weekly": 3.121,
-   "injuryStatus": null
-  },
-  {
-   "playerId": -16024,
-   "name": "Chargers D/ST",
-   "pos": "DST",
-   "proTeam": "LAC",
-   "seasonProj": 51.97,
-   "weekly": 3.057,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 4870612,
-   "name": "Zachariah Branch",
-   "pos": "WR",
-   "proTeam": "ATL",
-   "seasonProj": 39.69,
-   "weekly": 3.053,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 16002,
-   "name": "Kyle Juszczyk",
-   "pos": "RB",
-   "proTeam": "SF",
-   "seasonProj": 30.28,
-   "weekly": 3.028,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 3043275,
-   "name": "Austin Hooper",
+   "playerId": 4429148,
+   "name": "Theo Johnson",
    "pos": "TE",
-   "proTeam": "ATL",
-   "seasonProj": 38.96,
-   "weekly": 2.997,
+   "proTeam": "NYG",
+   "seasonProj": 38.24,
+   "weekly": 3.186,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16010,
+   "name": "Titans D/ST",
+   "pos": "DST",
+   "proTeam": "TEN",
+   "seasonProj": 53.76,
+   "weekly": 3.162,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4362748,
+   "name": "Tyler Badie",
+   "pos": "RB",
+   "proTeam": "DEN",
+   "seasonProj": 37.59,
+   "weekly": 3.133,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16003,
+   "name": "Bears D/ST",
+   "pos": "DST",
+   "proTeam": "CHI",
+   "seasonProj": 52.8,
+   "weekly": 3.106,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 4432260,
+   "name": "Matt Hibner",
+   "pos": "TE",
+   "proTeam": "BAL",
+   "seasonProj": 36.6,
+   "weekly": 3.05,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4360516,
+   "name": "Tyrone Tracy Jr.",
+   "pos": "RB",
+   "proTeam": "NYG",
+   "seasonProj": 35.83,
+   "weekly": 2.986,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -2864,142 +2909,70 @@
    "pos": "RB",
    "proTeam": "MIN",
    "seasonProj": 2.98,
-   "weekly": 2.984,
+   "weekly": 2.985,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3054212,
-   "name": "Jonnu Smith",
-   "pos": "TE",
-   "proTeam": "GB",
-   "seasonProj": 38.33,
-   "weekly": 2.949,
+   "playerId": 16002,
+   "name": "Kyle Juszczyk",
+   "pos": "RB",
+   "proTeam": "SF",
+   "seasonProj": 29.27,
+   "weekly": 2.927,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4431268,
+   "name": "Chimere Dike",
+   "pos": "WR",
+   "proTeam": "TEN",
+   "seasonProj": 34.85,
+   "weekly": 2.904,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4831959,
-   "name": "Eli Raridon",
-   "pos": "TE",
-   "proTeam": "NE",
-   "seasonProj": 37.73,
-   "weekly": 2.903,
+   "playerId": 4430871,
+   "name": "Sean Tucker",
+   "pos": "RB",
+   "proTeam": "TB",
+   "seasonProj": 34.63,
+   "weekly": 2.886,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4426844,
-   "name": "Elijah Higgins",
-   "pos": "TE",
-   "proTeam": "ARI",
-   "seasonProj": 37.66,
-   "weekly": 2.897,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3843945,
-   "name": "Foster Moreau",
-   "pos": "TE",
-   "proTeam": "HOU",
-   "seasonProj": 37.65,
-   "weekly": 2.896,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16006,
-   "name": "Cowboys D/ST",
+   "playerId": -16013,
+   "name": "Raiders D/ST",
    "pos": "DST",
-   "proTeam": "DAL",
-   "seasonProj": 48.32,
-   "weekly": 2.843,
+   "proTeam": "LV",
+   "seasonProj": 48.91,
+   "weekly": 2.877,
    "injuryStatus": null
   },
   {
-   "playerId": 3925357,
-   "name": "Calvin Ridley",
+   "playerId": -16011,
+   "name": "Colts D/ST",
+   "pos": "DST",
+   "proTeam": "IND",
+   "seasonProj": 48.79,
+   "weekly": 2.87,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 16731,
+   "name": "Brandin Cooks",
    "pos": "WR",
-   "proTeam": "TEN",
-   "seasonProj": 36.48,
-   "weekly": 2.806,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4686248,
-   "name": "Nate Boerkircher",
-   "pos": "TE",
-   "proTeam": "JAX",
-   "seasonProj": 36.41,
-   "weekly": 2.801,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4695193,
-   "name": "Efton Chism III",
-   "pos": "WR",
-   "proTeam": "NE",
-   "seasonProj": 36.11,
-   "weekly": 2.777,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3930086,
-   "name": "Dawson Knox",
-   "pos": "TE",
-   "proTeam": "BUF",
-   "seasonProj": 36.02,
-   "weekly": 2.771,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4597703,
-   "name": "Tory Horton",
-   "pos": "WR",
-   "proTeam": "SEA",
-   "seasonProj": 35.73,
-   "weekly": 2.749,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4362748,
-   "name": "Tyler Badie",
-   "pos": "RB",
-   "proTeam": "DEN",
-   "seasonProj": 35.59,
-   "weekly": 2.738,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4361372,
-   "name": "Jeremy Ruckert",
-   "pos": "TE",
-   "proTeam": "NYJ",
-   "seasonProj": 34.36,
-   "weekly": 2.643,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3886598,
-   "name": "Jauan Jennings",
-   "pos": "WR",
-   "proTeam": "MIN",
+   "proTeam": "SF",
    "seasonProj": 34.34,
-   "weekly": 2.641,
+   "weekly": 2.862,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4035656,
-   "name": "Ben Skowronek",
+   "playerId": 4259305,
+   "name": "Bo Melton",
    "pos": "WR",
-   "proTeam": "PIT",
-   "seasonProj": 34.28,
-   "weekly": 2.637,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4696882,
-   "name": "Devontez Walker",
-   "pos": "WR",
-   "proTeam": "BAL",
-   "seasonProj": 33.23,
-   "weekly": 2.556,
+   "proTeam": "GB",
+   "seasonProj": 34.23,
+   "weekly": 2.853,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3007,17 +2980,44 @@
    "name": "Joshua Palmer",
    "pos": "WR",
    "proTeam": "BUF",
-   "seasonProj": 30.66,
-   "weekly": 2.555,
+   "seasonProj": 30.55,
+   "weekly": 2.777,
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 4258595,
-   "name": "Cole Kmet",
+   "playerId": 3930086,
+   "name": "Dawson Knox",
    "pos": "TE",
-   "proTeam": "CHI",
-   "seasonProj": 32.53,
-   "weekly": 2.502,
+   "proTeam": "BUF",
+   "seasonProj": 33.23,
+   "weekly": 2.769,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4686248,
+   "name": "Nate Boerkircher",
+   "pos": "TE",
+   "proTeam": "JAX",
+   "seasonProj": 33.0,
+   "weekly": 2.75,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16029,
+   "name": "Panthers D/ST",
+   "pos": "DST",
+   "proTeam": "CAR",
+   "seasonProj": 46.52,
+   "weekly": 2.736,
+   "injuryStatus": null
+  },
+  {
+   "playerId": 3917914,
+   "name": "Olamide Zaccheaus",
+   "pos": "WR",
+   "proTeam": "ATL",
+   "seasonProj": 32.66,
+   "weekly": 2.721,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3025,8 +3025,71 @@
    "name": "Dyami Brown",
    "pos": "WR",
    "proTeam": "WSH",
-   "seasonProj": 32.04,
-   "weekly": 2.465,
+   "seasonProj": 32.62,
+   "weekly": 2.718,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4361516,
+   "name": "Daniel Bellinger",
+   "pos": "TE",
+   "proTeam": "TEN",
+   "seasonProj": 32.61,
+   "weekly": 2.718,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 2576581,
+   "name": "Chris Moore",
+   "pos": "WR",
+   "proTeam": "BAL",
+   "seasonProj": 31.21,
+   "weekly": 2.601,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4427834,
+   "name": "Erick All Jr.",
+   "pos": "TE",
+   "proTeam": "CIN",
+   "seasonProj": 30.44,
+   "weekly": 2.536,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4258595,
+   "name": "Cole Kmet",
+   "pos": "TE",
+   "proTeam": "CHI",
+   "seasonProj": 30.11,
+   "weekly": 2.509,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3054212,
+   "name": "Jonnu Smith",
+   "pos": "TE",
+   "proTeam": "GB",
+   "seasonProj": 29.97,
+   "weekly": 2.498,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4599739,
+   "name": "Kendre Miller",
+   "pos": "RB",
+   "proTeam": "NO",
+   "seasonProj": 29.49,
+   "weekly": 2.457,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3043275,
+   "name": "Austin Hooper",
+   "pos": "TE",
+   "proTeam": "ATL",
+   "seasonProj": 29.43,
+   "weekly": 2.453,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3035,70 +3098,34 @@
    "pos": "WR",
    "proTeam": "MIA",
    "seasonProj": 2.42,
-   "weekly": 2.421,
+   "weekly": 2.424,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3050481,
-   "name": "Tanner Hudson",
-   "pos": "TE",
-   "proTeam": "CIN",
-   "seasonProj": 31.31,
+   "playerId": 4569371,
+   "name": "Isaiah Williams",
+   "pos": "WR",
+   "proTeam": "NYJ",
+   "seasonProj": 29.06,
+   "weekly": 2.422,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3676833,
+   "name": "KaVontae Turpin",
+   "pos": "WR",
+   "proTeam": "DAL",
+   "seasonProj": 28.89,
    "weekly": 2.408,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4429148,
-   "name": "Theo Johnson",
-   "pos": "TE",
-   "proTeam": "NYG",
-   "seasonProj": 31.27,
-   "weekly": 2.406,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4431466,
-   "name": "Jordan Watkins",
-   "pos": "WR",
-   "proTeam": "SF",
-   "seasonProj": 31.09,
-   "weekly": 2.391,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4575665,
-   "name": "Jacob Cowing",
-   "pos": "WR",
-   "proTeam": "SF",
-   "seasonProj": 31.02,
-   "weekly": 2.386,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 16731,
-   "name": "Brandin Cooks",
-   "pos": "WR",
-   "proTeam": "SF",
-   "seasonProj": 30.95,
-   "weekly": 2.381,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4361516,
-   "name": "Daniel Bellinger",
-   "pos": "TE",
-   "proTeam": "TEN",
-   "seasonProj": 30.56,
-   "weekly": 2.351,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": -16018,
-   "name": "Saints D/ST",
+   "playerId": -16006,
+   "name": "Cowboys D/ST",
    "pos": "DST",
-   "proTeam": "NO",
-   "seasonProj": 39.92,
-   "weekly": 2.348,
+   "proTeam": "DAL",
+   "seasonProj": 40.61,
+   "weekly": 2.389,
    "injuryStatus": null
   },
   {
@@ -3115,53 +3142,35 @@
    "name": "Mitchell Evans",
    "pos": "TE",
    "proTeam": "CAR",
-   "seasonProj": 30.39,
-   "weekly": 2.338,
+   "seasonProj": 30.44,
+   "weekly": 2.342,
    "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": -16018,
+   "name": "Saints D/ST",
+   "pos": "DST",
+   "proTeam": "NO",
+   "seasonProj": 37.91,
+   "weekly": 2.23,
+   "injuryStatus": null
   },
   {
    "playerId": -16015,
    "name": "Dolphins D/ST",
    "pos": "DST",
    "proTeam": "MIA",
-   "seasonProj": 38.56,
-   "weekly": 2.268,
+   "seasonProj": 37.41,
+   "weekly": 2.2,
    "injuryStatus": null
-  },
-  {
-   "playerId": -16009,
-   "name": "Packers D/ST",
-   "pos": "DST",
-   "proTeam": "GB",
-   "seasonProj": 38.52,
-   "weekly": 2.266,
-   "injuryStatus": null
-  },
-  {
-   "playerId": 3911853,
-   "name": "Adam Trautman",
-   "pos": "TE",
-   "proTeam": "DEN",
-   "seasonProj": 27.97,
-   "weekly": 2.152,
-   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4912218,
    "name": "Cyrus Allen",
    "pos": "WR",
    "proTeam": "KC",
-   "seasonProj": 27.34,
-   "weekly": 2.103,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4715355,
-   "name": "Darius Cooper",
-   "pos": "WR",
-   "proTeam": "PHI",
-   "seasonProj": 27.3,
-   "weekly": 2.1,
+   "seasonProj": 27.1,
+   "weekly": 2.084,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3170,7 +3179,34 @@
    "pos": "WR",
    "proTeam": "GB",
    "seasonProj": 2.07,
-   "weekly": 2.069,
+   "weekly": 2.07,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4880236,
+   "name": "Will Kacmarek",
+   "pos": "TE",
+   "proTeam": "MIA",
+   "seasonProj": 24.25,
+   "weekly": 2.021,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4039057,
+   "name": "Lil'Jordan Humphrey",
+   "pos": "WR",
+   "proTeam": "DEN",
+   "seasonProj": 24.23,
+   "weekly": 2.019,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4361372,
+   "name": "Jeremy Ruckert",
+   "pos": "TE",
+   "proTeam": "NYJ",
+   "seasonProj": 24.11,
+   "weekly": 2.009,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3178,26 +3214,26 @@
    "name": "Cardinals D/ST",
    "pos": "DST",
    "proTeam": "ARI",
-   "seasonProj": 34.95,
-   "weekly": 2.056,
+   "seasonProj": 33.99,
+   "weekly": 1.999,
    "injuryStatus": null
   },
   {
-   "playerId": 2573401,
-   "name": "Tyler Higbee",
-   "pos": "TE",
-   "proTeam": "LAR",
-   "seasonProj": 26.55,
-   "weekly": 2.042,
+   "playerId": 4366963,
+   "name": "Dylan Laube",
+   "pos": "RB",
+   "proTeam": "LV",
+   "seasonProj": 23.79,
+   "weekly": 1.982,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4426535,
-   "name": "Theo Wease Jr.",
+   "playerId": 3886598,
+   "name": "Jauan Jennings",
    "pos": "WR",
-   "proTeam": "LAC",
-   "seasonProj": 1.92,
-   "weekly": 1.915,
+   "proTeam": "MIN",
+   "seasonProj": 23.51,
+   "weekly": 1.959,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3205,35 +3241,35 @@
    "name": "Laquon Treadwell",
    "pos": "WR",
    "proTeam": "IND",
-   "seasonProj": 24.47,
-   "weekly": 1.882,
+   "seasonProj": 23.5,
+   "weekly": 1.958,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3676833,
-   "name": "KaVontae Turpin",
+   "playerId": 5081999,
+   "name": "CJ Donaldson",
+   "pos": "RB",
+   "proTeam": "NO",
+   "seasonProj": 23.36,
+   "weekly": 1.947,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4426535,
+   "name": "Theo Wease Jr.",
    "pos": "WR",
-   "proTeam": "DAL",
-   "seasonProj": 24.04,
-   "weekly": 1.849,
+   "proTeam": "LAC",
+   "seasonProj": 1.91,
+   "weekly": 1.915,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4426553,
-   "name": "Davis Allen",
+   "playerId": 2573401,
+   "name": "Tyler Higbee",
    "pos": "TE",
    "proTeam": "LAR",
-   "seasonProj": 23.76,
-   "weekly": 1.827,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4430871,
-   "name": "Sean Tucker",
-   "pos": "RB",
-   "proTeam": "TB",
-   "seasonProj": 23.44,
-   "weekly": 1.803,
+   "seasonProj": 22.8,
+   "weekly": 1.9,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3241,17 +3277,8 @@
    "name": "Drew Sample",
    "pos": "TE",
    "proTeam": "CIN",
-   "seasonProj": 23.43,
-   "weekly": 1.803,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360516,
-   "name": "Tyrone Tracy Jr.",
-   "pos": "RB",
-   "proTeam": "NYG",
-   "seasonProj": 23.06,
-   "weekly": 1.773,
+   "seasonProj": 22.29,
+   "weekly": 1.857,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3259,8 +3286,17 @@
    "name": "Brock Wright",
    "pos": "TE",
    "proTeam": "DET",
-   "seasonProj": 22.94,
-   "weekly": 1.765,
+   "seasonProj": 21.64,
+   "weekly": 1.804,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4426553,
+   "name": "Davis Allen",
+   "pos": "TE",
+   "proTeam": "LAR",
+   "seasonProj": 21.05,
+   "weekly": 1.754,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3269,52 +3305,7 @@
    "pos": "WR",
    "proTeam": "PHI",
    "seasonProj": 1.73,
-   "weekly": 1.73,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4362477,
-   "name": "Derius Davis",
-   "pos": "WR",
-   "proTeam": "LAC",
-   "seasonProj": 22.49,
-   "weekly": 1.73,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4880236,
-   "name": "Will Kacmarek",
-   "pos": "TE",
-   "proTeam": "MIA",
-   "seasonProj": 22.32,
-   "weekly": 1.717,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4369466,
-   "name": "Ryan Miller",
-   "pos": "WR",
-   "proTeam": "MIA",
-   "seasonProj": 22.2,
-   "weekly": 1.708,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4360967,
-   "name": "Brevyn Spann-Ford",
-   "pos": "TE",
-   "proTeam": "DAL",
-   "seasonProj": 22.11,
-   "weekly": 1.701,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4569382,
-   "name": "Jordan Whittington",
-   "pos": "WR",
-   "proTeam": "LAR",
-   "seasonProj": 21.98,
-   "weekly": 1.691,
+   "weekly": 1.728,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3324,33 +3315,42 @@
    "proTeam": "TEN",
    "seasonProj": 20.09,
    "weekly": 1.674,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4360967,
+   "name": "Brevyn Spann-Ford",
+   "pos": "TE",
+   "proTeam": "DAL",
+   "seasonProj": 19.93,
+   "weekly": 1.661,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4569382,
+   "name": "Jordan Whittington",
+   "pos": "WR",
+   "proTeam": "LAR",
+   "seasonProj": 19.81,
+   "weekly": 1.65,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4715355,
+   "name": "Darius Cooper",
+   "pos": "WR",
+   "proTeam": "PHI",
+   "seasonProj": 19.41,
+   "weekly": 1.618,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4383440,
    "name": "Nate Adkins",
    "pos": "TE",
    "proTeam": "DEN",
-   "seasonProj": 21.74,
-   "weekly": 1.672,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4565185,
-   "name": "Tai Felton",
-   "pos": "WR",
-   "proTeam": "MIN",
-   "seasonProj": 21.49,
-   "weekly": 1.653,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4431268,
-   "name": "Chimere Dike",
-   "pos": "WR",
-   "proTeam": "TEN",
-   "seasonProj": 21.26,
-   "weekly": 1.636,
+   "seasonProj": 19.21,
+   "weekly": 1.601,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3358,35 +3358,53 @@
    "name": "Konata Mumpfield",
    "pos": "WR",
    "proTeam": "LAR",
-   "seasonProj": 21.23,
-   "weekly": 1.633,
+   "seasonProj": 19.09,
+   "weekly": 1.591,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4259305,
-   "name": "Bo Melton",
+   "playerId": 4360238,
+   "name": "Dameon Pierce",
+   "pos": "RB",
+   "proTeam": "PHI",
+   "seasonProj": 18.96,
+   "weekly": 1.58,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4597703,
+   "name": "Tory Horton",
    "pos": "WR",
-   "proTeam": "GB",
-   "seasonProj": 20.61,
-   "weekly": 1.585,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4362018,
-   "name": "Blake Whiteheart",
-   "pos": "TE",
-   "proTeam": "CLE",
-   "seasonProj": 20.46,
-   "weekly": 1.574,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 2975863,
-   "name": "Eric Saubert",
-   "pos": "TE",
    "proTeam": "SEA",
-   "seasonProj": 19.77,
-   "weekly": 1.521,
+   "seasonProj": 18.78,
+   "weekly": 1.565,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3911853,
+   "name": "Adam Trautman",
+   "pos": "TE",
+   "proTeam": "DEN",
+   "seasonProj": 18.56,
+   "weekly": 1.547,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4708049,
+   "name": "Gavin Bartholomew",
+   "pos": "TE",
+   "proTeam": "MIN",
+   "seasonProj": 18.35,
+   "weekly": 1.529,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4685504,
+   "name": "Sam Roush",
+   "pos": "TE",
+   "proTeam": "CHI",
+   "seasonProj": 18.31,
+   "weekly": 1.526,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3399,12 +3417,21 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4685504,
-   "name": "Sam Roush",
-   "pos": "TE",
-   "proTeam": "CHI",
-   "seasonProj": 19.46,
-   "weekly": 1.497,
+   "playerId": 4431466,
+   "name": "Jordan Watkins",
+   "pos": "WR",
+   "proTeam": "SF",
+   "seasonProj": 18.12,
+   "weekly": 1.51,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4426485,
+   "name": "Jonathan Mingo",
+   "pos": "WR",
+   "proTeam": "DAL",
+   "seasonProj": 17.91,
+   "weekly": 1.493,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3417,13 +3444,13 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4879276,
-   "name": "Bryce Lance",
+   "playerId": 4241424,
+   "name": "Tylan Wallace",
    "pos": "WR",
-   "proTeam": "NO",
-   "seasonProj": 18.72,
-   "weekly": 1.44,
-   "injuryStatus": "ACTIVE"
+   "proTeam": "CLE",
+   "seasonProj": 16.01,
+   "weekly": 1.455,
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 3051738,
@@ -3435,66 +3462,48 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4249836,
-   "name": "Pierre Strong Jr.",
-   "pos": "RB",
-   "proTeam": "GB",
-   "seasonProj": 4.25,
-   "weekly": 1.416,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 3052096,
    "name": "Johnny Mundt",
    "pos": "TE",
    "proTeam": "PHI",
-   "seasonProj": 18.24,
-   "weekly": 1.403,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5081999,
-   "name": "CJ Donaldson",
-   "pos": "RB",
-   "proTeam": "NO",
-   "seasonProj": 18.06,
-   "weekly": 1.389,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4685553,
-   "name": "Brenen Thompson",
-   "pos": "WR",
-   "proTeam": "LAC",
-   "seasonProj": 16.15,
-   "weekly": 1.346,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4040612,
-   "name": "Luke Farrell",
-   "pos": "TE",
-   "proTeam": "SF",
-   "seasonProj": 17.06,
-   "weekly": 1.313,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3917668,
-   "name": "Alec Ingold",
-   "pos": "RB",
-   "proTeam": "LAC",
    "seasonProj": 16.98,
-   "weekly": 1.306,
+   "weekly": 1.415,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 2576336,
-   "name": "Ameer Abdullah",
+   "playerId": 4879276,
+   "name": "Bryce Lance",
+   "pos": "WR",
+   "proTeam": "NO",
+   "seasonProj": 16.48,
+   "weekly": 1.373,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4911851,
+   "name": "LeQuint Allen Jr.",
    "pos": "RB",
    "proTeam": "JAX",
-   "seasonProj": 16.71,
-   "weekly": 1.286,
+   "seasonProj": 16.45,
+   "weekly": 1.371,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4808839,
+   "name": "Isaiah Bond",
+   "pos": "WR",
+   "proTeam": "CLE",
+   "seasonProj": 16.45,
+   "weekly": 1.371,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4035020,
+   "name": "Charlie Woerner",
+   "pos": "TE",
+   "proTeam": "ATL",
+   "seasonProj": 15.7,
+   "weekly": 1.308,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3503,7 +3512,25 @@
    "pos": "WR",
    "proTeam": "CIN",
    "seasonProj": 1.27,
-   "weekly": 1.274,
+   "weekly": 1.275,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4374045,
+   "name": "Teagan Quitoriano",
+   "pos": "TE",
+   "proTeam": "ARI",
+   "seasonProj": 14.98,
+   "weekly": 1.248,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4040612,
+   "name": "Luke Farrell",
+   "pos": "TE",
+   "proTeam": "SF",
+   "seasonProj": 14.96,
+   "weekly": 1.247,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3516,39 +3543,66 @@
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 4257188,
-   "name": "Charlie Jones",
+   "playerId": 4432775,
+   "name": "Dont'e Thornton Jr.",
    "pos": "WR",
-   "proTeam": "NYG",
-   "seasonProj": 15.66,
-   "weekly": 1.205,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4427834,
-   "name": "Erick All Jr.",
-   "pos": "TE",
-   "proTeam": "CIN",
-   "seasonProj": 15.65,
-   "weekly": 1.204,
-   "injuryStatus": "ACTIVE"
+   "proTeam": "LV",
+   "seasonProj": 13.07,
+   "weekly": 1.188,
+   "injuryStatus": "INJURY_RESERVE"
   },
   {
    "playerId": 4429501,
    "name": "Ray Davis",
    "pos": "RB",
    "proTeam": "BUF",
-   "seasonProj": 15.23,
-   "weekly": 1.171,
+   "seasonProj": 14.09,
+   "weekly": 1.174,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4431346,
-   "name": "Mark Redman",
+   "playerId": 4714365,
+   "name": "Carson Steele",
+   "pos": "RB",
+   "proTeam": "PHI",
+   "seasonProj": 2.34,
+   "weekly": 1.168,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4722893,
+   "name": "Jaleel McLaughlin",
+   "pos": "RB",
+   "proTeam": "CLE",
+   "seasonProj": 13.87,
+   "weekly": 1.156,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4685415,
+   "name": "Travis Hunter",
+   "pos": "WR",
+   "proTeam": "JAX",
+   "seasonProj": 13.84,
+   "weekly": 1.153,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4869132,
+   "name": "Reggie Virgil",
+   "pos": "WR",
+   "proTeam": "ARI",
+   "seasonProj": 13.71,
+   "weekly": 1.142,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4045305,
+   "name": "Ian Thomas",
    "pos": "TE",
-   "proTeam": "GB",
-   "seasonProj": 14.51,
-   "weekly": 1.116,
+   "proTeam": "LV",
+   "seasonProj": 13.48,
+   "weekly": 1.124,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3561,75 +3615,48 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4045305,
-   "name": "Ian Thomas",
+   "playerId": 4372096,
+   "name": "Luke Schoonmaker",
    "pos": "TE",
-   "proTeam": "LV",
-   "seasonProj": 14.38,
-   "weekly": 1.106,
+   "proTeam": "DAL",
+   "seasonProj": 13.24,
+   "weekly": 1.103,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4241424,
-   "name": "Tylan Wallace",
+   "playerId": 4869748,
+   "name": "Zavion Thomas",
    "pos": "WR",
+   "proTeam": "CHI",
+   "seasonProj": 12.97,
+   "weekly": 1.081,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4362018,
+   "name": "Blake Whiteheart",
+   "pos": "TE",
    "proTeam": "CLE",
-   "seasonProj": 13.26,
-   "weekly": 1.105,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4911851,
-   "name": "LeQuint Allen Jr.",
-   "pos": "RB",
-   "proTeam": "JAX",
-   "seasonProj": 14.16,
-   "weekly": 1.089,
+   "seasonProj": 12.65,
+   "weekly": 1.054,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4690143,
-   "name": "LaJohntay Wester",
-   "pos": "WR",
-   "proTeam": "BAL",
-   "seasonProj": 13.87,
-   "weekly": 1.067,
+   "playerId": 2998565,
+   "name": "Mo Alie-Cox",
+   "pos": "TE",
+   "proTeam": "IND",
+   "seasonProj": 12.23,
+   "weekly": 1.019,
    "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4039057,
-   "name": "Lil'Jordan Humphrey",
-   "pos": "WR",
-   "proTeam": "DEN",
-   "seasonProj": 13.86,
-   "weekly": 1.066,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4432775,
-   "name": "Dont'e Thornton Jr.",
-   "pos": "WR",
-   "proTeam": "LV",
-   "seasonProj": 12.78,
-   "weekly": 1.065,
-   "injuryStatus": "INJURY_RESERVE"
   },
   {
    "playerId": 4048228,
    "name": "John Bates",
    "pos": "TE",
    "proTeam": "WSH",
-   "seasonProj": 13.48,
-   "weekly": 1.037,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4722893,
-   "name": "Jaleel McLaughlin",
-   "pos": "RB",
-   "proTeam": "CLE",
-   "seasonProj": 12.98,
-   "weekly": 0.999,
+   "seasonProj": 12.18,
+   "weekly": 1.015,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3637,17 +3664,8 @@
    "name": "Hunter Luepke",
    "pos": "RB",
    "proTeam": "DAL",
-   "seasonProj": 12.9,
-   "weekly": 0.992,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4426485,
-   "name": "Jonathan Mingo",
-   "pos": "WR",
-   "proTeam": "DAL",
-   "seasonProj": 12.83,
-   "weekly": 0.987,
+   "seasonProj": 11.78,
+   "weekly": 0.982,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3655,44 +3673,53 @@
    "name": "Josh Cuevas",
    "pos": "TE",
    "proTeam": "BAL",
-   "seasonProj": 12.81,
-   "weekly": 0.986,
+   "seasonProj": 11.71,
+   "weekly": 0.976,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4708049,
-   "name": "Gavin Bartholomew",
+   "playerId": 2975863,
+   "name": "Eric Saubert",
    "pos": "TE",
-   "proTeam": "MIN",
-   "seasonProj": 12.78,
-   "weekly": 0.983,
+   "proTeam": "SEA",
+   "seasonProj": 11.64,
+   "weekly": 0.97,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4430656,
-   "name": "Myles Price",
+   "playerId": 4722908,
+   "name": "Drew Ogletree",
+   "pos": "TE",
+   "proTeam": "IND",
+   "seasonProj": 11.64,
+   "weekly": 0.97,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4362477,
+   "name": "Derius Davis",
+   "pos": "WR",
+   "proTeam": "LAC",
+   "seasonProj": 11.63,
+   "weekly": 0.969,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4565185,
+   "name": "Tai Felton",
    "pos": "WR",
    "proTeam": "MIN",
-   "seasonProj": 12.54,
+   "seasonProj": 11.58,
    "weekly": 0.965,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4428396,
-   "name": "Hayden Rucci",
+   "playerId": 4372505,
+   "name": "Payne Durham",
    "pos": "TE",
-   "proTeam": "LAC",
-   "seasonProj": 0.95,
-   "weekly": 0.949,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4241961,
-   "name": "Connor Heyward",
-   "pos": "RB",
-   "proTeam": "LV",
-   "seasonProj": 11.96,
-   "weekly": 0.92,
+   "proTeam": "TB",
+   "seasonProj": 11.1,
+   "weekly": 0.925,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3705,30 +3732,12 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4243176,
-   "name": "Brady Russell",
+   "playerId": 4241961,
+   "name": "Connor Heyward",
    "pos": "RB",
-   "proTeam": "SEA",
-   "seasonProj": 11.63,
-   "weekly": 0.895,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4035020,
-   "name": "Charlie Woerner",
-   "pos": "TE",
-   "proTeam": "ATL",
-   "seasonProj": 11.43,
-   "weekly": 0.879,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5097554,
-   "name": "Kameron Johnson",
-   "pos": "WR",
-   "proTeam": "TB",
-   "seasonProj": 10.81,
-   "weekly": 0.831,
+   "proTeam": "LV",
+   "seasonProj": 10.87,
+   "weekly": 0.906,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3737,7 +3746,7 @@
    "pos": "RB",
    "proTeam": "NYG",
    "seasonProj": 10.78,
-   "weekly": 0.83,
+   "weekly": 0.898,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3745,44 +3754,71 @@
    "name": "Ashton Dulin",
    "pos": "WR",
    "proTeam": "IND",
-   "seasonProj": 9.85,
-   "weekly": 0.821,
+   "seasonProj": 9.77,
+   "weekly": 0.888,
    "injuryStatus": "OUT"
   },
   {
-   "playerId": 4401805,
-   "name": "Dareke Young",
+   "playerId": 4685553,
+   "name": "Brenen Thompson",
+   "pos": "WR",
+   "proTeam": "LAC",
+   "seasonProj": 9.76,
+   "weekly": 0.887,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4243176,
+   "name": "Brady Russell",
+   "pos": "RB",
+   "proTeam": "SEA",
+   "seasonProj": 10.43,
+   "weekly": 0.869,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4369466,
+   "name": "Ryan Miller",
+   "pos": "WR",
+   "proTeam": "MIA",
+   "seasonProj": 9.42,
+   "weekly": 0.785,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4430656,
+   "name": "Myles Price",
+   "pos": "WR",
+   "proTeam": "MIN",
+   "seasonProj": 7.77,
+   "weekly": 0.648,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 5150247,
+   "name": "Malik Benson",
    "pos": "WR",
    "proTeam": "LV",
-   "seasonProj": 9.36,
-   "weekly": 0.72,
+   "seasonProj": 7.58,
+   "weekly": 0.632,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4808839,
-   "name": "Isaiah Bond",
+   "playerId": 5081338,
+   "name": "Kaden Wetjen",
    "pos": "WR",
-   "proTeam": "CLE",
-   "seasonProj": 7.66,
-   "weekly": 0.589,
+   "proTeam": "PIT",
+   "seasonProj": 7.27,
+   "weekly": 0.606,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4869748,
-   "name": "Zavion Thomas",
-   "pos": "WR",
-   "proTeam": "CHI",
-   "seasonProj": 7.26,
-   "weekly": 0.559,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4372096,
-   "name": "Luke Schoonmaker",
+   "playerId": 4431346,
+   "name": "Mark Redman",
    "pos": "TE",
-   "proTeam": "DAL",
-   "seasonProj": 7.18,
-   "weekly": 0.552,
+   "proTeam": "GB",
+   "seasonProj": 7.1,
+   "weekly": 0.592,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3790,8 +3826,17 @@
    "name": "Tutu Atwell",
    "pos": "WR",
    "proTeam": "LAR",
-   "seasonProj": 7.02,
-   "weekly": 0.54,
+   "seasonProj": 6.32,
+   "weekly": 0.526,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4241410,
+   "name": "Jelani Woods",
+   "pos": "TE",
+   "proTeam": "NYJ",
+   "seasonProj": 6.19,
+   "weekly": 0.516,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3799,35 +3844,8 @@
    "name": "Brevin Jordan",
    "pos": "TE",
    "proTeam": "HOU",
-   "seasonProj": 6.84,
-   "weekly": 0.527,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4690923,
-   "name": "Ben Sinnott",
-   "pos": "TE",
-   "proTeam": "WSH",
-   "seasonProj": 6.71,
+   "seasonProj": 6.19,
    "weekly": 0.516,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4678006,
-   "name": "Elijah Arroyo",
-   "pos": "TE",
-   "proTeam": "SEA",
-   "seasonProj": 6.66,
-   "weekly": 0.512,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 2998565,
-   "name": "Mo Alie-Cox",
-   "pos": "TE",
-   "proTeam": "IND",
-   "seasonProj": 6.65,
-   "weekly": 0.511,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3835,7 +3853,16 @@
    "name": "Jackson Hawes",
    "pos": "TE",
    "proTeam": "BUF",
-   "seasonProj": 6.59,
+   "seasonProj": 6.08,
+   "weekly": 0.507,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4690923,
+   "name": "Ben Sinnott",
+   "pos": "TE",
+   "proTeam": "WSH",
+   "seasonProj": 6.09,
    "weekly": 0.507,
    "injuryStatus": "ACTIVE"
   },
@@ -3849,12 +3876,39 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4426496,
-   "name": "Cade Stover",
+   "playerId": 4433959,
+   "name": "Ben Yurosek",
    "pos": "TE",
-   "proTeam": "HOU",
-   "seasonProj": 6.44,
+   "proTeam": "MIN",
+   "seasonProj": 6.07,
+   "weekly": 0.506,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 2576336,
+   "name": "Ameer Abdullah",
+   "pos": "RB",
+   "proTeam": "JAX",
+   "seasonProj": 5.94,
    "weekly": 0.495,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 5160110,
+   "name": "Jahdae Walker",
+   "pos": "WR",
+   "proTeam": "CHI",
+   "seasonProj": 5.88,
+   "weekly": 0.49,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4678006,
+   "name": "Elijah Arroyo",
+   "pos": "TE",
+   "proTeam": "SEA",
+   "seasonProj": 5.85,
+   "weekly": 0.488,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3862,16 +3916,16 @@
    "name": "Brashard Smith",
    "pos": "RB",
    "proTeam": "KC",
-   "seasonProj": 6.37,
-   "weekly": 0.49,
+   "seasonProj": 6.32,
+   "weekly": 0.487,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4722908,
-   "name": "Drew Ogletree",
+   "playerId": 4426496,
+   "name": "Cade Stover",
    "pos": "TE",
-   "proTeam": "IND",
-   "seasonProj": 6.25,
+   "proTeam": "HOU",
+   "seasonProj": 5.77,
    "weekly": 0.481,
    "injuryStatus": "ACTIVE"
   },
@@ -3894,21 +3948,30 @@
    "injuryStatus": "ACTIVE"
   },
   {
+   "playerId": 5097554,
+   "name": "Kameron Johnson",
+   "pos": "WR",
+   "proTeam": "TB",
+   "seasonProj": 5.43,
+   "weekly": 0.452,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4428396,
+   "name": "Hayden Rucci",
+   "pos": "TE",
+   "proTeam": "LAC",
+   "seasonProj": 5.35,
+   "weekly": 0.446,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4369886,
    "name": "Chris Blair",
    "pos": "WR",
    "proTeam": "ATL",
-   "seasonProj": 5.75,
-   "weekly": 0.443,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4372505,
-   "name": "Payne Durham",
-   "pos": "TE",
-   "proTeam": "TB",
-   "seasonProj": 5.69,
-   "weekly": 0.438,
+   "seasonProj": 5.31,
+   "weekly": 0.442,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3916,8 +3979,26 @@
    "name": "Deion Burks",
    "pos": "WR",
    "proTeam": "IND",
-   "seasonProj": 5.52,
+   "seasonProj": 5.53,
    "weekly": 0.425,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3917668,
+   "name": "Alec Ingold",
+   "pos": "RB",
+   "proTeam": "LAC",
+   "seasonProj": 4.83,
+   "weekly": 0.403,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4819231,
+   "name": "Kaleb Johnson",
+   "pos": "RB",
+   "proTeam": "GB",
+   "seasonProj": 1.66,
+   "weekly": 0.331,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3925,17 +4006,17 @@
    "name": "Barion Brown",
    "pos": "WR",
    "proTeam": "NO",
-   "seasonProj": 3.94,
-   "weekly": 0.303,
+   "seasonProj": 3.82,
+   "weekly": 0.319,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 5150247,
-   "name": "Malik Benson",
+   "playerId": 4257188,
+   "name": "Charlie Jones",
    "pos": "WR",
-   "proTeam": "LV",
+   "proTeam": "NYG",
    "seasonProj": 3.26,
-   "weekly": 0.251,
+   "weekly": 0.271,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3943,17 +4024,8 @@
    "name": "Kene Nwangwu",
    "pos": "RB",
    "proTeam": "NYJ",
-   "seasonProj": 2.31,
-   "weekly": 0.178,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5081338,
-   "name": "Kaden Wetjen",
-   "pos": "WR",
-   "proTeam": "PIT",
-   "seasonProj": 2.09,
-   "weekly": 0.161,
+   "seasonProj": 2.04,
+   "weekly": 0.17,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -3962,52 +4034,16 @@
    "pos": "WR",
    "proTeam": "LAR",
    "seasonProj": 1.81,
-   "weekly": 0.14,
+   "weekly": 0.151,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4037235,
-   "name": "Greg Dortch",
+   "playerId": 4690143,
+   "name": "LaJohntay Wester",
    "pos": "WR",
-   "proTeam": "BUF",
-   "seasonProj": 1.42,
-   "weekly": 0.109,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 3126997,
-   "name": "Tom Kennedy",
-   "pos": "WR",
-   "proTeam": "DET",
-   "seasonProj": 1.41,
-   "weekly": 0.109,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4426948,
-   "name": "Luke McCaffrey",
-   "pos": "WR",
-   "proTeam": "WSH",
-   "seasonProj": 1.27,
-   "weekly": 0.098,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4429684,
-   "name": "Anthony Gould",
-   "pos": "WR",
-   "proTeam": "IND",
-   "seasonProj": 1.26,
-   "weekly": 0.097,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4372716,
-   "name": "Nikko Remigio",
-   "pos": "WR",
-   "proTeam": "KC",
-   "seasonProj": 1.22,
-   "weekly": 0.094,
+   "proTeam": "BAL",
+   "seasonProj": 1.43,
+   "weekly": 0.119,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -4015,8 +4051,8 @@
    "name": "Devin Duvernay",
    "pos": "WR",
    "proTeam": "ARI",
-   "seasonProj": 1.22,
-   "weekly": 0.094,
+   "seasonProj": 1.42,
+   "weekly": 0.119,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -4024,26 +4060,17 @@
    "name": "Britain Covey",
    "pos": "WR",
    "proTeam": "PHI",
-   "seasonProj": 1.18,
-   "weekly": 0.09,
+   "seasonProj": 1.39,
+   "weekly": 0.116,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4212909,
-   "name": "David Moore",
+   "playerId": 4037235,
+   "name": "Greg Dortch",
    "pos": "WR",
-   "proTeam": "CAR",
-   "seasonProj": 0.88,
-   "weekly": 0.068,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4685415,
-   "name": "Travis Hunter",
-   "pos": "WR",
-   "proTeam": "JAX",
-   "seasonProj": 0.74,
-   "weekly": 0.057,
+   "proTeam": "BUF",
+   "seasonProj": 1.38,
+   "weekly": 0.115,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -4051,17 +4078,8 @@
    "name": "Jacob Saylors",
    "pos": "RB",
    "proTeam": "DET",
-   "seasonProj": 0.43,
-   "weekly": 0.033,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4366963,
-   "name": "Dylan Laube",
-   "pos": "RB",
-   "proTeam": "LV",
-   "seasonProj": 0.43,
-   "weekly": 0.033,
+   "seasonProj": 1.36,
+   "weekly": 0.114,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -4069,8 +4087,71 @@
    "name": "Malachi Corley",
    "pos": "WR",
    "proTeam": "CLE",
-   "seasonProj": 0.34,
-   "weekly": 0.026,
+   "seasonProj": 1.32,
+   "weekly": 0.11,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4372716,
+   "name": "Nikko Remigio",
+   "pos": "WR",
+   "proTeam": "KC",
+   "seasonProj": 1.3,
+   "weekly": 0.1,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3126997,
+   "name": "Tom Kennedy",
+   "pos": "WR",
+   "proTeam": "DET",
+   "seasonProj": 1.19,
+   "weekly": 0.099,
+   "injuryStatus": "OUT"
+  },
+  {
+   "playerId": 4429684,
+   "name": "Anthony Gould",
+   "pos": "WR",
+   "proTeam": "IND",
+   "seasonProj": 1.12,
+   "weekly": 0.093,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4212909,
+   "name": "David Moore",
+   "pos": "WR",
+   "proTeam": "CAR",
+   "seasonProj": 0.9,
+   "weekly": 0.069,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4401805,
+   "name": "Dareke Young",
+   "pos": "WR",
+   "proTeam": "LV",
+   "seasonProj": 0.33,
+   "weekly": 0.028,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4690013,
+   "name": "Rasheen Ali",
+   "pos": "RB",
+   "proTeam": "BAL",
+   "seasonProj": 0.25,
+   "weekly": 0.021,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4426948,
+   "name": "Luke McCaffrey",
+   "pos": "WR",
+   "proTeam": "WSH",
+   "seasonProj": 0.21,
+   "weekly": 0.017,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -4087,18 +4168,27 @@
    "name": "Corey Kiner",
    "pos": "RB",
    "proTeam": "NE",
-   "seasonProj": 0.16,
-   "weekly": 0.013,
+   "seasonProj": 0.15,
+   "weekly": 0.012,
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4432708,
-   "name": "Marvin Harrison Jr.",
-   "pos": "WR",
-   "proTeam": "ARI",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "playerId": 4685397,
+   "name": "Jordan James",
+   "pos": "RB",
+   "proTeam": "SF",
+   "seasonProj": 0.1,
+   "weekly": 0.008,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4035693,
+   "name": "Velus Jones Jr.",
+   "pos": "RB",
+   "proTeam": "SEA",
+   "seasonProj": 0.06,
+   "weekly": 0.005,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4035687,
@@ -4269,7 +4359,7 @@
    "proTeam": "NYG",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 16733,
@@ -4278,7 +4368,7 @@
    "proTeam": "MIN",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4877706,
@@ -4335,15 +4425,6 @@
    "injuryStatus": "INJURY_RESERVE"
   },
   {
-   "playerId": 4432762,
-   "name": "Shedeur Sanders",
-   "pos": "QB",
-   "proTeam": "CLE",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 3043116,
    "name": "Demarcus Robinson",
    "pos": "WR",
@@ -4351,6 +4432,15 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "INJURY_RESERVE"
+  },
+  {
+   "playerId": 4432762,
+   "name": "Shedeur Sanders",
+   "pos": "QB",
+   "proTeam": "CLE",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 15168,
@@ -4386,15 +4476,6 @@
    "proTeam": "PIT",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4685397,
-   "name": "Jordan James",
-   "pos": "RB",
-   "proTeam": "SF",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
    "injuryStatus": "ACTIVE"
   },
   {
@@ -4413,7 +4494,7 @@
    "proTeam": "MIA",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4362921,
@@ -4422,7 +4503,7 @@
    "proTeam": "KC",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "INJURY_RESERVE"
   },
   {
    "playerId": 4240603,
@@ -4461,15 +4542,6 @@
    "injuryStatus": "INJURY_RESERVE"
   },
   {
-   "playerId": 3916945,
-   "name": "Darius Slayton",
-   "pos": "WR",
-   "proTeam": "IND",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "OUT"
-  },
-  {
    "playerId": 4430841,
    "name": "Carson Beck",
    "pos": "QB",
@@ -4477,6 +4549,15 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 3916945,
+   "name": "Darius Slayton",
+   "pos": "WR",
+   "proTeam": "IND",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "OUT"
   },
   {
    "playerId": 4685526,
@@ -4593,7 +4674,7 @@
    "proTeam": "PIT",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4259619,
@@ -4614,15 +4695,6 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4690013,
-   "name": "Rasheen Ali",
-   "pos": "RB",
-   "proTeam": "BAL",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 5088338,
    "name": "Elijah Sarratt",
    "pos": "WR",
@@ -4632,28 +4704,19 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 4427728,
-   "name": "Bam Knight",
-   "pos": "RB",
-   "proTeam": "ARI",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5208518,
-   "name": "Charlie Smyth",
-   "pos": "K",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 4566158,
    "name": "Ben Sauls",
    "pos": "K",
    "proTeam": "NYG",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
+   "playerId": 4427728,
+   "name": "Bam Knight",
+   "pos": "RB",
+   "proTeam": "ARI",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -4677,6 +4740,15 @@
    "injuryStatus": "ACTIVE"
   },
   {
+   "playerId": 5208518,
+   "name": "Charlie Smyth",
+   "pos": "K",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4429084,
    "name": "Anthony Richardson Sr.",
    "pos": "QB",
@@ -4690,15 +4762,6 @@
    "name": "Tommy DeVito",
    "pos": "QB",
    "proTeam": "NE",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 5160110,
-   "name": "Jahdae Walker",
-   "pos": "WR",
-   "proTeam": "CHI",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -4785,15 +4848,6 @@
    "injuryStatus": "ACTIVE"
   },
   {
-   "playerId": 3892775,
-   "name": "Jarrett Stidham",
-   "pos": "QB",
-   "proTeam": "DEN",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
    "playerId": 3921690,
    "name": "Josh Oliver",
    "pos": "TE",
@@ -4839,6 +4893,15 @@
    "injuryStatus": "ACTIVE"
   },
   {
+   "playerId": 3892775,
+   "name": "Jarrett Stidham",
+   "pos": "QB",
+   "proTeam": "DEN",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4259553,
    "name": "Stetson Bennett IV",
    "pos": "QB",
@@ -4863,7 +4926,7 @@
    "proTeam": "PIT",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4428085,
@@ -4980,7 +5043,7 @@
    "proTeam": "HOU",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 3915486,
@@ -5169,7 +5232,7 @@
    "proTeam": "IND",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4431562,
@@ -5260,15 +5323,6 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "OUT"
-  },
-  {
-   "playerId": 4869132,
-   "name": "Reggie Virgil",
-   "pos": "WR",
-   "proTeam": "ARI",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4683159,
@@ -5439,7 +5493,7 @@
    "proTeam": "LV",
    "seasonProj": 0.0,
    "weekly": 0.0,
-   "injuryStatus": "OUT"
+   "injuryStatus": "ACTIVE"
   },
   {
    "playerId": 4239944,
@@ -5473,15 +5527,6 @@
    "name": "Jackson Meeks",
    "pos": "TE",
    "proTeam": "DET",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4035693,
-   "name": "Velus Jones Jr.",
-   "pos": "RB",
-   "proTeam": "SEA",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -5536,15 +5581,6 @@
    "name": "Jake Browning",
    "pos": "QB",
    "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
-  },
-  {
-   "playerId": 4241410,
-   "name": "Jelani Woods",
-   "pos": "TE",
-   "proTeam": "NYJ",
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "ACTIVE"
@@ -5667,6 +5703,15 @@
    "injuryStatus": "QUESTIONABLE"
   },
   {
+   "playerId": 4426407,
+   "name": "Trey Palmer",
+   "pos": "WR",
+   "proTeam": "FA",
+   "seasonProj": 0.0,
+   "weekly": 0.0,
+   "injuryStatus": "ACTIVE"
+  },
+  {
    "playerId": 4430637,
    "name": "Ja'Lynn Polk",
    "pos": "WR",
@@ -5737,15 +5782,6 @@
    "seasonProj": 0.0,
    "weekly": 0.0,
    "injuryStatus": "INJURY_RESERVE"
-  },
-  {
-   "playerId": 4240573,
-   "name": "Ihmir Smith-Marsette",
-   "pos": "WR",
-   "proTeam": "FA",
-   "seasonProj": 0.0,
-   "weekly": 0.0,
-   "injuryStatus": "ACTIVE"
   }
  ]
 }
