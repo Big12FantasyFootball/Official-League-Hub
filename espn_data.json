@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-10-12T05:30:12.473922+00:00",
+  "pulledAt": "2026-10-12T21:42:36.988083+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 5,
@@ -31,7 +31,7 @@
     },
     {
       "teamId": 1,
-      "name": "Lamar the Merrier",
+      "name": "Jalen Copemaxxing",
       "abbrev": "NNT",
       "wins": 3,
       "losses": 1,
@@ -1275,7 +1275,7 @@
         "proTeam": "SF",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 20.5
       },
       {
@@ -1345,7 +1345,7 @@
         "proTeam": "PIT",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 16.4
       },
       {
@@ -1365,7 +1365,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 10.6
       },
       {
@@ -1579,7 +1579,7 @@
         "proTeam": "HOU",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 5.4
       },
       {
@@ -1751,7 +1751,7 @@
         "proTeam": "ARI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 8.2
       },
       {
@@ -1873,7 +1873,7 @@
         "proTeam": "SEA",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 35.4
       },
       {
@@ -2753,7 +2753,7 @@
         "proTeam": "LAC",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
       {
