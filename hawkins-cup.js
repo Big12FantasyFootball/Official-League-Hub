@@ -45,8 +45,29 @@ function hcGetTeamWeekScores(matches, season, week, live) {
   for (const m of matches) {
     if (m.season !== season) continue;
     if ((m.week ?? m.matchupPeriodId) !== week) continue;
-    scores[m.homeTeamId] = m.homeScore;
-    scores[m.awayTeamId] = m.awayScore;
+    /*
+     * Ignore games that haven't actually produced a score.
+     *
+     * This function assumes `matches` holds only DECIDED games, which is true
+     * today because elo.js filters UNDECIDED out of the list it builds. That
+     * assumption is load-bearing and silent: if an unplayed game ever reaches
+     * here it arrives with homeScore/awayScore of 0, which still counts toward
+     * the ">= 12 teams, we're done" check below — so the live-score fallback
+     * never runs, every team reads 0.00, and the round resolves as a 0-0 tie
+     * handed to whoever sits in slot A.
+     *
+     * That is not a hypothetical. Feeding this an unfiltered week-4 list while
+     * ESPN still said UNDECIDED produced a "Lisa 0 v Furnari 0" final and
+     * crowned the wrong champion. Crowning the wrong manager is the worst
+     * output this file can produce, so it does not get to depend on a caller
+     * remembering to filter.
+     */
+    if (m.winner === "UNDECIDED") continue;
+    const hs = m.homeScore, as = m.awayScore;
+    if (hs == null || as == null) continue;
+    if (!(hs > 0) && !(as > 0)) continue;   // nobody has scored: not a result
+    scores[m.homeTeamId] = hs;
+    scores[m.awayTeamId] = as;
   }
   if (Object.keys(scores).length >= 12 || !live) return scores;
 
@@ -131,15 +152,34 @@ function computeHawkinsCup(matches, currentSeason, nameAt, live) {
     final = hcResolveRound([{ round: "Final", teamA: sf[0].winner, teamB: sf[1].winner }], matches, currentSeason, 4, live)[0];
   }
 
+  const champion = final && final.status === "final" ? final.winner : null;
+
+  /*
+   * `provisional` above only ever meant "the SEEDING came from live scores" —
+   * it checks Week 1 and nothing else. That was fine while the bracket was
+   * still being played, but it says nothing about the round that actually
+   * crowns somebody.
+   *
+   * The 2026 final was decided on a Sunday night while ESPN still had Week 4
+   * marked UNDECIDED: Lisa had finished on 89.52, Furnari led on 96.02 with
+   * one player left, and the bracket correctly resolved it from live scores.
+   * Correct, but not yet official — and a champion is the one claim on this
+   * site that should never be stated more firmly than the data supports.
+   * So the final round gets its own flag.
+   */
+  const championProvisional = !!champion
+    && !hcWeekIsOfficial(matches, currentSeason, 4);
+
   return {
     status: "determined",
     provisional,
+    championProvisional,
     qualifiers,
     eliminated,
     qf,
     sf,
     final,
-    champion: final && final.status === "final" ? final.winner : null,
+    champion,
   };
 }
 
@@ -224,7 +264,13 @@ function renderHawkinsCup(cup) {
       banner.className = "cup-champion-banner";
       bracket.parentNode.insertBefore(banner, bracket.nextSibling);
     }
-    banner.innerHTML = `&#127942; ${cup.champion.name} wins the Hawkins Cup`;
+    // Say so while the deciding week is still live-scored. This clears itself
+    // the moment ESPN stamps the week final, with no edit needed.
+    banner.innerHTML = `&#127942; ${cup.champion.name} wins the Hawkins Cup`
+      + (cup.championProvisional
+          ? '<span class="cup-champion-pending">Result is from live scoring &mdash; '
+            + 'ESPN has not stamped the week final yet</span>'
+          : "");
   }
 }
 

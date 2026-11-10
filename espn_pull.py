@@ -25,6 +25,7 @@ internet access (your own machine, or a CI runner).
 
 import json
 import sys
+import time
 from datetime import datetime, timezone
 
 import requests
@@ -57,13 +58,105 @@ PRO_TEAM_BY_ID = {
 BENCH_SLOT_IDS = {20, 21}  # 20 = bench, 21 = IR
 
 
+# ---------------------------------------------------------------------------
+# WHY THERE IS A BROWSER USER-AGENT HERE
+#
+# Every scheduled run of this script failed from 2026-10-13 onward — around
+# forty consecutive failures — while the exact same endpoint kept answering
+# fine from a browser. The CI job was healthy (checkout, setup-python and pip
+# all green); only the `python espn_pull.py` step failed, and the projections
+# script failed the same way at the same time.
+#
+# The one thing both scripts had in common was a non-browser User-Agent: this
+# one sent requests' default `python-requests/2.x`, the other sent
+# `big12-league-hub/1.0`. ESPN's fantasy endpoints are known to reject
+# non-browser agents, and that fits every symptom.
+#
+# Being straight about it: the Actions logs need repo auth to read, so this
+# was not confirmed from the error text. That is exactly why the retry and
+# diagnosis below exist — the next failure should name its own cause in the
+# log instead of needing to be deduced from the outside.
+# ---------------------------------------------------------------------------
+BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+
+BASE_HEADERS = {
+    "User-Agent": BROWSER_UA,
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://fantasy.espn.com/",
+    "X-Requested-With": "XMLHttpRequest",
+}
+
+
+def _diagnose(status, body):
+    """Turn an HTTP status into something actionable in the Actions log."""
+    if status in (401, 403):
+        if "LEAGUE_NOT_VISIBLE" in body or "AUTH" in body.upper():
+            return ("The league is no longer publicly viewable. Either flip\n"
+                    "  ESPN League Settings > Basic Settings > 'Make League Viewable to\n"
+                    "  Public' back to Yes, or set the ESPN_S2 and SWID repo secrets and\n"
+                    "  uncomment the COOKIES block in this file.")
+        return ("ESPN refused the request outright. Most often this is agent or\n"
+                "  IP filtering rather than anything about the league. The request\n"
+                "  already sends a browser User-Agent; if this persists, the runner's\n"
+                "  datacenter IP range is the next suspect and the pull would need to\n"
+                "  move somewhere with a residential IP.")
+    if status == 404:
+        return "League or season not found — check LEAGUE_ID and SEASON at the top."
+    if status == 429:
+        return "Rate limited. The backoff below should normally absorb this."
+    if 500 <= status < 600:
+        return "ESPN server-side error. Usually transient; the next scheduled run may succeed."
+    return "Unexpected status. The response body above is the best clue."
+
+
+def _get(url, params=None, headers=None, timeout=20, attempts=4):
+    """
+    GET with a browser-like UA and exponential backoff.
+
+    Retries network blips, 429s and 5xx. Does NOT retry 401/403/404 — those
+    are settings or identity problems and hammering them just burns minutes
+    and buries the real message.
+    """
+    hdrs = dict(BASE_HEADERS)
+    if headers:
+        hdrs.update(headers)
+    last = ""
+    for attempt in range(1, attempts + 1):
+        try:
+            resp = requests.get(url, params=params, headers=hdrs,
+                                cookies=COOKIES, timeout=timeout)
+        except requests.RequestException as exc:
+            last = f"{type(exc).__name__}: {exc}"
+        else:
+            if resp.status_code == 200:
+                if attempt > 1:
+                    print(f"  recovered on attempt {attempt}", file=sys.stderr)
+                return resp
+            body = resp.text[:600]
+            last = f"HTTP {resp.status_code}"
+            if resp.status_code in (401, 403, 404):
+                print(f"ERROR: {last}", file=sys.stderr)
+                print(body, file=sys.stderr)
+                print("\nDIAGNOSIS:\n  " + _diagnose(resp.status_code, body), file=sys.stderr)
+                sys.exit(1)
+        if attempt < attempts:
+            wait = 3 * (2 ** (attempt - 1))       # 3s, 6s, 12s
+            print(f"  attempt {attempt}/{attempts} failed ({last}) — retrying in {wait}s",
+                  file=sys.stderr)
+            time.sleep(wait)
+    print(f"ERROR: giving up after {attempts} attempts. Last failure: {last}",
+          file=sys.stderr)
+    print("\nDIAGNOSIS:\n  Could not reach ESPN at all. If this is a one-off the next\n"
+          "  scheduled run will clear it; if it repeats, the endpoint or the\n"
+          "  runner's network path has changed.", file=sys.stderr)
+    sys.exit(1)
+
+
 def fetch_league():
     params = [("view", v) for v in VIEWS]
-    resp = requests.get(BASE, params=params, cookies=COOKIES, timeout=15)
-    if resp.status_code != 200:
-        print(f"ERROR: HTTP {resp.status_code}", file=sys.stderr)
-        print(resp.text[:500], file=sys.stderr)
-        sys.exit(1)
+    resp = _get(BASE, params=params)
     data = resp.json()
     if "messages" in data:
         print("ERROR from ESPN API:", data["messages"], file=sys.stderr)

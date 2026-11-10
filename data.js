@@ -507,6 +507,7 @@ async function pollEspnOnce() {
   try { renderWeek1Results(data); } catch (e) { console.error(e); }
   try { renderWeekHeader(data); } catch (e) { console.error(e); }
   try { renderSOS(data); } catch (e) { console.error(e); }
+  try { renderSeasonTable(data); } catch (e) { console.error(e); }
 
   /*
    * Tell the page a poll landed. index.html's Head-to-Head matrix listens for
@@ -1213,6 +1214,156 @@ function renderWeek1Results(data) {
     + "</p>";
 }
 
+/* ===========================================================================
+ * CURRENT-SEASON STANDINGS
+ *
+ * The Manager Stats page was a hand-written 2023-2025 table and nothing else.
+ * Nine weeks into 2026 it still showed no games from this season at all, so
+ * "manager stats haven't updated in weeks" was literally true — there was
+ * nothing there to update.
+ *
+ * Everything here is derived from the same match list Elo uses, so the two
+ * cannot drift: if the standings say 7-1, Elo saw 7-1. Record and points come
+ * from ESPN's own standings block where available, and are recomputed from
+ * the match list when it isn't, with the two cross-checked.
+ * =========================================================================== */
+function computeSeasonTable(data) {
+  const live = data.live || {};
+  const season = live.season;
+  if (!season) return null;
+
+  // Recompute from games so the table can be checked against ESPN's own
+  // standings rather than trusting one source blindly.
+  const played = (live.seasonMatchups || []).filter((g) =>
+    (g.playoffTierType || "NONE") === "NONE"
+    && g.winner && g.winner !== "UNDECIDED");
+  const tally = {};
+  const touch = (id) => (tally[id] = tally[id]
+    || { teamId: id, w: 0, l: 0, t: 0, pf: 0, pa: 0, g: 0, scores: [] });
+  played.forEach((m) => {
+    const h = touch(m.homeTeamId), a = touch(m.awayTeamId);
+    h.pf += m.homeScore; h.pa += m.awayScore; h.g++; h.scores.push(m.homeScore);
+    a.pf += m.awayScore; a.pa += m.homeScore; a.g++; a.scores.push(m.awayScore);
+    if (m.homeScore === m.awayScore) { h.t++; a.t++; }
+    else if (m.homeScore > m.awayScore) { h.w++; a.l++; }
+    else { a.w++; h.l++; }
+  });
+  const rows = Object.values(tally);
+  if (!rows.length) return null;
+
+  // All-play record: how you'd have done against the whole league each week.
+  // Strips schedule luck out, which is the single most useful thing a fantasy
+  // standings table can show and the thing ESPN never displays.
+  const byWeek = {};
+  played.forEach((m) => {
+    (byWeek[m.matchupPeriodId] = byWeek[m.matchupPeriodId] || [])
+      .push([m.homeTeamId, m.homeScore], [m.awayTeamId, m.awayScore]);
+  });
+  rows.forEach((r) => { r.apW = 0; r.apL = 0; });
+  Object.values(byWeek).forEach((week) => {
+    week.forEach(([id, score]) => {
+      const r = tally[id]; if (!r) return;
+      week.forEach(([oid, oscore]) => {
+        if (oid === id) return;
+        if (score > oscore) r.apW++; else if (score < oscore) r.apL++;
+      });
+    });
+  });
+
+  const mean = (a) => a.reduce((x, y) => x + y, 0) / a.length;
+  rows.forEach((r) => {
+    r.ppg = r.g ? r.pf / r.g : 0;
+    r.diff = r.pf - r.pa;
+    const mu = r.scores.length ? mean(r.scores) : 0;
+    r.sd = r.scores.length > 1
+      ? Math.sqrt(mean(r.scores.map((s) => (s - mu) * (s - mu)))) : 0;
+    r.best = r.scores.length ? Math.max(...r.scores) : 0;
+    r.worst = r.scores.length ? Math.min(...r.scores) : 0;
+    r.apPct = (r.apW + r.apL) ? r.apW / (r.apW + r.apL) : 0;
+    // Luck: actual win rate minus the rate the scores deserved.
+    r.luck = r.g ? (r.w / r.g) - r.apPct : 0;
+  });
+
+  // Cross-check against ESPN's standings block. A mismatch means one of the
+  // two is wrong and the page should say so rather than pick a winner.
+  const espn = {};
+  (live.standings || []).forEach((s) => { espn[s.teamId] = s; });
+  let disagreements = 0;
+  rows.forEach((r) => {
+    const e = espn[r.teamId];
+    if (!e) return;
+    if (e.wins !== r.w || e.losses !== r.l) { r.mismatch = `ESPN ${e.wins}-${e.losses}`; disagreements++; }
+  });
+
+  rows.sort((a, b) => (b.w - a.w) || (b.pf - a.pf));
+  const weeks = Object.keys(byWeek).map(Number).sort((a, b) => a - b);
+  return { rows, season, disagreements,
+    throughWeek: weeks.length ? weeks[weeks.length - 1] : 0,
+    gamesPlayed: played.length,
+    leaguePPG: rows.length ? mean(rows.map((r) => r.ppg)) : 0 };
+}
+
+function renderSeasonTable(data) {
+  const el = document.getElementById("season-table");
+  if (!el) return;
+  const s = computeSeasonTable(data);
+  if (!s) {
+    el.innerHTML = '<p class="note" style="border:none;padding-left:0">'
+      + "This season's table appears once games have been played.</p>";
+    return;
+  }
+  const nameAt = data.managerNameAt;
+  const PLAYOFF = 6;   // league takes six
+  const fmt = (v, d) => v.toFixed(d == null ? 2 : d);
+
+  const rows = s.rows.map((r, i) => {
+    const cut = i === PLAYOFF
+      ? '<div class="st-cut"><span>Playoff cut line &mdash; top ' + PLAYOFF + ' make it</span></div>' : "";
+    const luckCls = r.luck > 0.12 ? " lucky" : r.luck < -0.12 ? " unlucky" : "";
+    return cut + `<div class="st-row${i < PLAYOFF ? "" : " out"}">
+      <span class="st-rank">${i + 1}</span>
+      <span class="st-mgr">${escHtml(nameAt(r.teamId, s.season))}${
+        r.mismatch ? ` <span class="st-flag" title="disagrees with ESPN">!</span>` : ""}</span>
+      <span class="st-rec">${r.w}&ndash;${r.l}${r.t ? "&ndash;" + r.t : ""}</span>
+      <span class="st-n">${fmt(r.pf)}</span>
+      <span class="st-n st-ppg">${fmt(r.ppg, 1)}</span>
+      <span class="st-n st-diff${r.diff >= 0 ? " pos" : " neg"}">${r.diff >= 0 ? "+" : ""}${fmt(r.diff, 1)}</span>
+      <span class="st-n st-sd">${fmt(r.sd, 1)}</span>
+      <span class="st-ap">${r.apW}&ndash;${r.apL}</span>
+      <span class="st-luck${luckCls}">${r.luck >= 0 ? "+" : ""}${(r.luck * 100).toFixed(0)}</span>
+    </div>`;
+  }).join("");
+
+  // The two managers the all-play record disagrees with hardest.
+  const byLuck = s.rows.slice().sort((a, b) => b.luck - a.luck);
+  const lucky = byLuck[0], unlucky = byLuck[byLuck.length - 1];
+
+  el.innerHTML = `<div class="st-head">${s.season} &middot; through Week ${s.throughWeek}`
+    + ` &middot; ${s.gamesPlayed} games${freshnessLabel()}</div>
+    <div class="st-list">
+      <div class="st-row head"><span class="st-rank"></span><span class="st-mgr">Manager</span>
+        <span class="st-rec">W&ndash;L</span><span class="st-n">PF</span>
+        <span class="st-n st-ppg">PPG</span><span class="st-n st-diff">Diff</span>
+        <span class="st-n st-sd">SD</span><span class="st-ap">All&ndash;Play</span>
+        <span class="st-luck">Luck</span></div>
+      ${rows}
+    </div>
+    <p class="note"><strong>All&ndash;Play</strong> is your record if you had played every
+    other manager every week &mdash; it strips out who the schedule happened to give you.
+    <strong>Luck</strong> is actual win rate minus all-play win rate, in points: positive
+    means the schedule has been kind.
+    ${lucky && unlucky && lucky.luck > 0.05 ? `<strong>${escHtml(nameAt(lucky.teamId, s.season))}</strong>
+      has gotten the most from it; <strong>${escHtml(nameAt(unlucky.teamId, s.season))}</strong>
+      the least.` : ""}
+    <strong>SD</strong> is week-to-week scoring volatility &mdash; low is consistent.</p>`
+    + (s.disagreements
+        ? `<p class="note" style="border-left-color:#B3261E"><strong>${s.disagreements}
+           record${s.disagreements === 1 ? "" : "s"} disagree with ESPN's own standings.</strong>
+           This table is recomputed from the game results; a mismatch usually means the
+           snapshot is mid-update. Flagged with <span class="st-flag">!</span> above.</p>`
+        : "");
+}
+
 /*
  * The week panel's own headings and copy.
  *
@@ -1433,6 +1584,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderWeek2(data);
       renderWeekHeader(data);
       renderSOS(data);
+      renderSeasonTable(data);
       startEspnPolling();   // upgrade from the 30-min snapshot to 45-second live
       renderRostersPage(data);
     })

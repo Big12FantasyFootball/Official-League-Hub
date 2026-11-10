@@ -682,6 +682,59 @@ table.sch-table tr:last-child td{border-bottom:none}
 .w1r-cut{padding:.35rem .9rem;background:var(--ink);color:#f4d876;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.11em;text-transform:uppercase}
 @media(max-width:620px){.w1r-row{grid-template-columns:1.7rem 1fr 4.2rem 4.6rem}.w1r-rec{display:none}}
 
+/* --- Live current-season standings (st-) on the Manager Stats page --- */
+.st-head{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.st-list{border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
+.st-row{display:grid;grid-template-columns:1.9rem 1fr 3.6rem 4.6rem 3.8rem 4.4rem 3.2rem 4.4rem 3rem;gap:.5rem;align-items:center;padding:.5rem .9rem;border-bottom:1px solid var(--border);font-size:.8rem}
+.st-row:last-child{border-bottom:none}
+.st-row.head{font-family:'JetBrains Mono',monospace;font-size:.53rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);background:var(--bg)}
+.st-row.out{background:#FCFBF9}
+.st-rank{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);text-align:center}
+.st-mgr{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.st-row.out .st-mgr{color:var(--muted)}
+.st-rec{font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:500;text-align:center}
+.st-n{font-family:'JetBrains Mono',monospace;font-size:.74rem;text-align:right;color:var(--muted)}
+.st-n.pos{color:#2f9e44}
+.st-n.neg{color:#B3261E}
+.st-ap{font-family:'JetBrains Mono',monospace;font-size:.72rem;text-align:center;color:var(--muted)}
+.st-luck{font-family:'JetBrains Mono',monospace;font-size:.72rem;text-align:right;color:var(--muted)}
+.st-luck.lucky{color:#2f9e44}
+.st-luck.unlucky{color:#B3261E}
+.st-row.head .st-n,.st-row.head .st-ap,.st-row.head .st-luck,.st-row.head .st-rec{color:var(--muted);font-weight:400}
+.st-cut{padding:.35rem .9rem;background:var(--ink);color:#f4d876;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.11em;text-transform:uppercase}
+.st-flag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#fff;background:#B3261E;border-radius:3px;padding:0 .3rem;vertical-align:middle}
+/* Column count and visible-child count MUST agree or the overflow wraps onto a
+   second row. The first version declared six columns while leaving seven
+   children visible, so SD dropped under each manager's name. Hiding by
+   :nth-of-type did not work either — every cell is a <span>, so it counted
+   spans rather than numeric columns. Hence the explicit per-column classes. */
+@media(max-width:860px){.st-row{grid-template-columns:1.7rem 1fr 3.4rem 4.6rem 3.8rem 4.4rem}.st-ap,.st-luck,.st-sd{display:none}}
+@media(max-width:560px){.st-row{grid-template-columns:1.6rem 1fr 3.3rem 4.4rem}.st-ppg,.st-diff{display:none}}
+
+/* --- Hawkins Cup champion banner in the Hall of Champions (ccb-) --- */
+.cup-champ-banner{position:relative;border:1px solid var(--gold);border-left-width:4px;border-radius:14px;background:linear-gradient(180deg,rgba(161,98,7,.07),#fff 55%);padding:1.5rem 1.6rem;margin-bottom:1.8rem;overflow:hidden}
+.ccb-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.7rem}
+.ccb-kicker{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.ccb-prize{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.08em;color:#fff;background:var(--gold);border-radius:5px;padding:.2rem .55rem}
+.ccb-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:2.6rem;line-height:1;text-transform:uppercase;color:var(--ink);margin-bottom:.25rem}
+.ccb-team{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+.panel .ccb-copy{font-size:.86rem;line-height:1.75;color:var(--muted);margin-bottom:1.1rem;max-width:72ch}
+.panel .ccb-copy strong{color:var(--ink)}
+.ccb-run{border:1px solid var(--border);border-radius:10px;background:#fff;overflow:hidden;margin-bottom:1.1rem}
+.ccb-leg{display:grid;grid-template-columns:11rem 1fr 4rem;gap:.7rem;align-items:center;padding:.55rem .9rem;border-bottom:1px solid var(--border);font-size:.8rem}
+.ccb-leg:last-child{border-bottom:none}
+.ccb-leg.win{background:rgba(161,98,7,.07)}
+.ccb-rd{font-family:'JetBrains Mono',monospace;font-size:.54rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+.ccb-score{color:var(--muted)}
+.ccb-score b{font-family:'JetBrains Mono',monospace;font-size:.92rem;font-weight:500;color:var(--ink)}
+.ccb-leg.win .ccb-score b{color:var(--gold)}
+.ccb-marg{font-family:'JetBrains Mono',monospace;font-size:.72rem;text-align:right;color:var(--gold)}
+.ccb-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.6rem}
+.ccb-stat{border:1px solid var(--border);border-radius:9px;background:#fff;padding:.6rem .7rem;text-align:center}
+.ccb-stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;line-height:1;color:var(--gold)}
+.ccb-stat span{display:block;font-family:'JetBrains Mono',monospace;font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.25rem}
+@media(max-width:620px){.ccb-name{font-size:2rem}.ccb-leg{grid-template-columns:1fr;gap:.15rem}.ccb-marg{text-align:left}}
+
 /* --- Live strength of schedule (sos2-). The old static .sos-table is left
        alone; this is a separate namespace so the two can't collide. --- */
 .sos2-head{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
@@ -1090,13 +1143,13 @@ table.sch-table tr:last-child td{border-bottom:none}
 
     <div class="stat-strip">
       <div class="stat-strip-main">
-        <div class="stat-strip-kicker">Most Anticipated Event</div>
-        <div class="stat-strip-title">The Hawkins Cup Is Coming</div>
-        <div class="stat-strip-copy">Week 1 isn't just about going 1&ndash;0 &mdash; it decides who gets into the first Hawkins Cup bracket. The top 8 scorers advance. The bottom 4 are out immediately.</div>
+        <div class="stat-strip-kicker">Settled &middot; Week 4, 2026</div>
+        <div class="stat-strip-title">Nick Furnari Wins The First Hawkins Cup</div>
+        <div class="stat-strip-copy">The #3 seed took it 3&ndash;0, beating the #2 seed in the semifinal and the #1 seed in the final. Full run and permanent record in the <strong>Hall of Champions</strong>.</div>
       </div>
-      <div class="stat-item"><strong>12</strong><span>Teams Fighting</span></div>
-      <div class="stat-item"><strong>8</strong><span>Cup Bids</span></div>
-      <div class="stat-item"><strong>$300</strong><span>Cup Prize</span></div>
+      <div class="stat-item"><strong>3&ndash;0</strong><span>Champion's Run</span></div>
+      <div class="stat-item"><strong>6.50</strong><span>Final Margin</span></div>
+      <div class="stat-item"><strong>$300</strong><span>Claimed</span></div>
     </div>
 
     <!-- Live Cup round scoreboard. Same renderer as the Week 2 panel's copy —
@@ -1145,12 +1198,15 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="road-step"><strong>Week 4 &middot; Final</strong><span>Winner takes the Hawkins Cup and $300.</span></div>
     </div>
 
-    <div class="road-title">Who Has The Most Pressure?</div>
+    <!-- Was "Who Has The Most Pressure?", written before Week 1 and listing
+         who stood to be embarrassed. The tournament is over; it says how it
+         actually went instead. -->
+    <div class="road-title">How It Actually Went</div>
     <div class="road-grid" style="margin-bottom:2.5rem">
-      <div class="road-step"><strong>Nick Hawkins</strong><span>The tournament has his name on it. Missing the field would be nuclear-level slander.</span></div>
-      <div class="road-step"><strong>Jake Joyce</strong><span>Defending champion can't start the year by missing the league's newest major event.</span></div>
-      <div class="road-step"><strong>Drew Sanford</strong><span>Emergency replacement manager with no history. A Cup miss starts the new era with immediate slander.</span></div>
-      <div class="road-step"><strong>Rookies</strong><span>Aidan and Brandon can become relevant immediately with one top-8 Week 1 score.</span></div>
+      <div class="road-step"><strong>Nick Furnari &middot; Champion</strong><span>Third seed, 3&ndash;0, and he had to beat the second and first seeds back to back to do it. Won the final 96.02&ndash;89.52 &mdash; his lowest score of the run, on the only week that decided anything.</span></div>
+      <div class="road-step"><strong>Joseph Lisa &middot; Runner-Up</strong><span>Top seed from the opening Sunday on the back of a league-best 161.06 in Week 1, and led the bracket the whole way. Came up 6.50 short in the final.</span></div>
+      <div class="road-step"><strong>Nick Hawkins</strong><span>The tournament has his name on it and he squeaked into the field as the eighth and last seed, by 9.06. Drew the top seed in the quarterfinal and went out.</span></div>
+      <div class="road-step"><strong>Jake Joyce</strong><span>The defending league champion missed the Cup field entirely &mdash; 105.70 in Week 1, tenth of twelve. Four weeks of watching.</span></div>
     </div>
 
     <div class="bracket">
@@ -1211,6 +1267,45 @@ table.sch-table tr:last-child td{border-bottom:none}
         <div class="archive-team"><b>Team Lisa</b><span>Joseph Lisa &middot; Champion</span></div>
       </div>
       <span class="archive-badge">Title Only</span>
+    </div>
+
+    <!-- ===================================================================
+         First Hawkins Cup, 2026. Kept at the top of the hall because it is
+         the league's newest trophy and the only one won this season. The
+         bracket itself lives on the Hawkins Cup tab and is computed live;
+         this is the permanent record.
+         =================================================================== -->
+    <div class="cup-champ-banner">
+      <div class="ccb-top">
+        <span class="ccb-kicker">Inaugural Hawkins Cup &middot; 2026</span>
+        <span class="ccb-prize">$300</span>
+      </div>
+      <div class="ccb-name">Nick Furnari</div>
+      <div class="ccb-team">Nick&rsquo;s Nitty Team &middot; #3 Seed &middot; 3&ndash;0 in the Cup</div>
+      <p class="ccb-copy">Seeded third off a 137.86 opening week, Furnari won the first Hawkins Cup by going through the bracket the hard way &mdash; knocking out the <strong>#2 seed</strong> in the semifinal and the <strong>#1 seed</strong> in the final. Joseph Lisa had been the Week 1 pacesetter at 161.06 and the top seed throughout; Furnari beat him 96.02&ndash;89.52 in the lowest-scoring game of the run, on the one weekend it counted.</p>
+      <div class="ccb-run">
+        <div class="ccb-leg">
+          <span class="ccb-rd">Quarterfinal &middot; Week 2</span>
+          <span class="ccb-score"><b>120.22</b> def. Josh Sweeney (#6) 110.26</span>
+          <span class="ccb-marg">+9.96</span>
+        </div>
+        <div class="ccb-leg">
+          <span class="ccb-rd">Semifinal &middot; Week 3</span>
+          <span class="ccb-score"><b>142.96</b> def. Jojo Guarnaccia (#2) 103.82</span>
+          <span class="ccb-marg">+39.14</span>
+        </div>
+        <div class="ccb-leg win">
+          <span class="ccb-rd">Final &middot; Week 4</span>
+          <span class="ccb-score"><b>96.02</b> def. Joseph Lisa (#1) 89.52</span>
+          <span class="ccb-marg">+6.50</span>
+        </div>
+      </div>
+      <div class="ccb-stats">
+        <div class="ccb-stat"><b>3&ndash;0</b><span>Cup Record</span></div>
+        <div class="ccb-stat"><b>359.20</b><span>Total Cup Points</span></div>
+        <div class="ccb-stat"><b>142.96</b><span>Peak Round</span></div>
+        <div class="ccb-stat"><b>2</b><span>Higher Seeds Beaten</span></div>
+      </div>
     </div>
 
     <div class="champ-year">
@@ -1560,7 +1655,13 @@ table.sch-table tr:last-child td{border-bottom:none}
       <div class="arc-card"><div class="arc-name"><strong>Aidan Goss</strong><span>Rookie File</span></div><div class="arc-line"><div class="arc-year">2026</div><div class="arc-copy">New member replacing inactive history.</div></div><div class="arc-line"><div class="arc-year">&mdash;</div><div class="arc-copy">No scars yet. Gets Joyce in Week 1.</div></div></div>
     </div>
 
-    <div class="road-title">Historical Manager Stats &middot; 2023&ndash;2025</div>
+    <!-- The current season, live. This panel used to jump straight from the
+         2026 roster news to a frozen 2023-2025 table, so nine weeks of actual
+         football were nowhere on the page. -->
+    <div class="road-title">This Season</div>
+    <div id="season-table"></div>
+
+    <div class="road-title" style="margin-top:2.5rem">Historical Manager Stats &middot; 2023&ndash;2025</div>
     <!-- Filled by renderMgrReconcile(): a live check that this table and the
          Head-to-Head grid actually agree. They disagreed for months. -->
     <div id="mgrReconcile"></div>
@@ -1584,7 +1685,7 @@ table.sch-table tr:last-child td{border-bottom:none}
           <tr class="hl" data-vals='["Jake Joyce","21-21","50.0","5044.52","120.1","4959.88","84.64","3-0","100.0","Champion x1"]'><td><div class="mn2">Jake Joyce</div><div class="ms2">Seal Team Nix</div></td><td class="r">21&ndash;21</td><td class="r">50.0%</td><td class="r">5044.52</td><td class="r">120.1</td><td class="r">4959.88</td><td class="r" style="color:#2f9e44">+84.64</td><td class="r">3&ndash;0</td><td class="r">100.0%</td><td>Champion x1</td></tr>
           <tr class="hl inactive-manager" data-vals='["Dillon Jacobs","16-12","57.1","3465.12","123.8","3355.62","109.50","3-1","75.0","Champion x1"]'><td><div class="mn2">Dillon Jacobs<span class="inactive-pill">Inactive</span></div><div class="ms2">This Team is Kincaids</div></td><td class="r">16&ndash;12</td><td class="r">57.1%</td><td class="r">3465.12</td><td class="r">123.8</td><td class="r">3355.62</td><td class="r" style="color:#2f9e44">+109.50</td><td class="r">3&ndash;1</td><td class="r">75.0%</td><td>Champion x1</td></tr>
           <tr data-vals='["Jalen Peretz","21-21","50.0","5067.48","120.7","5060.54","6.94","1-2","33.3","Runner-Up 2023"]'><td><div class="mn2">Jalen Peretz</div><div class="ms2">Bourne with Downs</div></td><td class="r">21&ndash;21</td><td class="r">50.0%</td><td class="r">5067.48</td><td class="r">120.7</td><td class="r">5060.54</td><td class="r" style="color:#2f9e44">+6.94</td><td class="r">1&ndash;2</td><td class="r">33.3%</td><td>Runner-Up 2023</td></tr>
-          <tr data-vals='["Nick Furnari","27-15","64.3","4916.20","117.1","4702.58","213.62","1-3","25.0","Semis 2023/2025"]'><td><div class="mn2">Nick Furnari</div><div class="ms2">Nick's Nitty Team</div></td><td class="r">27&ndash;15</td><td class="r">64.3%</td><td class="r">4916.20</td><td class="r">117.1</td><td class="r">4702.58</td><td class="r" style="color:#2f9e44">+213.62</td><td class="r">1&ndash;3</td><td class="r">25.0%</td><td>Semis 2023/2025</td></tr>
+          <tr data-vals='["Nick Furnari","27-15","64.3","4916.20","117.1","4702.58","213.62","1-3","25.0","Hawkins Cup 2026 / Semis 2023/2025"]'><td><div class="mn2">Nick Furnari</div><div class="ms2">Nick's Nitty Team</div></td><td class="r">27&ndash;15</td><td class="r">64.3%</td><td class="r">4916.20</td><td class="r">117.1</td><td class="r">4702.58</td><td class="r" style="color:#2f9e44">+213.62</td><td class="r">1&ndash;3</td><td class="r">25.0%</td><td><strong style="color:var(--gold)">Hawkins Cup 2026</strong> / Semis 2023/2025</td></tr>
           <tr data-vals='["Nick Hawkins","20-22","47.6","4703.40","112.0","4642.70","60.70","4-2","66.7","Runner-Up x3*"]'><td><div class="mn2">Nick Hawkins</div><div class="ms2">Curse of Ra</div></td><td class="r">20&ndash;22</td><td class="r">47.6%</td><td class="r">4703.40</td><td class="r">112.0</td><td class="r">4642.70</td><td class="r" style="color:#2f9e44">+60.70</td><td class="r">4&ndash;2</td><td class="r">66.7%</td><td>Runner-Up x3*</td></tr>
           <tr data-vals='["Josh Sweeney","22-20","52.4","5111.10","121.7","5015.12","95.98","0-1","0.0","Semis 2024"]'><td><div class="mn2">Josh Sweeney</div><div class="ms2">Josh's Scary Team</div></td><td class="r">22&ndash;20</td><td class="r">52.4%</td><td class="r">5111.10</td><td class="r">121.7</td><td class="r">5015.12</td><td class="r" style="color:#2f9e44">+95.98</td><td class="r">0&ndash;1</td><td class="r">0.0%</td><td>Semis 2024</td></tr>
           <tr data-vals='["Nick Carullo","23-19","54.8","4919.68","117.1","4840.10","79.58","0-2","0.0","Semis 2024"]'><td><div class="mn2">Nick Carullo</div><div class="ms2">Drake London and Friends</div></td><td class="r">23&ndash;19</td><td class="r">54.8%</td><td class="r">4919.68</td><td class="r">117.1</td><td class="r">4840.10</td><td class="r" style="color:#2f9e44">+79.58</td><td class="r">0&ndash;2</td><td class="r">0.0%</td><td>Semis 2024</td></tr>
@@ -14726,13 +14827,27 @@ if (typeof module !== "undefined") {
     var days = Math.floor(d/86400000);
 
     if (!next){
-      // Cup is over. Say that, rather than counting down to nothing.
-      setHtml("dnEyebrow", "Hawkins Cup &middot; Complete");
-      setHtml("dnWhen", "The bracket is finished");
-      setHtml("dnCopy", "Every Cup round has been played. The bracket and the full "
-        + "result are on the <strong>Hawkins Cup</strong> tab.");
+      /*
+       * Cup is over. Name the champion rather than just announcing that the
+       * bracket finished — the winner comes from the live bracket, not a
+       * hardcoded string, so this stays correct in future seasons without
+       * anyone editing it.
+       */
+      var cup = (window.B12Live && window.B12Live.hawkinsCup) || null;
+      var champ = cup && cup.champion ? cup.champion.name : null;
+      setHtml("dnEyebrow", "Hawkins Cup &middot; Champion");
+      setHtml("dnWhen", champ
+        ? "Won by <em>" + champ + "</em>"
+        : "The bracket is finished");
+      setHtml("dnCopy", champ
+        ? "<strong>" + champ + "</strong> has won the Hawkins Cup. The full bracket, "
+          + "every round and the permanent record are on the <strong>Hawkins Cup</strong> "
+          + "and <strong>Hall of Champions</strong> tabs."
+        : "Every Cup round has been played. The bracket and the full result are on the "
+          + "<strong>Hawkins Cup</strong> tab.");
       if (head){
-        head.textContent = "The Hawkins Cup is decided.";
+        head.textContent = champ ? champ + " wins the Hawkins Cup."
+                                 : "The Hawkins Cup is decided.";
         head.classList.remove("live");
       }
       return;
@@ -19584,6 +19699,17 @@ if (typeof module !== "undefined") {
     border-radius: 10px;
     padding: 1rem 1.2rem;
     margin-bottom: 1.5rem;
+  }
+  /* Shown only while the deciding week is still live-scored. */
+  .cup-champion-pending {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: .58rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: .4rem;
   }
 </style>
 

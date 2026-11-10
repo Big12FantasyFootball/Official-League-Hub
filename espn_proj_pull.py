@@ -27,6 +27,7 @@ Usage:
 
 import json
 import sys
+import time
 from datetime import datetime, timezone
 
 import requests
@@ -53,6 +54,14 @@ MAX_WEEKLY = 40.0       # nobody projects above this per week; guards unit error
 GAMES = 17
 
 
+# See the long note in espn_pull.py. This script failed on exactly the same
+# schedule, and it was the other half of the evidence: it sent a custom
+# `big12-league-hub/1.0` agent, which is no more browser-like than requests'
+# default. Both now present as a browser and retry with backoff.
+BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+
+
 def fetch_players():
     headers = {
         "X-Fantasy-Filter": json.dumps({
@@ -61,13 +70,41 @@ def fetch_players():
                 "sortPercOwned": {"sortPriority": 1, "sortAsc": False},
             }
         }),
-        "User-Agent": "big12-league-hub/1.0",
+        "User-Agent": BROWSER_UA,
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://fantasy.espn.com/",
+        "X-Requested-With": "XMLHttpRequest",
     }
-    resp = requests.get(BASE, params={"view": "kona_player_info"},
-                        headers=headers, timeout=45)
-    if resp.status_code != 200:
-        print(f"ERROR: HTTP {resp.status_code}", file=sys.stderr)
-        print(resp.text[:400], file=sys.stderr)
+    resp = None
+    last = ""
+    for attempt in range(1, 4):
+        try:
+            resp = requests.get(BASE, params={"view": "kona_player_info"},
+                                headers=headers, timeout=45)
+        except requests.RequestException as exc:
+            last = f"{type(exc).__name__}: {exc}"
+            resp = None
+        else:
+            if resp.status_code == 200:
+                break
+            last = f"HTTP {resp.status_code}"
+            if resp.status_code in (401, 403, 404):
+                print(f"ERROR: {last}", file=sys.stderr)
+                print(resp.text[:600], file=sys.stderr)
+                print("\nDIAGNOSIS:\n  ESPN refused the projections request. If espn_pull.py\n"
+                      "  is succeeding, this is specific to the kona_player_info view or the\n"
+                      "  X-Fantasy-Filter header; if both are failing, see the diagnosis there.",
+                      file=sys.stderr)
+                sys.exit(1)
+        if attempt < 3:
+            wait = 5 * attempt
+            print(f"  attempt {attempt}/3 failed ({last}) — retrying in {wait}s",
+                  file=sys.stderr)
+            time.sleep(wait)
+    if resp is None or resp.status_code != 200:
+        print(f"ERROR: projections pull failed after 3 attempts. Last: {last}",
+              file=sys.stderr)
         sys.exit(1)
 
     data = resp.json()
