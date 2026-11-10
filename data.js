@@ -450,27 +450,60 @@ function normalizeEspnMatchups(schedule, period) {
     });
 }
 
+/*
+ * One poll, and the whole season comes back with it.
+ *
+ * THE BUG THIS REPLACES, because it is easy to reintroduce:
+ *
+ * The poll used to read the week number out of the committed snapshot —
+ * `data.live.currentMatchupPeriod` — ask ESPN for exactly that week, and
+ * never look at what week ESPN actually says it is. That is fine right up
+ * until the snapshot stops updating. The scheduled pull broke on 2026-10-13
+ * with the file frozen on Week 6, and from then on every visitor's browser
+ * dutifully asked ESPN for Week 6, forever. The nav tab read "Week 6" in
+ * November, the standings were four weeks light, and Head-to-Head was missing
+ * eighteen games — all while a live connection to ESPN was working perfectly
+ * and fetching the wrong thing.
+ *
+ * Two changes fix it and make the page self-healing:
+ *
+ *   1. The current week comes from ESPN's own `status` block, not from the
+ *      file. The snapshot is a starting point, never the authority on "now".
+ *   2. seasonMatchups is rebuilt from EVERY decided game in the response
+ *      rather than splicing in one week. The response always carried all 14
+ *      weeks — `fullSchedule` below was already keeping them for strength of
+ *      schedule — so the missing weeks were sitting in memory, discarded.
+ *
+ * Net effect: if the cron dies again, the committed file goes stale but the
+ * site does not. Anyone who opens it gets a complete, current season.
+ */
 async function pollEspnOnce() {
   const data = window.B12Live;
   if (!data || !data.live) return false;
   const season = data.live.season;
-  const period = data.live.currentMatchupPeriod || 1;
+  const snapshotPeriod = data.live.currentMatchupPeriod || 1;
 
-  const res = await fetch(espnMatchupUrl(season, period), { cache: "no-store" });
+  const res = await fetch(espnMatchupUrl(season, snapshotPeriod), { cache: "no-store" });
   if (!res.ok) throw new Error("HTTP " + res.status);
   const json = await res.json();
+
+  // ESPN is the authority on what week it is. Fall back to the snapshot only
+  // if the status block is missing or nonsensical.
+  const reported = json.status && json.status.currentMatchupPeriod;
+  const period = (Number.isFinite(reported) && reported > 0) ? reported : snapshotPeriod;
+  if (period !== snapshotPeriod) {
+    console.info(`ESPN reports week ${period}; the committed snapshot said `
+      + `${snapshotPeriod}. Using ESPN and rebuilding the season from this response.`);
+  }
+  data.live.currentMatchupPeriod = period;
+
   const games = normalizeEspnMatchups(json.schedule, period);
   if (!games.length) throw new Error("no matchups for period " + period);
 
-  /*
-   * The response already contains every week of the season, not just the one
-   * we asked for — we were throwing 78 of 84 games away. Strength of schedule
-   * needs the UNPLAYED fixtures to say anything about what's ahead, so keep
-   * the whole thing.
-   */
+  const num = (v) => (v == null ? null : Math.round(Number(v) * 100) / 100);
+  // Every fixture, played or not — strength of schedule needs the unplayed ones.
   data.live.fullSchedule = (json.schedule || []).map((m) => {
     const h = m.home || {}, a = m.away || {};
-    const num = (v) => (v == null ? null : Math.round(Number(v) * 100) / 100);
     return {
       matchupPeriodId: m.matchupPeriodId,
       homeTeamId: h.teamId, awayTeamId: a.teamId,
@@ -480,12 +513,72 @@ async function pollEspnOnce() {
     };
   });
 
-  // Splice the fresh scores in. seasonMatchups keeps its finished weeks;
-  // only the current period is replaced.
   data.live.currentWeekMatchups = games;
-  const others = (data.live.seasonMatchups || []).filter((g) => g.matchupPeriodId !== period);
-  const finishedNow = games.filter((g) => g.winner && g.winner !== "UNDECIDED");
-  data.live.seasonMatchups = others.concat(finishedNow);
+
+  /*
+   * Rebuild the completed season from this response. Replacing rather than
+   * merging is deliberate: the response is a complete, self-consistent view,
+   * so there is nothing in the old array worth preserving and merging would
+   * only risk keeping a superseded score. Weeks the snapshot never had come
+   * back for free.
+   */
+  const rebuilt = (json.schedule || [])
+    .filter((m) => m.winner && m.winner !== "UNDECIDED")
+    .map((m) => {
+      const h = m.home || {}, a = m.away || {};
+      return {
+        matchupPeriodId: m.matchupPeriodId,
+        homeTeamId: h.teamId, homeScore: num(h.totalPoints) || 0,
+        homeLive: num(h.totalPointsLive != null ? h.totalPointsLive : h.totalPoints) || 0,
+        homeProjected: num(h.totalProjectedPointsLive != null
+          ? h.totalProjectedPointsLive : h.totalProjectedPoints),
+        awayTeamId: a.teamId, awayScore: num(a.totalPoints) || 0,
+        awayLive: num(a.totalPointsLive != null ? a.totalPointsLive : a.totalPoints) || 0,
+        awayProjected: num(a.totalProjectedPointsLive != null
+          ? a.totalProjectedPointsLive : a.totalProjectedPoints),
+        winner: m.winner,
+        playoffTierType: m.playoffTierType || "NONE",
+      };
+    })
+    .sort((x, y) => x.matchupPeriodId - y.matchupPeriodId);
+
+  // Guard against a thin response quietly deleting known history: only accept
+  // the rebuild if it covers at least as much as we already had.
+  const had = (data.live.seasonMatchups || []).length;
+  if (rebuilt.length >= had) {
+    data.live.seasonMatchups = rebuilt;
+  } else {
+    console.warn(`Poll returned ${rebuilt.length} decided games but the snapshot `
+      + `already had ${had}; keeping the snapshot rather than losing history.`);
+  }
+
+  /*
+   * Elo, records and the H2H grid are all derived from `matches`, which
+   * elo.js builds once at load from the snapshot. Rebuild it here or those
+   * three stay frozen at whatever the file contained — which is exactly how
+   * the standings ended up four weeks behind a working live connection.
+   */
+  try {
+    if (typeof buildMatchListFromEspnFiles === "function") {
+      data.matches = buildMatchListFromEspnFiles(data.history || { seasons: {} }, data.live);
+      if (typeof computeElo === "function") {
+        const elo = computeElo(data.matches, {
+          resetSeasons: MANAGER_START_SEASON, currentSeason: season,
+        });
+        data.ratings = elo.ratings;
+        data.eloHistory = elo.history;
+        data.departedRatings = elo.departedRatings;
+        data.departedHistory = elo.departedHistory;
+        (data.managers || []).forEach((m) => {
+          const r = m.departed ? elo.departedRatings[m.teamId] : elo.ratings[m.teamId];
+          if (r != null) m.elo = Math.round(r);
+        });
+        data.managers = (data.managers || []).slice().sort((a, b) => b.elo - a.elo);
+        try { renderEloColumn(data); } catch (e) { console.error(e); }
+        try { renderEloLeaderboard(data); } catch (e) { console.error(e); }
+      }
+    }
+  } catch (e) { console.error("Elo rebuild failed:", e); }
 
   LIVE_META = { asOf: new Date(), source: "espn-live" };
 
