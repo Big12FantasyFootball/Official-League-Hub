@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-11T05:43:17.580936+00:00",
+  "pulledAt": "2026-11-11T20:09:40.326426+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 10,
@@ -160,7 +160,7 @@
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 125.57,
+      "awayProjected": 127.98,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 118.69,
+      "homeProjected": 119.84,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 120.12,
+      "awayProjected": 120.14,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 109.71,
+      "homeProjected": 110.7,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 112.77,
+      "awayProjected": 112.76,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 84.62,
+      "homeProjected": 110.15,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 105.96,
+      "awayProjected": 116.83,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 123.8,
+      "homeProjected": 123.78,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 124.8,
+      "awayProjected": 133.06,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 111.57,
+      "homeProjected": 112.54,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 99.52,
+      "awayProjected": 118.63,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1543,7 +1543,7 @@
         "name": "Deebo Samuel Sr.",
         "pos": "WR",
         "proTeam": "SF",
-        "lineupSlotId": 4,
+        "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
@@ -1593,8 +1593,8 @@
         "name": "Ryan Flournoy",
         "pos": "WR",
         "proTeam": "DAL",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.3
       },
@@ -1616,6 +1616,36 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "OUT",
+        "appliedTotal": 0
+      },
+      {
+        "playerId": 4682648,
+        "name": "Malachi Fields",
+        "pos": "WR",
+        "proTeam": "NYG",
+        "lineupSlotId": 4,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 7.0
+      },
+      {
+        "playerId": 4567156,
+        "name": "Treylon Burks",
+        "pos": "WR",
+        "proTeam": "WSH",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "QUESTIONABLE",
+        "appliedTotal": 0
+      },
+      {
+        "playerId": 8439,
+        "name": "Aaron Rodgers",
+        "pos": "QB",
+        "proTeam": "PIT",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       }
     ],
@@ -1747,7 +1777,7 @@
         "proTeam": "NYJ",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 13.8
       },
       {
@@ -1897,7 +1927,7 @@
         "name": "Josh Jacobs",
         "pos": "RB",
         "proTeam": "GB",
-        "lineupSlotId": 20,
+        "lineupSlotId": 21,
         "starter": false,
         "injuryStatus": "OUT",
         "appliedTotal": 0.5
@@ -1923,16 +1953,6 @@
         "appliedTotal": 8.4
       },
       {
-        "playerId": 4689114,
-        "name": "Jaxson Dart",
-        "pos": "QB",
-        "proTeam": "NYG",
-        "lineupSlotId": 21,
-        "starter": false,
-        "injuryStatus": "INJURY_RESERVE",
-        "appliedTotal": 0
-      },
-      {
         "playerId": 4426338,
         "name": "Bo Nix",
         "pos": "QB",
@@ -1943,16 +1963,6 @@
         "appliedTotal": 15.68
       },
       {
-        "playerId": -16019,
-        "name": "Giants D/ST",
-        "pos": "DST",
-        "proTeam": "NYG",
-        "lineupSlotId": 16,
-        "starter": true,
-        "injuryStatus": null,
-        "appliedTotal": 14.0
-      },
-      {
         "playerId": 3055899,
         "name": "Harrison Butker",
         "pos": "K",
@@ -1961,6 +1971,26 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 4.0
+      },
+      {
+        "playerId": -16033,
+        "name": "Ravens D/ST",
+        "pos": "DST",
+        "proTeam": "BAL",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 1.0
+      },
+      {
+        "playerId": 4360797,
+        "name": "Tutu Atwell",
+        "pos": "WR",
+        "proTeam": "LAR",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 3.6
       }
     ],
     "4": [
@@ -2247,22 +2277,12 @@
         "appliedTotal": 10.0
       },
       {
-        "playerId": 4241474,
-        "name": "Brian Robinson Jr.",
-        "pos": "RB",
-        "proTeam": "ATL",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "INJURY_RESERVE",
-        "appliedTotal": 0
-      },
-      {
         "playerId": 17427,
         "name": "Cairo Santos",
         "pos": "K",
         "proTeam": "CHI",
-        "lineupSlotId": 17,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 9.0
       },
@@ -2305,6 +2325,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 5.9
+      },
+      {
+        "playerId": 5082424,
+        "name": "Dominic Zvada",
+        "pos": "K",
+        "proTeam": "NYG",
+        "lineupSlotId": 17,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 17.0
       }
     ],
     "6": [
@@ -2413,8 +2443,8 @@
         "name": "Chase McLaughlin",
         "pos": "K",
         "proTeam": "TB",
-        "lineupSlotId": 17,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 10.0
       },
@@ -2423,10 +2453,60 @@
         "name": "Chris Rodriguez Jr.",
         "pos": "RB",
         "proTeam": "JAX",
-        "lineupSlotId": 2,
+        "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.2
+      },
+      {
+        "playerId": 4431431,
+        "name": "Corey Kiner",
+        "pos": "RB",
+        "proTeam": "NE",
+        "lineupSlotId": 2,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 11.5
+      },
+      {
+        "playerId": 4819231,
+        "name": "Kaleb Johnson",
+        "pos": "RB",
+        "proTeam": "GB",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 12.8
+      },
+      {
+        "playerId": 4431466,
+        "name": "Jordan Watkins",
+        "pos": "WR",
+        "proTeam": "SF",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 18.6
+      },
+      {
+        "playerId": 5208518,
+        "name": "Charlie Smyth",
+        "pos": "K",
+        "proTeam": "NO",
+        "lineupSlotId": 17,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 11.0
+      },
+      {
+        "playerId": -16028,
+        "name": "Commanders D/ST",
+        "pos": "DST",
+        "proTeam": "WSH",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 5.0
       }
     ],
     "7": [
@@ -2455,8 +2535,8 @@
         "name": "Travis Etienne Jr.",
         "pos": "RB",
         "proTeam": "NO",
-        "lineupSlotId": 2,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 0
       },
@@ -2465,7 +2545,7 @@
         "name": "Jadarian Price",
         "pos": "RB",
         "proTeam": "SEA",
-        "lineupSlotId": 23,
+        "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.8
@@ -2561,16 +2641,6 @@
         "appliedTotal": 15.2
       },
       {
-        "playerId": 4241555,
-        "name": "Elijah Mitchell",
-        "pos": "RB",
-        "proTeam": "PHI",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 5.6
-      },
-      {
         "playerId": -16002,
         "name": "Bills D/ST",
         "pos": "DST",
@@ -2585,10 +2655,20 @@
         "name": "Mack Hollins",
         "pos": "WR",
         "proTeam": "NE",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 12.6
+      },
+      {
+        "playerId": 2576925,
+        "name": "Darren Waller",
+        "pos": "TE",
+        "proTeam": "CAR",
+        "lineupSlotId": 6,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 23.0
       }
     ],
     "8": [
@@ -2667,8 +2747,8 @@
         "name": "Vikings D/ST",
         "pos": "DST",
         "proTeam": "MIN",
-        "lineupSlotId": 16,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": null,
         "appliedTotal": 6.0
       },
@@ -2707,7 +2787,7 @@
         "name": "Kyle Monangai",
         "pos": "RB",
         "proTeam": "CHI",
-        "lineupSlotId": 20,
+        "lineupSlotId": 21,
         "starter": false,
         "injuryStatus": "OUT",
         "appliedTotal": 0
@@ -2743,14 +2823,24 @@
         "appliedTotal": 5.5
       },
       {
-        "playerId": -16003,
-        "name": "Bears D/ST",
+        "playerId": -16011,
+        "name": "Colts D/ST",
         "pos": "DST",
-        "proTeam": "CHI",
+        "proTeam": "IND",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 1.0
+      },
+      {
+        "playerId": -16029,
+        "name": "Panthers D/ST",
+        "pos": "DST",
+        "proTeam": "CAR",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": null,
-        "appliedTotal": 13.0
+        "appliedTotal": 3.0
       }
     ],
     "9": [
@@ -2812,16 +2902,6 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
-      },
-      {
-        "playerId": 3917315,
-        "name": "Kyler Murray",
-        "pos": "QB",
-        "proTeam": "MIN",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 0
       },
       {
@@ -2903,6 +2983,36 @@
         "starter": true,
         "injuryStatus": null,
         "appliedTotal": 12.0
+      },
+      {
+        "playerId": 4366031,
+        "name": "Tank Dell",
+        "pos": "WR",
+        "proTeam": "HOU",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 20.5
+      },
+      {
+        "playerId": 4570037,
+        "name": "Terrance Ferguson",
+        "pos": "TE",
+        "proTeam": "LAR",
+        "lineupSlotId": 21,
+        "starter": false,
+        "injuryStatus": "INJURY_RESERVE",
+        "appliedTotal": 0
+      },
+      {
+        "playerId": -16027,
+        "name": "Buccaneers D/ST",
+        "pos": "DST",
+        "proTeam": "TB",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": null,
+        "appliedTotal": 11.0
       }
     ],
     "10": [
@@ -3011,8 +3121,8 @@
         "name": "Broncos D/ST",
         "pos": "DST",
         "proTeam": "DEN",
-        "lineupSlotId": 16,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": null,
         "appliedTotal": 6.0
       },
@@ -3033,7 +3143,7 @@
         "proTeam": "CLE",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 15.8
       },
       {
@@ -3045,16 +3155,6 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 17.0
-      },
-      {
-        "playerId": 4249087,
-        "name": "Matt Gay",
-        "pos": "K",
-        "proTeam": "LV",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 7.0
       },
       {
         "playerId": 4597500,
@@ -3075,6 +3175,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.7
+      },
+      {
+        "playerId": -16014,
+        "name": "Rams D/ST",
+        "pos": "DST",
+        "proTeam": "LAR",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 11.0
       }
     ],
     "11": [
@@ -3401,14 +3511,14 @@
         "appliedTotal": 0
       },
       {
-        "playerId": -16018,
-        "name": "Saints D/ST",
+        "playerId": -16015,
+        "name": "Dolphins D/ST",
         "pos": "DST",
-        "proTeam": "NO",
+        "proTeam": "MIA",
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
-        "appliedTotal": 4.0
+        "appliedTotal": 7.0
       }
     ]
   },
@@ -4233,9 +4343,9 @@
       "roundPickNumber": 3,
       "teamId": 3,
       "playerId": 4689114,
-      "name": "Jaxson Dart",
-      "pos": "QB",
-      "proTeam": "NYG",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -4574,9 +4684,9 @@
       "roundPickNumber": 10,
       "teamId": 8,
       "playerId": -16014,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Rams D/ST",
+      "pos": "DST",
+      "proTeam": "LAR",
       "keeper": false
     },
     {
@@ -4860,9 +4970,9 @@
       "roundPickNumber": 12,
       "teamId": 9,
       "playerId": 3917315,
-      "name": "Kyler Murray",
-      "pos": "QB",
-      "proTeam": "MIN",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -5201,9 +5311,9 @@
       "roundPickNumber": 7,
       "teamId": 5,
       "playerId": 4241474,
-      "name": "Brian Robinson Jr.",
-      "pos": "RB",
-      "proTeam": "ATL",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -5311,9 +5421,9 @@
       "roundPickNumber": 5,
       "teamId": 2,
       "playerId": 4366031,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Tank Dell",
+      "pos": "WR",
+      "proTeam": "HOU",
       "keeper": false
     },
     {
@@ -5432,9 +5542,9 @@
       "roundPickNumber": 4,
       "teamId": 11,
       "playerId": 4570037,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Terrance Ferguson",
+      "pos": "TE",
+      "proTeam": "LAR",
       "keeper": false
     },
     {
@@ -5443,9 +5553,9 @@
       "roundPickNumber": 5,
       "teamId": 12,
       "playerId": -16033,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Ravens D/ST",
+      "pos": "DST",
+      "proTeam": "BAL",
       "keeper": false
     },
     {
