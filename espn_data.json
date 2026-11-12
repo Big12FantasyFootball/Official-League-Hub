@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-12T06:50:06.242869+00:00",
+  "pulledAt": "2026-11-12T20:45:56.512361+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 10,
@@ -173,7 +173,7 @@
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 108.55,
+      "awayProjected": 119.47,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -186,7 +186,7 @@
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 112.15,
+      "awayProjected": 113.37,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,7 +195,7 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 110.15,
+      "homeProjected": 109.34,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -1735,8 +1735,8 @@
         "name": "Matthew Stafford",
         "pos": "QB",
         "proTeam": "LAR",
-        "lineupSlotId": 0,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.22
       },
@@ -1775,8 +1775,8 @@
         "name": "Omar Cooper Jr.",
         "pos": "WR",
         "proTeam": "NYJ",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 13.8
       },
@@ -1789,16 +1789,6 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 13.0
-      },
-      {
-        "playerId": -16021,
-        "name": "Eagles D/ST",
-        "pos": "DST",
-        "proTeam": "PHI",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": null,
-        "appliedTotal": 10.0
       },
       {
         "playerId": 4569682,
@@ -1815,10 +1805,20 @@
         "name": "Konata Mumpfield",
         "pos": "WR",
         "proTeam": "LAR",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 4.0
+      },
+      {
+        "playerId": 3924327,
+        "name": "Drew Lock",
+        "pos": "QB",
+        "proTeam": "SEA",
+        "lineupSlotId": 0,
+        "starter": true,
+        "injuryStatus": "QUESTIONABLE",
+        "appliedTotal": 12.6
       }
     ],
     "3": [
@@ -2499,14 +2499,14 @@
         "appliedTotal": 11.0
       },
       {
-        "playerId": -16028,
-        "name": "Commanders D/ST",
+        "playerId": -16009,
+        "name": "Packers D/ST",
         "pos": "DST",
-        "proTeam": "WSH",
+        "proTeam": "GB",
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
-        "appliedTotal": 5.0
+        "appliedTotal": 11.0
       }
     ],
     "7": [
@@ -2669,6 +2669,16 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 23.0
+      },
+      {
+        "playerId": 4696044,
+        "name": "Kaelon Black",
+        "pos": "RB",
+        "proTeam": "SF",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 7.0
       }
     ],
     "8": [
@@ -3215,7 +3225,7 @@
         "proTeam": "NYG",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "OUT",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -3223,8 +3233,8 @@
         "name": "Carnell Tate",
         "pos": "WR",
         "proTeam": "TEN",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
@@ -3253,8 +3263,8 @@
         "name": "Blake Corum",
         "pos": "RB",
         "proTeam": "LAR",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.8
       },
@@ -3309,16 +3319,6 @@
         "appliedTotal": 12.64
       },
       {
-        "playerId": -16017,
-        "name": "Patriots D/ST",
-        "pos": "DST",
-        "proTeam": "NE",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": null,
-        "appliedTotal": -5.0
-      },
-      {
         "playerId": 4837248,
         "name": "Fernando Mendoza",
         "pos": "QB",
@@ -3347,6 +3347,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
+      },
+      {
+        "playerId": 4832955,
+        "name": "Emmett Johnson",
+        "pos": "RB",
+        "proTeam": "KC",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 9.4
       }
     ],
     "12": [
@@ -5179,9 +5189,9 @@
       "roundPickNumber": 7,
       "teamId": 1,
       "playerId": -16017,
-      "name": "Patriots D/ST",
-      "pos": "DST",
-      "proTeam": "NE",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -5201,9 +5211,9 @@
       "roundPickNumber": 9,
       "teamId": 11,
       "playerId": -16021,
-      "name": "Eagles D/ST",
-      "pos": "DST",
-      "proTeam": "PHI",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
@@ -5509,9 +5519,9 @@
       "roundPickNumber": 1,
       "teamId": 9,
       "playerId": 4696044,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Kaelon Black",
+      "pos": "RB",
+      "proTeam": "SF",
       "keeper": false
     },
     {
