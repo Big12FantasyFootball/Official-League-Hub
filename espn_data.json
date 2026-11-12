@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-11T20:09:40.326426+00:00",
+  "pulledAt": "2026-11-12T06:50:06.242869+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 10,
@@ -169,11 +169,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 119.84,
+      "homeProjected": 118.84,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 120.14,
+      "awayProjected": 108.55,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -186,7 +186,7 @@
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 112.76,
+      "awayProjected": 112.15,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -1485,7 +1485,7 @@
         "proTeam": "DET",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 16.6
       },
       {
@@ -1593,8 +1593,8 @@
         "name": "Ryan Flournoy",
         "pos": "WR",
         "proTeam": "DAL",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 4,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.3
       },
@@ -1623,8 +1623,8 @@
         "name": "Malachi Fields",
         "pos": "WR",
         "proTeam": "NYG",
-        "lineupSlotId": 4,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 7.0
       },
@@ -1635,7 +1635,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -1767,7 +1767,7 @@
         "proTeam": "MIN",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 7.3
       },
       {
@@ -1775,8 +1775,8 @@
         "name": "Omar Cooper Jr.",
         "pos": "WR",
         "proTeam": "NYJ",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 13.8
       },
@@ -1801,16 +1801,6 @@
         "appliedTotal": 10.0
       },
       {
-        "playerId": 4432762,
-        "name": "Shedeur Sanders",
-        "pos": "QB",
-        "proTeam": "CLE",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 22.68
-      },
-      {
         "playerId": 4569682,
         "name": "Audric Estime",
         "pos": "RB",
@@ -1819,6 +1809,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 14.7
+      },
+      {
+        "playerId": 4710855,
+        "name": "Konata Mumpfield",
+        "pos": "WR",
+        "proTeam": "LAR",
+        "lineupSlotId": 23,
+        "starter": true,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 4.0
       }
     ],
     "3": [
@@ -1839,7 +1839,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 8.9
       },
       {
@@ -1949,7 +1949,7 @@
         "proTeam": "HOU",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 8.4
       },
       {
@@ -2031,7 +2031,7 @@
         "proTeam": "NE",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2313,7 +2313,7 @@
         "proTeam": "NE",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 6.5
       },
       {
@@ -2345,7 +2345,7 @@
         "proTeam": "LAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 35.0
       },
       {
@@ -2405,7 +2405,7 @@
         "proTeam": "BUF",
         "lineupSlotId": 6,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 5.8
       },
       {
@@ -2455,7 +2455,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 11.2
       },
       {
@@ -2809,7 +2809,7 @@
         "proTeam": "HOU",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 4.0
       },
       {
@@ -2991,7 +2991,7 @@
         "proTeam": "HOU",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 20.5
       },
       {
@@ -3073,7 +3073,7 @@
         "proTeam": "CLE",
         "lineupSlotId": 6,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 12.2
       },
       {
@@ -3133,7 +3133,7 @@
         "proTeam": "DET",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 5.3
       },
       {
@@ -3213,8 +3213,8 @@
         "name": "Cam Skattebo",
         "pos": "RB",
         "proTeam": "NYG",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 2,
+        "starter": true,
         "injuryStatus": "OUT",
         "appliedTotal": 0
       },
@@ -3253,8 +3253,8 @@
         "name": "Blake Corum",
         "pos": "RB",
         "proTeam": "LAR",
-        "lineupSlotId": 2,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.8
       },
@@ -3417,7 +3417,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 10.5
       },
       {
@@ -3437,7 +3437,7 @@
         "proTeam": "NO",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 7.9
       },
       {
