@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-14T05:53:50.654370+00:00",
+  "pulledAt": "2026-11-14T18:42:45.626831+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 10,
@@ -156,11 +156,11 @@
       "homeTeamId": 9,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 115.8,
+      "homeProjected": 115.81,
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 7.4,
-      "awayProjected": 114.43,
+      "awayProjected": 116.04,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 17.12,
-      "homeProjected": 119.94,
+      "homeProjected": 119.92,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 54.9,
-      "awayProjected": 150.33,
+      "awayProjected": 150.31,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 32.96,
-      "homeProjected": 116.87,
+      "homeProjected": 116.9,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 100.06,
+      "awayProjected": 114.81,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 109.67,
+      "homeProjected": 91.24,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 2.0,
-      "awayProjected": 107.94,
+      "awayProjected": 107.95,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,7 +221,7 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 112.41,
+      "homeProjected": 112.4,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -1745,8 +1745,8 @@
         "name": "Omar Cooper Jr.",
         "pos": "WR",
         "proTeam": "NYJ",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 13.8
       },
@@ -1765,8 +1765,8 @@
         "name": "Audric Estime",
         "pos": "RB",
         "proTeam": "NO",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 14.7
       },
@@ -1815,9 +1815,9 @@
         "name": "Pat Freiermuth",
         "pos": "TE",
         "proTeam": "PIT",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
+        "lineupSlotId": 6,
+        "starter": true,
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       }
     ],
@@ -1849,7 +1849,7 @@
         "proTeam": "HOU",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2353,9 +2353,9 @@
         "name": "Kenneth Walker III",
         "pos": "RB",
         "proTeam": "KC",
-        "lineupSlotId": 2,
-        "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "OUT",
         "appliedTotal": 36.3
       },
       {
@@ -2443,7 +2443,7 @@
         "name": "Chris Rodriguez Jr.",
         "pos": "RB",
         "proTeam": "JAX",
-        "lineupSlotId": 23,
+        "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.2
@@ -2503,8 +2503,8 @@
         "name": "Tyler Higbee",
         "pos": "TE",
         "proTeam": "LAR",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 2.3
       }
