@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-15T19:20:20.769670+00:00",
+  "pulledAt": "2026-11-15T19:20:40.480748+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 10,
@@ -156,11 +156,11 @@
       "homeTeamId": 9,
       "homeScore": 0.0,
       "homeLive": 21.24,
-      "homeProjected": 104.44,
+      "homeProjected": 104.27,
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 38.06,
-      "awayProjected": 102.0,
+      "awayProjected": 101.69,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 64.32,
-      "homeProjected": 119.98,
+      "homeProjected": 119.92,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 90.76,
-      "awayProjected": 172.42,
+      "awayProjected": 172.33,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 52.96,
-      "homeProjected": 107.32,
+      "homeProjected": 107.26,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 20.34,
-      "awayProjected": 97.71,
+      "awayProjected": 97.72,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 35.7,
-      "homeProjected": 87.39,
+      "homeProjected": 87.37,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 29.2,
-      "awayProjected": 104.62,
+      "awayProjected": 104.45,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 45.58,
-      "homeProjected": 104.58,
+      "homeProjected": 104.59,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 32.56,
-      "awayProjected": 123.7,
+      "awayProjected": 123.58,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,7 +221,7 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 22.12,
-      "homeProjected": 81.84,
+      "homeProjected": 81.77,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 70.3,
@@ -2840,7 +2840,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": null,
-        "appliedTotal": 15.0
+        "appliedTotal": 18.0
       },
       {
         "playerId": 4686422,
@@ -3286,7 +3286,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 7.6
+        "appliedTotal": 8.2
       },
       {
         "playerId": 4362628,
