@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-14T18:42:45.626831+00:00",
+  "pulledAt": "2026-11-15T05:54:49.221743+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 10,
@@ -160,7 +160,7 @@
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 7.4,
-      "awayProjected": 116.04,
+      "awayProjected": 121.16,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 17.12,
-      "homeProjected": 119.92,
+      "homeProjected": 119.91,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 54.9,
-      "awayProjected": 150.31,
+      "awayProjected": 155.17,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 8,
       "homeScore": 0.0,
       "homeLive": 32.96,
-      "homeProjected": 116.9,
+      "homeProjected": 116.94,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 114.81,
+      "awayProjected": 114.83,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 6,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 91.24,
+      "homeProjected": 91.27,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 2.0,
-      "awayProjected": 107.95,
+      "awayProjected": 107.93,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,7 +208,7 @@
       "homeTeamId": 4,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 125.41,
+      "homeProjected": 125.37,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -221,11 +221,11 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 112.4,
+      "homeProjected": 112.46,
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 116.93,
+      "awayProjected": 116.57,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -2031,7 +2031,7 @@
         "proTeam": "NE",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 0
       },
       {
@@ -2537,7 +2537,7 @@
         "proTeam": "NO",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "INJURY_RESERVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
       {
@@ -3263,8 +3263,8 @@
         "name": "Blake Corum",
         "pos": "RB",
         "proTeam": "LAR",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 11.8
       },
@@ -3353,8 +3353,8 @@
         "name": "Emmett Johnson",
         "pos": "RB",
         "proTeam": "KC",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 9.4
       }
