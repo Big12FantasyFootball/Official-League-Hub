@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-16T05:54:54.190751+00:00",
+  "pulledAt": "2026-11-16T22:51:37.176333+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 10,
@@ -2527,7 +2527,7 @@
         "proTeam": "ATL",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 28.7
       },
       {
@@ -2607,7 +2607,7 @@
         "proTeam": "SEA",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -3397,7 +3397,7 @@
         "proTeam": "NE",
         "lineupSlotId": 0,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 21.28
       },
       {
