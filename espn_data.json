@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-16T03:01:07.793179+00:00",
+  "pulledAt": "2026-11-16T05:54:54.190751+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 10,
@@ -155,8 +155,8 @@
       "matchupPeriodId": 10,
       "homeTeamId": 9,
       "homeScore": 0.0,
-      "homeLive": 68.1,
-      "homeProjected": 88.38,
+      "homeLive": 80.3,
+      "homeProjected": 80.3,
       "awayTeamId": 3,
       "awayScore": 0.0,
       "awayLive": 109.02,
@@ -172,8 +172,8 @@
       "homeProjected": 123.92,
       "awayTeamId": 11,
       "awayScore": 0.0,
-      "awayLive": 172.98,
-      "awayProjected": 184.44,
+      "awayLive": 185.48,
+      "awayProjected": 185.48,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -185,8 +185,8 @@
       "homeProjected": 118.56,
       "awayTeamId": 2,
       "awayScore": 0.0,
-      "awayLive": 105.44,
-      "awayProjected": 117.25,
+      "awayLive": 112.84,
+      "awayProjected": 112.84,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -194,12 +194,12 @@
       "matchupPeriodId": 10,
       "homeTeamId": 6,
       "homeScore": 0.0,
-      "homeLive": 93.48,
-      "homeProjected": 102.99,
+      "homeLive": 101.76,
+      "homeProjected": 101.76,
       "awayTeamId": 5,
       "awayScore": 0.0,
-      "awayLive": 96.1,
-      "awayProjected": 103.86,
+      "awayLive": 101.7,
+      "awayProjected": 101.7,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -207,8 +207,8 @@
       "matchupPeriodId": 10,
       "homeTeamId": 4,
       "homeScore": 0.0,
-      "homeLive": 92.48,
-      "homeProjected": 112.32,
+      "homeLive": 93.48,
+      "homeProjected": 108.07,
       "awayTeamId": 10,
       "awayScore": 0.0,
       "awayLive": 126.78,
@@ -1646,7 +1646,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0.9
+        "appliedTotal": 15.62
       }
     ],
     "2": [
@@ -1698,7 +1698,7 @@
         "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "appliedTotal": 15.4
       },
       {
         "playerId": 3042519,
@@ -1718,7 +1718,7 @@
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
-        "appliedTotal": 1.0
+        "appliedTotal": -7.0
       },
       {
         "playerId": 4689936,
@@ -1870,7 +1870,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 2.0
+        "appliedTotal": 5.4
       },
       {
         "playerId": 4701936,
@@ -2142,7 +2142,7 @@
         "lineupSlotId": 17,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 4.0
+        "appliedTotal": 5.0
       },
       {
         "playerId": 3045147,
@@ -2224,7 +2224,7 @@
         "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 3.5
+        "appliedTotal": 9.1
       },
       {
         "playerId": 4432620,
@@ -2396,7 +2396,7 @@
         "lineupSlotId": 0,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 54.42
+        "appliedTotal": 62.7
       },
       {
         "playerId": 4385690,
@@ -2862,7 +2862,7 @@
         "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 26.6
+        "appliedTotal": 38.8
       },
       {
         "playerId": 3929630,
@@ -3296,7 +3296,7 @@
         "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 53.1
+        "appliedTotal": 65.6
       },
       {
         "playerId": -16025,
