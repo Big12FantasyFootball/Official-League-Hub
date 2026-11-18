@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-17T21:43:51.231037+00:00",
+  "pulledAt": "2026-11-18T06:55:36.400371+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 11,
@@ -2463,16 +2463,6 @@
         "appliedTotal": 2.5
       },
       {
-        "playerId": 4819231,
-        "name": "Kaleb Johnson",
-        "pos": "RB",
-        "proTeam": "GB",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 4.2
-      },
-      {
         "playerId": -16009,
         "name": "Packers D/ST",
         "pos": "DST",
@@ -2481,16 +2471,6 @@
         "starter": false,
         "injuryStatus": null,
         "appliedTotal": 4.0
-      },
-      {
-        "playerId": 2573401,
-        "name": "Tyler Higbee",
-        "pos": "TE",
-        "proTeam": "LAR",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 10.7
       }
     ],
     "7": [
@@ -3488,7 +3468,7 @@
         "playerId": 4685279,
         "name": "Jaydon Blue",
         "pos": "RB",
-        "proTeam": "FA",
+        "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
