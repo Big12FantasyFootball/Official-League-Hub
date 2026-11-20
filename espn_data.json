@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-20T06:47:54.628576+00:00",
+  "pulledAt": "2026-11-20T21:01:27.390728+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 11,
@@ -156,11 +156,11 @@
       "homeTeamId": 3,
       "homeScore": 0.0,
       "homeLive": 15.4,
-      "homeProjected": 131.79,
+      "homeProjected": 130.98,
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 139.93,
+      "awayProjected": 140.02,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -169,11 +169,11 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 14.5,
-      "homeProjected": 79.0,
+      "homeProjected": 78.99,
       "awayTeamId": 4,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 114.24,
+      "awayProjected": 113.72,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 7,
       "homeScore": 0.0,
       "homeLive": 6.0,
-      "homeProjected": 102.86,
+      "homeProjected": 103.77,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 114.26,
+      "awayProjected": 114.23,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 15.0,
-      "homeProjected": 135.2,
+      "homeProjected": 133.29,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 3.2,
-      "awayProjected": 100.08,
+      "awayProjected": 104.89,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 9,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 121.04,
+      "homeProjected": 121.35,
       "awayTeamId": 8,
       "awayScore": 0.0,
       "awayLive": 1.0,
-      "awayProjected": 114.72,
+      "awayProjected": 114.8,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -221,11 +221,11 @@
       "homeTeamId": 10,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 119.4,
+      "homeProjected": 119.59,
       "awayTeamId": 6,
       "awayScore": 0.0,
       "awayLive": 14.8,
-      "awayProjected": 110.5,
+      "awayProjected": 110.74,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1791,7 +1791,7 @@
         "proTeam": "MIN",
         "lineupSlotId": 6,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -1801,7 +1801,7 @@
         "proTeam": "NYJ",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -1811,7 +1811,7 @@
         "proTeam": "MIA",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 10.1
       },
       {
@@ -2227,7 +2227,7 @@
         "proTeam": "NE",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 4.7
       },
       {
@@ -2361,16 +2361,6 @@
         "appliedTotal": 4.2
       },
       {
-        "playerId": 5082424,
-        "name": "Dominic Zvada",
-        "pos": "K",
-        "proTeam": "NYG",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 2.0
-      },
-      {
         "playerId": 4241985,
         "name": "J.K. Dobbins",
         "pos": "RB",
@@ -2379,6 +2369,16 @@
         "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
+      },
+      {
+        "playerId": -16033,
+        "name": "Ravens D/ST",
+        "pos": "DST",
+        "proTeam": "BAL",
+        "lineupSlotId": 16,
+        "starter": true,
+        "injuryStatus": null,
+        "appliedTotal": 4.0
       }
     ],
     "6": [
@@ -2399,7 +2399,7 @@
         "proTeam": "KC",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2439,7 +2439,7 @@
         "proTeam": "BUF",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "DOUBTFUL",
         "appliedTotal": 7.8
       },
       {
@@ -2773,7 +2773,7 @@
         "proTeam": "NO",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 19.0
       },
       {
@@ -3309,7 +3309,7 @@
         "proTeam": "NYG",
         "lineupSlotId": 6,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 27.7
       },
       {
@@ -3431,7 +3431,7 @@
         "proTeam": "NE",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "DOUBTFUL",
+        "injuryStatus": "OUT",
         "appliedTotal": 3.02
       },
       {
@@ -5597,9 +5597,9 @@
       "roundPickNumber": 5,
       "teamId": 12,
       "playerId": -16033,
-      "name": null,
-      "pos": null,
-      "proTeam": null,
+      "name": "Ravens D/ST",
+      "pos": "DST",
+      "proTeam": "BAL",
       "keeper": false
     },
     {
