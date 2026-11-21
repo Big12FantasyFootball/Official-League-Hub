@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-21T06:41:43.560794+00:00",
+  "pulledAt": "2026-11-21T20:03:18.048004+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 11,
@@ -160,7 +160,7 @@
       "awayTeamId": 11,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 140.02,
+      "awayProjected": 140.01,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -225,7 +225,7 @@
       "awayTeamId": 6,
       "awayScore": 0.0,
       "awayLive": 14.8,
-      "awayProjected": 110.51,
+      "awayProjected": 110.56,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1863,6 +1863,16 @@
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 8.8
+      },
+      {
+        "playerId": 4600981,
+        "name": "Pat Bryant",
+        "pos": "WR",
+        "proTeam": "DEN",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 0
       }
     ],
     "3": [
@@ -2721,7 +2731,7 @@
         "proTeam": "TEN",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 3.8
       }
     ],
