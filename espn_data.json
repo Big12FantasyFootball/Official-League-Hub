@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-20T21:01:27.390728+00:00",
+  "pulledAt": "2026-11-21T06:41:43.560794+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 11,
@@ -169,11 +169,11 @@
       "homeTeamId": 12,
       "homeScore": 0.0,
       "homeLive": 14.5,
-      "homeProjected": 78.99,
+      "homeProjected": 78.98,
       "awayTeamId": 4,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 113.72,
+      "awayProjected": 113.76,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -182,11 +182,11 @@
       "homeTeamId": 7,
       "homeScore": 0.0,
       "homeLive": 6.0,
-      "homeProjected": 103.77,
+      "homeProjected": 103.78,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 114.23,
+      "awayProjected": 114.24,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -195,11 +195,11 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 15.0,
-      "homeProjected": 133.29,
+      "homeProjected": 133.56,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 3.2,
-      "awayProjected": 104.89,
+      "awayProjected": 104.95,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -208,11 +208,11 @@
       "homeTeamId": 9,
       "homeScore": 0.0,
       "homeLive": 0.0,
-      "homeProjected": 121.35,
+      "homeProjected": 121.39,
       "awayTeamId": 8,
       "awayScore": 0.0,
       "awayLive": 1.0,
-      "awayProjected": 114.8,
+      "awayProjected": 114.69,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -225,7 +225,7 @@
       "awayTeamId": 6,
       "awayScore": 0.0,
       "awayLive": 14.8,
-      "awayProjected": 110.74,
+      "awayProjected": 110.51,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -1699,7 +1699,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0.5
       }
     ],
@@ -1883,7 +1883,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 20.3
       },
       {
@@ -2075,7 +2075,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 6.2
       },
       {
@@ -2429,7 +2429,7 @@
         "proTeam": "DEN",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -2487,8 +2487,8 @@
         "name": "Jacory Croskey-Merritt",
         "pos": "RB",
         "proTeam": "WSH",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 2,
+        "starter": true,
         "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 0
       },
@@ -2497,8 +2497,8 @@
         "name": "Samaje Perine",
         "pos": "RB",
         "proTeam": "CIN",
-        "lineupSlotId": 2,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 13.9
       },
@@ -2711,7 +2711,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 4.7
       },
       {
@@ -3309,7 +3309,7 @@
         "proTeam": "NYG",
         "lineupSlotId": 6,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 27.7
       },
       {
@@ -3461,7 +3461,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 6.4
       },
       {
