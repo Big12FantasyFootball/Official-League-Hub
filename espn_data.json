@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-21T20:03:18.048004+00:00",
+  "pulledAt": "2026-11-22T06:10:12.766721+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 11,
@@ -182,7 +182,7 @@
       "homeTeamId": 7,
       "homeScore": 0.0,
       "homeLive": 6.0,
-      "homeProjected": 103.78,
+      "homeProjected": 104.15,
       "awayTeamId": 2,
       "awayScore": 0.0,
       "awayLive": 0.0,
@@ -195,7 +195,7 @@
       "homeTeamId": 1,
       "homeScore": 0.0,
       "homeLive": 15.0,
-      "homeProjected": 133.56,
+      "homeProjected": 132.89,
       "awayTeamId": 5,
       "awayScore": 0.0,
       "awayLive": 3.2,
@@ -1597,8 +1597,8 @@
         "name": "Deebo Samuel Sr.",
         "pos": "WR",
         "proTeam": "SF",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 25.9
       },
@@ -1647,8 +1647,8 @@
         "name": "Ryan Flournoy",
         "pos": "WR",
         "proTeam": "DAL",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 19.1
       },
@@ -2669,8 +2669,8 @@
         "name": "Keon Coleman",
         "pos": "WR",
         "proTeam": "BUF",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 2.1
       },
@@ -2721,7 +2721,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 4.7
       },
       {
@@ -2729,8 +2729,8 @@
         "name": "Tyjae Spears",
         "pos": "RB",
         "proTeam": "TEN",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "INJURY_RESERVE",
         "appliedTotal": 3.8
       }
@@ -3107,7 +3107,7 @@
         "proTeam": "LAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 5.2
       },
       {
