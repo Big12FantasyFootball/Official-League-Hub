@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-23T07:02:11.404203+00:00",
+  "pulledAt": "2026-11-24T00:46:43.690070+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 11,
@@ -115,7 +115,7 @@
     },
     {
       "teamId": 1,
-      "name": "Jalen Copemaxxing Puka",
+      "name": "Joyce Copemaxxing Tuten",
       "abbrev": "NNT",
       "wins": 4,
       "losses": 6,
@@ -1659,7 +1659,7 @@
         "proTeam": "SF",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "OUT",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -1893,7 +1893,7 @@
         "proTeam": "JAX",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 28.6
       },
       {
@@ -2085,7 +2085,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 6.2
       },
       {
@@ -2307,7 +2307,7 @@
         "proTeam": "CAR",
         "lineupSlotId": 23,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 9.0
       },
       {
@@ -2499,7 +2499,7 @@
         "proTeam": "WSH",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "INJURY_RESERVE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
       {
@@ -2549,7 +2549,7 @@
         "proTeam": "DET",
         "lineupSlotId": 6,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 11.8
       },
       {
@@ -3107,7 +3107,7 @@
         "proTeam": "LAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 5.2
       },
       {
@@ -3167,7 +3167,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 4.8
       },
       {
@@ -3531,7 +3531,7 @@
         "proTeam": "IND",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 15.5
       },
       {
