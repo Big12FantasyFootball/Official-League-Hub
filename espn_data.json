@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-24T22:59:17.546477+00:00",
+  "pulledAt": "2026-11-25T07:59:13.806305+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 12,
@@ -225,7 +225,7 @@
       "awayTeamId": 7,
       "awayScore": 0.0,
       "awayLive": 0.0,
-      "awayProjected": 113.52,
+      "awayProjected": 112.57,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     }
@@ -2633,8 +2633,8 @@
         "name": "Jadarian Price",
         "pos": "RB",
         "proTeam": "SEA",
-        "lineupSlotId": 20,
-        "starter": false,
+        "lineupSlotId": 23,
+        "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
@@ -2713,8 +2713,8 @@
         "name": "DeMario Douglas",
         "pos": "WR",
         "proTeam": "NE",
-        "lineupSlotId": 23,
-        "starter": true,
+        "lineupSlotId": 20,
+        "starter": false,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 0
       },
@@ -2939,7 +2939,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 2,
         "starter": true,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 13.5
       },
       {
@@ -3021,16 +3021,6 @@
         "starter": true,
         "injuryStatus": null,
         "appliedTotal": 5.0
-      },
-      {
-        "playerId": 4570037,
-        "name": "Terrance Ferguson",
-        "pos": "TE",
-        "proTeam": "LAR",
-        "lineupSlotId": 21,
-        "starter": false,
-        "injuryStatus": "INJURY_RESERVE",
-        "appliedTotal": 0
       },
       {
         "playerId": -16027,
@@ -3191,7 +3181,7 @@
         "proTeam": "PHI",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "ACTIVE",
         "appliedTotal": 4.8
       },
       {
@@ -5620,9 +5610,9 @@
       "roundPickNumber": 4,
       "teamId": 11,
       "playerId": 4570037,
-      "name": "Terrance Ferguson",
-      "pos": "TE",
-      "proTeam": "LAR",
+      "name": null,
+      "pos": null,
+      "proTeam": null,
       "keeper": false
     },
     {
