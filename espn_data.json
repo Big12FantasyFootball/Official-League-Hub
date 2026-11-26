@@ -1,5 +1,5 @@
 {
-  "pulledAt": "2026-11-25T22:27:22.194379+00:00",
+  "pulledAt": "2026-11-26T07:50:53.078175+00:00",
   "leagueId": 1480327482,
   "season": 2026,
   "currentMatchupPeriod": 12,
@@ -168,12 +168,12 @@
       "matchupPeriodId": 12,
       "homeTeamId": 6,
       "homeScore": 0.0,
-      "homeLive": 0.0,
-      "homeProjected": 122.03,
+      "homeLive": 12.0,
+      "homeProjected": 126.34,
       "awayTeamId": 2,
       "awayScore": 0.0,
-      "awayLive": 0.0,
-      "awayProjected": 118.33,
+      "awayLive": 28.5,
+      "awayProjected": 133.01,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -181,12 +181,12 @@
       "matchupPeriodId": 12,
       "homeTeamId": 3,
       "homeScore": 0.0,
-      "homeLive": 0.0,
-      "homeProjected": 131.31,
+      "homeLive": 4.9,
+      "homeProjected": 119.51,
       "awayTeamId": 10,
       "awayScore": 0.0,
-      "awayLive": 0.0,
-      "awayProjected": 126.25,
+      "awayLive": 16.5,
+      "awayProjected": 125.96,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -198,8 +198,8 @@
       "homeProjected": 118.4,
       "awayTeamId": 9,
       "awayScore": 0.0,
-      "awayLive": 0.0,
-      "awayProjected": 128.88,
+      "awayLive": 16.5,
+      "awayProjected": 131.25,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -211,8 +211,8 @@
       "homeProjected": 122.88,
       "awayTeamId": 12,
       "awayScore": 0.0,
-      "awayLive": 0.0,
-      "awayProjected": 110.21,
+      "awayLive": 3.4,
+      "awayProjected": 104.38,
       "winner": "UNDECIDED",
       "playoffTierType": "NONE"
     },
@@ -1856,7 +1856,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "appliedTotal": 10.9
       },
       {
         "playerId": 3918298,
@@ -1886,7 +1886,7 @@
         "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "appliedTotal": 28.5
       },
       {
         "playerId": 4426388,
@@ -1915,8 +1915,8 @@
         "proTeam": "LAR",
         "lineupSlotId": 20,
         "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "injuryStatus": "QUESTIONABLE",
+        "appliedTotal": 2.4
       }
     ],
     "3": [
@@ -1978,7 +1978,7 @@
         "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "appliedTotal": 4.9
       },
       {
         "playerId": 3139477,
@@ -2027,7 +2027,7 @@
         "proTeam": "GB",
         "lineupSlotId": 21,
         "starter": false,
-        "injuryStatus": "QUESTIONABLE",
+        "injuryStatus": "OUT",
         "appliedTotal": 0
       },
       {
@@ -2159,7 +2159,7 @@
         "proTeam": "BAL",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 16.4
       },
       {
@@ -2271,7 +2271,7 @@
         "proTeam": "SEA",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "ACTIVE",
+        "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 0
       },
       {
@@ -2392,7 +2392,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "appliedTotal": 8.62
       },
       {
         "playerId": 4431299,
@@ -2524,7 +2524,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": null,
-        "appliedTotal": 0
+        "appliedTotal": 2.0
       },
       {
         "playerId": 3116389,
@@ -2594,7 +2594,7 @@
         "lineupSlotId": 16,
         "starter": true,
         "injuryStatus": null,
-        "appliedTotal": 0
+        "appliedTotal": 12.0
       },
       {
         "playerId": 4603186,
@@ -2729,16 +2729,6 @@
         "appliedTotal": 2.5
       },
       {
-        "playerId": 4567156,
-        "name": "Treylon Burks",
-        "pos": "WR",
-        "proTeam": "WSH",
-        "lineupSlotId": 20,
-        "starter": false,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 5.0
-      },
-      {
         "playerId": 4428557,
         "name": "Tyjae Spears",
         "pos": "RB",
@@ -2777,6 +2767,16 @@
         "starter": true,
         "injuryStatus": null,
         "appliedTotal": 0
+      },
+      {
+        "playerId": 4429084,
+        "name": "Anthony Richardson Sr.",
+        "pos": "QB",
+        "proTeam": "IND",
+        "lineupSlotId": 20,
+        "starter": false,
+        "injuryStatus": "ACTIVE",
+        "appliedTotal": 0.2
       }
     ],
     "8": [
@@ -2795,7 +2795,7 @@
         "name": "Tetairoa McMillan",
         "pos": "WR",
         "proTeam": "CAR",
-        "lineupSlotId": 4,
+        "lineupSlotId": 23,
         "starter": true,
         "injuryStatus": "QUESTIONABLE",
         "appliedTotal": 19.1
@@ -2825,7 +2825,7 @@
         "name": "Jordyn Tyson",
         "pos": "WR",
         "proTeam": "NO",
-        "lineupSlotId": 23,
+        "lineupSlotId": 4,
         "starter": true,
         "injuryStatus": "ACTIVE",
         "appliedTotal": 2.0
@@ -2979,8 +2979,8 @@
         "proTeam": "GB",
         "lineupSlotId": 4,
         "starter": true,
-        "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "injuryStatus": "QUESTIONABLE",
+        "appliedTotal": 16.5
       },
       {
         "playerId": 4430539,
@@ -3070,7 +3070,7 @@
         "lineupSlotId": 20,
         "starter": false,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "appliedTotal": 3.6
       },
       {
         "playerId": 4688813,
@@ -3142,7 +3142,7 @@
         "lineupSlotId": 2,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "appliedTotal": 16.5
       },
       {
         "playerId": 3915416,
@@ -3496,7 +3496,7 @@
         "lineupSlotId": 6,
         "starter": true,
         "injuryStatus": "ACTIVE",
-        "appliedTotal": 0
+        "appliedTotal": 3.4
       },
       {
         "playerId": 3916433,
